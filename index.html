@@ -138,7 +138,7 @@
             
             <!-- Words and Sliders -->
             <div class="col-4">
-              <br>
+              <br><br>
               <p class="filter">
                 <input class="form-check-input position-static" id="red_checkbox" onclick="check()" type="checkbox"> Red
                 <input type="range" min="2" max="26" step=".1" class="range" id="red_value">
@@ -215,14 +215,17 @@
             <li>Now click on the g filter, and adjust its slider.</li>
             <li>Repeat this for the remaining four filters.</li>
           </ul>
-          <b>Six Color Mixing Tool</b>
+          <br><br>
           <!-- Widget -->
           <div class="widget container">
             <br>
-            <div class="row">
+            <div class="row" style="height: 70vh">
               
               <!-- Words and Sliders -->
               <div class="col-4">
+                <br>
+                <h1 class="widget-title">Six Color Mixing Tool</h1>
+                <br><br><br>
                 <p class="filter">
                   <input class="form-check-input position-static" data-target="u_filter" type="checkbox" id="u_checkbox" onclick="check()"> u
                   <input type="range" min="1" max="7" step=".1" class="range" id="u_value">
@@ -310,13 +313,10 @@
                     <option value="none">None</option>
                   </select>
                 </p>
-                <br>
-                <button id="button" class="button" value="preset" name="preset" style="margin-left: -20px;" onclick="reset()" >Reset</button>
-                <button id="button" class="button" value="preset" name="preset" >Print</button>
               </div>
               <!-- Images -->
               <div class="col-8" style="filter: contrast(1.2);">
-                <div  >
+               
                   <div class="intro_filter"></div>
                   <div class="u_filter"></div>
                   <div class="g_filter"></div>
@@ -324,10 +324,19 @@
                   <div class="i_filter"></div>
                   <div class="z_filter"></div>
                   <div class="y_filter"></div>
-                </div>
+                  
+           
+              
+            </div>
+                 
+            </div>
+            <div class="row py-2">   
+              <div class="col-4"><button id="button" class="button" value="preset" name="preset" style="margin-left: -20px;" onclick="reset()" >Reset</button>
+                <button id="button" class="button" value="preset" name="preset" >Print</button></div>
+              <div class="col-8">
                 <button id="button" id="+" class="button sticky" value="preset" name="preset" >+</button>
                 <button id="button" id="-" style="left:70px;"class="button sticky" value="preset" name="preset" >-</button>
-                <div class="input-group sticky input-container">
+              <div class="input-group sticky input-container">
                   <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
                     <option selected>M33</option>
                     <option value="1">M16</option>
@@ -336,8 +345,8 @@
                   </select>
                 </div>
               </div>
-            </div>
           </div>
+        </div>
           <!-- End Widget -->
           <b>Chromatic ordering and Representative color images</b>
           <p>Before assigning colors to each filter, it’s important to understand that there is a deliberate method for how astronomers build a color image.  It is called <i>chromatic ordering</i>. Each color represents a specific type of wavelength information. The shortest wavelength of light used is assigned to the shortest wavelength of color, and so on. These images are not simply pretty pictures- they communicate information about specific aspects of the structure in the image. Professional astronomers know how to interpret the colors to gain scientific knowledge.  Images constructed by using chromatic ordering are known as <i>representative color images</i>. In <i>false color images</i>, the assignment of colors is not ordered according to wavelength.
