@@ -1,0 +1,236 @@
+input[type="range"] {
+  /*display: block;*/
+  -webkit-appearance: none;
+  background-color: #4b6cb7;
+  width: 200px;
+  height: 5px;
+  border-radius: 5px;
+  outline: 0;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}		
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 26px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -4px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+.custom-select {
+  font-size: 18px;
+}
+
+.input-color {
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: #3498db;
+}
+
+.button {
+  background: #182848;
+  width: auto;
+  padding: 10px 20px;
+  border: none;
+  font-weight: light;
+  color: white;
+  border-radius: 3px;
+  outline: none !important;
+}
+.button:hover {
+  background: #759bc3;
+  transition: .2s;
+}
+
+.sticky {
+  position: absolute;
+  bottom: 0;  
+}
+
+.input-container {
+  width: 70%;
+  float: right;
+  right:0;
+}
+
+.widget {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+
+/* Filters */
+
+/* Intro */
+.intro_filter {
+    border-radius: 10px;
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    background-size: 100%;
+    background-blend-mode: multiply;
+    mix-blend-mode: screen;
+    -webkit-box-shadow: 0px 0px  11px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    0px 0px  11px #ccc;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         0px 0px  11px #ccc;
+    /*display: none;*/
+}
+
+/* U – Purple */
+.u_filter {
+    border-radius: 10px;
+    position: absolute;
+  	width: 100%;
+  	height: 90%;
+  	background-size: 100%;
+  	background-blend-mode: multiply;
+  	background-image: url('../assets/m33/png/m33_u.png');
+  	/*background-color: #A649EC;*/
+  	mix-blend-mode: screen;
+    filter: brightness(1.92);
+  	/*-webkit-filter: saturate(3.5); */
+    -webkit-box-shadow: 3px 3px  6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    3px 3px  6px #ccc;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         3px 3px  6px #ccc;
+    display: none; 
+}
+
+
+/* G – Blue */
+.g_filter {
+    border-radius: 10px;
+    position: absolute;
+  	width: 100%;
+  	height: 90%;
+  	background-size: 100%;
+  	background-blend-mode: multiply;
+  	background-image: url('../assets/m33/png/m33_g.png');
+  	/*background-color: #3933FF;*/
+  	mix-blend-mode: screen;
+    filter: brightness(1.08);
+  	/*-webkit-filter: saturate(2.5); */
+  	display: none;
+
+}
+
+/* R – Green */
+.r_filter {
+  border-radius: 10px;
+  position: absolute;
+	width: 100%;
+	height: 90%;
+	background-blend-mode: multiply;
+	background-image: url('../assets/m33/png/m33_r.png');
+	/*background-color: #6FD898;*/
+  mix-blend-mode: screen;
+  background-size: 100%;
+  filter: brightness(1.45);
+  /*-webkit-filter: saturate(5.5);*/
+  display: none;
+}
+
+/* I – Yellow */
+.i_filter {
+  border-radius: 10px;
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  background-blend-mode: multiply;
+  background-image: url('../assets/m33/png/m33_i.png');
+  /*background-color: #E9DE20;*/
+  mix-blend-mode: screen;
+  background-size: 100%;
+  filter: brightness(.52);
+  /*-webkit-filter: saturate(1.3);*/
+  display: none;
+}
+
+/* Z – Orange */
+.z_filter {
+  border-radius: 10px;
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  background-blend-mode: multiply;
+  background-image: url('../assets/m33/png/m33_z.png');
+  /*background-color: #E39F62;*/
+  mix-blend-mode: screen;
+  background-size: 100%;
+  filter: brightness(.375);
+  /*-webkit-filter: saturate(2.5);*/
+  display: none;
+}
+
+/* Y – Red */
+.y_filter {
+  border-radius: 10px;
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  background-blend-mode: multiply;
+  background-image: url('../assets/m33/png/m33_y.png');
+  /*background-color: #D73131;*/
+  mix-blend-mode: screen;
+  background-size: 100%;
+  /*filter: brightness(70%);*/
+  -webkit-filter: saturate(1.9);
+  display: none;
+} 
+
+/* RGB Widget */
+
+/* Red */
+.red_filter {
+  border-radius: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: multiply;
+  background-image: url('../assets/images/red_filter.png');
+  /*background-color: #D73131;*/
+  mix-blend-mode: screen;
+  background-size: 100%;
+  /*filter: brightness(70%);*/
+  -webkit-filter: saturate(1.9);
+  display: none;
+} 
+
+/* Green */
+.green_filter {
+  border-radius: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: multiply;
+  background-image: url('../assets/images/green_filter.png');
+  /*background-color: #D73131;*/
+  mix-blend-mode: screen;
+  background-size: 100%;
+  /*filter: brightness(70%);*/
+  -webkit-filter: saturate(1.9);
+  display: none;
+} 
+
+/* Blue */
+.blue_filter {
+  border-radius: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: multiply;
+  background-image: url('../assets/images/blue_filter.png');
+  /*background-color: #D73131;*/
+  mix-blend-mode: screen;
+  background-size: 100%;
+  /*filter: brightness(70%);*/
+  -webkit-filter: saturate(1.9);
+  display: none;
+} 
