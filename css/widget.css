@@ -23,7 +23,6 @@ input[type=range]::-webkit-slider-thumb {
 
 .custom-select {
   font-size: 18px;
-  margin-left: -20px;
   width: 100px;
 }
 
