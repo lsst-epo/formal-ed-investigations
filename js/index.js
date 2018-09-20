@@ -1,38 +1,49 @@
-function filter() {
-	if (document.getElementById('red').checked == true) {
-		document.getElementsByClassName("prism-colors")[6].style.zIndex = '1'
-		document.getElementsByClassName('rectangle')[0].style.backgroundColor = 'red'
-	}
-	else if (document.getElementById('orange').checked == true) {
-		document.getElementsByClassName("prism-colors")[5].style.zIndex = '1'
-		document.getElementsByClassName('rectangle')[0].style.backgroundColor = 'orange'
 
-	} else if (document.getElementById('yellow').checked == true) {
-		document.getElementsByClassName("prism-colors")[4].style.zIndex = '1'
-		document.getElementsByClassName('rectangle')[0].style.backgroundColor = 'yellow'
-
-	} else if (document.getElementById('green').checked == true) {
-		document.getElementsByClassName("prism-colors")[3].style.zIndex = '1'
-		document.getElementsByClassName('rectangle')[0].style.backgroundColor = 'green'
-
-	} else if (document.getElementById('blue').checked == true) {
-		document.getElementsByClassName("prism-colors")[2].style.zIndex = '1'
-		document.getElementsByClassName('rectangle')[0].style.backgroundColor = 'blue'
-
-	} else if (document.getElementById('indigo').checked == true) {
-		document.getElementsByClassName("prism-colors")[1].style.zIndex = '1'
-		document.getElementsByClassName('rectangle')[0].style.backgroundColor = 'indigo'
-
-	} else if (document.getElementById('violet').checked == true) {
-		document.getElementsByClassName("prism-colors")[0].style.zIndex = '1'
-		document.getElementsByClassName('rectangle')[0].style.backgroundColor = 'violet'
-	}
-	else {
-	 	for (var i = 0; i<=6; i++) {
-	 		document.getElementsByClassName("prism-colors")[i].style.zIndex = '0'
-	 	}
-		document.getElementsByClassName('rectangle')[0].style.backgroundColor = '#c8c8c8'
-	}
+// TODO Resets images to a default
+function reset() {
+	
 }
 
+// Changes the color of the prism
+// Manipulates the z-index to hide and show the rainbow colors
+function filter(color) {
+	// hide all colors
+	for (var i=0; i<=6; i++) {
+		Object.assign(document.getElementsByClassName('camera-filter')[i].style,{visibility:"hidden", opacity: "0", top: "-58px", transition: "0s", zIndex: '0'});
+		document.getElementsByClassName("prism-colors")[i].style.zIndex = '0';
 
+	}
+	Object.assign(document.getElementById(color).style,{visibility:"visible", backgroundColor: color, opacity: "1", top: "-36px", transition: "1.2s", zIndex: '1'});
+	document.getElementsByClassName('white')[0].style.display = 'block';
+	setTimeout(function() {
+		document.getElementsByName(color)[0].style.zIndex = 3;	
+	}, 900);
+}
+
+// Turns filter on and off
+function check(filter) {
+	var filter = document.getElementsByClassName(filter)[0];
+	(filter.style.display != 'block') ? filter.style.display = 'block' : filter.style.display = 'none';
+}
+
+// gets the value selected on the dropdown and applies it to image class
+function color_picker(e, id){
+	document.getElementsByClassName(id)[0].style.backgroundColor = e;
+}
+
+// Update the brightness of the slider
+function update_slider(range, filter) {
+	var filter = document.getElementsByClassName(filter)[0];
+	filter.style.WebkitFilter = 'brightness('+ range +')'; 
+}
+
+function select(object) {
+	var dict = {
+  	m63: ['b', 'ha', 'i', 'r', 'u', 'v'],
+  	m33: ['u', 'g', 'r', 'i', 'z', 'y'],
+	};
+	for (var i = 0; i<6; i++) {
+		document.getElementsByClassName('image_filter')[i].style.backgroundImage = "url('assets/" + object + "/png/" + object + "_" + dict[object][i] + ".png')";
+		document.getElementsByClassName('filter_label')[i].innerHTML = dict[object][i]
+	}			
+}

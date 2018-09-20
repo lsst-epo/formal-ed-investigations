@@ -93,6 +93,10 @@ a:hover {
   transition: .2s;
 }
 
+.prism-radio {
+  margin-left: 30px;
+  margin-top: 30px;
+}
 
 li a {
     display: block;
@@ -121,7 +125,7 @@ ol p {
 /* Text Styles */
 
 .fig {
-  margin:50px auto 0px auto;
+  margin:50px auto 10px auto;
   display: block;
   width: 60%;
 }
@@ -244,7 +248,7 @@ ol p {
 
 
 .stars{
-    background: url(http://salehriaz.com/404Page/img/overlay_stars.svg);
+    background: url(../assets/images/overlay_stars.svg);
     background-repeat: repeat;
     background-size: contain;
     background-position: left top;
@@ -424,7 +428,7 @@ ol p {
   transform: rotate(-31deg);
   left: 153px;
   top: -202px;
-  z-index: 1;
+  z-index: -1;
 }
 
 @-webkit-keyframes glow {
@@ -451,105 +455,33 @@ ol p {
 }
 .prism-items .prism-colors {
   flex-grow: 1;
-  -webkit-filter: blur(20px);
-  filter: blur(20px);
-  -webkit-animation: glow 1.7s ease-in-out infinite alternate;
-  animation: glow 1.7s ease-in-out infinite alternate;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
 }
 .prism-items .prism-colors:nth-child(1) {
-  width: 99%;
+  background: red;
 }
 .prism-items .prism-colors:nth-child(2) {
-  width: 90%;
-}
-.prism-items .prism-colors:nth-child(2) {
-  width: 90%;
-}
-.prism-items .prism-colors:nth-child(4) {
-  width: 93%;
-}
-.prism-items .prism-colors:nth-child(5) {
-  width: 96%;
-}
-.prism-items .prism-colors:nth-child(6) {
-  width: 87%;
-}
-.prism-items .prism-colors:nth-child(7) {
-  width: 100%;
-}
-.prism-items .prism-colors:nth-child(1) {
-  width: 0.9;
-}
-.prism-items .prism-colors:nth-child(2) {
-  width: 0.8;
+  background: orange;
 }
 .prism-items .prism-colors:nth-child(3) {
-  width: 1;
-}
-.prism-items .prism-colors:nth-child(4) {
-  width: 0.75;
-}
-.prism-items .prism-colors:nth-child(5) {
-  width: 0.94;
-}
-.prism-items .prism-colors:nth-child(6) {
-  width: 0.87;
-}
-.prism-items .prism-colors:nth-child(1) {
-  width: 0.9;
-}
-.prism-items .prism-colors:nth-child(1) {
-  background: violet;
-}
-.prism-items .prism-colors:nth-child(2) {
-  background: indigo;
-}
-.prism-items .prism-colors:nth-child(3) {
-  background: blue;
+  background: yellow;
 }
 .prism-items .prism-colors:nth-child(4) {
   background: green;
 }
 .prism-items .prism-colors:nth-child(5) {
-  background: yellow;
+  background: blue;
 }
 .prism-items .prism-colors:nth-child(6) {
-  background: orange;
+  background: indigo;
 }
 .prism-items .prism-colors:nth-child(7) {
-  background: red;
-}
-.prism-items .prism-colors:nth-child(1) {
-  -webkit-animation-delay: 0.25s;
-          animation-delay: 0.25s;
-}
-.prism-items .prism-colors:nth-child(2) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-.prism-items .prism-colors:nth-child(3) {
-  -webkit-animation-delay: 0.75s;
-          animation-delay: 0.75s;
-}
-.prism-items .prism-colors:nth-child(4) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-.prism-items .prism-colors:nth-child(5) {
-  -webkit-animation-delay: 1.25s;
-          animation-delay: 1.25s;
-}
-.prism-items .prism-colors:nth-child(6) {
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-}
-.prism-items .prism-colors:nth-child(7) {
-  -webkit-animation-delay: 1.75s;
-          animation-delay: 1.75s;
+  background: violet;
 }
 
-.rectangle {
-  background-color: #c8c8c8;
+.lens {
+  background-color: #dedede;
   border-radius: 10px;
   height: 170px;
   width: 10px;
@@ -558,11 +490,26 @@ ol p {
   right: 91px;
 }
 
+.camera-filter {
+  width: 7px;
+  right: 84px;
+  top:-58px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.1s linear;
+  z-index: 1;
+}
+
+.camera-filter:active {
+  top:-27px;
+}
+
 .white {
+  display: none;
   background-color: white;
   height: 200px;
   width: 200px;
-  right: -109px;
+  right: -116px;
   top: -45px;
 }
 
