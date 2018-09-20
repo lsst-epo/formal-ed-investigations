@@ -30,7 +30,7 @@ function color_picker(e, id){
 	document.getElementsByClassName(id)[0].style.backgroundColor = e;
 }
 
-
+// Update the brightness of the slider
 function update_slider(range, filter) {
 	var filter = document.getElementsByClassName(filter)[0];
 	filter.style.WebkitFilter = 'brightness('+ range +')'; 

@@ -459,25 +459,25 @@ ol p {
   filter: blur(5px);
 }
 .prism-items .prism-colors:nth-child(1) {
-  background: violet;
+  background: red;
 }
 .prism-items .prism-colors:nth-child(2) {
-  background: indigo;
+  background: orange;
 }
 .prism-items .prism-colors:nth-child(3) {
-  background: blue;
+  background: yellow;
 }
 .prism-items .prism-colors:nth-child(4) {
   background: green;
 }
 .prism-items .prism-colors:nth-child(5) {
-  background: yellow;
+  background: blue;
 }
 .prism-items .prism-colors:nth-child(6) {
-  background: orange;
+  background: indigo;
 }
 .prism-items .prism-colors:nth-child(7) {
-  background: red;
+  background: violet;
 }
 
 .lens {
