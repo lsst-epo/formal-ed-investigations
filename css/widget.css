@@ -209,7 +209,6 @@ input[type=checkbox][name=g_filter]:checked ~ .g_filter {
   background-image: url('../assets/images/red_filter.png');
   mix-blend-mode: screen;
   background-size: 100%;
-  -webkit-filter: saturate(1.9);
   display: none;
 } 
 
@@ -224,7 +223,6 @@ input[type=checkbox][name=g_filter]:checked ~ .g_filter {
   background-image: url('../assets/images/green_filter.png');
   mix-blend-mode: screen;
   background-size: 100%;
-  -webkit-filter: saturate(1.9);
   display: none;
 } 
 
@@ -239,6 +237,5 @@ input[type=checkbox][name=g_filter]:checked ~ .g_filter {
   background-image: url('../assets/images/blue_filter.png');
   mix-blend-mode: screen;
   background-size: 100%;
-  -webkit-filter: saturate(1.9);
   display: none;
 } 

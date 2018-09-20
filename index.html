@@ -147,9 +147,9 @@
               <br><br>
               <div class="filter" id="red_filter">
                 <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> Red
-                <input type="range" min=".7" max="1.5" step=".01" class="range" onchange="update_slider(this.value, this.parentNode.id)">
+                <input type="range" min=".7" max="1.5" step=".01" value=".9" class="range" onchange="update_slider(this.value, this.parentNode.id)">
                 <select class="custom-select" id="red_select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
-                  <option value="" disabled selected>Select</option>
+                  <option value="" disabled selected>Color</option>
                   <option value="red">Red</option>
                   <option value="green">Green</option>
                   <option value="blue">Blue</option>
@@ -158,9 +158,9 @@
               </div>
               <div class="filter" id="green_filter">
                 <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> Green
-                <input type="range" min=".7" max="2" step=".01" style="width:185px;" onchange="update_slider(this.value, this.parentNode.id)">
+                <input type="range" min=".7" max="2" step=".01" value="1.41" style="width:185px;" onchange="update_slider(this.value, this.parentNode.id)">
                 <select class="custom-select" id="green_select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
-                  <option value="" disabled selected>Select</option>
+                  <option value="" disabled selected>Color</option>
                   <option value="red">Red</option>
                   <option value="green">Green</option>
                   <option value="blue">Blue</option>
@@ -170,9 +170,9 @@
               
               <div class="filter" id="blue_filter">
                 <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> Blue
-                <input type="range" min=".7" max="1.5" step=".01" class="range"  onchange="update_slider(this.value, this.parentNode.id)">
+                <input type="range" min=".7" max="1.5" step=".01" value=".83" class="range"  onchange="update_slider(this.value, this.parentNode.id)">
                 <select class="custom-select" onchange="color_picker(this.value, this.parentNode.id)">
-                  <option value="" disabled selected>Select</option>
+                  <option value="" disabled selected>Color</option>
                   <option value="red">Red</option>
                   <option value="green">Green</option>
                   <option value="blue">Blue</option>                  
