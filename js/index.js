@@ -1,3 +1,4 @@
+
 // TODO Resets images to a default
 function reset() {
 	
@@ -34,4 +35,15 @@ function color_picker(e, id){
 function update_slider(range, filter) {
 	var filter = document.getElementsByClassName(filter)[0];
 	filter.style.WebkitFilter = 'brightness('+ range +')'; 
+}
+
+function select(object) {
+	var dict = {
+  	m63: ['b', 'ha', 'i', 'r', 'u', 'v'],
+  	m33: ['u', 'g', 'r', 'i', 'z', 'y'],
+	};
+	for (var i = 0; i<6; i++) {
+		document.getElementsByClassName('image_filter')[i].style.backgroundImage = "url('assets/" + object + "/png/" + object + "_" + dict[object][i] + ".png')";
+		document.getElementsByClassName('filter_label')[i].innerHTML = dict[object][i]
+	}			
 }
