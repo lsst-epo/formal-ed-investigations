@@ -234,7 +234,7 @@
                 <br><br><br>
                 <div class="filter" id="u_filter">
                   <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter_label"></p>
-                  <input type="range" min="1.5" max="4" step=".01" class="range" onchange="update_slider(this.value, this.parentNode.id)">
+                  <input type="range" min="1.5" max="4" step=".01" value="1.92" class="range" onchange="update_slider(this.value, this.parentNode.id)">
                   <select class="custom-select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                     <option value="" disabled selected>Color</option>
                     <option value="violet">Violet</option>
@@ -250,7 +250,7 @@
                 
                 <div class="filter" id="g_filter">
                   <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter_label"></p>
-                  <input type="range" min=".5" max="2.5" step=".01" onchange="update_slider(this.value, this.parentNode.id)" >
+                  <input type="range" min=".5" max="2.5" step=".01" value="1.08" onchange="update_slider(this.value, this.parentNode.id)" >
                   <select class="custom-select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                     <option value="" disabled selected>Color</option>
                     <option value="violet">Violet</option>
@@ -265,7 +265,7 @@
                 
                 <div class="filter" id="r_filter" >
                   <input class="form-check-input" onclick="check(this.parentNode.id)" type="checkbox"> <p class="filter_label"></p>
-                  <input type="range" min="1" max="3" step=".01" class="range" onchange="update_slider(this.value, this.parentNode.id)">
+                  <input type="range" min="1" max="3" step=".01" value="1.45" class="range" onchange="update_slider(this.value, this.parentNode.id)">
                   <select class="custom-select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                     <option value="" disabled selected>Color</option>
                     <option value="violet">Violet</option>
@@ -279,7 +279,7 @@
                 </div>
                 <div class="filter" id="i_filter">
                   <input class="form-check-input" onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter_label"></p>
-                  <input type="range" min=".5" max="1.5" step=".01" class="range" onchange="update_slider(this.value, this.parentNode.id)" >
+                  <input type="range" min=".5" max="1.5" step=".01" value=".52" class="range" onchange="update_slider(this.value, this.parentNode.id)" >
                   <select class="custom-select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                     <option value="" disabled selected>Color</option>
                     <option value="violet">Violet</option>
@@ -293,7 +293,7 @@
                 </div>
                 <div class="filter" id="z_filter">
                   <input class="form-check-input " onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter_label"></p>
-                  <input type="range" min=".4" max="1.6" step=".01" class="range" onchange="update_slider(this.value, this.parentNode.id)">
+                  <input type="range" min=".4" max="1.6" step=".01" value=".375" class="range" onchange="update_slider(this.value, this.parentNode.id)">
                   <select class="custom-select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                     <option value="" disabled selected>Color</option>
                     <option value="violet">Violet</option>
@@ -307,7 +307,7 @@
                 </div>
                 <div class="filter" id="y_filter">
                   <input class="form-check-input " onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter_label"></p>
-                  <input type="range" min="1" max="3.5" step=".01" class="range" onchange="update_slider(this.value, this.parentNode.id)">
+                  <input type="range" min="1" max="3.5" step=".01" value="1.25" class="range" onchange="update_slider(this.value, this.parentNode.id)">
                   <select class="custom-select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                     <option value="" disabled selected>Color</option>
                     <option value="violet">Violet</option>
@@ -335,11 +335,9 @@
                  
             </div>
             <div class="row py-2">   
-              <div class="col-4"><button id="button" class="button" value="preset" name="preset" style="margin-left: -20px;" onclick="reset()" >Reset</button>
-                <button id="button" class="button" value="preset" name="preset" >Print</button></div>
+              <div class="col-4"></div>
               <div class="col-8">
-                <button id="button" id="+" class="button sticky" value="preset" name="preset" >+</button>
-                <button id="button" id="-" style="left:70px;"class="button sticky" value="preset" name="preset" >-</button>
+               <button id="button" class="button" value="preset" name="preset" onclick="reset()" >Reset</button>
               <div class="input-group sticky input-container">
                   <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" onchange="select(this.value)">
                     <option selected>Select a Filter</option>

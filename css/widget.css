@@ -23,6 +23,7 @@ input[type=range]::-webkit-slider-thumb {
 
 .custom-select {
   font-size: 18px;
+  float: right;
   width: 100px;
 }
 
@@ -33,6 +34,9 @@ input[type=range]::-webkit-slider-thumb {
   cursor: pointer;
   text-decoration: none;
   color: #3498db;
+}
+.form-check-input {
+  margin-top: .85rem;
 }
 
 .button {
@@ -73,6 +77,9 @@ input[type=range]::-webkit-slider-thumb {
   text-shadow: none;
 }
 
+.filter_label {
+  display: inline-block;
+}
 
 
 /* Filters */
@@ -94,8 +101,8 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 
-/* U – Purple */
-.u_filter {
+/* Six Color Filter */
+.image_filter {
     background-position: center; 
     border-radius: 10px;
     position: absolute;
@@ -103,97 +110,42 @@ input[type=range]::-webkit-slider-thumb {
   	height: 100%;
   	background-size: 100%;
   	background-blend-mode: multiply;
-  	background-image: url('../assets/m33/png/m33_u.png');
   	mix-blend-mode: screen;
-    filter: brightness(1.92);
     -webkit-box-shadow: 3px 3px  6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
     -moz-box-shadow:    3px 3px  6px #ccc;  /* Firefox 3.5 - 3.6 */
     box-shadow:         3px 3px  6px #ccc;
-    display: none; 
+    display: none;
 }
 
+
+.u_filter {
+  filter: brightness(1.92);
+}
 
 /* G – Blue */
 .g_filter {
-    background-position: center; 
-    border-radius: 10px;
-    position: absolute;
-  	width: 100%;
-  	height: 100%;
-  	background-size: 100%;
-  	background-blend-mode: multiply;
-  	background-image: url('../assets/m33/png/m33_g.png');
-  	mix-blend-mode: screen;
     filter: brightness(1.08);
-  	display: none;
 
 }
-
-input[type=checkbox][name=g_filter]:checked ~ .g_filter {
-  display: block;
-}
-
 
 /* R – Green */
 .r_filter {
-  background-position: center; 
-  border-radius: 10px;
-  position: absolute;
-	width: 100%;
-	height: 100%;
-	background-blend-mode: multiply;
-  background-image: url('../assets/m33/png/m33_r.png');
-	
-  mix-blend-mode: screen;
-  background-size: 100%;
   filter: brightness(1.45);
-  display: none;
 }
 
 /* I – Yellow */
 .i_filter {
-  background-position: center;
-  border-radius: 10px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-blend-mode: multiply;
-  background-image: url('../assets/m33/png/m33_i.png');
-  mix-blend-mode: screen;
-  background-size: 100%;
   filter: brightness(.52);
-  display: none;
 }
 
 /* Z – Orange */
 .z_filter {
-  background-position: center;
-  border-radius: 10px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-blend-mode: multiply;
-  background-image: url('../assets/m33/png/m33_z.png');
-  mix-blend-mode: screen;
-  background-size: 100%;
   filter: brightness(.375);
-  display: none;
 }
 
 /* Y – Red */
 .y_filter {
-  background-position: center;
-  border-radius: 10px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-blend-mode: multiply;
-  background-image: url('../assets/m33/png/m33_y.png');
-  mix-blend-mode: screen;
-  background-size: 100%;
-  /*filter: brightness(70%);*/
-  -webkit-filter: saturate(1.9);
-  display: none;
+  filter: brightness(1.9);
 } 
 
 /* RGB Widget */
@@ -206,7 +158,7 @@ input[type=checkbox][name=g_filter]:checked ~ .g_filter {
   width: 100%;
   height: 100%;
   background-blend-mode: multiply;
-  background-image: url('../assets/images/red_filter.png');
+  /*background-image: url('../assets/images/red_filter.png');*/
   mix-blend-mode: screen;
   background-size: 100%;
   display: none;
@@ -220,7 +172,7 @@ input[type=checkbox][name=g_filter]:checked ~ .g_filter {
   width: 100%;
   height: 100%;
   background-blend-mode: multiply;
-  background-image: url('../assets/images/green_filter.png');
+  /*background-image: url('../assets/images/green_filter.png');*/
   mix-blend-mode: screen;
   background-size: 100%;
   display: none;
@@ -234,7 +186,7 @@ input[type=checkbox][name=g_filter]:checked ~ .g_filter {
   width: 100%;
   height: 100%;
   background-blend-mode: multiply;
-  background-image: url('../assets/images/blue_filter.png');
+  /*background-image: url('../assets/images/blue_filter.png');*/
   mix-blend-mode: screen;
   background-size: 100%;
   display: none;
