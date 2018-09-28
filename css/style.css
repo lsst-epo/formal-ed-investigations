@@ -130,6 +130,10 @@ ol p {
   width: 60%;
 }
 
+.wide {
+  width: 85%;
+}
+
 .credit {
   margin-bottom: 40px;
   text-align: center;
