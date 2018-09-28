@@ -20,16 +20,22 @@ function filter(color) {
 	}, 900);
 }
 
+
+
 // Turns filter on and off
 function check(filter) {
 	var filter = document.getElementsByClassName(filter)[0];
 	(filter.style.display != 'block') ? filter.style.display = 'block' : filter.style.display = 'none';
 }
 
+
+
 // gets the value selected on the dropdown and applies it to image class
 function color_picker(e, id){
 	document.getElementsByClassName(id)[0].style.backgroundColor = e;
 }
+
+
 
 // Update the brightness of the slider
 function update_slider(range, filter) {
@@ -37,6 +43,8 @@ function update_slider(range, filter) {
 	filter.style.WebkitFilter = 'brightness('+ range +')'; 
 }
 
+
+// 
 function select(object) {
 	var dict = {
   	m63: ['b', 'ha', 'i', 'r', 'u', 'v'],

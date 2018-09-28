@@ -70,7 +70,7 @@
         There are filters like this inside a digital camera (e.g., the one on a smartphone.)  Tiny red, green, and blue filters are placed over the pixels of the photosensor as shown in the picture below (Figure 2) on the right.  When you take a picture, your camera measures light simultaneously through all three kinds of filters.
       </p>
       <div class="img-container inline">
-        <img class="fig two-image" src="assets/images/marenfield.jpg">
+        <img class="fig two-image" src="assets/images/marenfeld.jpg">
         <img class="fig two-image" src="assets/images/bayer_filter.png">
       </div>
       <p class="credit">Figure 2:  Sources: P. Marenfeld (NOAO/AURA/NSF) and
@@ -140,11 +140,13 @@
         <!-- Three Color -->
         <div class="widget container">
           <br>
-          <div class="row" style="height:66vh;margin-bottom: 50px;">
+          <div class="row" style="height:66vh;">
             
             <!-- Words and Sliders -->
             <div class="col-4">
-              <br><br>
+              <br>
+                <h1 class="widget-title">RGB Color Mixing Tool</h1>
+                <br><br><br>
               <div class="filter" id="red_filter">
                 <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> Red
                 <input type="range" min=".7" max="1.5" step=".01" value=".9" class="range" onchange="update_slider(this.value, this.parentNode.id)">
@@ -179,8 +181,7 @@
                   <option value="none">None</option>
                 </select>
               </div>
-              <br>
-              <button id="button" class="button" style="margin-left: -20px" value="preset" name="preset" onclick="rbg_reset()" >Reset</button>
+              
             </div>
             <!-- Images -->
             <div class="col-8" style="filter: contrast(1.2);">
@@ -193,11 +194,19 @@
               
             </div>
           </div>
+            <div class="row py-2">   
+              <div class="col-4"></div>
+              <div class="col-8">
+              <button id="button" class="button" value="preset" name="preset" onclick="rbg_reset()" >Reset</button>
+              </div>
+          </div>
+       
+          </div>
           <!-- End Widget -->
           <b>Constructing an Astronomical Image with Six Filters</b>
           <p>People often wonder if astronomical images show an object “as it really looks”; that is, as it would appear to their eyes if they were close to it.  Note that telescopes not only magnify distant objects, they also collect so much more light than your eyes that they reveal objects too faint for you to see.  And often, telescope images are made from wavelengths of light that your eyes can’t see. These images therefore show us not what you would see, but what our telescopes can see. In a sense, telescopes give us superhuman vision.  Indeed that’s the reason we build them!</p>
           <p>The LSST camera contains six filters, identified by the letters u, g, r, i, z and y.  Three of these filters (g, r, and i) pass the same wavelengths (or colors) of visible light that our eyes can see.  The u filter passes ultraviolet light. Two of the filters allow only infrared light.  These are kinds of light that our eyes cannot see. Ultraviolet literally means “above violet” and is too high in energy for our eyes to see. Infrared means “below red” and is too low in energy for our eyes to see.  Although our eyes cannot see these kinds of light, the LSST camera is able to detect them.  </p>
-          <img class="fig" src="assets/images/filter_comps.jpeg">
+          <img class="fig wide" src="assets/images/filters-ugrizy.jpg">
           <p class="credit">Figure 5: Comparison of visible color wavelength ranges with LSST filters  (nm = nanometers)</p>
           <p>Astronomers use these extra filters because each type of light reveals different information about the universe, so observing over all these wavelengths helps us to build a more complete story. For example, the u (ultraviolet) filter is especially useful in identifying quasars or tracing the gas released from comets, because both of these objects shine brightly at ultraviolet wavelengths.</p>
           <p>Compare the images below to see (where a comet is giving off gas/which objects in this image are quasars.)</p>
@@ -223,7 +232,10 @@
           </ul>
           <br><br>
           <!-- Widget -->
+          <button id="button" class="button" value="preset" style="float: right;margin:10px;border-radius: 50px;padding:13px 20px" name="preset" onclick="divide()" >+</button>
+          <br><br>
           <div class="widget container">
+
             <br>
             <div class="row" style="height: 70vh">
               
@@ -231,10 +243,10 @@
               <div class="col-4">
                 <br>
                 <h1 class="widget-title">Six Color Mixing Tool</h1>
-                <br><br><br>
+                <br><br>
                 <div class="filter" id="u_filter">
                   <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter_label"></p>
-                  <input type="range" min="1.5" max="4" step=".01" class="range" onchange="update_slider(this.value, this.parentNode.id)">
+                  <input type="range" min="1.5" max="4" step=".01" value="1.92" class="range" onchange="update_slider(this.value, this.parentNode.id)">
                   <select class="custom-select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                     <option value="" disabled selected>Color</option>
                     <option value="violet">Violet</option>
@@ -250,7 +262,7 @@
                 
                 <div class="filter" id="g_filter">
                   <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter_label"></p>
-                  <input type="range" min=".5" max="2.5" step=".01" onchange="update_slider(this.value, this.parentNode.id)" >
+                  <input type="range" min=".5" max="2.5" step=".01" value="1.08" onchange="update_slider(this.value, this.parentNode.id)" >
                   <select class="custom-select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                     <option value="" disabled selected>Color</option>
                     <option value="violet">Violet</option>
@@ -265,7 +277,7 @@
                 
                 <div class="filter" id="r_filter" >
                   <input class="form-check-input" onclick="check(this.parentNode.id)" type="checkbox"> <p class="filter_label"></p>
-                  <input type="range" min="1" max="3" step=".01" class="range" onchange="update_slider(this.value, this.parentNode.id)">
+                  <input type="range" min="1" max="3" step=".01" value="1.45" class="range" onchange="update_slider(this.value, this.parentNode.id)">
                   <select class="custom-select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                     <option value="" disabled selected>Color</option>
                     <option value="violet">Violet</option>
@@ -279,7 +291,7 @@
                 </div>
                 <div class="filter" id="i_filter">
                   <input class="form-check-input" onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter_label"></p>
-                  <input type="range" min=".5" max="1.5" step=".01" class="range" onchange="update_slider(this.value, this.parentNode.id)" >
+                  <input type="range" min=".5" max="1.5" step=".01" value=".52" class="range" onchange="update_slider(this.value, this.parentNode.id)" >
                   <select class="custom-select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                     <option value="" disabled selected>Color</option>
                     <option value="violet">Violet</option>
@@ -293,7 +305,7 @@
                 </div>
                 <div class="filter" id="z_filter">
                   <input class="form-check-input " onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter_label"></p>
-                  <input type="range" min=".4" max="1.6" step=".01" class="range" onchange="update_slider(this.value, this.parentNode.id)">
+                  <input type="range" min=".4" max="1.6" step=".01" value=".375" class="range" onchange="update_slider(this.value, this.parentNode.id)">
                   <select class="custom-select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                     <option value="" disabled selected>Color</option>
                     <option value="violet">Violet</option>
@@ -307,7 +319,7 @@
                 </div>
                 <div class="filter" id="y_filter">
                   <input class="form-check-input " onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter_label"></p>
-                  <input type="range" min="1" max="3.5" step=".01" class="range" onchange="update_slider(this.value, this.parentNode.id)">
+                  <input type="range" min="1" max="3.5" step=".01" value="1.25" class="range" onchange="update_slider(this.value, this.parentNode.id)">
                   <select class="custom-select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                     <option value="" disabled selected>Color</option>
                     <option value="violet">Violet</option>
@@ -335,11 +347,9 @@
                  
             </div>
             <div class="row py-2">   
-              <div class="col-4"><button id="button" class="button" value="preset" name="preset" style="margin-left: -20px;" onclick="reset()" >Reset</button>
-                <button id="button" class="button" value="preset" name="preset" >Print</button></div>
+              <div class="col-4"></div>
               <div class="col-8">
-                <button id="button" id="+" class="button sticky" value="preset" name="preset" >+</button>
-                <button id="button" id="-" style="left:70px;"class="button sticky" value="preset" name="preset" >-</button>
+               <button id="button" class="button" value="preset" name="preset" onclick="reset()" >Reset</button>
               <div class="input-group sticky input-container">
                   <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" onchange="select(this.value)">
                     <option selected>Select a Filter</option>
