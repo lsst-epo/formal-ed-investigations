@@ -2,7 +2,7 @@ input[type="range"] {
   /*display: block;*/
   -webkit-appearance: none;
   background-color: #4b6cb7;
-  width: 200px;
+  width: 170px;
   height: 5px;
   border-radius: 5px;
   outline: 0;
@@ -21,6 +21,7 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -4px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
 }
+
 
 .custom-select {
   font-size: 18px;
@@ -89,10 +90,16 @@ input[type=range]::-webkit-slider-thumb {
   margin-bottom: 25px; 
 }
 
-.filter_label {
+.filter-label {
   display: inline-block;
   text-align: center;
   width: 20px;
+}
+
+.rgb-filter-label {
+  display: inline-block;
+  text-align: center;
+  width: 50px;
 }
 
 
@@ -136,29 +143,29 @@ input[type=range]::-webkit-slider-thumb {
   filter: brightness(1.92);
 }
 
-/* G – Blue */
-.g_filter {
+/* b – Blue */
+.b_filter {
     filter: brightness(1.08);
 
 }
 
-/* R – Green */
-.r_filter {
+/* v – Green */
+.v_filter {
   filter: brightness(1.45);
 }
 
-/* I – Yellow */
-.i_filter {
+/* r – Yellow */
+.r_filter {
   filter: brightness(.52);
 }
 
-/* Z – Orange */
-.z_filter {
+/* i – Orange */
+.i_filter {
   filter: brightness(.375);
 }
 
-/* Y – Red */
-.y_filter {
+/* ha – Red */
+.ha_filter {
   filter: brightness(1.9);
 } 
 

@@ -379,7 +379,7 @@ ol p {
 .prism-shape {
   width: 150px;
   height: 150px;
-  border-bottom: 3px solid grey;
+  border-bottom: 3px solid #454545;
   position: relative;
   margin: 2rem auto 5rem;
 }
@@ -389,7 +389,7 @@ ol p {
   width: 150px;
   height: 3px;
   bottom: 0;
-  background: grey;
+  background: #454545;
   z-index: 3;
 }
 .prism-shape:before {
@@ -403,15 +403,25 @@ ol p {
   left: -72px;
 }
 .prism-shape .white-streak {
-  height: 3px;
+  height: 2px;
   width: 300px;
   position: absolute;
-  left: -278px;
-  background: grey;
+  background: black;
   -webkit-transform: rotate(-13deg) translateY(calc(100% + 110px));
   transform: rotate(-13deg) translateY(calc(100% + 110px));
   border-radius: 10px 0 0 10px;
 }
+
+.lower-streak {
+  top:15px;
+  left: -286px;
+}
+
+.upper-streak {
+  left: -279px;
+}
+
+
 .prism-shape .prism-wrapper {
   position: relative;
   height: 100px;
@@ -433,6 +443,14 @@ ol p {
   left: 153px;
   top: -202px;
   z-index: -1;
+}
+
+.prism-label {
+    float: left;
+    position: absolute;
+    top: 83px;
+    left: -150px;
+    transform: rotate(-13deg);
 }
 
 @-webkit-keyframes glow {
