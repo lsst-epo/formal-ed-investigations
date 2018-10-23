@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="central-body">
-          <h1>Coloring the universe</h1>
+          <h1>Coloring the Universe</h1>
           <div class="arrow arrow-first"></div>
         </div>
         <div class="objects">
@@ -60,7 +60,7 @@
       </ul>
       <h2>Background</h2>
       <b>Types of Light</b>
-      <p>There are many types of electromagnetic radiation: radio waves, infrared, visible, ultraviolet (UV), X-rays, etc. Astronomers use all of these types of light to study objects in our universe. Each type of light has specific ranges of wavelengths and energies. The type of light we can see with our eyes is called “visible” light. Visible light consists of all of the colors of the rainbow, as shown below.  You may have learned the acronym “Roy G. Biv” to remember the seven colors of the rainbow. The different colors correspond to different wavelengths and energies.  Red light is the lowest energy of light we can see and has the longest wavelengths; violet is the highest energy of light we can see, and has the shortest wavelengths.
+      <p>There are many types of electromagnetic radiation: radio waves, infrared, visible, ultraviolet (UV), X-rays, etc. Astronomers use all of these types of light to study objects in our Universe. Each type of light has specific ranges of wavelengths and energies. The type of light we can see with our eyes is called “visible” light. Visible light consists of all of the colors of the rainbow, as shown below.  You may have learned the acronym “Roy G. Biv” to remember the seven colors of the rainbow. The different colors correspond to different wavelengths and energies.  Red light is the lowest energy of light we can see and has the longest wavelengths; violet is the highest energy of light we can see, and has the shortest wavelengths.
       </p>
       
       <img class="fig" src="assets/images/visible_spectrum2.png">
@@ -208,7 +208,7 @@
           <p>The LSST camera contains six filters, identified by the letters u, g, r, i, z and y.  Three of these filters (g, r, and i) pass the same wavelengths (or colors) of visible light that our eyes can see.  The u filter passes ultraviolet light. Two of the filters allow only infrared light.  These are kinds of light that our eyes cannot see. Ultraviolet literally means “above violet” and is too high in energy for our eyes to see. Infrared means “below red” and is too low in energy for our eyes to see.  Although our eyes cannot see these kinds of light, the LSST camera is able to detect them.  </p>
           <img class="fig wide" src="assets/images/filters-ugrizy.jpg">
           <p class="credit">Figure 5: Comparison of visible color wavelength ranges with LSST filters  (nm = nanometers)</p>
-          <p>Astronomers use these extra filters because each type of light reveals different information about the universe, so observing over all these wavelengths helps us to build a more complete story. For example, the u (ultraviolet) filter is especially useful in identifying quasars or tracing the gas released from comets, because both of these objects shine brightly at ultraviolet wavelengths.</p>
+          <p>Astronomers use these extra filters because each type of light reveals different information about the Universe, so observing over all these wavelengths helps us to build a more complete story. For example, the u (ultraviolet) filter is especially useful in identifying quasars or tracing the gas released from comets, because both of these objects shine brightly at ultraviolet wavelengths.</p>
           <p>Compare the images below to see (where a comet is giving off gas/which objects in this image are quasars.)</p>
           <p>The filters i, z and y pass increasingly lower energies (longer wavelengths) of light to pass through them.  One of the uses of these filters is to see through dust, which scatters shorter wavelengths of light but passes the longer wavelengths of light. </p>
           <ol start="7">
@@ -243,7 +243,18 @@
               <div class="col-4">
                 <br>
                 <h1 class="widget-title">Six Color Mixing Tool</h1>
-                <br><br>
+                <div class="row">
+                   <div class="center-sticky input-group ">
+                  <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" onchange="select(this.value)">
+                    <option selected>Select an Object</option>
+                    <option value="m33">M33</option>
+                    <option value="m63">M63</option>
+                    <option value="2">M15</option>
+                    <option value="3">M13</option>
+                  </select>
+                </div>
+                </div>
+                <div class="row">
                 <div class="filter" id="u_filter">
                   <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter_label"></p>
                   <input type="range" min="1.5" max="4" step=".01" value="1.92" class="range" onchange="update_slider(this.value, this.parentNode.id)">
@@ -332,6 +343,7 @@
                   </select>
                 </div>
               </div>
+            </div>
               <!-- Images -->
               <div class="col-8" style="filter: contrast(1.2);">
                
@@ -350,15 +362,7 @@
               <div class="col-4"></div>
               <div class="col-8">
                <button id="button" class="button" value="preset" name="preset" onclick="reset()" >Reset</button>
-              <div class="input-group sticky input-container">
-                  <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" onchange="select(this.value)">
-                    <option selected>Select a Filter</option>
-                    <option value="m33">M33</option>
-                    <option value="m63">M63</option>
-                    <option value="2">M15</option>
-                    <option value="3">M13</option>
-                  </select>
-                </div>
+             
               </div>
           </div>
         </div>
