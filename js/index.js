@@ -47,7 +47,7 @@ function update_slider(range, filter) {
 // 
 function select(object) {
 	var dict = {
-  	m63: ['b', 'ha', 'i', 'r', 'u', 'v'],
+  	m63: ['u', 'b', 'v', 'r', 'ha', 'i'],
   	m33: ['u', 'g', 'r', 'i', 'z', 'y'],
 	};
 	for (var i = 0; i<6; i++) {
