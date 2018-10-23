@@ -47,8 +47,8 @@ function update_slider(range, filter) {
 // 
 function select(object) {
 	var dict = {
-  	m63: ['u', 'b', 'v', 'r', 'ha', 'i'],
-  	m33: ['u', 'g', 'r', 'i', 'z', 'y'],
+  	m63: ['u', 'b', 'v', 'r', 'i', 'ha'],
+  	m33: ['u', 'b', 'v', 'r', 'i', 'ha'],
 	};
 	for (var i = 0; i<6; i++) {
 		document.getElementsByClassName('image_filter')[i].style.backgroundImage = "url('assets/" + object + "/png/" + object + "_" + dict[object][i] + ".png')";
