@@ -104,7 +104,7 @@
               </div>
 
             </div>
-          <p class="prism-label">white light</p>
+          <p class="prism-label">white light →</p>
           </div>
 
           <input type="radio" class="prism-radio" name="prism" value="red" onchange="filter(this.value)"> Red</input>
@@ -152,7 +152,7 @@
                 <h1 class="widget-title">RGB Color Mixing Tool</h1>
                 <br><br><br>
               <div class="filter" id="red_filter">
-                <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"><p class="rgb_filter-label">Red</p>
+                <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"><p class="rgb-filter-label">R</p>
                 <input type="range" min=".7" max="1.5" step=".01" value=".9" class="range" onchange="update_slider(this.value, this.parentNode.id)">
                 <select class="custom-select" id="red_select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                   <option value="" disabled selected>Color</option>
@@ -163,7 +163,7 @@
                 </select>
               </div>
               <div class="filter" id="green_filter">
-                <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="rgb_filter-label">Green</p>
+                <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="rgb-filter-label">G</p>
                 <input type="range" min=".7" max="2" step=".01" value="1.41" onchange="update_slider(this.value, this.parentNode.id)">
                 <select class="custom-select" id="green_select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                   <option value="" disabled selected>Color</option>
@@ -175,7 +175,7 @@
               </div>
               
               <div class="filter" id="blue_filter">
-                <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="rgb_filter-label">Blue</p>
+                <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="rgb-filter-label">B</p>
                 <input type="range" min=".7" max="1.5" step=".01" value=".83" class="range"  onchange="update_slider(this.value, this.parentNode.id)">
                 <select class="custom-select" onchange="color_picker(this.value, this.parentNode.id)">
                   <option value="" disabled selected>Color</option>

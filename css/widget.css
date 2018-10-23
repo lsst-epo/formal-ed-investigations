@@ -2,7 +2,7 @@ input[type="range"] {
   /*display: block;*/
   -webkit-appearance: none;
   background-color: #4b6cb7;
-  width: 170px;
+  width: 200px;
   height: 5px;
   border-radius: 5px;
   outline: 0;
@@ -99,7 +99,7 @@ input[type=range]::-webkit-slider-thumb {
 .rgb-filter-label {
   display: inline-block;
   text-align: center;
-  width: 50px;
+  width: 20px;
 }
 
 
