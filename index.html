@@ -225,7 +225,7 @@
           <p>Identify a distant galaxy in the images below.</p>
           <p>Brown dwarf stars are very faint at visible wavelengths but appear bright  when imaged through the infrared filters. Locate a brown dwarf star in the images below.</p>
           <img class="fig" src="assets/images/brown_dwarf.jpeg">
-          <p class="credit">Figure 8: Comparison of stars through a  visible light filter (R) with an infrared filter (IR).</p>
+          <p class="credit">Figure 7: Comparison of stars through a  visible light filter (R) with an infrared filter (IR).</p>
           <p>We can use images taken through the six LSST filters to create a color image in a way similar to the three-color process.  Let’s explore how this works.</p>
           <p>This tool works in the same way as the (three-filter) color mixing tool, but it has the ability to use six colors. We will build an image of M33, a spiral galaxy. </p>
           <ul>
@@ -250,17 +250,19 @@
                 <div class="row">
                    <div class="center-sticky input-group ">
                   <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" onchange="select(this.value)">
-                    <option selected>Select an Object</option>
-                    <option value="m33">M33</option>
+                    <option >Select an Object</option>
+                    <option selected value="m33">M33</option>
                     <option value="m63">M63</option>
                     <option value="2">M15</option>
                     <option value="3">M13</option>
                   </select>
                 </div>
                 </div>
+
                 <div class="row">
                 <div class="filter" id="u_filter">
-                  <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label"></p>
+
+                  <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">u</p>
                   <input type="range" min="1.5" max="4" step=".01" value="1.92" class="range" onchange="update_slider(this.value, this.parentNode.id)">
                   <select class="custom-select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                     <option value="" disabled selected>Color</option>
@@ -276,7 +278,7 @@
                 
                 
                 <div class="filter" id="b_filter">
-                  <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label"></p>
+                  <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">b</p>
                   <input type="range" min=".5" max="2.5" step=".01" value="1.08" onchange="update_slider(this.value, this.parentNode.id)" >
                   <select class="custom-select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                     <option value="" disabled selected>Color</option>
@@ -291,7 +293,7 @@
                 </div>
                 
                 <div class="filter" id="v_filter" >
-                  <input class="form-check-input" onclick="check(this.parentNode.id)" type="checkbox"> <p class="filter-label"></p>
+                  <input class="form-check-input" onclick="check(this.parentNode.id)" type="checkbox"> <p class="filter-label">v</p>
                   <input type="range" min="1" max="3" step=".01" value="1.45" class="range" onchange="update_slider(this.value, this.parentNode.id)">
                   <select class="custom-select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                     <option value="" disabled selected>Color</option>
@@ -305,7 +307,7 @@
                   </select>
                 </div>
                 <div class="filter" id="r_filter">
-                  <input class="form-check-input" onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter-label"></p>
+                  <input class="form-check-input" onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter-label">r</p>
                   <input type="range" min=".5" max="1.5" step=".01" value=".52" class="range" onchange="update_slider(this.value, this.parentNode.id)" >
                   <select class="custom-select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                     <option value="" disabled selected>Color</option>
@@ -319,7 +321,7 @@
                   </select>
                 </div>
                 <div class="filter" id="i_filter">
-                  <input class="form-check-input " onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter-label"></p>
+                  <input class="form-check-input " onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter-label">i</p>
                   <input type="range" min=".4" max="1.6" step=".01" value=".375" class="range" onchange="update_slider(this.value, this.parentNode.id)">
                   <select class="custom-select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                     <option value="" disabled selected>Color</option>
@@ -333,7 +335,7 @@
                   </select>
                 </div>
                 <div class="filter" id="ha_filter">
-                  <input class="form-check-input " onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter-label"></p>
+                  <input class="form-check-input " onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter-label">ha</p>
                   <input type="range" min="1" max="3.5" step=".01" value="1.25" class="range" onchange="update_slider(this.value, this.parentNode.id)">
                   <select class="custom-select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                     <option value="" disabled selected>Color</option>
@@ -353,11 +355,11 @@
                
                   <div class="intro_filter"></div>
                   <div class="image_filter u_filter"></div>
-                  <div class="image_filter g_filter"></div>
+                  <div class="image_filter b_filter"></div>
+                  <div class="image_filter v_filter"></div>
                   <div class="image_filter r_filter"></div>
                   <div class="image_filter i_filter"></div>
-                  <div class="image_filter z_filter"></div>
-                  <div class="image_filter y_filter"></div>
+                  <div class="image_filter ha_filter"></div>
                           
             </div>
                  

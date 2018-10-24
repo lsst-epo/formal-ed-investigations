@@ -4,6 +4,10 @@ function reset() {
 	
 }
 
+function rgb_reset() {
+
+}
+
 // Changes the color of the prism
 // Manipulates the z-index to hide and show the rainbow colors
 function filter(color) {
@@ -41,6 +45,7 @@ function color_picker(e, id){
 function update_slider(range, filter) {
 	var filter = document.getElementsByClassName(filter)[0];
 	filter.style.WebkitFilter = 'brightness('+ range +')'; 
+	console.log(range,filter)
 }
 
 

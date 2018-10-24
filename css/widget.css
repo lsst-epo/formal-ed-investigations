@@ -141,32 +141,37 @@ input[type=range]::-webkit-slider-thumb {
 
 .u_filter {
   filter: brightness(1.92);
+  background-image: url('../assets/m33/png/m33_u.png');
 }
 
 /* b – Blue */
 .b_filter {
-    filter: brightness(1.08);
-
+  filter: brightness(1.08);
+  background-image: url('../assets/m33/png/m33_b.png');
 }
 
 /* v – Green */
 .v_filter {
   filter: brightness(1.45);
+  background-image: url('../assets/m33/png/m33_v.png');
 }
 
 /* r – Yellow */
 .r_filter {
   filter: brightness(.52);
+  background-image: url('../assets/m33/png/m33_r.png');
 }
 
 /* i – Orange */
 .i_filter {
   filter: brightness(.375);
+  background-image: url('../assets/m33/png/m33_i.png');
 }
 
 /* ha – Red */
 .ha_filter {
   filter: brightness(1.9);
+  background-image: url('../assets/m33/png/m33_ha.png');
 } 
 
 /* RGB Widget */
