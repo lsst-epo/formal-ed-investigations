@@ -4,6 +4,10 @@ function reset() {
 	
 }
 
+function rgb_reset() {
+
+}
+
 // Changes the color of the prism
 // Manipulates the z-index to hide and show the rainbow colors
 function filter(color) {
@@ -41,14 +45,15 @@ function color_picker(e, id){
 function update_slider(range, filter) {
 	var filter = document.getElementsByClassName(filter)[0];
 	filter.style.WebkitFilter = 'brightness('+ range +')'; 
+	console.log(range,filter)
 }
 
 
 // 
 function select(object) {
 	var dict = {
-  	m63: ['b', 'ha', 'i', 'r', 'u', 'v'],
-  	m33: ['u', 'g', 'r', 'i', 'z', 'y'],
+  	m63: ['u', 'b', 'v', 'r', 'i', 'ha'],
+  	m33: ['u', 'b', 'v', 'r', 'i', 'ha'],
 	};
 	for (var i = 0; i<6; i++) {
 		document.getElementsByClassName('image_filter')[i].style.backgroundImage = "url('assets/" + object + "/png/" + object + "_" + dict[object][i] + ".png')";
