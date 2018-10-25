@@ -347,6 +347,11 @@
     transform: rotate(-13deg);
 }
 
+.prism-radio {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
 @-webkit-keyframes glow {
   to {
     width: 100%;
@@ -867,7 +872,7 @@ transition: transform ease-in 99999999999s;
 /* Prism Widget */
 
 .content-wrapper {
-  overflow-x: hidden;
+  overflow: hidden;
   margin: auto;
   text-align: center;
 }
