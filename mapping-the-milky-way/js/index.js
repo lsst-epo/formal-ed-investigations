@@ -45,17 +45,23 @@ function init() {
 
 function main(){
   
+    
+    var texture = new THREE.TextureLoader().load( "images/land_ocean_ice_cloud_2048.jpg" );
+
+
 
     // Sphere
     var geometry = new THREE.SphereGeometry( 5, 32, 32 );
     var material = new THREE.MeshBasicMaterial({
-    color: 0xF3A2B0,
-    wireframe: true
+    map: texture,
+    wireframe: false
 });
+
     
 
     sphere = new THREE.Mesh( geometry, material );
-    
+    sphere.material.side = THREE.BackSide;
+
     sphere.castShadow = true;
     scene.add( sphere );
   
