@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta charset="UTF-8">
+		<title>Plane, Shapes, Lights, Shadows, Animation</title>
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		
+		<link rel="stylesheet" href="../assets/css/style.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="../assets/css/normalize.css">
+		
+	</head>
+	<body>
+		<div class="container">
+			<h2>Mapping the Milky Way</h2>
+			<h3>Introduction</h3>
+			<p>We live inside a galaxy called the “Milky Way.”  Our galaxy contains over 400 billion stars and we now have a good idea of its size and shape as well as our location within it.  Our galaxy is too big to travel outside of it to take a picture.  So how can we know what our galaxy looks like when we are inside it? </p>
+			<p>Imagine you lived in a house and you wanted to know what it looks like but you can’t go outside.  You could get a good idea by looking around your house and seeng where and how big the rooms are.  You could then look out the windows at other houses and see if any look similar to what you think your house looks like.
+			</p>
+			<p>We can figure out what the Milky Way looks like in a similar way: by mapping out the locations of stars inside our galaxy and by comparing the shape and size of our galaxy to other galaxies.
+			</p>
+			<p>In this investigation you will learn how to use LSST data to determine what kind of galaxy we live in. You’ll also learn how to figure out where in the Milky Way we live. We can learn both by mapping the locations of stars in the sky.
+			</p>
+			<h3>Essential Questions</h3>
+			<ul>
+				<li>What is a concentration map and how is it different from a map of stars?
+				</li>
+				<li>What kind of galaxy is the Milky Way? What is the evidence for this?
+				</li>
+				<li>Where are Earth and our Sun located in the Milky Way galaxy? What is the evidence for this?</li>
+			</ul>
+			<h3>How to Map the Night Sky
+			</h3>
+			<p>LSST will measure the locations of about 17 billion stars in about a third of the entire sky.  It would be impossible to display all of the stars on a computer screen, so instead we will use a data visualization that shows the concentration of stars at different locations in the sky. Concentration maps show the number of stars in each location by displaying different colors on the map. Examine the color band at the map bottom: e.g., a red color indicates a high concentration of stars whereas black indicates there are no stars at that location.  White areas of the map are places that LSST has not observed.
+			</p>
+		</div>
+		<canvas id="main"></canvas>
+		<div class="container">
+			
+			<p>If a location appears green, how many stars are located there?</p>
+				
+			<p> Why are some locations white?  Does this mean there are no stars at that location?</p>
+				
+			<p>Note that the concentration map may be for different types of objects.  For example, a map may show only the number of red stars at each location.</p>
+			<p>Let’s practice using this type of map. A concentration map for stars detected through the LSST y-band filter will appear in the display window of the tool. The y-band filter passes infrared light from stars. Infrared light is not blocked by dust clouds, so we can see more of the stars than those that appear only in visible light.  Click and drag to move around in the display window until you find a location that appears red.   </p>
+			<p> Predict whether you will see a large number of stars or few stars in the LSST image for this location.</p>
+				
+			<p>Click on a red location in the map.</p>
+			<p>Close the image window.  Now move around in the display window until you find a location that appears blue.  </p>
+			<p> Predict whether you will see a large number of stars or few stars in the LSST image for this location.</p>
+				
+			<p>Click on a blue location and an image of that region of the sky will appear. </p>
+			<p> Based on what you have just observed, what do the colors on the concentration maps represent?</p>
+				
+			<h3>What kind of galaxy is the Milky Way? Where Do We Live in Our Galaxy?</h3>
+			<p>The distribution of stars in the sky would change depending on the type of galaxy you live in and your location in the galaxy.  To understand how this works we will investigate six simulated galaxy maps, using  two galaxy types and three locations in each galaxy.  As you explore these scenarios, think about how they are similar and different.  Specifically, keep these three questions in mind for each of the six scenarios:
+			</p>
+			<ol>
+				<li>Is there a band of color that indicates a high concentration of stars across the map?
+				</li>
+				<li>Is there a single location on it that has the highest concentration of stars?
+				</li>
+				<li>Are there regions of the map where there are no stars at all?
+				</li>
+			</ol>
+			<p>Begin by imagining that you are at the center of an elliptical galaxy.</p>
+		</div>
+		<img src="" alt="">
+		<div class="container">
+			<p>Use the mapper tool to look around the sky.  Notice that the concentration of stars is the same no matter in what direction you look.
+			</p>
+			<p>  If you are living at the center of an elliptical galaxy, why does the distribution of stars look the same in all directions?</p>
+				
+			<p>Now imagine you are in the same galaxy as above but you’ve moved from the center of the galaxy to a location that’s halfway between the center and the outer edge, as shown below:
+			</p>
+		</div>
+		<img src="" alt="">
+		<div class="container">
+			<p>  How does the distribution of stars look different than when you were located at the center of the galaxy?</p>
+				
+			<p>  Notice there is a direction in the sky where the concentration of stars is highest.  In what direction is this?  </p>
+				
+			<p>Now imagine you have moved to the outer edge of the galaxy, as shown below:</p>
+		</div>
+		<img src="" alt="">
+		<div class="container">
+			<p>Use the mapper tool to look around the sky again.</p>
+			<p>  Notice that much of the sky does not contain any stars.  Why is that?</p>
+				
+			<p>  NHow is the distribution of stars different than for the previous two locations?</p>
+				
+			<p>Now imagine that you are at the center of a spiral galaxy.</p>
+		</div>
+	</div>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js'></script>
+	<script src='https://s3.ca-central-1.amazonaws.com/maxv-dev/ThreeJS/OrbitControls.js'></script>
+	
+	<script  src="js/index.js"></script>
+</body>
+</html>
