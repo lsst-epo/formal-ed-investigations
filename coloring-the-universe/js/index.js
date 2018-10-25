@@ -14,7 +14,7 @@ function filter(color) {
 
 	}
 	Object.assign(document.getElementById(color).style,{visibility:"visible", backgroundColor: color, opacity: "1", top: "-36px", transition: "1.2s", zIndex: '1'});
-	document.getElementsByClassName('white')[0].style.display = 'block';
+	document.getElementsByClassName('white-cover')[0].style.display = 'block';
 	setTimeout(function() {
 		document.getElementsByName(color)[0].style.zIndex = 3;	
 	}, 900);
