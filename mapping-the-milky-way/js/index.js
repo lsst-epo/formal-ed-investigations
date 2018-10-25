@@ -46,7 +46,7 @@ function init() {
 function main(){
   
     
-    var texture = new THREE.TextureLoader().load( "images/land_ocean_ice_cloud_2048.jpg" );
+    var texture = new THREE.TextureLoader().load( "images/20161111_screenshot_00012.jpg" );
 
 
 

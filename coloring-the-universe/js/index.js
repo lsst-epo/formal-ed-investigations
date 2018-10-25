@@ -30,6 +30,7 @@ function filter(color) {
 function check(filter) {
 	var filter = document.getElementsByClassName(filter)[0];
 	(filter.style.display != 'block') ? filter.style.display = 'block' : filter.style.display = 'none';
+	console.log(filter);
 }
 
 
@@ -57,6 +58,6 @@ function select(object) {
 	};
 	for (var i = 0; i<6; i++) {
 		document.getElementsByClassName('image_filter')[i].style.backgroundImage = "url('assets/" + object + "/png/" + object + "_" + dict[object][i] + ".png')";
-		document.getElementsByClassName('filter_label')[i].innerHTML = dict[object][i]
+		document.getElementsByClassName('filter-label')[i].innerHTML = dict[object][i]
 	}			
 }

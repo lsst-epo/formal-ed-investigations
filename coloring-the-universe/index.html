@@ -7,7 +7,7 @@
     src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="css/widget.css">
+    <link rel="stylesheet" href="css/style.css">
     
   </head>
   <body>
@@ -152,6 +152,7 @@
                 <h1 class="widget-title">RGB Color Mixing Tool</h1>
                 <br><br><br>
               <div class="filter" id="red_filter">
+                 <p class="filter-titles">filter on/off </p>
                 <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"><p class="rgb-filter-label">R</p>
                 <input type="range" min=".7" max="1.5" step=".01" value=".9" class="range" onchange="update_slider(this.value, this.parentNode.id)">
                 <select class="custom-select" id="red_select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
@@ -236,16 +237,13 @@
           </ul>
           <br><br>
           <!-- Widget -->
-          <button id="button" class="button" value="preset" style="float: right;margin:10px;border-radius: 50px;padding:13px 20px" name="preset" onclick="divide()" >+</button>
-          <br><br>
+
           <div class="widget container">
 
-            <br>
-            <div class="row" style="height: 70vh">
+            <div class="row"">
               
               <!-- Words and Sliders -->
-              <div class="col-4">
-                <br>
+              <div class="col-12 col-md-4">
                 <h1 class="widget-title">Six Color Mixing Tool</h1>
                 <div class="row">
                    <div class="center-sticky input-group ">
@@ -258,10 +256,10 @@
                   </select>
                 </div>
                 </div>
+                
 
-                <div class="row">
                 <div class="filter" id="u_filter">
-
+                  <p class="filter-titles">filter on/off </p>
                   <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">u</p>
                   <input type="range" min="1.5" max="4" step=".01" value="1.92" class="range" onchange="update_slider(this.value, this.parentNode.id)">
                   <select class="custom-select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
@@ -348,10 +346,9 @@
                     <option value="none">None</option>
                   </select>
                 </div>
-              </div>
             </div>
               <!-- Images -->
-              <div class="col-8" style="filter: contrast(1.2);">
+              <div class="col-12 col-md-8">
                
                   <div class="intro_filter"></div>
                   <div class="image_filter u_filter"></div>
