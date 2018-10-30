@@ -30,7 +30,6 @@ function filter(color) {
 function check(filter) {
 	var filter = document.getElementsByClassName(filter)[0];
 	(filter.style.display != 'block') ? filter.style.display = 'block' : filter.style.display = 'none';
-	console.log(filter);
 }
 
 
