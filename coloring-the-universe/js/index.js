@@ -1,11 +1,19 @@
 
-// TODO Resets images to a default
+// Resets 6co widget
 function reset() {
-	
+	let color = ['violet','blue','green','yellow','orange','red'];
+	for (var i=0; i<6;i++) {
+		Object.assign(document.getElementsByClassName('image_filter')[i].style,{display:'block', backgroundColor:color[i]});
+		document.getElementsByClassName('form-check-input')[i+3].checked = true;
+	}
 }
 
 function rgb_reset() {
-
+	let color = ['red','green','blue'];
+	for (var i=0; i<3;i++) {
+		Object.assign(document.getElementsByClassName('rgb_filter')[i].style,{display:'block', backgroundColor:color[i]});
+		document.getElementsByClassName('form-check-input')[i].checked = true;
+	}
 }
 
 // Changes the color of the prism
@@ -30,6 +38,7 @@ function filter(color) {
 function check(filter) {
 	var filter = document.getElementsByClassName(filter)[0];
 	(filter.style.display != 'block') ? filter.style.display = 'block' : filter.style.display = 'none';
+	(filter.style.backgroundColor != 'none') ? filter.style.backgroundColor = 'transparent' : null;
 }
 
 
