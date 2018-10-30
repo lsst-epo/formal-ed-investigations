@@ -79,6 +79,7 @@
         <br>
         <div class="content-wrapper">
           <div class="prism-shape">
+
             <div class="upper-streak white-streak"></div>
             <div class=" lower-streak white-streak"></div>
             <div class="prism-clip-wrapper">
@@ -102,9 +103,9 @@
                   <div class="prism-colors single"></div>
                 </div>
               </div>
-
             </div>
-          <p class="prism-label">white light →  </p>
+          <p id="prism-label">prism</p>
+          <p id="white-light-label">white light →  </p>
           </div>
 
           <input type="radio" class="prism-radio" name="prism" value="red" onchange="filter(this.value)"> Red</input>
@@ -144,16 +145,16 @@
         <!-- Three Color -->
         <div class="widget container">
           <br>
-          <div class="row" style="height:66vh;">
+          <div class="row">
             
             <!-- Words and Sliders -->
-            <div class="col-4">
+            <div class="col-12 col-md-4">
               <br>
                 <h1 class="widget-title">RGB Color Mixing Tool</h1>
                 <br><br><br>
               <div class="filter" id="red_filter">
                  <p class="filter-titles">filter on/off </p>
-                <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"><p class="rgb-filter-label">R</p>
+                <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"><p class="filter-label">R</p>
                 <input type="range" min=".7" max="1.5" step=".01" value=".9" class="range" onchange="update_slider(this.value, this.parentNode.id)">
                 <select class="custom-select" id="red_select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                   <option value="" disabled selected>Color</option>
@@ -164,7 +165,7 @@
                 </select>
               </div>
               <div class="filter" id="green_filter">
-                <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="rgb-filter-label">G</p>
+                <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">G</p>
                 <input type="range" min=".7" max="2" step=".01" value="1.41" onchange="update_slider(this.value, this.parentNode.id)">
                 <select class="custom-select" id="green_select" aria-label="Color" onchange="color_picker(this.value, this.parentNode.id)">
                   <option value="" disabled selected>Color</option>
@@ -176,7 +177,7 @@
               </div>
               
               <div class="filter" id="blue_filter">
-                <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="rgb-filter-label">B</p>
+                <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">B</p>
                 <input type="range" min=".7" max="1.5" step=".01" value=".83" class="range"  onchange="update_slider(this.value, this.parentNode.id)">
                 <select class="custom-select" onchange="color_picker(this.value, this.parentNode.id)">
                   <option value="" disabled selected>Color</option>
@@ -189,19 +190,17 @@
               
             </div>
             <!-- Images -->
-            <div class="col-8">
-              <div >
+            <div class="col-12 col-md-8 mobile-buffer">
                 <div class="intro_filter"></div>
                 <div class="blue_filter"></div>
                 <div class="green_filter"></div>
                 <div class="red_filter"></div>
-              </div>
               
             </div>
           </div>
             <div class="row py-2">   
-              <div class="col-4"></div>
-              <div class="col-8">
+              <div class="col-12 col-md-4"></div>
+              <div class="col-12 col-md-8">
               <button id="button" class="button" value="preset" name="preset" onclick="rbg_reset()" >Reset</button>
               </div>
           </div>
@@ -215,6 +214,8 @@
           <p class="credit">Figure 5: Comparison of visible color wavelength ranges with LSST filters  (nm = nanometers)</p>
           <p>Astronomers use these extra filters because each type of light reveals different information about the Universe, so observing over all these wavelengths helps us to build a more complete story. For example, the u (ultraviolet) filter is especially useful in identifying quasars or tracing the gas released from comets, because both of these objects shine brightly at ultraviolet wavelengths.</p>
           <p>Compare the images below to see (where a comet is giving off gas/which objects in this image are quasars.)</p>
+          <img class="fig" src="http://placehold.it/800x400">
+          <p class="credit">Figure 6: Credit Goes Here</p>
           <p>The filters i, z and y pass increasingly lower energies (longer wavelengths) of light to pass through them.  One of the uses of these filters is to see through dust, which scatters shorter wavelengths of light but passes the longer wavelengths of light. </p>
           <ol start="7">
             <li>Compare the details in the two images below. What differences do you notice?</li>
@@ -224,9 +225,11 @@
           <p>Some galaxies are so distant that their light is stretched out to longer wavelengths. They are therefore only visible when observed through infrared filters.
           </p>
           <p>Identify a distant galaxy in the images below.</p>
+           <img class="fig" src="http://placehold.it/800x400">
+          <p class="credit">Figure 7: Credit Goes Here</p>
           <p>Brown dwarf stars are very faint at visible wavelengths but appear bright  when imaged through the infrared filters. Locate a brown dwarf star in the images below.</p>
-          <img class="fig" src="assets/images/brown_dwarf.jpeg">
-          <p class="credit">Figure 7: Comparison of stars through a  visible light filter (R) with an infrared filter (IR).</p>
+          <img class="fig" src="assets/images/brown_dwarf_bw_large.jpg">
+          <p class="credit">Figure 8: Credit Goes Here</p>
           <p>We can use images taken through the six LSST filters to create a color image in a way similar to the three-color process.  Let’s explore how this works.</p>
           <p>This tool works in the same way as the (three-filter) color mixing tool, but it has the ability to use six colors. We will build an image of M33, a spiral galaxy. </p>
           <ul>
@@ -348,7 +351,7 @@
                 </div>
             </div>
               <!-- Images -->
-              <div class="col-12 col-md-8">
+              <div class="col-12 col-md-8 mobile-buffer">
                
                   <div class="intro_filter"></div>
                   <div class="image_filter u_filter"></div>
@@ -363,7 +366,7 @@
             </div>
             <div class="row py-2">   
               <div class="col-4"></div>
-              <div class="col-8">
+              <div class="col-12 col-md-8">
                <button id="button" class="button" value="preset" name="preset" onclick="reset()" >Reset</button>
              
               </div>
