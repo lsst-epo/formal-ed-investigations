@@ -272,10 +272,11 @@
 }
 
 .prism-shape {
+  position: relative;
+  left: -100px;
   width: 150px;
   height: 150px;
   border-bottom: 3px solid #454545;
-  position: relative;
   margin: 2rem auto 5rem;
 }
 .prism-shape:before, .prism-shape:after {
@@ -340,12 +341,18 @@
   z-index: -1;
 }
 
-.prism-label {
+#white-light-label {
     float: left;
     position: absolute;
     top: 83px;
     left: -150px;
     transform: rotate(-13deg);
+}
+
+#prism-label {
+    position: absolute;
+    top: 156px;
+    left: 53px;
 }
 
 .prism-radio {
@@ -543,12 +550,6 @@ input[type=range]::-webkit-slider-thumb {
   width: 20px;
 }
 
-.rgb-filter-label {
-  display: inline-block;
-  text-align: center;
-  width: 20px;
-}
-
 .filter-titles {
   position: relative;
   left: -25px;
@@ -716,6 +717,9 @@ input[type=range]::-webkit-slider-thumb {
   input[type="range"] {
     width: 69px;
   }
+  .prism-items {
+    width: 93%;
+  }
 }
 
 
@@ -725,8 +729,8 @@ input[type=range]::-webkit-slider-thumb {
   input[type="range"] {
     width: 70%;
   }
-  .col-12.col-md-8 {
-    height: 50vh;
+  .mobile-buffer {
+    height: 40vh;
   }
 }
 
