@@ -5,6 +5,7 @@ function reset() {
 	for (var i=0; i<6;i++) {
 		Object.assign(document.getElementsByClassName('image_filter')[i].style,{display:'block', backgroundColor:color[i]});
 		document.getElementsByClassName('form-check-input')[i+3].checked = true;
+		document.getElementsByClassName('custom-select')[i+4].value = color[i];
 	}
 }
 
@@ -13,6 +14,7 @@ function rgb_reset() {
 	for (var i=0; i<3;i++) {
 		Object.assign(document.getElementsByClassName('rgb_filter')[i].style,{display:'block', backgroundColor:color[i]});
 		document.getElementsByClassName('form-check-input')[i].checked = true;
+		document.getElementsByClassName('custom-select')[i].value = color[i];
 	}
 }
 
@@ -38,7 +40,6 @@ function filter(color) {
 function check(filter) {
 	var filter = document.getElementsByClassName(filter)[0];
 	(filter.style.display != 'block') ? filter.style.display = 'block' : filter.style.display = 'none';
-	(filter.style.backgroundColor != 'none') ? filter.style.backgroundColor = 'transparent' : null;
 }
 
 
