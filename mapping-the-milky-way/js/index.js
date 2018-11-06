@@ -20,10 +20,13 @@ function init() {
   renderer.setSize( window.innerWidth,window.innerHeight );
   
   // Camera
-  camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1000 );
+  camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, .1, 10000 );
   camera.position.set( 5.5, 0, 0 );
   controls = new THREE.OrbitControls(camera, document.getElementById("main"));
-  
+
+  // Controls how far you can zoom in.
+  controls.maxDistance = 1000;
+
   // Scene
   scene = new THREE.Scene();
   
@@ -45,13 +48,16 @@ function init() {
 
 function main(){
   
-    
+    // Texture
     var texture = new THREE.TextureLoader().load( "images/20161111_screenshot_00012.jpg" );
 
+    // Invert Texture
+    texture.wrapS = THREE.RepeatWrapping;
+    texture.repeat.x = - 1;
 
 
     // Sphere
-    var geometry = new THREE.SphereGeometry( 5, 32, 32 );
+    var geometry = new THREE.SphereGeometry( 1000, 32, 32 );
     var material = new THREE.MeshBasicMaterial({
     map: texture,
     wireframe: false
@@ -63,6 +69,7 @@ function main(){
     sphere.material.side = THREE.BackSide;
 
     sphere.castShadow = true;
+
     scene.add( sphere );
   
   
