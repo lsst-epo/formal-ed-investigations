@@ -20,7 +20,7 @@ function init() {
   renderer.setSize( window.innerWidth,window.innerHeight );
   
   // Camera
-  camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, .1, 10000 );
+  camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, .1, 10000 );
   camera.position.set( 5.5, 0, 0 );
   controls = new THREE.OrbitControls(camera, document.getElementById("main"));
 
@@ -69,7 +69,6 @@ function main(){
     sphere.material.side = THREE.BackSide;
 
     sphere.castShadow = true;
-
     scene.add( sphere );
   
   
@@ -80,12 +79,13 @@ function render() {
     camera.lookAt( scene.position );  
     renderer.render( scene,camera );
     window.requestAnimationFrame( render );
+    renderer.setSize( (window.innerWidth/1.3), (window.innerHeight/1.3) ); 
 }
 
 
 window.addEventListener( 'resize', function() {
   
-  renderer.setSize( window.innerWidth,window.innerHeight ); 
+  renderer.setSize( window.innerWidth, (window.innerHeight/2) ); 
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
 });
