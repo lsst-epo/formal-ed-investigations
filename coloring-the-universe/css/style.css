@@ -44,54 +44,15 @@
     transform: rotate(-3600deg) !important;
 }
 
-/* Cover Details */
+
+/* Astronaut and Cover */
+
 .bg-blue{
     overflow: hidden
     overflow-x: hidden;
     background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
     height: 80vh;
 }
-
-.custom-navbar{
-    padding-top: 15px;
-}
-
-.brand-logo{
-    margin-left: 25px;
-    margin-top: 5px;
-    display: inline-block;
-}
-
-.navbar-links{
-    display: inline-block;
-    float: right;
-    margin-right: 15px;
-    text-transform: uppercase;
-    
-    
-}
-
-.hamburger{
-  background:none;
-  position:absolute;
-  top:0;
-  right:0;
-  line-height:45px;
-  padding:5px 15px 0px 15px;
-  color:#ffffff;
-  width: 100px;
-  border:0;
-  font-size:2em;
-  font-weight:bold;
-  cursor:pointer;
-  outline:none;
-  z-index:100;
-}
-
-
-
-
-/* Astronaut and Cover */
 
 
 .central-body{
@@ -492,22 +453,6 @@ input[type=range]::-webkit-slider-thumb {
 
 .form-check-input {
   margin-top: .85rem;
-}
-
-.button {
-  background: #182848;
-  width: auto;
-  padding: 10px 20px;
-  border: none;
-  font-weight: light;
-  color: white;
-  border-radius: 3px;
-  outline: none !important;
-}
-
-.button:hover {
-  background: #759bc3;
-  transition: .2s;
 }
 
 .sticky {

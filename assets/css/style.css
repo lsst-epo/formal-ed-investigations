@@ -25,7 +25,7 @@ h1 {
 h2 {
   font-weight: 600;
   margin: 30px 0 30px 0;
-}
+} 
 
 html{
     margin: 0;
@@ -78,10 +78,46 @@ ol p {
   margin-top: 1rem;
 }
 
+/* Navigation Styles */
+
+.custom-navbar{
+    padding-top: 15px;
+}
+
+.brand-logo{
+    margin-left: 25px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.navbar-links{
+    display: inline-block;
+    float: right;
+    margin-right: 15px;
+    text-transform: uppercase;  
+}
+
+.hamburger {
+  background:none;
+  position:absolute;
+  top:0;
+  right:0;
+  line-height:45px;
+  padding:5px 15px 0px 15px;
+  width: 100px;
+  border:0;
+  font-size:2em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:100;
+}
+
+
 /* Text Styles */
 
-.white {
-  color: white;
+.list-none {
+  list-style: none;
 }
 
 .widget-title {
@@ -120,6 +156,22 @@ ol p {
 }
 
 /* Universal Styles */
+
+.button {
+  background: #182848;
+  width: auto;
+  padding: 10px 20px;
+  border: none;
+  font-weight: light;
+  color: white;
+  border-radius: 3px;
+  outline: none !important;
+}
+
+.button:hover {
+  background: #759bc3;
+  transition: .2s;
+}
 
 .icon {
   height: 30px;

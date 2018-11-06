@@ -6,4 +6,21 @@ body {
 canvas {
   background-color:#000;
   margin: 20px 0 20px 0;
+  display: block;
+}
+
+/* Text CSS */
+
+.notebook-header {
+	font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 70px;
+    width: 500px;
+}
+
+/* Widget CSS */
+
+.position-indicator {
+	display: inline;
+	float: right;
 }
