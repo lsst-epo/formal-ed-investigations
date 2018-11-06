@@ -9,6 +9,14 @@ canvas {
   display: block;
 }
 
+/* Text CSS */
+
+.notebook-header {
+	font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 70px;
+    width: 500px;
+}
 
 /* Widget CSS */
 
