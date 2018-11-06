@@ -494,22 +494,6 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: .85rem;
 }
 
-.button {
-  background: #182848;
-  width: auto;
-  padding: 10px 20px;
-  border: none;
-  font-weight: light;
-  color: white;
-  border-radius: 3px;
-  outline: none !important;
-}
-
-.button:hover {
-  background: #759bc3;
-  transition: .2s;
-}
-
 .sticky {
   position: absolute;
   bottom: 0;

@@ -9,3 +9,11 @@ canvas {
   display: block;
 }
 
+
+/* Widget CSS */
+
+.position-indicator {
+	display: inline;
+	float: right;
+	margin-top: 0px;
+}
