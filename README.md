@@ -7,7 +7,7 @@ git clone https://github.com/lsst-epo/formal-ed-investigations.git
 cd mapping-the-milky-way
 ```
 
-To change your texture first add your image it to the 'images' folder. Then, open the index.js file. To change the texture file, replace
+To change your texture first add your image it to the 'images' folder. Then, to change the texuture file, go to js/index.js and replace
 
 ```
 textureLoader.load( 'images/YOUR TEXTURE HERE', function ( texture ) {
