@@ -4,9 +4,11 @@
       var lon = 0, lat = 0;
       var phi = 0, theta = 0;
 
+      
+     
+
       // Load Texture
       var textureLoader = new THREE.TextureLoader();
-
       textureLoader.load( 'images/test_MW_map.png', function ( texture ) {
         texture.mapping = THREE.UVMapping;
         init( texture );
@@ -37,6 +39,8 @@
         document.addEventListener( 'wheel', onDocumentMouseWheel, false );
         window.addEventListener( 'resize', onWindowResized, false );
       }
+
+
       function onWindowResized() {
         renderer.setSize( window.innerWidth, window.innerHeight );
         camera.aspect = window.innerWidth / window.innerHeight;
