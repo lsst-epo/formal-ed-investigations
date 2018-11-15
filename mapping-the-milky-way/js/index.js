@@ -1,91 +1,91 @@
-let renderer,
-    scene,
-    camera,
-    controls,
-    sphere,
-    cylinder;
+      var camera, scene, renderer;
+      var material, backgroundMesh;
+      var onPointerDownPointerX, onPointerDownPointerY, onPointerDownLon, onPointerDownLat;
+      var lon = 0, lat = 0;
+      var phi = 0, theta = 0;
 
-let startTime	= Date.now();
+      // Load Texture
+      var textureLoader = new THREE.TextureLoader();
 
-init();
-main();
-render();
-
-function init() {
-  
-  // Renderer
-  renderer = new THREE.WebGLRenderer({ canvas:document.getElementById('main'), antialiasing:true });
-  renderer.shadowMap.enabled = true;
-  renderer.setClearColor(0x000000);
-  renderer.setSize( window.innerWidth,window.innerHeight );
-  
-  // Camera
-  camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, .1, 10000 );
-  camera.position.set( 5.5, 0, 0 );
-  controls = new THREE.OrbitControls(camera, document.getElementById("main"));
-
-  // Controls how far you can zoom in.
-  controls.maxDistance = 1000;
-
-  // Scene
-  scene = new THREE.Scene();
-  
-  // Lights
-  // Default
-  scene.add( new THREE.AmbientLight( 0xffffff, 0.3 ));
-  
-  // Spotlight
-  var spotLight = new THREE.SpotLight( 0xcccccc, 0.8 );
-  spotLight.position.set( 10, 30, 20 );
-  spotLight.castShadow = true;
-  spotLight.shadow.mapSize.width = 2048;
-  spotLight.shadow.mapSize.height = 2048; 
-  scene.add( spotLight );
-
-  // var spotLightHelper = new THREE.SpotLightHelper( spotLight );
-  // scene.add( spotLightHelper );
-}
-
-function main(){
-  
-    // Texture
-    var texture = new THREE.TextureLoader().load( "images/20161111_screenshot_00012.jpg" );
-
-    // Invert Texture
-    texture.wrapS = THREE.RepeatWrapping;
-    texture.repeat.x = - 1;
+      textureLoader.load( 'images/test_MW_map.png', function ( texture ) {
+        texture.mapping = THREE.UVMapping;
+        init( texture );
+        animate();
+      } );
 
 
-    // Sphere
-    var geometry = new THREE.SphereGeometry( 1000, 32, 32 );
-    var material = new THREE.MeshBasicMaterial({
-    map: texture,
-    wireframe: false
-});
+      function init( texture ) {
 
-    
+        // Camera
+        camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 1000 );
 
-    sphere = new THREE.Mesh( geometry, material );
-    sphere.material.side = THREE.BackSide;
+        // Scene
+        scene = new THREE.Scene();
 
-    sphere.castShadow = true;
-    scene.add( sphere );
-  
-  
-}
+        // Background
+        backgroundMesh = new THREE.Mesh( new THREE.SphereBufferGeometry( 500, 32, 16 ), new THREE.MeshBasicMaterial( { map: texture } ) );
+        backgroundMesh.geometry.scale( - 1, 1, 1 );
+        scene.add( backgroundMesh );
 
-function render() {
-  
-    camera.lookAt( scene.position );  
-    renderer.render( scene,camera );
-    window.requestAnimationFrame( render );
-    renderer.setSize( (window.innerWidth/1.3), (window.innerHeight/1.3) ); 
-}
+        // Renderer
+        renderer = new THREE.WebGLRenderer({ canvas:document.getElementById('main'), antialiasing:true });        
+        renderer.setPixelRatio( window.devicePixelRatio );
+        renderer.setSize( window.innerWidth, window.innerHeight );
 
+        //
+        document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+        document.addEventListener( 'wheel', onDocumentMouseWheel, false );
+        window.addEventListener( 'resize', onWindowResized, false );
+      }
+      function onWindowResized() {
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+      }
 
-window.addEventListener( 'resize', function() {
-  
-  renderer.setSize( window.innerWidth, (window.innerHeight/2) ); 
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-});
+      function onDocumentMouseDown( event ) {
+        event.preventDefault();
+        onPointerDownPointerX = event.clientX;
+        onPointerDownPointerY = event.clientY;
+        onPointerDownLon = lon;
+        onPointerDownLat = lat;
+        document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+        document.addEventListener( 'mouseup', onDocumentMouseUp, false );
+      }
+
+      function onDocumentMouseMove( event ) {
+        lon = ( event.clientX - onPointerDownPointerX ) * 0.1 + onPointerDownLon;
+        lat = ( event.clientY - onPointerDownPointerY ) * 0.1 + onPointerDownLat;
+      }
+
+      function onDocumentMouseUp() {
+        document.removeEventListener( 'mousemove', onDocumentMouseMove, false );
+        document.removeEventListener( 'mouseup', onDocumentMouseUp, false );
+      }
+
+      function onDocumentMouseWheel( event ) {
+        var fov = camera.fov + event.deltaY * 0.05;
+        camera.fov = THREE.Math.clamp( fov, 10, 75 );
+        camera.updateProjectionMatrix();
+      }
+
+      function animate() {
+        requestAnimationFrame( animate );
+        render();
+      }
+
+      function render() {
+        var time = Date.now();
+        lat = Math.max( - 85, Math.min( 85, lat ) );
+        phi = THREE.Math.degToRad( 90 - lat );
+        theta = THREE.Math.degToRad( lon );
+        
+
+        camera.position.x = 100 * Math.sin( phi ) * Math.cos( theta );
+        camera.position.y = 100 * Math.cos( phi );
+        camera.position.z = 100 * Math.sin( phi ) * Math.sin( theta );
+        camera.lookAt( scene.position );
+        
+        backgroundMesh.position.copy( camera.position );
+        renderer.render( scene, camera );
+      }
