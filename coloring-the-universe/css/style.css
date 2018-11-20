@@ -66,7 +66,7 @@
     pointer-events: none;
 }
 
-.object_rocket{
+.object-rocket{
     z-index: 95;
     position: absolute;
     transform: translateX(-50px);
@@ -75,7 +75,7 @@
     animation: rocket-movement 200s linear infinite both running;
 }
 
-.object_earth{
+.object-earth{
     position: absolute;
     top: 20%;
     left: 15%;
@@ -83,7 +83,7 @@
 /*    animation: spin-earth 100s infinite linear both;*/
 }
 
-.object_moon{
+.object-moon{
     position: absolute;
     top: 12%;
     left: 25%;
@@ -93,11 +93,11 @@
 */
 }
 
-.object_astronaut{
+.object-astronaut{
     animation: rotate-astronaut 200s infinite linear both alternate;
 }
 
-.box_astronaut{
+.box-astronaut{
     z-index: 110 !important;
     position: absolute;
     top: 20%;
@@ -108,13 +108,13 @@
 
 
 .stars{
-    background: url(../assets/images/overlay_stars.svg);
+    background: url(../assets/images/overlay-stars.svg);
     background-repeat: repeat;
     background-size: contain;
     background-position: left top;
 }
 
-.glowing_stars .star{
+.glowing-stars .star{
     position: absolute;
     border-radius: 100%;
     background-color: #fff;
@@ -124,27 +124,27 @@
     will-change: opacity;
 }
 
-.glowing_stars .star:nth-child(1){
+.glowing-stars .star:nth-child(1){
     top: 80%;
     left: 25%;
     animation: glow-star 2s infinite ease-in-out alternate 1s;
 }
-.glowing_stars .star:nth-child(2){
+.glowing-stars .star:nth-child(2){
     top: 20%;
     left: 40%;
     animation: glow-star 2s infinite ease-in-out alternate 3s;
 }
-.glowing_stars .star:nth-child(3){
+.glowing-stars .star:nth-child(3){
     top: 25%;
     left: 25%;
     animation: glow-star 2s infinite ease-in-out alternate 5s;
 }
-.glowing_stars .star:nth-child(4){
+.glowing-stars .star:nth-child(4){
     top: 75%;
     left: 80%;
     animation: glow-star 2s infinite ease-in-out alternate 7s;
 }
-.glowing_stars .star:nth-child(5){
+.glowing-stars .star:nth-child(5){
     top: 90%;
     left: 50%;
     animation: glow-star 2s infinite ease-in-out alternate 9s;
@@ -511,7 +511,7 @@ input[type=range]::-webkit-slider-thumb {
 
 /* Intro */
 
-.intro_filter {
+.intro-filter {
   background-position: center;
   border-radius: 10px;
   position: absolute;
@@ -531,7 +531,7 @@ input[type=range]::-webkit-slider-thumb {
 
 /* Six Color Filter */
 
-.image_filter {
+.image-filter {
   background-position: center;
   border-radius: 10px;
   position: absolute;
@@ -548,49 +548,49 @@ input[type=range]::-webkit-slider-thumb {
   display: none;
 }
 
-.u_filter {
+.u-filter {
   filter: brightness(1.92);
-  background-image: url('../assets/m33/png/m33_u.png');
+  background-image: url('../assets/m33/m33-u.png');
 }
 
 
 /* b – Blue */
 
-.b_filter {
+.b-filter {
   filter: brightness(1.08);
-  background-image: url('../assets/m33/png/m33_b.png');
+  background-image: url('../assets/m33/m33-b.png');
 }
 
 
 /* v – Green */
 
-.v_filter {
+.v-filter {
   filter: brightness(1.45);
-  background-image: url('../assets/m33/png/m33_v.png');
+  background-image: url('../assets/m33/m33-v.png');
 }
 
 
 /* r – Yellow */
 
-.r_filter {
+.r-filter {
   filter: brightness(.52);
-  background-image: url('../assets/m33/png/m33_r.png');
+  background-image: url('../assets/m33/m33-r.png');
 }
 
 
 /* i – Orange */
 
-.i_filter {
+.i-filter {
   filter: brightness(.375);
-  background-image: url('../assets/m33/png/m33_i.png');
+  background-image: url('../assets/m33/m33-i.png');
 }
 
 
 /* ha – Red */
 
-.ha_filter {
+.ha-filter {
   filter: brightness(1.9);
-  background-image: url('../assets/m33/png/m33_ha.png');
+  background-image: url('../assets/m33/m33-ha.png');
 }
 
 
@@ -599,14 +599,14 @@ input[type=range]::-webkit-slider-thumb {
 
 /* Red */
 
-.red_filter {
+.red-filter {
   background-position: center;
   border-radius: 10px;
   position: absolute;
   width: 100%;
   height: 100%;
   background-blend-mode: multiply;
-  background-image: url('../assets/images/red_filter.png');
+  background-image: url('../assets/images/red-filter.png');
   mix-blend-mode: screen;
   background-size: 100%;
   display: none;
@@ -615,14 +615,14 @@ input[type=range]::-webkit-slider-thumb {
 
 /* Green */
 
-.green_filter {
+.green-filter {
   background-position: center;
   border-radius: 10px;
   position: absolute;
   width: 100%;
   height: 100%;
   background-blend-mode: multiply;
-  background-image: url('../assets/images/green_filter.png');
+  background-image: url('../assets/images/green-filter.png');
   mix-blend-mode: screen;
   background-size: 100%;
   display: none;
@@ -631,14 +631,14 @@ input[type=range]::-webkit-slider-thumb {
 
 /* Blue */
 
-.blue_filter {
+.blue-filter {
   background-position: center;
   border-radius: 10px;
   position: absolute;
   width: 100%;
   height: 100%;
   background-blend-mode: multiply;
-  background-image: url('../assets/images/blue_filter.png');
+  background-image: url('../assets/images/blue-filter.png');
   mix-blend-mode: screen;
   background-size: 100%;
   display: none;

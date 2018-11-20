@@ -3,7 +3,7 @@
 function reset() {
 	let color = ['violet','blue','green','yellow','orange','red'];
 	for (var i=0; i<6;i++) {
-		Object.assign(document.getElementsByClassName('image_filter')[i].style,{display:'block', backgroundColor:color[i]});
+		Object.assign(document.getElementsByClassName('image-filter')[i].style,{display:'block', backgroundColor:color[i]});
 		document.getElementsByClassName('form-check-input')[i+3].checked = true;
 		document.getElementsByClassName('custom-select')[i+4].value = color[i];
 	}
@@ -12,7 +12,7 @@ function reset() {
 function rgb_reset() {
 	let color = ['red','green','blue'];
 	for (var i=0; i<3;i++) {
-		Object.assign(document.getElementsByClassName('rgb_filter')[i].style,{display:'block', backgroundColor:color[i]});
+		Object.assign(document.getElementsByClassName('rgb-filter')[i].style,{display:'block', backgroundColor:color[i]});
 		document.getElementsByClassName('form-check-input')[i].checked = true;
 		document.getElementsByClassName('custom-select')[i].value = color[i];
 	}
@@ -64,9 +64,21 @@ function select(object) {
 	var dict = {
   	m63: ['u', 'b', 'v', 'r', 'i', 'ha'],
   	m33: ['u', 'b', 'v', 'r', 'i', 'ha'],
+  	m101: ['U', 'B', 'V', 'I', 'ha'],
+  	ngc3718: ['U', 'B', 'V', 'I', 'ha'],
+  	ngc6520: ['U', 'B', 'V', 'I', 'ha'],
+  	ngc6946: ['U', 'B', 'V', 'ha'],
 	};
-	for (var i = 0; i<6; i++) {
-		document.getElementsByClassName('image_filter')[i].style.backgroundImage = "url('assets/" + object + "/png/" + object + "_" + dict[object][i] + ".png')";
-		document.getElementsByClassName('filter-label')[i].innerHTML = dict[object][i]
+	for (var i = 0; i<dict[object].length; i++) {
+		document.getElementsByClassName('image-filter')[i].style.backgroundImage = "url('assets/" + object + "/" + object + "-" + dict[object][i] + ".png')";
+		document.getElementsByClassName('filter-label')[i+3].innerHTML = dict[object][i]
+		document.getElementsByClassName('range')[i+1].style.backgroundColor = '#4b6cb7';
+		
+	}
+	for (var i=dict[object].length; i<6; i++) {
+		document.getElementsByClassName('filter-label')[i+3].innerHTML = "";
+		document.getElementsByClassName('filter')[i+3].style.pointerEvents = 'none';
+		document.getElementsByClassName('range')[i+1].style.backgroundColor = 'grey';
+
 	}			
 }
