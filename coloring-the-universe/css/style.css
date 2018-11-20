@@ -440,6 +440,7 @@ input[type=range]::-webkit-slider-thumb {
   font-size: 18px;
   float: right;
   width: 100px;
+  outline: 0;
 }
 
 .input-color {

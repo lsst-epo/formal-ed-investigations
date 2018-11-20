@@ -201,6 +201,20 @@ li a:hover {
 }
 
 
+/* Dropdown */
+
+.custom-select {
+  font-size: 18px;
+  float: right;
+  width: 100px;
+}
+
+.custom-select:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
 @media only screen and (max-width: 600px){
     .navbar-links{
         display: none;
