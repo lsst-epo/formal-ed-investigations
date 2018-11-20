@@ -5,8 +5,10 @@ animate();
 
 
 function init( ) {
+  const selectedTexture = document.getElementById('texture');
+  const textureValue = selectedTexture.options[selectedTexture.selectedIndex].value;
 
-  texture = new THREE.TextureLoader().load( 'images/test_MW_map.png' );
+  texture = new THREE.TextureLoader().load( 'images/' + textureValue + '.jpg' );
   texture.mapping = THREE.UVMapping;
 
   // Camera
@@ -50,6 +52,8 @@ function onWindowResized() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
 }
+
+
 
 function animate() {
   requestAnimationFrame( animate );

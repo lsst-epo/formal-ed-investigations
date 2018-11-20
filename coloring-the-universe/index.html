@@ -190,7 +190,7 @@
           <p class="filter-titles">filter on/off </p>
           <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"><p class="filter-label">R</p>
           <input type="range" min=".7" max="1.5" step=".01" value=".9" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
-          <select class="custom-select" id="red-select" aria-label="Color" onchange="colorPicker(this.value, this.parentNode.id)">
+          <select class="custom-select" id="red-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
             <option value="" disabled selected>Color</option>
             <option value="red">Red</option>
             <option value="green">Green</option>
@@ -201,7 +201,7 @@
         <div class="filter" id="green-filter">
           <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">G</p>
           <input type="range" min=".7" max="2" step=".01" value="1.41" onchange="updateSlider(this.value, this.parentNode.id)">
-          <select class="custom-select" id="green-select" aria-label="Color" onchange="colorPicker(this.value, this.parentNode.id)">
+          <select class="custom-select" id="green-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
             <option value="" disabled selected>Color</option>
             <option value="red">Red</option>
             <option value="green">Green</option>
@@ -213,7 +213,7 @@
         <div class="filter" id="blue-filter">
           <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">B</p>
           <input type="range" min=".7" max="1.5" step=".01" value=".83" class="range"  onchange="updateSlider(this.value, this.parentNode.id)">
-          <select class="custom-select" onchange="colorPicker(this.value, this.parentNode.id)">
+          <select class="custom-select" onchange="selectColor(this.value, this.parentNode.id)">
             <option value="" disabled selected>Color</option>
             <option value="red">Red</option>
             <option value="green">Green</option>
@@ -282,7 +282,7 @@
         <h1 class="widget-title">Six Color Mixing Tool</h1>
         <div class="row">
           <div class="center-sticky input-group ">
-            <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" onchange="select(this.value)">
+            <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" onchange="selectObject(this.value)">
               <option >Select an Object</option>
               <option selected value="m33">m33</option>
               <option value="m63">m63</option>
@@ -298,7 +298,7 @@
           <p class="filter-titles">filter on/off </p>
           <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">u</p>
           <input type="range" min="1.5" max="4" step=".01" value="1.92" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
-          <select class="custom-select" aria-label="Color" onchange="colorPicker(this.value, this.parentNode.id)">
+          <select class="custom-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
             <option value="" disabled selected>Color</option>
             <option value="violet">Violet</option>
             <option value="blue">Blue</option>
@@ -316,7 +316,7 @@
         <div class="filter" id="b-filter">
           <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">b</p>
           <input type="range" min=".5" max="2.5" step=".01" value="1.08" onchange="updateSlider(this.value, this.parentNode.id)" >
-          <select class="custom-select" aria-label="Color" onchange="colorPicker(this.value, this.parentNode.id)">
+          <select class="custom-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
             <option value="" disabled selected>Color</option>
             <option value="violet">Violet</option>
             <option value="blue">Blue</option>
@@ -331,7 +331,7 @@
         <div class="filter" id="v-filter" >
           <input class="form-check-input" onclick="check(this.parentNode.id)" type="checkbox"> <p class="filter-label">v</p>
           <input type="range" min="1" max="3" step=".01" value="1.45" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
-          <select class="custom-select" aria-label="Color" onchange="colorPicker(this.value, this.parentNode.id)">
+          <select class="custom-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
             <option value="" disabled selected>Color</option>
             <option value="violet">Violet</option>
             <option value="blue">Blue</option>
@@ -345,7 +345,7 @@
         <div class="filter" id="r-filter">
           <input class="form-check-input" onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter-label">r</p>
           <input type="range" min=".5" max="1.5" step=".01" value=".52" class="range" onchange="updateSlider(this.value, this.parentNode.id)" >
-          <select class="custom-select" aria-label="Color" onchange="colorPicker(this.value, this.parentNode.id)">
+          <select class="custom-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
             <option value="" disabled selected>Color</option>
             <option value="violet">Violet</option>
             <option value="blue">Blue</option>
@@ -359,7 +359,7 @@
         <div class="filter" id="i-filter">
           <input class="form-check-input " onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter-label">i</p>
           <input type="range" min=".4" max="1.6" step=".01" value=".375" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
-          <select class="custom-select" aria-label="Color" onchange="colorPicker(this.value, this.parentNode.id)">
+          <select class="custom-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
             <option value="" disabled selected>Color</option>
             <option value="violet">Violet</option>
             <option value="blue">Blue</option>
@@ -373,7 +373,7 @@
         <div class="filter" id="ha-filter">
           <input class="form-check-input " onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter-label">ha</p>
           <input type="range" min="1" max="3.5" step=".01" value="1.25" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
-          <select class="custom-select" aria-label="Color" onchange="colorPicker(this.value, this.parentNode.id)">
+          <select class="custom-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
             <option value="" disabled selected>Color</option>
             <option value="violet">Violet</option>
             <option value="blue">Blue</option>

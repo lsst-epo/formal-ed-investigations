@@ -5,7 +5,6 @@ body {
 
 canvas {
   background-color:#000;
-  margin: 20px 0 20px 0;
   display: block;
 }
 
@@ -23,4 +22,19 @@ canvas {
 .position-indicator {
 	display: inline;
 	float: right;
+}
+
+/* Buttons*/
+
+.canvas-button {
+  position: absolute;
+  display: block;
+  z-index: 99;
+  left: 0%;
+  top: 0%;
+}
+
+.custom-select {
+  width: 200px;
+  margin: 20px;
 }
