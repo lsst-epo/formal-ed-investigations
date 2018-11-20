@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 	<head>
-		<title>three.js webgl - materials - dynamic cube reflection</title>
+		<title>Mapping The Milky Way</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<style>
@@ -9,13 +9,35 @@
 				background-color: #000000;
 				margin: 0px;
 				overflow: hidden;
+				z-index: -10;
 			}
+
+			.canvas-button {
+				position: absolute;
+    			display: block;
+   				z-index: 99;
+    			left: 0%;
+    			top: 0%;
+			}
+
 		</style>
 	</head>
 	<body>
-	<canvas id="main"></canvas>
+		<canvas id="main"></canvas>
+		<select class="custom-select canvas-button" aria-label="Color" onchange="">
+        <option value="" disabled selected>Texture</option>
+        <option value="Constellation">Constellations</option>
+        <option value="Simulated">Simulated</option>
+        <option value="Image">Image</option>
+        
+    </select>
+	
+	
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js'></script>
+	<script src='https://s3.ca-central-1.amazonaws.com/maxv-dev/ThreeJS/OrbitControls.js'></script>
 	<script  src="js/index.js"></script>
+	
+
 
 	
 

@@ -9,7 +9,7 @@ function reset() {
 	}
 }
 
-function rgb_reset() {
+function rgbReset() {
 	let color = ['red','green','blue'];
 	for (var i=0; i<3;i++) {
 		Object.assign(document.getElementsByClassName('rgb-filter')[i].style,{display:'block', backgroundColor:color[i]});
@@ -45,14 +45,14 @@ function check(filter) {
 
 
 // gets the value selected on the dropdown and applies it to image class
-function color_picker(e, id){
+function colorPicker(e, id){
 	document.getElementsByClassName(id)[0].style.backgroundColor = e;
 }
 
 
 
 // Update the brightness of the slider
-function update_slider(range, filter) {
+function updateSlider(range, filter) {
 	var filter = document.getElementsByClassName(filter)[0];
 	filter.style.WebkitFilter = 'brightness('+ range +')'; 
 	console.log(range,filter)
