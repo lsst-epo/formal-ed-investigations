@@ -20,7 +20,7 @@ function rgbReset() {
 
 // Changes the color of the prism
 // Manipulates the z-index to hide and show the rainbow colors
-function filter(color) {
+function prismColor(color) {
 	// hide all colors
 	for (let i=0; i<=6; i++) {
 		Object.assign(document.getElementsByClassName('camera-filter')[i].style,{visibility:"hidden", opacity: "0", top: "-58px", transition: "0s", zIndex: '0'});
@@ -38,7 +38,7 @@ function filter(color) {
 
 // Turns filter on and off
 function check(filter) {
-	const filter = document.getElementsByClassName(filter)[0];
+	filter = document.getElementsByClassName(filter)[0];
 	(filter.style.display != 'block') ? filter.style.display = 'block' : filter.style.display = 'none';
 }
 
@@ -53,9 +53,8 @@ function selectColor(e, id){
 
 // Update the brightness of the slider
 function updateSlider(range, filter) {
-	const filter = document.getElementsByClassName(filter)[0];
+	filter = document.getElementsByClassName(filter)[0];
 	filter.style.WebkitFilter = 'brightness('+ range +')'; 
-	console.log(range,filter)
 }
 
 
@@ -64,7 +63,7 @@ function updateSlider(range, filter) {
 function selectObject(selected) {
 
 
-	const object = {
+	let object = {
   		m63: ['u', 'b', 'v', 'r', 'i', 'ha'],
   		m33: ['u', 'b', 'v', 'r', 'i', 'ha'],
   		m101: ['U', 'B', 'V', 'I', 'ha'],
