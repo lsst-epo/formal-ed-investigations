@@ -80,6 +80,7 @@ function selectObject(selected) {
 		
 	}
 	for (let i = object[selected].length; i<6; i++) {
+		document.getElementsByClassName('image-filter')[i].style.backgroundImage = 'none';
 		document.getElementsByClassName('filter-label')[i+3].innerHTML = "";
 		document.getElementsByClassName('filter')[i+3].style.pointerEvents = 'none';
 		document.getElementsByClassName('range')[i+1].style.backgroundColor = 'grey';
