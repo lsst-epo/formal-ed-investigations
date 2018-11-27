@@ -200,16 +200,25 @@ li a:hover {
   }
 }
 
+/* Textarea */
+textarea.form-control {
+  width: 40%;
+}
+
+.student-answer {
+  max-width: 40%;
+}
+
 
 /* Dropdown */
 
-.custom-select {
+.object-select {
   font-size: 18px;
   float: right;
   width: 100px;
 }
 
-.custom-select:focus {
+.object-select:focus {
   outline: none;
   box-shadow: none;
   border-color: rgb(206, 212, 218);
