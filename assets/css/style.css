@@ -47,6 +47,7 @@ a:hover {
   text-decoration: none;
   color: #a2a7ab;
   transition: .2s;
+  cursor: pointer;
 }
 
 .prism-radio {
@@ -198,6 +199,19 @@ li a:hover {
   100% {
     opacity: 1;
   }
+}
+
+/* Links */
+
+.scroll-link {
+  color: #6c757d;
+}
+
+.scroll-link:hover {
+  text-decoration: none;
+  color: #a2a7ab;
+  transition: .2s;
+  cursor: pointer;
 }
 
 /* Textarea */

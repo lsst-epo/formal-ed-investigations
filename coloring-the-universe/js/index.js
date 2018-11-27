@@ -1,3 +1,7 @@
+function scrollToQuestionNode(id) {
+  const element = document.getElementById(id);
+  element.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+}
 
 // Resets 6co widget
 function reset() {
@@ -56,6 +60,7 @@ function updateSlider(range, filter) {
 	filter = document.getElementsByClassName(filter)[0];
 	filter.style.WebkitFilter = 'brightness('+ range +')'; 
 }
+
 
 
 // 
