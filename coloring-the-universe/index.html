@@ -267,7 +267,7 @@
 
   <p>As already mentioned, ultraviolet and infrared light are beyond the range of human vision. However, astronomers can still make images with these filters by colorizing the filtered images with colors we can see. Different filters are used to highlight certain objects or areas of interest. Here are some examples:</p>
 
-  <u>Infrared filters: Seeing through dust</u>
+  <u id="B">Infrared filters: Seeing through dust</u>
   <p>One of the uses of infrared filters is to see through dust, which <a href="https://www.itp.uni-hannover.de/fileadmin/arbeitsgruppen/zawischa/static_html/scattering.html">scatters</a> light with shorter wavelengths but transmits light with longer wavelengths. </p>
 
   <p>Figure 7 below displays images from three filters and a full-color image. Before combining the filtered images they had to be colorized. The u filter image was colorized blue, the g filter image was colorized green, and the y (infrared) filter image was colorized red. (There’s a particular reason that these colors are arranged in this order—more on this later.) </p>
@@ -281,7 +281,7 @@
   <li>What color are the stars in Figure 7 that were previously hidden by dust?</li>
 </ol>
 
-<u>Infrared filters: Detecting faraway galaxies</u>
+<u id="C">Infrared filters: Detecting faraway galaxies</u>
 <p>Some galaxies are very distant, so distant that their light, because of <a href="http://astronomy.swin.edu.au/cosmos/C/Cosmological+Redshift">cosmological redshift</a> is detectable only at infrared wavelengths.</p>
 <p>To quickly spot the most distant galaxies, a color composite image can be made using at least one infrared filter. The image obtained using the filter that transmits the light with the shortest wavelengths is colorized blue, and the one using the filter that transmits the light with the longest (infrared) wavelengths is colorized red. The color image in Figure 8 below was made by combining all three filtered images and shows the most distant galaxies in a very red color, because they are brightest at very long wavelengths.
 </p>
@@ -293,7 +293,7 @@
  as described above, then combined to make the color image on the right
 </p>
 
-<u>Visible light filters: Exploring Spiral Galaxies</u>
+<u id="A">Visible light filters: Exploring Spiral Galaxies</u>
 <p>Active star-forming regions can be identified in spiral galaxies. They appear as fuzzy patches of gas that glow brightly in r filtered images due to light emitted by hydrogen, but are dimmer in shorter wavelengths (u and g filters). </p>
 <p>Hot young stars are very bright when imaged with the u and g filters, but dimmer when imaged with the longer wavelengths (r and i). By combining three or more filters, images such as those in Figure 9, can be produced that highlight different astronomical objects and structures. </p>
   <img class="fig" src="assets/images/NGC3982.jpg">
@@ -550,10 +550,10 @@ Image credit: <a href="https://www.spacetelescope.org/images/opo1036a/">NASA, ES
     <li>What type of object would you like to investigate?</li>
     <p>Here are some options:</p>
     <ul>
-      <li>Look through a dusty nebula to see what’s inside</li>
-      <li>Search for a faraway galaxy</li>
-      <li>Locate the hot young stars in a galaxy</li>
-      <li>Identify star-forming regions in a galaxy</li>
+      <li  onclick="scrollToQuestionNode('B')" class="scroll-link">Look through a dusty nebula to see what’s inside</li>
+      <li  onclick="scrollToQuestionNode('C')" class="scroll-link">Search for a faraway galaxy</li>
+      <li  onclick="scrollToQuestionNode('A')" class="scroll-link">Locate the hot young stars in a galaxy</li>
+      <li  onclick="scrollToQuestionNode('A')" class="scroll-link">Identify star-forming regions in a galaxy</li>
     </ul>
     <li>What question do you want to answer? </li>
     <li>What filters will be most appropriate for conducting your investigation? Why? <i>(Note: You must use at least two filters.)</i></li>
