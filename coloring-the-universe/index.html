@@ -141,27 +141,32 @@
   <p class="credit">Figure 4: Comparison of the light passed by filters.</p>
   <ol start="4">
     <li>In the table below, record whether a shirt of a particular color appears to be bright or dark in the corresponding filter (e.g., in the upper-left cell below select “bright” or “dark” for the red shirt as it is appears through the red filter. In the lower-left cell select “bright” or “dark” for the red shirt as it appears in the blue filter). </li>
-    <table >
+    <table class="table mt-5 mb-5">
+      <thead>
       <tr>
-        <th>Bright or dark?</th>
-        <th>Red shirt</th>
-        <th>Green Shirt</th>
-        <th>Blue Shirt</th>
+        <th scope="col">Bright or dark?</th>
+        <th scope="col">Red shirt</th>
+        <th scope="col">Green Shirt</th>
+        <th scope="col">Blue Shirt</th>
+      </tr>
+    </thead>
+      <tr>
+        <td scope="row">Red Filter</td>
+        <td><input class="form-control" type="text"></td>
+        <td><input class="form-control" type="text"></td>
+        <td><input class="form-control" type="text"></td>
       </tr>
       <tr>
-        <td>Red Filter</td>
-        <td></td>
-        <td></td>
+        <td scope="row">Green Filter</td>
+        <td><input class="form-control" type="text"></td>
+        <td><input class="form-control" type="text"></td>
+        <td><input class="form-control" type="text"></td>
       </tr>
       <tr>
-        <td>Green Filter</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Blue Filter Filter</td>
-        <td></td>
-        <td></td>
+        <td scope="row">Blue Filter</td>
+        <td><input class="form-control" type="text"></td>
+        <td><input class="form-control" type="text"></td>
+        <td><input class="form-control" type="text"></td>
       </tr>
     </table>
     <p>Look for a pattern in the answers in the table above.</p>
@@ -303,35 +308,35 @@ Image credit: <a href="https://www.spacetelescope.org/images/opo1036a/">NASA, ES
 <p>The chromatic ordering technique matches the light with the shortest wavelengths collected by the telescope to the color with the shortest wavelength, and continues increasing the wavelength of the color as we increase the wavelength of the captured light. Since the LSST u filter passes light with the shortest wavelengths, images obtained with that filter would be colorized violet because violet has the shortest wavelengths of visible light. The g filter transmits light with slightly longer wavelengths than the u filter, so the g filter image would be colorized blue, since blue is the next shortest wavelength color. Continuing on with this process, the images obtained with other LSST filters would be colorized in this pattern:
 </p>
 
-<table>
-  <th>r filter -> green</th>
-  <th>i filter ->  yellow</th>
-  <th>z filter -> orange</th>
-  <th>y filter ->  red</th>
+<table class="table mt-5 mb-5">
+  <th scope="col">r filter -> green</th>
+  <th scope="col">i filter ->  yellow</th>
+  <th scope="col">z filter -> orange</th>
+  <th scope="col">y filter ->  red</th>
 </table>
 
 <p>Sometimes images from all six filters are not all available. In that case, a few colors are omitted, and the images can be colorized with any colors as long as they follow the chromatic order rule. For example, suppose you have a set of images taken using only these filters: g, r, i, and y.
 </p>
 <p>Any of the following filter sequences would be a correct application of chromatic ordering:</p>
-<table>
-  <th>g</th>
-  <th>r</th>
-  <th>i</th>
-  <th>y</th>
+<table class="table mt-5 mb-5">
+  <th scope="col">g</th>
+  <th scope="col">r</th>
+  <th scope="col">i</th>
+  <th scope="col">y</th>
   <tr>
-    <td>violet</td>
+    <td scope="row">violet</td>
     <td>green</td>
     <td>yellow</td>
     <td>red</td>
   </tr>
   <tr>
-    <td>blue</td>
+    <td scope="row">blue</td>
     <td>yellow</td>
     <td>orange</td>
     <td>red</td>
   </tr>
   <tr>
-    <td>blue</td>
+    <td scope="row">blue</td>
     <td>green</td>
     <td>yellow</td>
     <td>orange</td>
@@ -340,9 +345,9 @@ Image credit: <a href="https://www.spacetelescope.org/images/opo1036a/">NASA, ES
 
 <ol start="9">
   <li>What is another chromatic sequence of colors that you could use in addition to the three examples above? If you are not sure, refer back to Figure 6.</li>
+  <textarea class="form-control mt-3" rows="2"></textarea>
 </ol>
-<textarea class="form-control" rows="2"></textarea>
-
+<br>
 <b>Constructing an astronomical color image</b>
 <p>To practice this technique, let’s use images taken with the six LSST filters to create a color image with the Astronomical Image Coloring Tool. It works in a similar way to the RGB mixing tool.  We will use it to explore an image of M33, a spiral galaxy. </p>
 
@@ -510,22 +515,22 @@ Image credit: <a href="https://www.spacetelescope.org/images/opo1036a/">NASA, ES
 
 <ol start="10">
   <li>What happens to the appearance of the image?</li>
-  <textarea class="form-control" rows="2"></textarea>
+  <textarea class="form-control mt-2 mb-2" rows="2"></textarea>
   <li>Explain why the appearance of the image changed in the way it did.</li>
-  <textarea class="form-control" rows="2"></textarea>
+  <textarea class="form-control mt-2 mb-2" rows="2"></textarea>
   <li>Would you say this image is color balanced?  Why or why not?</li>
-  <textarea class="form-control" rows="2"></textarea>
+  <textarea class="form-control mt-2 mb-2" rows="2"></textarea>
 </ol>
 
 <p>Move the slider next to the “g” filter back to its original location (so that the image looked as it did before you moved it). Now move the slider next to the “r” filter all the way to the left.</p>
 
 <ol start="13">
   <li>What happens to the appearance of the image?</li>
-  <textarea class="form-control" rows="2"></textarea>
+  <textarea class="form-control mt-2 mb-2" rows="2"></textarea>
   <li>Explain why the appearance of the image changed in the way it did.</li>
-  <textarea class="form-control" rows="2"></textarea>
+  <textarea class="form-control mt-2 mb-2" rows="2"></textarea>
   <li>Would you say this image is color balanced?  Why or why not?</li>
-  <textarea class="form-control" rows="2"></textarea>
+  <textarea class="form-control mt-2 mb-2" rows="2"></textarea>
 </ol>
 
 <p>Move the slider next to the “r” filter back to its original location (so the image looks as it did before you moved it.)</p>
@@ -570,7 +575,7 @@ Image credit: <a href="https://www.spacetelescope.org/images/opo1036a/">NASA, ES
   <ol start="16">
     <li>You are wearing a pair of sunglasses and notice that the lenses of your glasses make the color of the sun look yellow. What is the most likely explanation for this color change?
     </li>
-    <select class="custom-select student-answer" aria-label="select an object">
+    <select class="custom-select student-answer mt-2 mb-2" aria-label="select an object">
               <option selected>Choose ...</option>
               <option>a. the lens of your sunglasses changes the white light of the sun into yellow light</option>
               <option>b. the lens of your sunglasses reflects yellow light but transmits other color</option>
