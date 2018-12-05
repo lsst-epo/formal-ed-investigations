@@ -34,6 +34,12 @@ canvas {
   top: 0%;
 }
 
+.canvas-button-nb {
+  z-index: 99;
+  left: 0%;
+  top: 0%;
+}
+
 .custom-select {
   width: 200px;
   margin: 20px;
