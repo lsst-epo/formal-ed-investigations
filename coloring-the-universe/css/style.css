@@ -507,6 +507,11 @@ input[type=range]::-webkit-slider-thumb {
   margin-bottom: none;
 }
 
+.titles-right {
+  float: right;
+  left:-90px;
+}
+
 
 /* Filters */
 
@@ -692,6 +697,9 @@ input[type=range]::-webkit-slider-thumb {
 /* Small devices (landscape phones, 576px and up)*/
 
 @media (max-width: 676px) {
+  h1 {
+    font-size: 54px;
+  }
   input[type="range"] {
     width: 70%;
   }
@@ -700,6 +708,12 @@ input[type=range]::-webkit-slider-thumb {
   }
   .prism-items {
     width: 70%;
+  }
+  .object-astronaut {
+    width: 75px;
+  }
+  .object-earth {
+    width: 20px;
   }
 
 }
@@ -715,4 +729,5 @@ input[type=range]::-webkit-slider-thumb {
     top: 64px;
     left: -68px;
     transform: rotate(-12deg);
+}
 }

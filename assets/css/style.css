@@ -224,6 +224,10 @@ textarea.form-control {
   max-width: 40%;
 }
 
+.student-answer-mc {
+  width: 130px;
+}
+
 
 /* Dropdown */
 
@@ -259,4 +263,11 @@ textarea.form-control {
     .central-body{
         padding-top: 25%;
     }
+}
+
+@media (max-width: 676px) {
+  textarea.form-control {
+    width: 91%;
+  }
+
 }

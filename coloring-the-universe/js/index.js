@@ -97,6 +97,7 @@ function selectObject(selected) {
 		document.getElementsByClassName('range')[i+1].style.backgroundColor = '#4b6cb7';
 		document.getElementsByClassName('filter')[i+3].style.pointerEvents = 'auto';
 
+
 		
 	}
 	for (let i = object[selected].length; i<6; i++) {
