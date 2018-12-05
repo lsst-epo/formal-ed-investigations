@@ -41,12 +41,13 @@ html{
 
 a {
   color: #6c757d;
+  font-weight: 700;
 }
 
 a:hover {
   text-decoration: none;
-  color: #a2a7ab;
-  transition: .2s;
+  color: #aeaeae;
+  transition: .3s;
   cursor: pointer;
 }
 
