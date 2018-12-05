@@ -556,43 +556,43 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 
-/* b – Blue */
+/* g – Blue */
 
-.b-filter {
+.g-filter {
   filter: brightness(1.08);
-  background-image: url('../assets/m33/m33-b.png');
+  background-image: url('../assets/m33/m33-g.png');
 }
 
 
-/* v – Green */
-
-.v-filter {
-  filter: brightness(1.45);
-  background-image: url('../assets/m33/m33-v.png');
-}
-
-
-/* r – Yellow */
+/* r – Green */
 
 .r-filter {
-  filter: brightness(.52);
+  filter: brightness(1.45);
   background-image: url('../assets/m33/m33-r.png');
 }
 
 
-/* i – Orange */
+/* i – Yellow */
 
 .i-filter {
-  filter: brightness(.375);
+  filter: brightness(.52);
   background-image: url('../assets/m33/m33-i.png');
 }
 
 
-/* ha – Red */
+/* z – Orange */
 
-.ha-filter {
+.z-filter {
+  filter: brightness(.375);
+  background-image: url('../assets/m33/m33-z.png');
+}
+
+
+/* y – Red */
+
+.y-filter {
   filter: brightness(1.9);
-  background-image: url('../assets/m33/m33-ha.png');
+  background-image: url('../assets/m33/m33-y.png');
 }
 
 
@@ -671,6 +671,8 @@ input[type=range]::-webkit-slider-thumb {
   .fig {
     width: 100%;
   }
+
+
 }
 
 

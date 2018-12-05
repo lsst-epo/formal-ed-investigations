@@ -1,3 +1,18 @@
+function report() {
+    html2canvas(document.querySelector('#capture'), { // replace div.cart with your selector
+        onrendered: function (canvas) {
+            var myImage = canvas.toDataURL("image/png");
+            var tmp = document.body.innerHTML;
+
+            document.body.innerHTML = '<img src="'+myImage+'" alt="">';
+
+            var printWindow = window.open();
+            document.body.innerHTML = tmp;
+        }
+    });
+}
+
+
 function scrollToQuestionNode(id) {
   const element = document.getElementById(id);
   element.scrollIntoView({ block: 'end',  behavior: 'smooth' });
@@ -67,28 +82,31 @@ function updateSlider(range, filter) {
 
 function selectObject(selected) {
 
-
 	let object = {
-  		m63: ['u', 'b', 'v', 'r', 'i', 'ha'],
-  		m33: ['u', 'b', 'v', 'r', 'i', 'ha'],
-  		m101: ['U', 'B', 'V', 'I', 'ha'],
-  		ngc3718: ['U', 'B', 'V', 'I', 'ha'],
-  		ngc6520: ['U', 'B', 'V', 'I', 'ha'],
-  		ngc6946: ['U', 'B', 'V', 'ha'],
-	};
-
+	  		m63: ['u', 'g', 'r', 'i', 'z', 'y'],
+	  		m33: ['u', 'g', 'r', 'i', 'z', 'y'],
+	  		m101: ['u', 'g', 'r', 'y', 'z'],
+	  		ngc3718: ['u', 'g', 'r', 'z', 'y'],
+	  		ngc6520: ['u', 'g', 'r', 'z', 'y'],
+	  		ngc6946: ['u', 'g', 'r', 'y'],
+		};
 
 	for (let i = 0; i<object[selected].length; i++) {
 		document.getElementsByClassName('image-filter')[i].style.backgroundImage = "url('assets/" + selected + "/" + selected + "-" + object[selected][i] + ".png')";
 		document.getElementsByClassName('filter-label')[i+3].innerHTML = object[selected][i]
 		document.getElementsByClassName('range')[i+1].style.backgroundColor = '#4b6cb7';
+		document.getElementsByClassName('filter')[i+3].style.pointerEvents = 'auto';
+
 		
 	}
 	for (let i = object[selected].length; i<6; i++) {
 		document.getElementsByClassName('image-filter')[i].style.backgroundImage = 'none';
+		document.getElementsByClassName('image-filter')[i].style.display = 'none';
 		document.getElementsByClassName('filter-label')[i+3].innerHTML = "";
 		document.getElementsByClassName('filter')[i+3].style.pointerEvents = 'none';
 		document.getElementsByClassName('range')[i+1].style.backgroundColor = 'grey';
+		document.getElementsByClassName('image-filter')[i].style.backgroundColor = 'transparent'
+		document.getElementsByClassName('form-check-input')[i+3].checked = false;
 
 	}			
 }
