@@ -32,7 +32,7 @@ function init( ) {
   // Controls
   controls = new THREE.OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true; // For that slippery Feeling
-  controls.dampingFactor = 0.22; // Needs to call update on render loop 
+  controls.dampingFactor = 0.1; // Needs to call update on render loop 
   controls.rotateSpeed = 0.08; // Rotate speed
 
 
