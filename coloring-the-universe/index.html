@@ -175,14 +175,14 @@
     <ol start="5">
     <li>Choose the right words to finish this sentence: </li>
     <p>“The red shirt looks 
-  <select class="custom-select my-1 mr-sm-2" style="width: 130px" id="inlineFormCustomSelectPref">
+  <select class="custom-select my-1 mr-sm-2 student-answer-mc">
     <option selected>Bright/Dark</option>
     <option value="1">Bright</option>
     <option value="2">Dark</option>
   </select>
    in the image taken through the red filter because the red filter (passes/blocks) red light.”</p><br>
     <li>Choose the right words to finish this sentence: 
-      <p>“The green shirt looks  <select class="custom-select my-1 mr-sm-2" style="width: 130px" id="inlineFormCustomSelectPref">
+      <p>“The green shirt looks  <select class="custom-select my-1 mr-sm-2">
     <option selected>Bright/Dark</option>
     <option value="1">Bright</option>
     <option value="2">Dark</option>
@@ -212,7 +212,7 @@
         <h1 class="widget-title">RGB Color Mixing Tool</h1>
         <br><br><br>
         <div class="filter" id="red-filter">
-          <p class="filter-titles">filter on/off </p>
+          <p class="filter-titles">Filter on/off </p>
           <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"><p class="filter-label">R</p>
           <input type="range" min=".7" max="1.5" step=".01" value="1.17" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
           <select class="custom-select object-select" id="red-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
@@ -389,7 +389,7 @@ Image credit: <a href="https://www.spacetelescope.org/images/opo1036a/">NASA, ES
         </div>
         
         <div class="filter" id="u-filter">
-          <p class="filter-titles" style="float: right; left:-90px;">Colors </p>
+          <p class="filter-titles titles-right">Colors </p>
           <p class="filter-titles">Filter on/off </p>
           <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">u</p>
           <input type="range" min="1.5" max="4" step=".01" value="1.92" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
