@@ -1,18 +1,3 @@
-function report() {
-    html2canvas(document.querySelector('#capture'), { // replace div.cart with your selector
-        onrendered: function (canvas) {
-            var myImage = canvas.toDataURL("image/png");
-            var tmp = document.body.innerHTML;
-
-            document.body.innerHTML = '<img src="'+myImage+'" alt="">';
-
-            var printWindow = window.open();
-            document.body.innerHTML = tmp;
-        }
-    });
-}
-
-
 function scrollToQuestionNode(id) {
   const element = document.getElementById(id);
   element.scrollIntoView({ block: 'end',  behavior: 'smooth' });

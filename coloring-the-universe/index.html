@@ -182,7 +182,8 @@
   </select>
    in the image taken through the red filter because the red filter (passes/blocks) red light.”</p><br>
     <li>Choose the right words to finish this sentence: 
-      <p>“The green shirt looks  <select class="custom-select my-1 mr-sm-2">
+      <p>“The green shirt looks  
+    <select class="custom-select my-1 mr-sm-2 student-answer-mc">
     <option selected>Bright/Dark</option>
     <option value="1">Bright</option>
     <option value="2">Dark</option>
@@ -212,6 +213,7 @@
         <h1 class="widget-title">RGB Color Mixing Tool</h1>
         <br><br><br>
         <div class="filter" id="red-filter">
+          <p class="filter-titles titles-right">Colors </p>
           <p class="filter-titles">Filter on/off </p>
           <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"><p class="filter-label">R</p>
           <input type="range" min=".7" max="1.5" step=".01" value="1.17" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
@@ -617,14 +619,14 @@ Image credit: <a href="https://www.spacetelescope.org/images/opo1036a/">NASA, ES
       <li>What you learned through this process. (What was the answer to the question you posed?)</li>
     </ul>
   </ol>
- <textarea class="form-control" rows="2"></textarea>
+ <textarea class="form-control summary" rows="5"></textarea>
   <p> Be sure to save/print your image!</p>
 <button class="button">Submit</button>
 </div>
 
 <!-- Need a Footer -->
 <footer> 
- <p class="text-sm-left ml-5">Spot a bug? Send us an email at <a href="mailto:education@lsst.org">education@lsst.org</a>
+ <p class=" copyright text-sm-left ml-5">Spot a bug? Send us an email at <a href="mailto:education@lsst.org">education@lsst.org</a>
           </p> </footer>
 <script type="text/javascript" src="js/index.js"></script>
 </body>

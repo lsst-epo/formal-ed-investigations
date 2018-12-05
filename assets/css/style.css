@@ -32,13 +32,6 @@ html{
     font-weight: 300;   
 }
 
-
-
-.intro-filter h3 {
-  margin: 200px;
- 
-}
-
 a {
   color: #6c757d;
   font-weight: 700;
@@ -177,6 +170,10 @@ li a:hover {
   transition: .2s;
 }
 
+button:focus {
+  outline: none;
+}
+
 .icon {
   height: 30px;
   margin: 10px;
@@ -206,18 +203,34 @@ li a:hover {
 
 .scroll-link {
   color: #6c757d;
+  font-weight: 700;
 }
 
 .scroll-link:hover {
   text-decoration: none;
-  color: #a2a7ab;
-  transition: .2s;
+  color: #aeaeae;
+  transition: .3s;
   cursor: pointer;
 }
 
 /* Textarea */
 textarea.form-control {
   width: 40%;
+  margin:10px 0px 10px 0px;
+}
+
+.form-control:focus {
+  border-color: none;
+  box-shadow: none;
+}
+
+.custom-select:focus {
+   border-color: none;
+  box-shadow: none;
+}
+
+.summary {
+  width: 100% !important;
 }
 
 .student-answer {
@@ -243,7 +256,15 @@ textarea.form-control {
   border-color: rgb(206, 212, 218);
 }
 
-@media only screen and (max-width: 600px){
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 600px){
     .navbar-links{
         display: none;
     }
