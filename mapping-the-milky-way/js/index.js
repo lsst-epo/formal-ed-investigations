@@ -3,10 +3,19 @@ var camera, scene, renderer, backgroundMesh, texture, controls;
 init();
 animate();
 
+function scrollToQuestionNode(id, location) {
+  const element = document.getElementById(id);
+  element.scrollIntoView({ block: 'start',  behavior: 'smooth' });
+  document.getElementById('texture').value = location
+  document.getElementById('location').innerHTML = location
+  init()
+}
 
-function init( ) {
-  const selectedTexture = document.getElementById('texture');
-  const textureValue = selectedTexture.options[selectedTexture.selectedIndex].value;
+function init() {
+
+const selectedTexture = document.getElementById('texture');
+const textureValue = selectedTexture.options[selectedTexture.selectedIndex].value;
+
 
   texture = new THREE.TextureLoader().load( 'images/' + textureValue + '.jpg' );
   texture.mapping = THREE.UVMapping;
@@ -27,7 +36,7 @@ function init( ) {
   // Renderer
   renderer = new THREE.WebGLRenderer({ canvas:document.getElementById('main'), antialiasing:true });        
   renderer.setPixelRatio( window.devicePixelRatio );
-  renderer.setSize( window.innerWidth, window.innerHeight );
+  renderer.setSize( window.innerWidth, (window.innerHeight * .85) );
 
   // Controls
   controls = new THREE.OrbitControls(camera, renderer.domElement);
@@ -42,7 +51,7 @@ function init( ) {
 }
 
 function onDocumentMouseWheel( event ) {
-  var fov = camera.fov + event.deltaY * 0.05;
+  var fov = camera.fov + event.deltaY * 0.02;
   camera.fov = THREE.Math.clamp( fov, 10, 75 );
   camera.updateProjectionMatrix();
 }

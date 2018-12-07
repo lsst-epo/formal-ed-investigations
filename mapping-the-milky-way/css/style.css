@@ -1,6 +1,25 @@
 body {
   margin:0 !important;
   overflow-x:hidden;
+  background-color: #f7f7f7;
+}
+
+h3 {
+  font-size: 2.35rem;
+  color: #272727;
+}
+
+p {
+  font-size: 18px;
+  color: #272727;
+}
+
+ul {
+  font-size: 18px;
+}
+
+ol {
+  font-size: 18px;
 }
 
 canvas {
@@ -8,13 +27,22 @@ canvas {
   display: block;
 }
 
+#main {
+  height: 85vh;
+}
+
 /* Text CSS */
 
 .notebook-header {
-	font-family: 'Montserrat', sans-serif;
+	    text-decoration: underline;
+    display: block;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: 70px;
     width: 500px;
+    color: #945545;
+    margin: auto;
 }
 
 /* Widget CSS */
@@ -22,6 +50,8 @@ canvas {
 .position-indicator {
 	display: inline;
 	float: right;
+  position: relative;
+  top: 11px;
 }
 
 /* Buttons*/
@@ -43,4 +73,8 @@ canvas {
 .custom-select {
   width: 200px;
   margin: 20px;
+}
+
+a.click-to-scroll {
+  font-size: 30px;
 }
