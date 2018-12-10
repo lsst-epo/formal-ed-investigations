@@ -55,6 +55,10 @@ ol p {
   margin-top: 1rem;
 }
 
+ol ol {
+  list-style-type: lower-alpha;
+}
+
 li a {
     display: block;
     color: white;
