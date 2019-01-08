@@ -74,6 +74,11 @@ function selectObject(selected) {
 	  		ngc3718: ['u', 'g', 'r', 'z', 'y'],
 	  		ngc6520: ['u', 'g', 'r', 'z', 'y'],
 	  		ngc6946: ['u', 'g', 'r', 'y'],
+	  		b163: ['g', 'r', 'i', 'y'],
+	  		cg4: ['g', 'r', 'y', 'z'],
+	  		m78: ['g', 'i', 'r', 'y'],
+	  		m51: ['g', 'r', 'i', 'z', 'y']
+
 		};
 
 	for (let i = 0; i<object[selected].length; i++) {
