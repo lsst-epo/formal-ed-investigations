@@ -49,17 +49,27 @@
 		<canvas id="main"></canvas>
 		<div class="m-4">
 			
-			<button class="button">+</button>
-			<button class="button">-</button>
+			<button class="button">Constellations</button>
+			<button class="button">Star Field Image</button>
 			<select class="custom-select canvas-button-nb" id="texture" aria-label="Color" onchange="init()">
-				<option value="" disabled>Texture</option>
-				<option value="constellations">Constellations</option>
-				<option value="simulated">Simulated</option>
-				<option value="MellingerColor" selected>Galaxy</option>
-				<option value="Halfway">Halfway Galaxy</option>
-				
+				<optgroup label="Generic">
+					<option value="Generic/Constellations">Constellations</option>
+					<option value="Generic/StarField">Star Field Image</option>
+				</optgroup>
+				<optgroup label="Elliptical Galaxy">
+					<!-- <option value="" disabled>Texture</option> -->
+					<option value="Elliptical-Galaxy/elliptical-center">Elliptical Center</option>
+					<option value="Elliptical-Galaxy/elliptical-edge">Elliptical Edge</option>
+					<option value="Elliptical-Galaxy/elliptical-middle">Elliptical Middle</option>
+					<option value="Elliptical-Galaxy/elliptical-outside">Elliptical Outside</option>
+				</optgroup>
+				<optgroup label="Disk Galaxy">
+					<option value="Disk-Galaxy/spiral-center" selected>Spiral Center</option>
+					<option value="Disk-Galaxy/spiral-edge">Spiral Ege</option>
+					<option value="Disk-Galaxy/spiral-middle">Spiral Middle</option>
+				</optgroup>
 			</select>
-			<h3 class="position-indicator">Location: <u id="location">Halfway</u></h3>
+			<h3 class="position-indicator">Location: <u id="location">Spiral Center</u></h3>
 			<br>
 		</div>
 		<div class="container">
@@ -220,8 +230,10 @@
 
 		</div>
 	</div>
-<footer class="footer fixed-bottom bg-white pt-3"> 
- <p class=" copyright text-sm-left ml-5">Thank you for helping us test this workspace, which is in development. Please submit feedback to <a href="mailto:education@lsst.org">education@lsst.org</a></p>
+<footer class="footer fixed-bottom bg-white pt-3" id="footer">  
+ <p class=" copyright text-sm-left ml-5">Thank you for helping us test this workspace, which is in development. Please submit feedback to <a href="mailto:education@lsst.org">education@lsst.org</a><button type="button" class="close mr-3" aria-label="Close" onclick="document.getElementById('footer').style.display = 'none'">
+  <span aria-hidden="true">&times;</span>
+</button></p>
 </footer>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js'></script>
 	<script src='https://s3.ca-central-1.amazonaws.com/maxv-dev/ThreeJS/OrbitControls.js'></script>

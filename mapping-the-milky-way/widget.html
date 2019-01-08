@@ -10,17 +10,38 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="../assets/css/normalize.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet">
-
+		<style>
+			.nb-header-test {
+				position: absolute;
+				left: 500px;
+				font-size:90px;
+				width: 700px;
+				top: 100px;
+				color: white;
+			}
+		</style>
 	</head>
 	<body>
-	<select class="custom-select canvas-button" id="texture" aria-label="Color" onchange="init()">
-        <option value="" disabled>Texture</option>
-        <option value="constellations">Constellations</option>
-        <option value="simulated">Simulated</option>
-        <option value="MellingerColor" selected>Galaxy</option>
-        
-    </select>
+	<h2 class="notebook-header mt-5 mb-5 nb-header-test">Mapping The Milky Way</h2>
 		<canvas id="main"></canvas>
+		<select class="custom-select canvas-button d-none" id="texture" aria-label="Color" onchange="init()">
+				<optgroup label="Generic">
+					<option value="Generic/Constellations">Constellations</option>
+					<option value="Generic/StarField" selected>Star Field Image</option>
+				</optgroup>
+				<optgroup label="Elliptical Galaxy">
+					<!-- <option value="" disabled>Texture</option> -->
+					<option value="Elliptical-Galaxy/elliptical-center">Elliptical Center</option>
+					<option value="Elliptical-Galaxy/elliptical-edge">Elliptical Edge</option>
+					<option value="Elliptical-Galaxy/elliptical-middle">Elliptical Middle</option>
+					<option value="Elliptical-Galaxy/elliptical-outside">Elliptical Outside</option>
+				</optgroup>
+				<optgroup label="Disk Galaxy">
+					<option value="Disk-Galaxy/spiral-center">Spiral Center</option>
+					<option value="Disk-Galaxy/spiral-edge">Spiral Ege</option>
+					<option value="Disk-Galaxy/spiral-middle">Spiral Middle</option>
+				</optgroup>
+			</select>
 	
 	
 	
