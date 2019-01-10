@@ -17,7 +17,7 @@ const selectedTexture = document.getElementById('texture');
 const textureValue = selectedTexture.options[selectedTexture.selectedIndex].value;
 
 
-  texture = new THREE.TextureLoader().load( 'images/' + textureValue + '.jpg' );
+  texture = new THREE.TextureLoader().load( 'assets/' + textureValue + '.png' );
   texture.mapping = THREE.UVMapping;
 
   // Camera
@@ -36,7 +36,10 @@ const textureValue = selectedTexture.options[selectedTexture.selectedIndex].valu
   // Renderer
   renderer = new THREE.WebGLRenderer({ canvas:document.getElementById('main'), antialiasing:true });        
   renderer.setPixelRatio( window.devicePixelRatio );
+
+  // Keep height at 100 for now
   renderer.setSize( window.innerWidth, (window.innerHeight * .85) );
+  // renderer.setSize( window.innerWidth, window.innerHeight );
 
   // Controls
   controls = new THREE.OrbitControls(camera, renderer.domElement);

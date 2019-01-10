@@ -27,6 +27,7 @@ canvas {
   display: block;
 }
 
+/* Change back after testing */
 #main {
   height: 85vh;
 }
