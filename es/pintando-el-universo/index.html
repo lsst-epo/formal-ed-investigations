@@ -2,7 +2,7 @@
 <html lang="es" >
   <head>
     <meta charset="utf-8">
-    <meta name="Pintando el Univers" content="Coloring the Universe">
+    <meta name="Pintando el Univers" content="Pintando el Universo">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pintando el Universo</title>
     <link type="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -63,7 +63,7 @@
       <b>Tipos de luz</b>
       <p>Hay muchos tipos de <a href="https://imagine.gsfc.nasa.gov/science/toolbox/emspectrum1.html">radiación electromagnética</a>: ondas de radio, infrarrojo, visible, ultravioleta (UV), rayos X, etc. Los astrónomos se refieren a todos estos tipos de radiación como luz. Cada tipo de luz tiene un rango específico de longitudes de onda y energías. El tipo de luz que podemos ver con nuestros ojos se llama luz "visible".
     </p>
-    <img class="fig wide" src="assets/images/EM-spectrum-full.jpg">
+    <img class="fig wide" src="assets/images/EM-spectrum-full.png">
     <p class="credit">Figura 1: El Espectro Electromagnético. Adaptado de <a href="https://imagine.gsfc.nasa.gov/Images/science/EM_spectrum_full.jpg">https://imagine.gsfc.nasa.gov/Images/science/EM-spectrum-full.jpg</a></p>
     <p>La luz visible contiene todos los colores del arco iris, como se muestra a continuación. Los diferentes colores corresponden a diferentes longitudes de onda y energías. Dentro del rango de luz que podemos ver, la luz roja tiene la energía más baja y las longitudes de onda más largas; el violeta tiene la energía más alta y las longitudes de onda más cortas.</p>
     <img class="fig" src="assets/images/visible-spectrum2.png">
@@ -108,8 +108,8 @@
           </div>
         </div>
       </div>
-      <p id="prism-label">prisma</p>
-      <p id="white-light-label">la luz blanca →  </p>
+      <p id="prism-label">Prisma</p>
+      <p id="white-light-label">Luz blanca →  </p>
     </div>
     <input type="radio" class="prism-radio" name="prism" value="red" onchange="prismColor(this.value)"> Rojo</input>
     <input type="radio" class="prism-radio" name="prism" value="orange" onchange="prismColor(this.value)"> Naranja</input>
@@ -179,13 +179,13 @@
     <li>Elige las palabras correctas para terminar esta oración:</li>
     <p>"La polera roja se ve
       <select class="custom-select my-1 mr-sm-2 student-answer-mc">
-        <option selected>Choose ...</option>
+        <option selected>Elige ...</option>
         <option value="1">luminosa</option>
         <option value="2">obscura</option>
       </select>
       en la imagen tomada a través del filtro rojo porque el filtro rojo”
       <select class="custom-select my-1 mr-sm-2 student-answer-mc">
-        <option selected>Choose ...</option>
+        <option selected>Elige ...</option>
         <option value="1">deja pasar</option>
         <option value="2">bloquea</option>
       </select>
@@ -193,12 +193,12 @@
     <li>Elige las palabras correctas para terminar esta oración:
       <p>“La polera verde se ve
         <select class="custom-select my-1 mr-sm-2 student-answer-mc">
-          <option selected>Choose ...</option>
+          <option selected>Elige ...</option>
           <option value="1">luminosa</option>
           <option value="2">obscura</option>
         </select>  en la imagen tomada a través del filtro rojo porque el filtro rojo
         <select class="custom-select my-1 mr-sm-2 student-answer-mc">
-          <option selected>Choose ...</option>
+          <option selected>Elige ...</option>
           <option value="1">deja pasar</option>
           <option value="2">bloquea</option>
         </select>
@@ -226,30 +226,30 @@
       <!-- Words and Sliders -->
       <div class="col-12 col-md-4">
         <br>
-        <h1 class="widget-title">RGB Color Mixing Tool</h1>
+        <h1 class="widget-title">Herramienta para mezclar colores</h1>
         <br><br><br>
         <div class="filter" id="red-filter">
-          <p class="filter-titles titles-right">Colors </p>
-          <p class="filter-titles">Filter on/off </p>
+          <p class="filter-titles titles-right">Colores </p>
+          <p class="filter-titles">Filtro encendido/apagado </p>
           <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"><p class="filter-label">R</p>
           <input type="range" min=".7" max="1.5" step=".01" value="1.17" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
           <select class="custom-select object-select" id="red-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
-            <option value="" disabled selected>Color</option>
+            <option value="" disabled selected>Colores</option>
             <option value="red">Rojo</option>
             <option value="green">Verde</option>
             <option value="blue">Azul</option>
-            <option value="transparent">None</option>
+            <option value="transparent">Ninguno</option>
           </select>
         </div>
         <div class="filter" id="green-filter">
           <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">G</p>
           <input type="range" min=".7" max="2" step=".01" value="1.64" onchange="updateSlider(this.value, this.parentNode.id)">
           <select class="custom-select object-select" id="green-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
-            <option value="" disabled selected>Color</option>
+            <option value="" disabled selected>Colores</option>
             <option value="red">Rojo</option>
             <option value="green">Verde</option>
             <option value="blue">Azul</option>
-            <option value="transparent">None</option>
+            <option value="transparent">Ninguno</option>
           </select>
         </div>
         
@@ -257,11 +257,11 @@
           <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">B</p>
           <input type="range" min=".7" max="1.5" step=".01" value="1.06" class="range"  onchange="updateSlider(this.value, this.parentNode.id)">
           <select class="custom-select object-select" onchange="selectColor(this.value, this.parentNode.id)">
-            <option value="" disabled selected>Color</option>
+            <option value="" disabled selected>Colores</option>
             <option value="red">Rojo</option>
             <option value="green">Verde</option>
             <option value="blue">Azul</option>
-            <option value="transparent">None</option>
+            <option value="transparent">Ninguno</option>
           </select>
         </div>
         
@@ -278,7 +278,7 @@
     <div class="row py-2">
       <div class="col-12 col-md-4"></div>
       <div class="col-12 col-md-8">
-        <button id="button" class="button" value="preset" name="preset" onclick="rgbReset()" >Reset</button>
+        <button id="button" class="button" value="preset" name="preset" onclick="rgbReset()" >Reiniciar</button>
       </div>
     </div>
     
@@ -379,7 +379,7 @@ Crédito de la imagen: <a href="https://www.spacetelescope.org/images/opo1036a/"
             <div class="center-sticky input-group ">
               <select class="custom-select object-select" aria-label="select an object" onchange="selectObject(this.value)">
                 <option >Select an Object</option>
-                <optgroup label="Spiral Galaxies">
+                <optgroup label="Galaxias Espiraless">
                   <option selected value="m33">M33</option>
                   <option value="m51">M51</option>
                   <option value="m63">M63</option>
@@ -387,7 +387,7 @@ Crédito de la imagen: <a href="https://www.spacetelescope.org/images/opo1036a/"
                   <option value="ngc6946">NGC6946</option>
                   <option value="ngc3718">NGC3718</option>
                 </optgroup>
-                <optgroup label="Nebulae">
+                <optgroup label="Nebulosas">
                   <option value="cg4">GG4</option>
                   <option value="b163">B163</option>
                   <option value="m78">M78</option>
@@ -398,12 +398,12 @@ Crédito de la imagen: <a href="https://www.spacetelescope.org/images/opo1036a/"
           </div>
           
           <div class="filter" id="u-filter">
-            <p class="filter-titles titles-right">Colors </p>
-            <p class="filter-titles">Filter on/off </p>
+            <p class="filter-titles titles-right">Colores </p>
+            <p class="filter-titles">Filtro encendido/apagado </p>
             <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">u</p>
             <input type="range" min="1.5" max="4" step=".01" value="1.92" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
             <select class="custom-select object-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
-              <option value="" disabled selected>Color</option>
+              <option value="" disabled selected>Colores</option>
               <option value="violet">Violeta</option>
               <option value="blue">Azul</option>
               <option value="green">Verde</option>
@@ -412,7 +412,7 @@ Crédito de la imagen: <a href="https://www.spacetelescope.org/images/opo1036a/"
               <option value="red">Rojo</option>
               <option value="cyan">*Cian</option>
               <option value="magenta">*Magenta</option>
-              <option value="none">None</option>
+              <option value="none">Ninguno</option>
             </select>
           </div>
           
@@ -421,7 +421,7 @@ Crédito de la imagen: <a href="https://www.spacetelescope.org/images/opo1036a/"
             <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">g</p>
             <input type="range" min=".5" max="2.5" step=".01" value="1.08" onchange="updateSlider(this.value, this.parentNode.id)" >
             <select class="custom-select object-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
-              <option value="" disabled selected>Color</option>
+              <option value="" disabled selected>Colores</option>
               <option value="violet">Violeta</option>
               <option value="blue">Azul</option>
               <option value="green">Verde</option>
@@ -430,7 +430,7 @@ Crédito de la imagen: <a href="https://www.spacetelescope.org/images/opo1036a/"
               <option value="red">Rojo</option>
               <option value="cyan">*Cian</option>
               <option value="magenta">*Magenta</option>
-              <option value="none">None</option>
+              <option value="none">Ninguno</option>
             </select>
           </div>
           
@@ -438,7 +438,7 @@ Crédito de la imagen: <a href="https://www.spacetelescope.org/images/opo1036a/"
             <input class="form-check-input" onclick="check(this.parentNode.id)" type="checkbox"> <p class="filter-label">r</p>
             <input type="range" min="1" max="3" step=".01" value="1.45" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
             <select class="custom-select object-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
-              <option value="" disabled selected>Color</option>
+              <option value="" disabled selected>Colores</option>
               <option value="violet">Violeta</option>
               <option value="blue">Azul</option>
               <option value="green">Verde</option>
@@ -447,14 +447,14 @@ Crédito de la imagen: <a href="https://www.spacetelescope.org/images/opo1036a/"
               <option value="red">Rojo</option>
               <option value="cyan">*Cian</option>
               <option value="magenta">*Magenta</option>
-              <option value="none">None</option>
+              <option value="none">Ninguno</option>
             </select>
           </div>
           <div class="filter" id="i-filter">
             <input class="form-check-input" onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter-label">i</p>
             <input type="range" min=".5" max="1.5" step=".01" value=".52" class="range" onchange="updateSlider(this.value, this.parentNode.id)" >
             <select class="custom-select object-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
-              <option value="" disabled selected>Color</option>
+              <option value="" disabled selected>Colores</option>
               <option value="violet">Violeta</option>
               <option value="blue">Azul</option>
               <option value="green">Verde</option>
@@ -463,14 +463,14 @@ Crédito de la imagen: <a href="https://www.spacetelescope.org/images/opo1036a/"
               <option value="red">Rojo</option>
               <option value="cyan">*Cian</option>
               <option value="magenta">*Magenta</option>
-              <option value="none">None</option>
+              <option value="none">Ninguno</option>
             </select>
           </div>
           <div class="filter" id="z-filter">
             <input class="form-check-input " onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter-label">z</p>
             <input type="range" min=".4" max="1.6" step=".01" value=".375" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
             <select class="custom-select object-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
-              <option value="" disabled selected>Color</option>
+              <option value="" disabled selected>Colores</option>
               <option value="violet">Violeta</option>
               <option value="blue">Azul</option>
               <option value="green">Verde</option>
@@ -479,14 +479,14 @@ Crédito de la imagen: <a href="https://www.spacetelescope.org/images/opo1036a/"
               <option value="red">Rojo</option>
               <option value="cyan">*Cian</option>
               <option value="magenta">*Magenta</option>
-              <option value="none">None</option>
+              <option value="none">Ninguno</option>
             </select>
           </div>
           <div class="filter" id="y-filter">
             <input class="form-check-input " onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter-label">y</p>
             <input type="range" min="1" max="3.5" step=".01" value="1.25" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
             <select class="custom-select object-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
-              <option value="" disabled selected>Color</option>
+              <option value="" disabled selected>Colores</option>
               <option value="violet">Violeta</option>
               <option value="blue">Azul</option>
               <option value="green">Verde</option>
@@ -495,7 +495,7 @@ Crédito de la imagen: <a href="https://www.spacetelescope.org/images/opo1036a/"
               <option value="red">Rojo</option>
               <option value="cyan">*Cian</option>
               <option value="magenta">*Magenta</option>
-              <option value="none">None</option>
+              <option value="none">Ninguno</option>
             </select>
           </div>
         </div>
@@ -515,7 +515,7 @@ Crédito de la imagen: <a href="https://www.spacetelescope.org/images/opo1036a/"
       <div class="row py-2">
         <div class="col-4"></div>
         <div class="col-12 col-md-8">
-          <button id="button" class="button" value="preset" name="preset" onclick="" >Reset</button>
+          <button id="button" class="button" value="preset" name="preset" onclick="" >Reiniciar</button>
           
         </div>
       </div>
@@ -591,7 +591,7 @@ Crédito de la imagen: <a href="https://www.spacetelescope.org/images/opo1036a/"
       <li> Estás usando anteojos de sol y notas que las lentes de tus anteojos hacen que el sol se vea de color amarillo. ¿Cuál es la explicación más probable para este cambio de color?
       </li>
       <select class="custom-select student-answer mt-2 mb-2" aria-label="select an object">
-        <option selected>Choose ...</option>
+        <option selected>Elige ...</option>
         <option>a. las lentes de tus anteojos de sol transforman la luz blanca del sol en luz amarilla.</option>
         <option>b. las lentes de tus anteojos de sol reflejan la luz amarilla pero transmiten otros colores.</option>
         <option>c. las lentes de tus anteojos de sol transmiten la luz amarilla pero bloquean otros colores.</option>
@@ -618,10 +618,11 @@ Crédito de la imagen: <a href="https://www.spacetelescope.org/images/opo1036a/"
     <textarea class="form-control summary" rows="5"></textarea>
     <p> ¡Asegúrate de guardar / imprimir tu imagen!</p>
     <button class="button">Submit</button>
+    <br><br>  
   </div>
   <!-- Draft Text -->
   <footer class="footer fixed-bottom bg-light pt-3">
-    <p class=" copyright text-sm-left ml-5">Thank you for helping us test this workspace, which is in development. Please submit feedback to <a href="mailto:education@lsst.org">education@lsst.org</a></p>
+    <p class=" copyright text-sm-left ml-5">Gracias por ayudarnos a probar este espacio de trabajo, que está aún en desarrollo. Por favor envía tus comentarios a <a href="mailto:education@lsst.org">education@lsst.org</a><button type="button" class="close mr-3" aria-label="Close" onclick="document.getElementById('footer').style.display = 'none'"></p>
   </footer>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
