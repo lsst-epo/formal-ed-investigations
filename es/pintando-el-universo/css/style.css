@@ -437,7 +437,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .object-select {
-  font-size: 18px;
+  font-size: 16px;
   float: right;
   width: 100px;
   outline: 0;
