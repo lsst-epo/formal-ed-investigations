@@ -38,8 +38,8 @@ const textureValue = selectedTexture.options[selectedTexture.selectedIndex].valu
   renderer.setPixelRatio( window.devicePixelRatio );
 
   // Keep height at 100 for now
-  renderer.setSize( window.innerWidth, (window.innerHeight * .85) );
-  // renderer.setSize( window.innerWidth, window.innerHeight );
+  // renderer.setSize( window.innerWidth, (window.innerHeight * .85) );
+  renderer.setSize( window.innerWidth, window.innerHeight );
 
   // Controls
   controls = new THREE.OrbitControls(camera, renderer.domElement);
