@@ -21,7 +21,7 @@
 			.text {
 				width: 400px;
 				position: relative;
-				margin-bottom: 200px;
+				margin-bottom: 20px;
 				color: white;
 				z-index: 10;
 				font-size: 15px;
@@ -40,16 +40,29 @@
 			<h2 class="notebook-header text-white pt-5">Mapping The Milky Way</h2>
 			
 		</div>
-		<div class="container" style="float: left;width: 500px;z-index: 10;" >
-			<h3 class="mt-5 ml-5 mb-4" style="z-index: 10;position: relative;color: white;">Introduction</h3>
-	<p class="ml-5 mb-5 text">We live inside a galaxy called the “Milky Way.” Our galaxy contains over 400 billion stars and we now have a good idea of its size and shape as well as our location within it. Our galaxy is too big to travel outside of it to take a picture. So how can we know what our galaxy looks like when we are inside it?</p>
-	<p class="ml-5 text">We live inside a galaxy called the “Milky Way.” Our galaxy contains over 400 billion stars and we now have a good idea of its size and shape as well as our location within it. Our galaxy is too big to travel outside of it to take a picture. So how can we know what our galaxy looks like when we are inside it?</p>
-	<p class="ml-5 text">We live inside a galaxy called the “Milky Way.” Our galaxy contains over 400 billion stars and we now have a good idea of its size and shape as well as our location within it. Our galaxy is too big to travel outside of it to take a picture. So how can we know what our galaxy looks like when we are inside it?</p>
-	<p class="ml-5 text">We live inside a galaxy called the “Milky Way.” Our galaxy contains over 400 billion stars and we now have a good idea of its size and shape as well as our location within it. Our galaxy is too big to travel outside of it to take a picture. So how can we know what our galaxy looks like when we are inside it?</p>
-		
+		<div class="container pl-5" style="float: left;width: 500px;z-index: 10;" >
+			<h3 class="mt-5 mb-4" style="z-index: 10;position: relative;color: white;">Introduction</h3>
+	<p class="text">We live inside a galaxy called the Milky Way. Our galaxy contains over 400 billion stars, and we now have a good idea of its size and shape as well as our location within it. But how do we know this? The Milky Way is too big for us to send a space probe outside of the galaxy to photograph it in its entirety. We need to use different techniques to figure out what it looks like from our place inside the galaxy.</p>
+
+	<p class="text">Imagine you live in a house, and you want to know what it looks like, but you can’t go outside. You could build a model of it by observing the inside of your house and noting the layout and size of the rooms. You could then look out the windows at other houses, to see if any of them have a similar appearance to the model of your house.</p>
+
+	<p class="text">We can figure out what the Milky Way looks like in a similar way: by mapping out the locations of stars inside our galaxy, and by comparing the shape and size of our galaxy to other galaxies we can observe from a distance. Galaxies, like houses, come in different shapes and sizes. The most common galaxy types are <a href="https://cnx.org/contents/LnN76Opl@13.154:IwGwW2LK@3/Types-of-Galaxies">spiral, elliptical and irregular galaxies.</a></p>
+
+	<p class="text">In this investigation you will learn how to use LSST data to determine the type of galaxy we live in. You’ll also learn how to figure out where in the Milky Way we live. We can do both by mapping the locations of stars in the sky.</p>
+
+	<h3 class="mt-5 mb-4 text">Essential Questions</h3>
+			<ul class="text">
+				<li>What is a concentration map and how is it different from a map of stars?
+				</li>
+				<li>What type of galaxy is the Milky Way? What is the evidence for this?
+				</li>
+				<li>Where are Earth and our Sun located in the Milky Way galaxy? What is the evidence for this?</li>
+			</ul>
+	<b class="text">Understanding Concentration Maps</b>	
+	<p class="text" >The map below shows a small section of the sky observed by LSST:</p>
 
 	
-	<select class="custom-select canvas-button position-sticky ml-5" style="top:10px;" id="texture" aria-label="Color" onchange="init()">
+	<select class="custom-select canvas-button position-sticky" style="top:10px;" id="texture" aria-label="Color" onchange="init()">
 				<optgroup label="Generic">
 					<option value="Generic/Constellations">Constellations</option>
 				</optgroup>
@@ -66,16 +79,17 @@
 					<option value="Disk-Galaxy/spiral-middle">Spiral Middle</option>
 				</optgroup>
 			</select>
-	<p class="ml-5 text">We live inside a galaxy called the “Milky Way.” Our galaxy contains over 400 billion stars and we now have a good idea of its size and shape as well as our location within it. Our galaxy is too big to travel outside of it to take a picture. So how can we know what our galaxy looks like when we are inside it?</p>
-	<p class="ml-5 text">We live inside a galaxy called the “Milky Way.” Our galaxy contains over 400 billion stars and we now have a good idea of its size and shape as well as our location within it. Our galaxy is too big to travel outside of it to take a picture. So how can we know what our galaxy looks like when we are inside it?</p>
-	<p class="ml-5 text">We live inside a galaxy called the “Milky Way.” Our galaxy contains over 400 billion stars and we now have a good idea of its size and shape as well as our location within it. Our galaxy is too big to travel outside of it to take a picture. So how can we know what our galaxy looks like when we are inside it?</p>
-	<p class="ml-5 text">We live inside a galaxy called the “Milky Way.” Our galaxy contains over 400 billion stars and we now have a good idea of its size and shape as well as our location within it. Our galaxy is too big to travel outside of it to take a picture. So how can we know what our galaxy looks like when we are inside it?</p>
+	<p class="text">We live inside a galaxy called the “Milky Way.” Our galaxy contains over 400 billion stars and we now have a good idea of its size and shape as well as our location within it. Our galaxy is too big to travel outside of it to take a picture. So how can we know what our galaxy looks like when we are inside it?</p>
+	<p class="text">We live inside a galaxy called the “Milky Way.” Our galaxy contains over 400 billion stars and we now have a good idea of its size and shape as well as our location within it. Our galaxy is too big to travel outside of it to take a picture. So how can we know what our galaxy looks like when we are inside it?</p>
+	<p class="text">We live inside a galaxy called the “Milky Way.” Our galaxy contains over 400 billion stars and we now have a good idea of its size and shape as well as our location within it. Our galaxy is too big to travel outside of it to take a picture. So how can we know what our galaxy looks like when we are inside it?</p>
+	<p class="text">We live inside a galaxy called the “Milky Way.” Our galaxy contains over 400 billion stars and we now have a good idea of its size and shape as well as our location within it. Our galaxy is too big to travel outside of it to take a picture. So how can we know what our galaxy looks like when we are inside it?</p>
 	</div>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js'></script>
 	<script src='https://s3.ca-central-1.amazonaws.com/maxv-dev/ThreeJS/OrbitControls.js'></script>
-
+<script src="js/libs/inflate.min.js"></script>
 	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>	
- 
+ 	<script  src="js/FBXLoader.js"></script>
+
 	<script  src="js/index.js"></script>
 
 
