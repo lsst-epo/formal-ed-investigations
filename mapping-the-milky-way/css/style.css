@@ -49,9 +49,9 @@ canvas {
 
       .sidebar p, ol, ul, b {
         /*background: white;*/
-          padding: 19px;
-          border-radius: 5px;
-        width: 350px;
+         padding: 19px;
+        border-radius: 5px;
+        width: 375px;
         position: relative;
         /*color: white;*/
         z-index: 10;
