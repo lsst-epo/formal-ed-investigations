@@ -34,18 +34,39 @@ canvas {
 
 /* Text CSS */
 
-.notebook-header {
-	    text-decoration: underline;
-    display: block;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 70px;
-    width: 500px;
-    color: #945545;
-    margin: auto;
-}
+.nb-header-widget {
+        text-decoration: underline;
+          /*display: block;*/
+          /*text-align: center;*/
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 800;
+          font-size: 65px;
+          /*width: 500px;*/
+          color: #86a9c5;
+          margin: auto;
+          margin-top: 20px
+      }
 
+      .sidebar p, ol, ul, b {
+        /*background: white;*/
+          padding: 19px;
+          border-radius: 5px;
+        width: 350px;
+        position: relative;
+        /*color: white;*/
+        z-index: 10;
+        font-size: 15px;
+      }
+
+      .sidebar h2, h3 {
+        padding: 19px;
+      }
+
+      .sidebar {
+        position: relative;
+        background: white;
+        font-size: 15px;
+      }
 /* Widget CSS */
 
 .position-indicator {

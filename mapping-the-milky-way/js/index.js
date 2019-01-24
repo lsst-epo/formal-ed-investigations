@@ -22,7 +22,7 @@ function init() {
 
   // Camera
   camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 1000 );
-  camera.position.set( 0, 0, 2 );
+  // camera.position.set( 10, 0, 2 );
 
   // Indicator Camera
   camera2 = new THREE.PerspectiveCamera( 20, window.innerWidth / window.innerHeight, 1, 1000 );
@@ -73,7 +73,7 @@ function init() {
   renderer.autoClear = false; // For two scenes
 
   window.addEventListener( 'resize', onWindowResized, false );
-  document.getElementById('main').addEventListener( 'wheel', onDocumentMouseWheel, false );
+  // document.getElementById('main').addEventListener( 'wheel', onDocumentMouseWheel, false );
 
  
         
