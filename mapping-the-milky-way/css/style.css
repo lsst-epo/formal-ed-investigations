@@ -54,10 +54,10 @@ canvas {
   text-decoration: underline;
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
-  font-size: 65px;
+  font-size: 70px;
   color: #86a9c5;
   margin: auto;
-  margin-top: 150px;
+  margin-top: 200px;
   margin-bottom: 250px;
 }
 
@@ -68,8 +68,8 @@ canvas {
   width: 375px;
   position: relative;
   z-index: 10;
-  line-height: 30px;
-  font-size: 17px;
+  line-height: 34px;
+  font-size: 18px;
 }
 
 .sidebar ul {
@@ -115,9 +115,14 @@ canvas {
 
 /* Buttons*/
 
+.button {
+  font-size: 18px
+}
+
 .canvas-button {
+  font-size: 18px;
   position: fixed;
-  top: 630px !important;
+  top: 700px !important;
   left: 430px !important;
   /*position: absolute;*/
   display: block;
