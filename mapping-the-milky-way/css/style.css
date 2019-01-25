@@ -32,41 +32,73 @@ canvas {
   height: 85vh;
 }
 
+.hamburger-alt {
+  background: none;
+  /* position: absolute; */
+  /* top: 0; */
+  /* right: 0; */
+  line-height: 45px;
+  /* padding: 5px 15px 0px 15px; */
+  /* width: 100px; */
+  border: 0;
+  font-size: 2em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 100;
+}
+
 /* Text CSS */
 
 .nb-header-alt2 {
-        text-decoration: underline;
-          /*display: block;*/
-          /*text-align: center;*/
-          font-family: 'Montserrat', sans-serif;
-          font-weight: 800;
-          font-size: 65px;
-          /*width: 500px;*/
-          color: #86a9c5;
-          margin: auto;
-          margin-top: 20px
-      }
+  text-decoration: underline;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 65px;
+  color: #86a9c5;
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom: 250px;
+}
 
-      .sidebar p, ol, ul, b {
-        /*background: white;*/
-         padding: 19px;
-        border-radius: 5px;
-        width: 375px;
-        position: relative;
-        /*color: white;*/
-        z-index: 10;
-        font-size: 15px;
-      }
+.sidebar p, ol, ul, b {
+  padding: 19px;
+  border-radius: 5px;
+  width: 375px;
+  position: relative;
+  z-index: 10;
+  line-height: 30px;
+  font-size: 17px;
+}
 
-      .sidebar h2, h3 {
-        padding: 19px;
-      }
+.sidebar ul {
+  padding-top: 0px;
+}
 
-      .sidebar {
-        position: relative;
-        background: white;
-        font-size: 15px;
-      }
+.sidebar li {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 20px;
+}
+
+.sidebar textarea {
+  margin-left: 24px;
+  width: 90%;
+}
+
+.sidebar h2, h3 {
+  padding: 19px;
+}
+.sidebar h3 {
+  padding-bottom: 1px;
+  font-weight: 600;
+}
+
+.sidebar {
+  position: relative;
+  background: white;
+  font-size: 15px;
+}
 /* Widget CSS */
 
 .position-indicator {
@@ -79,7 +111,10 @@ canvas {
 /* Buttons*/
 
 .canvas-button {
-  position: absolute;
+  position: fixed;
+  top: 630px !important;
+  left: 430px !important;
+  /*position: absolute;*/
   display: block;
   z-index: 99;
   left: 0%;

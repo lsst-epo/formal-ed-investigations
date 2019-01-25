@@ -2,7 +2,7 @@
 <html lang="en" >
 	<head>
 		<meta charset="UTF-8">
-		<title>Mapping The Milky Way</title>
+		<title>Mapping the Milky Way</title>
 		
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		
@@ -10,33 +10,53 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="../assets/css/normalize.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet">
-		<style>
-			
-		</style>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
 	</head>
 	<body>
-
 		<canvas id="main" style="position: fixed;z-index: 1" ></canvas>
-				  
-	<div class="container" style="z-index: 10;position: relative;">
-			
-			
-		</div>
+
+		<select class="custom-select canvas-button" id="texture" aria-label="Color" onchange="init()">
+
+				<optgroup label="Generic">
+					<option value="Generic/Constellations" selected>Constellations</option>
+				</optgroup>
+
+				<optgroup label="Elliptical Galaxy">
+					<!-- <option value="" disabled>Texture</option> -->
+					<option value="Elliptical-Galaxy/elliptical-edge">Edge</option>
+					<option value="Elliptical-Galaxy/elliptical-center" >Center</option>
+					<option value="Elliptical-Galaxy/elliptical-middle">Middle</option>
+				</optgroup>
+
+				<optgroup label="Disk Galaxy">
+					<option value="Disk-Galaxy/spiral-edge">Edge</option>
+					<option value="Disk-Galaxy/spiral-center">Center</option>
+					<option value="Disk-Galaxy/spiral-middle">Middle</option>
+				</optgroup>
+
+			</select>
+
+
 		<div class="container pl-3 sidebar" style="float: left;width: 425px;z-index: 10;" >
-			<h2 class="nb-header-alt2">Mapping The Milky Way</h2>
+			<ul class="list-none">
+              <li><button class="hamburger-alt text-dark">&#9776;</button></li>
+            </ul>
+
+			<h2 class="nb-header-alt2">Mapping the Milky Way</h2>
 			<h3 class="" style="z-index: 10;position: relative;">Introduction</h3>
-	<p>We live inside a galaxy called the Milky Way. Our galaxy contains over 400 billion stars, and we now have a good idea of its size and shape as well as our location within it. But how do we know this? The Milky Way is too big for us to send a space probe outside of the galaxy to photograph it in its entirety. We need to use different techniques to figure out what it looks like from our place inside the galaxy.</p>
 
-	<p>Imagine you live in a house, and you want to know what it looks like, but you can’t go outside. You could build a model of it by observing the inside of your house and noting the layout and size of the rooms. You could then look out the windows at other houses, to see if any of them have a similar appearance to the model of your house.</p>
+			<p>We live inside a galaxy called the Milky Way. Our galaxy contains over 400 billion stars, and we now have a good idea of its size and shape as well as our location within it. But how do we know this? The Milky Way is too big for us to send a space probe outside of the galaxy to photograph it in its entirety. We need to use different techniques to figure out what it looks like from our place inside the galaxy.</p>
 
-	<p>We can figure out what the Milky Way looks like in a similar way: by mapping out the locations of stars inside our galaxy, and by comparing the shape and size of our galaxy to other galaxies we can observe from a distance. Galaxies, like houses, come in different shapes and sizes. The most common galaxy types are <a href="https://cnx.org/contents/LnN76Opl@13.154:IwGwW2LK@3/Types-of-Galaxies">spiral, elliptical and irregular galaxies.</a></p>
+			<p>Imagine you live in a house, and you want to know what it looks like, but you can’t go outside. You could build a model of it by observing the inside of your house and noting the layout and size of the rooms. You could then look out the windows at other houses, to see if any of them have a similar appearance to the model of your house.</p>
 
-	<p>In this investigation you will learn how to use LSST data to determine the type of galaxy we live in. You’ll also learn how to figure out where in the Milky Way we live. We can do both by mapping the locations of stars in the sky.</p>
+			<p>We can figure out what the Milky Way looks like in a similar way: by mapping out the locations of stars inside our galaxy, and by comparing the shape and size of our galaxy to other galaxies we can observe from a distance. Galaxies, like houses, come in different shapes and sizes. The most common galaxy types are <a href="https://cnx.org/contents/LnN76Opl@13.154:IwGwW2LK@3/Types-of-Galaxies">spiral, elliptical and irregular galaxies.</a></p>
 
-	<h3 class="mt-5 mb-4 text">Essential Questions</h3>
+			<p>In this investigation you will learn how to use LSST data to determine the type of galaxy we live in. You’ll also learn how to figure out where in the Milky Way we live. We can do both by mapping the locations of stars in the sky.</p>
+
+			<h3 class="mt-5 mb-4 text">Essential Questions</h3>
+
 			<ul>
 				<li>What is a concentration map and how is it different from a map of stars?
 				</li>
@@ -44,41 +64,311 @@
 				</li>
 				<li>Where are Earth and our Sun located in the Milky Way galaxy? What is the evidence for this?</li>
 			</ul>
-	<b>Understanding Concentration Maps</b>	
-	<p >The map below shows a small section of the sky observed by LSST:</p>
+
+
+			<b>Understanding Concentration Maps</b>	
+
+			<p>The map below shows a small section of the sky observed by LSST:</p>
+			<p>Begin by selecting the star field image.</p>
+
+
+			<p>When there are lots of stars in an image, it becomes impossible to quantify exactly how many stars are in a particular area just by looking at it. Since LSST will precisely map the locations of about 17 billion stars during its ten-year survey, it will definitely be impossible to count them visually. Instead, astronomers create data visualizations, called concentration maps, to show how many stars are concentrated at different locations in the sky. </p>
+			<p>Now select the concentration map for this image.</p>
+			<p>The different colors in the concentration maps give you an indication of how many stars are present in that area of the galaxy. Examine the color legend at the map bottom: e.g., a red color indicates a high number of stars concentrated in that area, whereas black indicates there are no stars at that location. White areas of the map are places that LSST has not observed the sky.</p>
+
+			<ol>
+				<li>A green color indicates that there is a (low, medium, high) number of stars in that area.</li>
+				<textarea class="form-control" rows="1"></textarea>
+
+				<li>Why are some regions white? Does this mean there are no stars in those places?</li>
+				<textarea class="form-control" rows="1"></textarea>
+				<li>Find a red area on the map. Predict whether there is a large number of stars or a small number of stars in this area.</li>
+				<select class="custom-select my-1 mr-sm-2 student-answer-mc">
+    				<option selected>Choose ...</option>
+    				<option value="1">Large</option>
+    				<option value="2">Small</option>
+  				</select>
+			</ol>
+
+			<p>Click on the red area on the map. An image of that region of the galaxy will appear. Note the number of stars in this image.</p>
+			<p>Now find a location that appears blue on the map.</p>
+
+			<ol start="4">
+				<li>Predict whether you will see a large number of stars or a small number of stars at this location</li>
+				<select class="custom-select my-1 mr-sm-2 student-answer-mc">
+    				<option selected>Choose ...</option>
+    				<option value="1">Large</option>
+    				<option value="2">Small</option>
+  				</select>
+			</ol>
+			<p>Click on a blue location and an image of that region of the sky will appear. Note the number of stars in this image.</p>
+
+			<ol start="5">
+				<li>Based on what you have just observed, what do the colors on the concentration maps represent?</li>
+				<ol type="A">
+					<li>The colors on the map correspond to the colors of the stars for that area of the galaxy. Red on the map indicates that many red stars are located in that area.</li>
+					<li>The colors on the map correspond to how many stars are in that area. Red locations indicate where there are high concentrations of stars.</li>
+					<li>The colors on the map correspond to the average temperature of stars for that area of the galaxy. Blue areas indicate that many hot stars are located in that area.</li>
+					<li>The colors on the map correspond to how often LSST has observed that part of the galaxy. Red areas indicate that LSST has observed that part of the galaxy many times.</li>
+					<br>
+					<select class="custom-select my-1 mr-sm-2 student-answer-mc">
+    					<option selected>Choose ...</option>
+    					<option value="1">a.</option>
+    					<option value="2">b.</option>
+    					<option value="2">c.</option>
+    					<option value="2">d.</option>
+  					</select>
+				</ol>
+			</ol>
+
+			<b>Concentration Map Models</b>
+
+			<p>The distribution of stars you see in the sky depends on the type of galaxy you live in and your location within it. If the Milky Way had a different shape or if the Sun were in a different location, you would see the stars distributed in the sky in a different way. To understand how this works you will investigate six concentration maps for simulated galaxies, using two galaxy types (elliptical and spiral) and three locations in each galaxy. </p>
+
+			<p> As you explore these six scenarios, think about what is similar and what is different about the concentration and distribution of stars in each type of galaxy. Specifically, keep these three questions in mind for each scenario:</p>
+
+			<ol>
+				<li>Is there a band of color that indicates a high concentration of stars across the map?</li>
+				<li>Is there a place that has the highest concentration of stars?</li>
+				<li>Are there regions of the map where there are very few (or no) stars?</li>
+			</ol>
+
+			<p>Begin by selecting “Elliptical Galaxy - Edge” from the drop-down menu on the sky mapper.</p>
+
+			<p>As you move around the map, notice the small index image in the lower right corner. An arrow extends from your location in the galaxy, pointing in the direction that you are viewing. </p>
+
+			<p>Imagine you are located on a planet orbiting a star at the edge of an elliptical (spherical) galaxy. </p>
+
+			<p>Click and drag to explore the concentration map of stars from this location. </p>
+
+			<ol start="6">
+				<li>Describe what you see.</li>
+				<textarea class="form-control" rows="3"></textarea>
+				<li> Notice that much of the sky does not contain any stars. In which direction are you looking when you observe this? (Refer to the index image when you see this view.)</li>
+				<textarea class="form-control" rows="1"></textarea>
+				<li> There are many stars in a different part of the sky. In which direction are you looking when you observe this? (Refer to the index image when you see this view.)</li>
+				<textarea class="form-control" rows="1"></textarea>
+			</ol>
+
+			<p>Change the menu on the sky mapper to “Elliptical Galaxy - Halfway.”</p>
+
+			<p>Now imagine you are in the same galaxy as before, but you’ve moved to a location that’s halfway between the center and the outer edge.</p>
+
+			<ol start="9">
+				<li>How does the distribution of stars look different than when you were located at the edge of the galaxy?</li>
+				<textarea class="form-control" rows="1"></textarea>
+				<li>Notice there is a direction in the sky where the concentration of stars is highest. In what direction is this? </li>
+				<textarea class="form-control" rows="1"></textarea>
+			</ol>
+
+			<p>Change the menu on the sky mapper to “Elliptical Galaxy - Center.”</p>
+
+			<p>Notice as you look around the sky that that the concentration of stars is the same in every direction you look. </p>
+
+			<ol start="11">
+				<li>If you are at the center of an elliptical galaxy, why does the distribution of stars look the same in all directions?</li>
+				<textarea class="form-control" rows="1"></textarea>
+			</ol>
+
+			<p>Now let’s investigate the views of the sky from a spiral galaxy.</p>
+
+			<p>Change the menu on the sky mapper to “Spiral Galaxy - Edge.”</p>
+
+			<ol start="12">
+				<li>In what direction is the concentration of stars the highest? (Hint: Think about the previous examples with the elliptical galaxy.)</li>
+				<textarea class="form-control" rows="1"></textarea>
+			</ol>
+
+			<p>Change the menu on the sky mapper to “Spiral Galaxy - Halfway.”</p>
+
+			<ol start="13">
+				<li>How does this distribution of stars look different than when you were halfway out from the center of an elliptical galaxy?</li>
+				<textarea class="form-control" rows="1"></textarea>
+			</ol>
+
+			<p>Change the menu on the sky mapper to “Spiral Galaxy - Center.”</p>
+
+			<ol start="14">
+				<li>How does this distribution of stars look different than when you were at the center of an elliptical galaxy?</li>
+				<textarea class="form-control" rows="1"></textarea>
+				<li>For each of the six scenarios listed in the left column, answer the three questions (listed in the top row) by selecting yes or no for each box:
+					<ol>
+						<li>Is there a band of color that indicates a high concentration of stars across the map?</li>
+						<select class="custom-select my-1 mr-sm-2 student-answer-mc">
+    						<option selected>Choose ...</option>
+    						<option value="1">Yes</option>
+    						<option value="2">No</option>
+  						</select>
+  						<li>Is there a single place that has the highest concentration of stars?</li>
+						<select class="custom-select my-1 mr-sm-2 student-answer-mc">
+    						<option selected>Choose ...</option>
+    						<option value="1">Yes</option>
+    						<option value="2">No</option>
+  						</select>
+  						<li>Are there regions of the map where there are very few (or no) stars?</li>
+						<select class="custom-select my-1 mr-sm-2 student-answer-mc">
+    						<option selected>Choose ...</option>
+    						<option value="1">Yes</option>
+    						<option value="2">No</option>
+  						</select>
+					</ol>
+				</li>
+			</ol>
+
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col"></th>
+						<th scope="col">Band of high-conc. color?</th>
+						<th scope="col">Single place with highest conc.?</th>
+						<th scope="col">Region with few or no stars?</th>
+					</tr>
+				</thead>
+				<tr>
+					<td scope="row">Elliptical Edge</td>
+					<td><input class="form-control" type="text"></td>
+					<td><input class="form-control" type="text"></td>
+					<td><input class="form-control" type="text"></td>
+				</tr>
+				<tr>
+					<td scope="row">Elliptical Halfway</td>
+					<td><input class="form-control" type="text"></td>
+					<td><input class="form-control" type="text"></td>
+					<td><input class="form-control" type="text"></td>
+				</tr>
+				<tr>
+					<td scope="row">Elliptical Center</td>
+					<td><input class="form-control" type="text"></td>
+					<td><input class="form-control" type="text"></td>
+					<td><input class="form-control" type="text"></td>
+				</tr>
+				<tr>
+					<td scope="row">Spiral Edge</td>
+					<td><input class="form-control" type="text"></td>
+					<td><input class="form-control" type="text"></td>
+					<td><input class="form-control" type="text"></td>
+				</tr>
+				<tr>
+					<td scope="row">Spiral Halfway</td>
+					<td><input class="form-control" type="text"></td>
+					<td><input class="form-control" type="text"></td>
+					<td><input class="form-control" type="text"></td>
+				</tr>
+				<tr>
+					<td scope="row">Spiral Center</td>
+					<td><input class="form-control" type="text"></td>
+					<td><input class="form-control" type="text"></td>
+					<td><input class="form-control" type="text"></td>
+				</tr>
+
+
+			</table>
+
+			<h2>Using the LSST data for our galaxy</h2>
+			<p>One of the six scenarios above accurately models what type of galaxy the Milky Way is, and where we live in it. To determine which one it is, you will compare the simulated concentration maps to the actual star concentration map of the Milky Way Galaxy created from LSST observations. Studying the LSST star concentration map will be more challenging for two reasons: (1) Our galaxy has more complex structure than the simulated galaxies you just studied. (2) LSST can’t observe all of the sky, only what is visible from its location in the Southern hemisphere. The areas of the sky that are not observed by LSST are shown as white.</p>
+
+			<p>The Milky Way concentration map is made from the number of stars that appear in y-band filter images. The y-band filter allows LSST to observe infrared light from stars. Since infrared light is not blocked by dust clouds, the y-band filter allows us to see more stars than we would observe by using only visible light wavelengths.</p>
+
+			<ol start="16">
+				<li>As you did for the simulated maps, answer these three questions about the LSST map:</li>
+				<ol>
+					<li>Is there a band of color that indicates a high concentration of stars across the map?</li>
+					<select class="custom-select my-1 mr-sm-2 student-answer-mc">
+						<option selected>Choose ...</option>
+						<option value="1">Yes</option>
+						<option value="2">No</option>
+						</select>
+						<li>Is there a single place that has the highest concentration of stars?</li>
+					<select class="custom-select my-1 mr-sm-2 student-answer-mc">
+						<option selected>Choose ...</option>
+						<option value="1">Yes</option>
+						<option value="2">No</option>
+						</select>
+						<li>Are there regions of the map where there are very few (or no) stars?</li>
+					<select class="custom-select my-1 mr-sm-2 student-answer-mc">
+						<option selected>Choose ...</option>
+						<option value="1">Yes</option>
+						<option value="2">No</option>
+					</select>
+				</ol>
+				<li>Using your answers for these three questions, which of the six simulated maps most closely matches the appearance of the LSST map?</li>
+				<textarea class="form-control" rows="1"></textarea>
+				<li>Based upon your previous answer, which type of galaxy do you think the Milky Way is?</li>
+				<textarea class="form-control" rows="1"></textarea>
+				<li>Where do you think we are located in the galaxy?</li>
+				<select class="custom-select my-1 mr-sm-2 student-answer-mc">
+					<option selected>Choose ...</option>
+					<option value="1">Center</option>
+					<option value="2">Edge</option>
+					<option value="2">Halfway</option>
+				</select>
+				<li> Turn on the constellations overlay. Which constellation is in the direction of the center of our galaxy? </li>
+				<textarea class="form-control" rows="1"></textarea>
+			</ol>
+
+			<p>Notice there are two bright objects in the concentration map below. These are named the Large Magellanic Cloud (LMC) and Small Magellanic Cloud (SMC).</p>
+
+			<ol start="21">
+				<li>The Milky Way Galaxy is about 100,000 light years in diameter. The LMC is about 158,000 light years away from the Milky Way and the SMC is about 200,000 light years away. Do you think the LMC and SMC are inside or outside the Milky Way? How do you know?</li>
+				<textarea class="form-control" rows="1"></textarea>
+				<li>Despite their names, these two objects aren’t actually clouds. What type of objects could they be?</li>
+				<select class="custom-select my-1 mr-sm-2 student-answer-mc">
+					<option selected>Choose ...</option>
+					<option value="1">Planetary nebulae</option>
+					<option value="2">Galaxies</option>
+					<option value="2">Star forming regions (nebulae) in our galaxy</option>
+					<option value="2">Comets</option>
+				</select>
+				<li>Explain your answer to the previous question.</li>
+				<textarea class="form-control" rows="2"></textarea>
+			</ol>
+
+			<h2>Discuss and report</h2>
+			<p>Take a few minutes with your partner or group to discuss the following questions. Be prepared to share your observations with the class.</p>
+
+			<ol start="24">
+				<li>Could you have correctly answered questions 18 and 19 if LSST imaged only a small area of the galaxy? Why or why not?</li>
+				<textarea class="form-control" rows="2"></textarea>
+
+				<li> If you are located at the edge of a disk in a
+					<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:100px;margin:0;">
+    					<option selected>Choose ...</option>
+    					<option value="1">Bright</option>
+    					<option value="2">Dark</option>
+  					</select>galaxy, and facing 
+  					<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:100px;margin:0;">
+    					<option selected>Choose ...</option>
+    					<option value="1">Bright</option>
+    					<option value="2">Dark</option>
+  					</select>, it would appear grey on the density map, indicating the concentration of stars is 
+  					<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:100px;margin:0;">
+    					<option selected>Choose ...</option>
+   						<option value="1">Bright</option>
+    					<option value="2">Dark</option>
+  					</select>. 
+				</li>
+			</ol>
+
+			<h2>Summary</h2>
+
+			<ol start="26">
+				<li>The view from the center of both types of galaxies shows many stars in (all directions/ only one direction), while the view from the edge of both types of galaxies shows a high concentration of stars in when looking (away from/ towards) the center of the galaxy.</li>
+				<li>From a midway location in both types of galaxies there would be a (higher/lower) concentration of stars when looking towards the center. The difference is that in an elliptical galaxy, there would not be a (banded/ spherical) pattern of star concentrations across the galaxy.</li>
+			</ol>
+			<!-- <img src="assets/Generic/image4.png" width="370" style="padding:20px" alt=""> -->
 
 	
-	<select class="custom-select canvas-button position-sticky" style="top:10px;" id="texture" aria-label="Color" onchange="init()">
-				<optgroup label="Generic">
-					<option value="Generic/Constellations">Constellations</option>
-				</optgroup>
-				<optgroup label="Elliptical Galaxy">
-					<!-- <option value="" disabled>Texture</option> -->
-					<option value="Elliptical-Galaxy/elliptical-center" >Elliptical Center</option>
-					<option value="Elliptical-Galaxy/elliptical-edge">Elliptical Edge</option>
-					<option value="Elliptical-Galaxy/elliptical-middle" selected>Elliptical Middle</option>
-					<option value="Elliptical-Galaxy/elliptical-outside">Elliptical Outside</option>
-				</optgroup>
-				<optgroup label="Disk Galaxy">
-					<option value="Disk-Galaxy/spiral-center">Spiral Center</option>
-					<option value="Disk-Galaxy/spiral-edge">Spiral Edge</option>
-					<option value="Disk-Galaxy/spiral-middle">Spiral Middle</option>
-				</optgroup>
-			</select>
-	<p>We live inside a galaxy called the “Milky Way.” Our galaxy contains over 400 billion stars and we now have a good idea of its size and shape as well as our location within it. Our galaxy is too big to travel outside of it to take a picture. So how can we know what our galaxy looks like when we are inside it?</p>
-	<p>We live inside a galaxy called the “Milky Way.” Our galaxy contains over 400 billion stars and we now have a good idea of its size and shape as well as our location within it. Our galaxy is too big to travel outside of it to take a picture. So how can we know what our galaxy looks like when we are inside it?</p>
-	<p>We live inside a galaxy called the “Milky Way.” Our galaxy contains over 400 billion stars and we now have a good idea of its size and shape as well as our location within it. Our galaxy is too big to travel outside of it to take a picture. So how can we know what our galaxy looks like when we are inside it?</p>
-	<p>We live inside a galaxy called the “Milky Way.” Our galaxy contains over 400 billion stars and we now have a good idea of its size and shape as well as our location within it. Our galaxy is too big to travel outside of it to take a picture. So how can we know what our galaxy looks like when we are inside it?</p>
-	</div>
+			
+
+			
+		</div>
+
+
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js'></script>
 	<script src='https://s3.ca-central-1.amazonaws.com/maxv-dev/ThreeJS/OrbitControls.js'></script>
-<script src="js/libs/inflate.min.js"></script>
-	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>	
+	<script src="js/libs/inflate.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>	
  	<script  src="js/FBXLoader.js"></script>
-
 	<script  src="js/index.js"></script>
-
-
-
 	</body>
 </html>
