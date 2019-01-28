@@ -156,6 +156,12 @@ li a:hover {
   display: inline-block;
 }
 
+.inline-textarea {
+  width: 90px !important;
+  display: inline !important;
+  margin: 10px 10px -5px 10px !important;
+}
+
 /* Universal Styles */
 
 .button {
