@@ -51,7 +51,6 @@ canvas {
 /* Text CSS */
 
 .nb-header-alt2 {
-  text-decoration: underline;
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   font-size: 70px;
@@ -115,31 +114,18 @@ canvas {
 
 /* Buttons*/
 
+
 .button {
   font-size: 18px
-}
-
-.canvas-button {
-  font-size: 18px;
-  position: fixed;
-  top: 700px !important;
-  left: 430px !important;
-  /*position: absolute;*/
-  display: block;
-  z-index: 99;
-  left: 0%;
-  top: 0%;
-}
-
-.canvas-button-nb {
-  z-index: 99;
-  left: 0%;
-  top: 0%;
 }
 
 .custom-select {
   width: 200px;
   margin: 20px;
+}
+
+.canvas-overlay-button {
+  left: 440px;
 }
 
 a.click-to-scroll {
