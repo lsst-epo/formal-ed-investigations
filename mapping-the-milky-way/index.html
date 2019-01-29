@@ -27,7 +27,7 @@
 					<option value="Elliptical-Galaxy/elliptical-center" >Center</option>
 				</optgroup>
 
-				<optgroup label="Disk Galaxy">
+				<optgroup label="Spiral Galaxy">
 					<option value="Disk-Galaxy/spiral-edge">Edge</option>
 					<option value="Disk-Galaxy/spiral-middle">Halfway</option>
 					<option value="Disk-Galaxy/spiral-center">Center</option>
@@ -217,7 +217,7 @@
 			<ol start="14">
 				<li>How does this distribution of stars look different than when you were at the center of an elliptical galaxy?</li>
 				<textarea class="form-control" rows="1"></textarea>
-				<li>For each of the six scenarios listed in the left column, answer the three questions (listed in the top row) by selecting yes or no for each box:
+				<li>For each of the six scenarios listed in the left column of the chart below, answer the three questions (listed in the top row) by inserting yes or no for each box:
 					<ol>
 						<li>Is there a band of color that indicates a high concentration of stars across the map?</li>
   						<li>Is there a single place that has the highest concentration of stars?</li>
@@ -275,7 +275,7 @@
 
 			</table>
 
-			<h2>Using the LSST data for our galaxy</h2>
+			<h3 class="mt-5 mb-3 text">Using the LSST data for our galaxy</h3>
 			<p>One of the six scenarios above accurately models what type of galaxy the Milky Way is, and where we live in it. To determine which one it is, you will compare the simulated concentration maps to the actual star concentration map of the Milky Way Galaxy created from LSST observations. Studying the LSST star concentration map will be more challenging for two reasons: (1) Our galaxy has more complex structure than the simulated galaxies you just studied. (2) LSST can’t observe all of the sky, only what is visible from its location in the Southern hemisphere. The areas of the sky that are not observed by LSST are shown as white.</p>
 
 			<p>The Milky Way concentration map is made from the number of stars that appear in y-band filter images. The y-band filter allows LSST to observe infrared light from stars. Since infrared light is not blocked by dust clouds, the y-band filter allows us to see more stars than we would observe by using only visible light wavelengths.</p>
@@ -305,7 +305,11 @@
 				<li>Using your answers for these three questions, which of the six simulated maps most closely matches the appearance of the LSST map?</li>
 				<textarea class="form-control" rows="1"></textarea>
 				<li>Based upon your previous answer, which type of galaxy do you think the Milky Way is?</li>
-				<textarea class="form-control" rows="1"></textarea>
+				<select class="custom-select my-1 mr-sm-2 student-answer-mc">
+					<option selected>Choose ...</option>
+					<option value="1">Spiral</option>
+					<option value="2">Elliptical</option>
+				</select>
 				<li>Where do you think we are located in the galaxy?</li>
 				<select class="custom-select my-1 mr-sm-2 student-answer-mc">
 					<option selected>Choose ...</option>
@@ -317,7 +321,9 @@
 				<textarea class="form-control" rows="1"></textarea>
 			</ol>
 
-			<p>Notice there are two bright objects in the concentration map below. These are named the Large Magellanic Cloud (LMC) and Small Magellanic Cloud (SMC).</p>
+			<p>Select LMC/SMC from the drop down menu under Milky Way Galaxy.</p>
+
+			<p>Notice there are two bright objects in the concentration map. These are named the Large Magellanic Cloud (LMC) and Small Magellanic Cloud (SMC).</p>
 
 			<ol start="21">
 				<li>The Milky Way Galaxy is about 100,000 light years in diameter. The LMC is about 158,000 light years away from the Milky Way and the SMC is about 200,000 light years away. Do you think the LMC and SMC are inside or outside the Milky Way? How do you know?</li>
@@ -334,7 +340,7 @@
 				<textarea class="form-control" rows="2"></textarea>
 			</ol>
 
-			<h2>Discuss and report</h2>
+			<h3 class="mt-5 mb-3 text">Discuss and report</h3>
 			<p>Take a few minutes with your partner or group to discuss the following questions. Be prepared to share your observations with the class.</p>
 
 			<ol start="24">
@@ -342,17 +348,54 @@
 				<textarea class="form-control" rows="2"></textarea>
 
 				<li> If you are located at the edge of a disk in a
-					<textarea class="form-control inline-textarea" rows="1"></textarea>galaxy, and facing 
-  					<textarea class="form-control inline-textarea" rows="1"></textarea>, it would appear grey on the density map, indicating the concentration of stars is 
-  					<textarea class="form-control inline-textarea" rows="1"></textarea>. 
+				<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:130px;margin-left: 0px">
+					<option selected>Choose ...</option>
+					<option value="1">spiral</option>
+					<option value="2">elliptical</option>
+				</select>
+				galaxy, and facing 
+  				<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:130px;margin-left: 0px">
+					<option selected>Choose ...</option>
+					<option value="1">towards the center</option>
+					<option value="2">away from the center</option>
+				</select>	
+  				, it would appear grey on the density map, indicating the concentration of stars is 
+  				<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:130px;margin-left: 0px">
+					<option selected>Choose ...</option>
+					<option value="1">high</option>
+					<option value="2">low</option>
+				</select>. 
 				</li>
 			</ol>
 
-			<h2>Summary</h2>
+			<h3 class="mt-5 mb-3 text">Summary</h3>
 
 			<ol start="26">
-				<li>The view from the center of both types of galaxies shows many stars in (all directions/ only one direction), while the view from the edge of both types of galaxies shows a high concentration of stars in when looking (away from/ towards) the center of the galaxy.</li>
-				<li>From a halfway location in both types of galaxies there would be a (higher/lower) concentration of stars when looking towards the center. The difference is that in an elliptical galaxy, there would not be a (banded/ spherical) pattern of star concentrations across the galaxy.</li>
+				<li>The view from the center of both types of galaxies shows many stars in
+				<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:130px;margin-left: 0px">
+					<option selected>Choose ...</option>
+					<option value="1">all directions</option>
+					<option value="2">only one direction</option>
+				</select>, while the view from the edge of both types of galaxies shows a high concentration of stars in when looking
+				<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:130px;margin-left: 0px">
+					<option selected>Choose ...</option>
+					<option value="1">away from</option>
+					<option value="2">towards</option>
+				</select>
+				the center of the galaxy.</li>
+				<li>From a halfway location in both types of galaxies there would be a 
+				<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:130px;margin-left: 0px">
+					<option selected>Choose ...</option>
+					<option value="1">higher</option>
+					<option value="2">lower</option>
+				</select>
+				concentration of stars when looking towards the center. The difference is that in an elliptical galaxy, there would not be a 
+				<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:130px;margin-left: 0px">
+					<option selected>Choose ...</option>
+					<option value="1">banded</option>
+					<option value="2">spherical</option>
+				</select>
+				pattern of star concentrations across the galaxy.</li>
 			</ol>
 			<!-- <img src="assets/Generic/image4.png" width="370" style="padding:20px" alt=""> -->
 			<button class="button" style="margin: 40px;">Submit</button>		
