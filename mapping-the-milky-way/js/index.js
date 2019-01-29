@@ -77,7 +77,7 @@ function init() {
   renderer.autoClear = false;
 
   window.addEventListener( 'resize', onWindowResized, false );
-
+}
 
 function onWindowResized() {
   renderer.setSize( window.innerWidth, window.innerHeight );
@@ -107,6 +107,7 @@ function render() {
   renderer.render( scene, camera );
 
   renderer.clearDepth(); // important! clear the depth buffer
-  renderer.setViewport( window.innerWidth/4, window.innerHeight/4, 500, 500 );
+  renderer.setViewport( window.innerWidth - 400 , window.innerHeight -275, 500, 300 );
   renderer.render( scene2, camera2 );
 }
+
