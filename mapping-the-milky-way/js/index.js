@@ -1,4 +1,4 @@
-var camera, scene, renderer, backgroundMesh, texture, controls, controls2, sphere, geometry, material, light, ambientLight, arrowHelper;
+var camera, scene, renderer, backgroundMesh, texture, controls, sphere, geometry, material, light, ambientLight, arrowHelper;
 
 init();
 animate();
