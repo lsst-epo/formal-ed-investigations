@@ -1,4 +1,4 @@
-var camera, scene, renderer, backgroundMesh, texture, controls, sphere, geometry, material, light, ambientLight;
+var camera, scene, renderer, backgroundMesh, texture, controls, controls2, sphere, geometry, material, light, ambientLight, arrowHelper;
 
 init();
 animate();
@@ -11,6 +11,7 @@ function scrollToQuestionNode(id, location) {
   init()
 }
 
+var test = 10; 
 function init() {
 
   // Main Scene ===================
@@ -44,7 +45,7 @@ function init() {
 
   // Geometry
   geometry = new THREE.SphereGeometry( 2, 16, 16 );
-  material = new THREE.MeshLambertMaterial( { color: 0xffffff, wireframe: true } );
+  material = new THREE.MeshLambertMaterial( { color: 0xffffff, wireframe: false } );
   sphere = new THREE.Mesh( geometry, material );
   sphere.lookAt(camera.position)
   sphere.position.z = -20
@@ -55,9 +56,19 @@ function init() {
   light.position.set( 0, 0, -10 );
   scene2.add( light );
 
-  ambientLight = new THREE.AmbientLight( 0xffffff, .1 )
+  ambientLight = new THREE.AmbientLight( 0xffffff, .3 )
   scene2.add(ambientLight)
 
+  var dir = new THREE.Vector3( 10, 0, 0 );
+
+  //normalize the direction vector (convert to vector of length 1)
+  // dir.normalize();
+
+  var origin = new THREE.Vector3( .4, 0, -4 );
+  var length = .5;
+  var hex = 0xff0000;
+  arrowHelper = new THREE.ArrowHelper( dir, origin, length, hex );
+  scene2.add( arrowHelper );
 
 
   // Renderer
@@ -97,9 +108,10 @@ function animate() {
 function render() {
 
   // Moves Indicator w/ Camera
-  sphere.rotation.x = camera.position.y
-  sphere.rotation.y = camera.position.x
-
+  // sphere.rotation.x = camera.position.y
+  // arrowHelper.rotation.y = camera.position.x
+  arrowHelper.rotation.x = (camera.position.y +190);
+  arrowHelper.rotation.z = camera.position.x
   camera.lookAt( scene.position );
   
   renderer.clear();
@@ -108,6 +120,7 @@ function render() {
 
   renderer.clearDepth(); // important! clear the depth buffer
   renderer.setViewport( window.innerWidth - 350 , window.innerHeight -225, 400, 230 );
+  // renderer.setViewport( 0,0, window.innerWidth, window.innerHeight);
   renderer.render( scene2, camera2 );
 }
 
