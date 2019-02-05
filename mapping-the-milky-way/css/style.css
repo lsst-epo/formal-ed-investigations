@@ -16,56 +16,12 @@ canvas {
 
 }
 
-
-/* Sidebar */
-
-
-.sidebar {
-  float: left;
-  width: 425px;
-  z-index: 10;
-  position: relative;
-  background: white;
-  font-size: 15px;
-}
-
-.sidebar p, ol, ul, b {
-  padding: 19px;
-  padding-bottom: 0px;
-  border-radius: 5px;
-  width: 375px;
-  position: relative;
-  z-index: 10;
-  line-height: 34px;
-  font-size: 18px;
-}
-
-.sidebar li {
-  margin-left: 25px;
-  margin-right: 25px;
-  margin-top: 20px;
-}
-
-.sidebar h2, h3 {
-  padding: 19px;
-}
-.sidebar h3 {
-  padding-bottom: 1px;
-  font-weight: 600;
-}
-
-
-
 /* Buttons*/
-
-
-.button {
-  font-size: 18px;
-  margin: 20px;
-}
 
 .canvas-overlay-button {
   left: 440px;
+  width: 200px;
+  margin-bottom: 20px;
 }
 
 a.click-to-scroll {
@@ -75,6 +31,7 @@ a.click-to-scroll {
 .legend-position {
   height: 100px;
   left: 680px;
+  width: auto;
 }
 
 .density-map-opacity {
@@ -87,11 +44,10 @@ a.click-to-scroll {
 /* Images */
 
 .density-map {
-  width: 370px;
-  padding:20px;
+  width: 350px;
 }
 
 .data-map {
   position: absolute;
-  left: 15px;
+  left: 28px;
 }

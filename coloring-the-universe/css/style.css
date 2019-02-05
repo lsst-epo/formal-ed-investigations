@@ -227,6 +227,7 @@
   font-weight: 600;
   font-size: 13px;
   margin-bottom: none;
+  line-height: inherit;
 }
 
 .titles-right {

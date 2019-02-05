@@ -10,7 +10,8 @@ function scrollToSMC() {
   camera.position.set(-0.98,  1.18, -1.28)
 }
 
-function slideOpacity() {
-  document.getElementById('data-map').style.opacity = this.value/100;
+function changeOpacity(opacity) {
+  document.getElementById('data-map').style.opacity = opacity/100;
+
 }
 

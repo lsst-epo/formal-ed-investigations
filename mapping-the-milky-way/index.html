@@ -35,13 +35,14 @@
 
 		<canvas id="main"></canvas>
 
-		<div class="container pl-3 sidebar">
+		<div class="container sidebar">
 			<ul class="list-none">
+			<br>
               <li class="hamburger-menu"><button class="hamburger text-dark">&#9776;</button></li>
             </ul>
 
 			<h2 class="notebook-header">Mapping the Milky Way</h2>
-			<h3 class="mt-5 mb-4 text">Introduction</h3>
+			<h3 class="mt-5 mb-4">Introduction</h3>
 
 			<p>We live inside a galaxy called the Milky Way. Our galaxy contains over 400 billion stars, and we now have a good idea of its size and shape as well as our location within it. But how do we know this? The Milky Way is too big for us to send a space probe outside the galaxy to photograph it in its entirety. We need to use different techniques to figure out what it looks like from our place inside the galaxy.</p>
 
@@ -51,7 +52,7 @@
 
 			<p>In this investigation you will learn how to use LSST data to determine the type of galaxy we live in. You’ll also learn how to figure out where in the Milky Way we live. We can do both by mapping the locations of stars in the sky.</p>
 
-			<h3 class="mt-5 mb-4 text">Essential Questions</h3>
+			<h3 class="mt-5 mb-4">Essential Questions</h3>
 
 			<ul>
 				<li>What is a concentration map and how is it different from a map of stars?
@@ -61,7 +62,7 @@
 				<li>Where are Earth and our Sun located in the Milky Way galaxy? What is the evidence for this?</li>
 			</ul>
 
-			<h3 class="mt-5 mb-4 text">Background</h3>
+			<h3 class="mt-5 mb-4">Background</h3>
 
 			<b>Understanding Concentration Maps</b>	
 
@@ -69,7 +70,7 @@
 
 			<img src="assets/Concentration Map/density-map.png" class="density-map" alt="">
 			<img src="assets/Concentration Map/data-map.png" class="density-map data-map" id="data-map" alt="">
-			<input type="range" class="density-map-opacity range" min="0" max="100" step="1" value="100" onchange="changeOpacity()">
+			<input type="range" class="density-map-opacity range" min="0" max="100" step="1" value="100" onchange="changeOpacity(this.value)">
 
 
 			<p>When there are lots of stars in an image, it becomes impossible to quantify exactly how many stars are in a particular area just by looking at it. Since LSST will precisely map the locations of about 17 billion stars during its ten-year survey, it will definitely be impossible to count them visually. Instead, astronomers create data visualizations, called concentration maps, to show how many stars are concentrated at different locations in the sky. </p>
@@ -373,7 +374,7 @@
 
 			</table>
 
-			<h3 class="mt-5 mb-3 text">Using the LSST data for our galaxy</h3>
+			<h3 class="mt-5 mb-3">Using the LSST data for our galaxy</h3>
 			<p>One of the six scenarios above accurately models what type of galaxy the Milky Way is, and where we live in it. To determine which one it is, you will compare the simulated concentration maps to the actual star concentration map of the Milky Way Galaxy created from LSST observations. Studying the LSST star concentration map will be more challenging for two reasons: (1) Our galaxy has more complex structure than the simulated galaxies you just studied. (2) LSST can’t observe all of the sky, only what is visible from its location in the Southern hemisphere. The areas of the sky that are not observed by LSST are shown as white.</p>
 
 			<p>The Milky Way concentration map is made from the number of stars that appear in y-band filter images. The y-band filter allows LSST to observe infrared light from stars. Since infrared light is not blocked by dust clouds, the y-band filter allows us to see more stars than we would observe by using only visible light wavelengths.</p>
@@ -452,7 +453,7 @@
 				</li>
 			</ol>
 
-			<h3 class="mt-5 mb-3 text">Discuss and report</h3>
+			<h3 class="mt-5 mb-3">Discuss and report</h3>
 			<p>Take a few minutes with your partner or group to discuss the following questions. Be prepared to share your observations with the class.</p>
 
 			<ol start="24">
@@ -481,7 +482,7 @@
 				</li>
 			</ol>
 
-			<h3 class="mt-5 mb-3 text">Summary</h3>
+			<h3 class="mt-5 mb-3">Summary</h3>
 
 			<ol start="26">
 				<li>The view from the center of both types of galaxies shows many stars in
