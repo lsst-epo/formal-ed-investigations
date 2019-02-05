@@ -9,6 +9,7 @@ function init() {
   const selectedTexture = document.getElementById('texture');
   const textureValue = selectedTexture.options[selectedTexture.selectedIndex].value;
 
+
   texture = new THREE.TextureLoader().load( 'assets/' + textureValue + '.png' );
   texture.mapping = THREE.UVMapping;
 
@@ -59,7 +60,6 @@ function init() {
   var length = .3;
   var hex = 0xff0000;
   arrowHelper = new THREE.ArrowHelper( dir, origin, length, hex );
-  scene2.add( arrowHelper );
 
 
   // Renderer
@@ -79,6 +79,27 @@ function init() {
   renderer.autoClear = false;
 
   window.addEventListener( 'resize', onWindowResized, false );
+
+  // Turn indicator on/off
+  if (textureValue == "Generic/SMC" || textureValue == "Generic/Constellations") {
+    scene2.remove(sphere, arrowHelper)
+  }
+  // Indicator Location
+  if (textureValue == "Elliptical-Galaxy/elliptical-center" ) {
+    var elipticalCenterPosition = new THREE.Vector3( 0, 0, -4 );
+    arrowHelper = new THREE.ArrowHelper( dir, elipticalCenterPosition, length, hex );
+    scene2.add( arrowHelper );
+  }
+  if (textureValue == "Elliptical-Galaxy/elliptical-edge" ) {
+    var elipticalCenterPosition = new THREE.Vector3( .4, 0, -4 );
+    arrowHelper = new THREE.ArrowHelper( dir, elipticalCenterPosition, length, hex );
+    scene2.add( arrowHelper );
+  }
+  if (textureValue == "Elliptical-Galaxy/elliptical-halfway" ) {
+    var elipticalCenterPosition = new THREE.Vector3( .2, 0, -4 );
+    arrowHelper = new THREE.ArrowHelper( dir, elipticalCenterPosition, length, hex );
+    scene2.add( arrowHelper );
+  }
 }
 
 function onWindowResized() {
