@@ -44,10 +44,10 @@ function init() {
 
   // Lights
   light = new THREE.PointLight( 0xffffff, 1, 100 );
-  light.position.set( 0, 0, -5 );
+  light.position.set( 0, 0, -10 );
   scene2.add( light );
 
-  ambientLight = new THREE.AmbientLight( 0xffffff, .5 )
+  ambientLight = new THREE.AmbientLight( 0xffffff, .4 )
   scene2.add(ambientLight)
 
   var dir = new THREE.Vector3( 10, 0, 0 );
