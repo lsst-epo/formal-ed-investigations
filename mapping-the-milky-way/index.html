@@ -20,7 +20,7 @@
 			<optgroup label="Elliptical Galaxy">
 				<option value="Elliptical-Galaxy/elliptical-edge" selected>Edge</option>
 				<option value="Elliptical-Galaxy/elliptical-middle">Halfway</option>
-				<option value="Elliptical-Galaxy/elliptical-center" >Center</option>
+				<option value="Elliptical-Galaxy/elliptical-center2" >Center</option>
 			</optgroup>
 
 			<optgroup label="Spiral Galaxy">
@@ -34,16 +34,17 @@
 				<option value="Generic/Gaia_MW_density_map">LMC/SMC</option>
 			</optgroup>
 		</select>
+		<img src="assets/Generic/Legends.png" class="fixed-bottom canvas-overlay-button" style="height: 100px;left: 680px" alt="">
 
-		<canvas id="main" style="position: fixed;z-index: 1" ></canvas>
+		<canvas id="main"></canvas>
 
-		<div class="container pl-3 sidebar" style="float: left;width: 425px;z-index: 10;" >
+		<div class="container pl-3 sidebar">
 			<ul class="list-none">
-              <li style="margin-left: 0px;"><button class="hamburger-alt text-dark">&#9776;</button></li>
+              <li class="hamburger-menu"><button class="hamburger-alt text-dark">&#9776;</button></li>
             </ul>
 
 			<h2 class="nb-header-alt2">Mapping the Milky Way</h2>
-			<h3 class="" style="z-index: 10;position: relative;">Introduction</h3>
+			<h3 class="mt-5 mb-4 text">Introduction</h3>
 
 			<p>We live inside a galaxy called the Milky Way. Our galaxy contains over 400 billion stars, and we now have a good idea of its size and shape as well as our location within it. But how do we know this? The Milky Way is too big for us to send a space probe outside the galaxy to photograph it in its entirety. We need to use different techniques to figure out what it looks like from our place inside the galaxy.</p>
 
@@ -68,6 +69,12 @@
 			<b>Understanding Concentration Maps</b>	
 
 			<p>The map below shows a small section of the sky observed by LSST. Begin by selecting the star field image.</p>
+			<div style="">
+				<img src="assets/Concentration Map/density-map.png" width="370" style="padding:20px;" alt="">
+				<img src="assets/Concentration Map/data-map.png" id="density-map" width="370" style="padding:20px;position: absolute;left: 15px" alt="">
+			</div>
+			<input type="range" class="range" min="0" style="display: block;margin-right: auto;margin-left: auto;" max="100" step="1" value="100"onchange="document.getElementById('density-map').style.opacity = this.value/100;console.log(this.value/100)">
+
 
 			<p>When there are lots of stars in an image, it becomes impossible to quantify exactly how many stars are in a particular area just by looking at it. Since LSST will precisely map the locations of about 17 billion stars during its ten-year survey, it will definitely be impossible to count them visually. Instead, astronomers create data visualizations, called concentration maps, to show how many stars are concentrated at different locations in the sky. </p>
 			<p>Now select the concentration map for this image.</p>
@@ -131,11 +138,11 @@
 
 			<p> As you explore these six scenarios, think about what is similar and what is different about the concentration and distribution of stars in each type of galaxy. Specifically, keep these three questions in mind for each scenario:</p>
 
-			<ol>
+			<ul>
 				<li>Is there a band of color that indicates a high concentration of stars across the map?</li>
 				<li>Is there a place that has the highest concentration of stars?</li>
 				<li>Are there regions of the map where there are very few (or no) stars?</li>
-			</ol>
+			</ul>
 
 			<p>Begin by selecting “Elliptical Galaxy - Edge” from the drop-down menu on the sky mapper.</p>
 
@@ -407,6 +414,9 @@
 
 			<p>Notice there are two bright objects in the concentration map. These are named the Large Magellanic Cloud (LMC) and Small Magellanic Cloud (SMC).</p>
 
+
+			<button class="button" onclick="scrollToSMC()">Go to SMC</button>
+
 			<ol start="21">
 				<li>The Milky Way Galaxy is about 100,000 light years in diameter. The LMC is about 158,000 light years away from the Milky Way and the SMC is about 200,000 light years away. Do you think the LMC and SMC are inside or outside the Milky Way? How do you know?</li>
 				<textarea class="form-control" rows="1"></textarea>
@@ -479,8 +489,8 @@
 				</select>
 				pattern of star concentrations across the galaxy.</li>
 			</ol>
-			<!-- <img src="assets/Generic/image4.png" width="370" style="padding:20px" alt=""> -->
-			<button class="button" style="margin: 40px;">Submit</button>		
+			
+			<button class="button">Submit</button>		
 			<br><br>
 		</div>
 

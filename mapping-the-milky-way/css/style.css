@@ -27,9 +27,10 @@ canvas {
   display: block;
 }
 
-/* Change back after testing */
 #main {
-  height: 85vh;
+  position:fixed;
+  z-index: 1;
+
 }
 
 .hamburger-alt {
@@ -48,6 +49,10 @@ canvas {
   z-index: 100;
 }
 
+.hamburger-menu {
+  margin-left:0px !important;
+}
+
 /* Text CSS */
 
 .nb-header-alt2 {
@@ -58,6 +63,12 @@ canvas {
   margin: auto;
   margin-top: 200px;
   margin-bottom: 250px;
+}
+
+.sidebar {
+  float: left;
+  width: 425px;
+  z-index: 10;
 }
 
 .sidebar p, ol, ul, b {
@@ -116,7 +127,8 @@ canvas {
 
 
 .button {
-  font-size: 18px
+  font-size: 18px;
+  margin: 20px;
 }
 
 .custom-select {
