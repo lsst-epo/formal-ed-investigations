@@ -36,7 +36,7 @@ function init() {
 
   // Geometry
   geometry = new THREE.SphereGeometry( 2, 16, 16 );
-  material = new THREE.MeshLambertMaterial( { color: 0xffffff, wireframe: false } );
+  material = new THREE.MeshLambertMaterial( { color: 0xffffff, wireframe: true } );
   sphere = new THREE.Mesh( geometry, material );
   sphere.lookAt(camera.position)
   sphere.position.z = -20
@@ -44,10 +44,10 @@ function init() {
 
   // Lights
   light = new THREE.PointLight( 0xffffff, 1, 100 );
-  light.position.set( 0, 0, -10 );
+  light.position.set( 0, 0, -5 );
   scene2.add( light );
 
-  ambientLight = new THREE.AmbientLight( 0xffffff, .3 )
+  ambientLight = new THREE.AmbientLight( 0xffffff, .5 )
   scene2.add(ambientLight)
 
   var dir = new THREE.Vector3( 10, 0, 0 );
@@ -56,7 +56,7 @@ function init() {
   // dir.normalize();
 
   var origin = new THREE.Vector3( .4, 0, -4 );
-  var length = .5;
+  var length = .3;
   var hex = 0xff0000;
   arrowHelper = new THREE.ArrowHelper( dir, origin, length, hex );
   scene2.add( arrowHelper );
@@ -98,9 +98,6 @@ function animate() {
 
 function render() {
 
-  // Moves Indicator w/ Camera
-  // sphere.rotation.x = camera.position.y
-  // arrowHelper.rotation.y = camera.position.x
   arrowHelper.rotation.x = (camera.position.y +190);
   arrowHelper.rotation.z = camera.position.x
   camera.lookAt( scene.position );
