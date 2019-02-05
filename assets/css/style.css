@@ -31,6 +31,17 @@ h2 {
   margin: 30px 0 30px 0;
 } 
 
+h3 {
+  font-size: 2.35rem;
+  color: #272727;
+  font-weight: 600;
+}
+
+p {
+  font-size: 18px;
+  color: #272727;
+}
+
 
 a {
   color: #6c757d;
@@ -42,6 +53,11 @@ a:hover {
   color: #aeaeae;
   transition: .3s;
   cursor: pointer;
+}
+
+
+ul ol {
+  font-size: 18px;
 }
 
 
@@ -73,25 +89,28 @@ li a:hover {
     color: #ffcb39;
 }
 
-
 textarea{
   margin:10px 0px 10px 0px;
 }
 
-
-.prism-radio {
-  margin-left: 30px;
-  margin-top: 30px;
+.notebook-header {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 70px;
+  color: #86a9c5;
+  margin: auto;
+  margin-top: 200px;
+  margin-bottom: 250px;
 }
 
 
-/* Navigation Styles */
+/* Menu Styles */
 
 .custom-navbar{
     padding-top: 15px;
 }
 
-.brand-logo{
+.logo {
     margin-left: 25px;
     margin-top: 5px;
     display: inline-block;
@@ -105,20 +124,20 @@ textarea{
 }
 
 .hamburger {
-  background:none;
-  position:absolute;
-  top:0;
-  right:0;
-  line-height:45px;
-  padding:5px 15px 0px 15px;
-  width: 100px;
-  border:0;
-  font-size:2em;
-  font-weight:bold;
-  cursor:pointer;
-  outline:none;
-  z-index:100;
+  background: none;
+  line-height: 45px;
+  border: 0;
+  font-size: 2em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 100;
 }
+
+.hamburger-menu {
+  margin-left:0px !important;
+}
+
 
 
 /* Text Styles */

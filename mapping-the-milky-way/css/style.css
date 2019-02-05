@@ -1,4 +1,3 @@
-
 body {
   margin:0 !important;
   overflow-x:hidden;
@@ -17,58 +16,6 @@ canvas {
 
 }
 
-/* Fonts Sizes */
-
-h3 {
-  font-size: 2.35rem;
-  color: #272727;
-}
-
-p {
-  font-size: 18px;
-  color: #272727;
-}
-
-ul {
-  font-size: 18px;
-}
-
-ol {
-  font-size: 18px;
-}
-
-.nb-header-alt2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  font-size: 70px;
-  color: #86a9c5;
-  margin: auto;
-  margin-top: 200px;
-  margin-bottom: 250px;
-}
-
-
-/* Menu */
-
-.hamburger-alt {
-  background: none;
-  /* position: absolute; */
-  /* top: 0; */
-  /* right: 0; */
-  line-height: 45px;
-  /* padding: 5px 15px 0px 15px; */
-  /* width: 100px; */
-  border: 0;
-  font-size: 2em;
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
-  z-index: 100;
-}
-
-.hamburger-menu {
-  margin-left:0px !important;
-}
 
 /* Sidebar */
 
@@ -77,6 +24,9 @@ ol {
   float: left;
   width: 425px;
   z-index: 10;
+  position: relative;
+  background: white;
+  font-size: 15px;
 }
 
 .sidebar p, ol, ul, b {
@@ -88,10 +38,6 @@ ol {
   z-index: 10;
   line-height: 34px;
   font-size: 18px;
-}
-
-.sidebar ul {
-  padding-top: 0px;
 }
 
 .sidebar li {
@@ -108,15 +54,6 @@ ol {
   font-weight: 600;
 }
 
-.sidebar ol {
-  padding-top: 0px;
-}
-
-.sidebar {
-  position: relative;
-  background: white;
-  font-size: 15px;
-}
 
 
 /* Buttons*/
@@ -126,7 +63,6 @@ ol {
   font-size: 18px;
   margin: 20px;
 }
-
 
 .canvas-overlay-button {
   left: 440px;
