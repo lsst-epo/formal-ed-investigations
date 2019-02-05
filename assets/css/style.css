@@ -64,6 +64,9 @@ a:hover {
   cursor: pointer;
 }
 
+b {
+  font-size: 20px;
+}
 
 ul ol {
   font-size: 18px;

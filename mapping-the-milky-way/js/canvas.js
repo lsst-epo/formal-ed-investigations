@@ -110,7 +110,6 @@ function render() {
   renderer.render( scene, camera );
 
   renderer.clearDepth(); // important! clear the depth buffer
-  renderer.setViewport( window.innerWidth - 350 , window.innerHeight -325, 400, 230 );
-  // renderer.setViewport( 0,0, window.innerWidth, window.innerHeight);
+  renderer.setViewport( window.innerWidth - 350 , window.innerHeight -225, 400, 230 );
   renderer.render( scene2, camera2 );
 }
