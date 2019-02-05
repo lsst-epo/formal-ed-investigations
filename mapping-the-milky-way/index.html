@@ -5,14 +5,10 @@
 		<title>Mapping the Milky Way</title>
 		
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-		
 		<link rel="stylesheet" href="../assets/css/style.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="../assets/css/normalize.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet">
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
 	</head>
 	<body>
 
@@ -34,7 +30,8 @@
 				<option value="Generic/Gaia_MW_density_map">LMC/SMC</option>
 			</optgroup>
 		</select>
-		<img src="assets/Generic/Legends.png" class="fixed-bottom canvas-overlay-button" style="height: 100px;left: 680px" alt="">
+
+		<img src="assets/Generic/Legends.png" class="fixed-bottom canvas-overlay-button legend-position" alt="">
 
 		<canvas id="main"></canvas>
 
@@ -69,11 +66,10 @@
 			<b>Understanding Concentration Maps</b>	
 
 			<p>The map below shows a small section of the sky observed by LSST. Begin by selecting the star field image.</p>
-			<div style="">
-				<img src="assets/Concentration Map/density-map.png" width="370" style="padding:20px;" alt="">
-				<img src="assets/Concentration Map/data-map.png" id="density-map" width="370" style="padding:20px;position: absolute;left: 15px" alt="">
-			</div>
-			<input type="range" class="range" min="0" style="display: block;margin-right: auto;margin-left: auto;" max="100" step="1" value="100"onchange="document.getElementById('density-map').style.opacity = this.value/100;console.log(this.value/100)">
+
+			<img src="assets/Concentration Map/density-map.png" class="density-map" alt="">
+			<img src="assets/Concentration Map/data-map.png" class="density-map data-map" id="data-map" alt="">
+			<input type="range" class="density-map-opacity range" min="0" max="100" step="1" value="100" onchange="changeOpacity()">
 
 
 			<p>When there are lots of stars in an image, it becomes impossible to quantify exactly how many stars are in a particular area just by looking at it. Since LSST will precisely map the locations of about 17 billion stars during its ten-year survey, it will definitely be impossible to count them visually. Instead, astronomers create data visualizations, called concentration maps, to show how many stars are concentrated at different locations in the sky. </p>
@@ -82,7 +78,7 @@
 
 			<ol>
 				<li>A green color indicates that there is a 
-				<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:130px;margin-left: 0px">
+				<select class="custom-select my-1 mr-sm-2 student-answer-inline">
 					<option selected>Choose ...</option>
     				<option value="1">high</option>
     				<option value="2">medium</option>
@@ -90,38 +86,42 @@
 				</select>
 				 number of stars in that area.</li>
 				
-				<li>Why are some regions white? Does this mean there are no stars in those places?</li>
-				<textarea class="form-control" rows="1"></textarea>
-				<li>Find a red area on the map. Predict whether there is a large number of stars or a small number of stars in this area.</li>
-				<select class="custom-select my-1 mr-sm-2 student-answer-mc">
-    				<option selected>Choose ...</option>
-    				<option value="1">Large</option>
-    				<option value="2">Small</option>
-  				</select>
+				<li>Why are some regions white? Does this mean there are no stars in those places?
+					<textarea class="form-control" rows="1"></textarea>
+				</li>
+				<li>Find a red area on the map. Predict whether there is a large number of stars or a small number of stars in this area.
+					<select class="custom-select my-1 mr-sm-2">
+    					<option selected>Choose ...</option>
+    					<option value="1">Large</option>
+    					<option value="2">Small</option>
+  					</select>
+  				</li>
 			</ol>
 
 			<p>Click on the red area on the map. An image of that region of the galaxy will appear. Note the number of stars in this image.</p>
 			<p>Now find a location that appears blue on the map.</p>
 
 			<ol start="4">
-				<li>Predict whether you will see a large number of stars or a small number of stars at this location.</li>
-				<select class="custom-select my-1 mr-sm-2 student-answer-mc">
-    				<option selected>Choose ...</option>
-    				<option value="1">Large</option>
-    				<option value="2">Small</option>
-  				</select>
+				<li>Predict whether you will see a large number of stars or a small number of stars at this location.
+					<select class="custom-select my-1 mr-sm-2">
+    					<option selected>Choose ...</option>
+    					<option value="1">Large</option>
+    					<option value="2">Small</option>
+  					</select>
+  				</li>
 			</ol>
 			<p>Click on a blue location and an image of that region of the sky will appear. Note the number of stars in this image.</p>
 
 			<ol start="5">
-				<li>Based on what you have just observed, what do the colors on the concentration maps represent? (read the four choices below)</li>
-				<select class="custom-select my-1 mr-sm-2 student-answer-mc">
+				<li>Based on what you have just observed, what do the colors on the concentration maps represent? (read the four choices below)
+					<select class="custom-select my-1 mr-sm-2">
     					<option selected>Choose ...</option>
     					<option value="1">a.</option>
     					<option value="2">b.</option>
     					<option value="2">c.</option>
     					<option value="2">d.</option>
   					</select>
+  				</li>
 				<ol type="a">
 					<li>The colors on the map correspond to the colors of the stars for that area of the galaxy. Red on the map indicates that many red stars are located in that area.</li>
 					<li>The colors on the map correspond to how many stars are in that area. Red locations indicate where there are high concentrations of stars.</li>
@@ -153,22 +153,25 @@
 			<p>Click and drag to explore the concentration map of stars from this location. </p>
 
 			<ol start="6">
-				<li>Describe what you see.</li>
+				<li>Describe what you see.
 				<textarea class="form-control" rows="3"></textarea>
-				<li> Notice that much of the sky does not contain any stars. In which direction are you looking when you observe this? (Refer to the index image when you see this view.)</li>
-				<select class="custom-select my-1 mr-sm-2 student-answer-mc">
+				</li>
+				<li> Notice that much of the sky does not contain any stars. In which direction are you looking when you observe this? (Refer to the index image when you see this view.)
+					<select class="custom-select my-1 mr-sm-2">
     					<option selected>Choose ...</option>
     					<option value="1">a. Directly opposite the center of the galaxy</option>
     					<option value="2">b. Directly towards the center of the galaxy</option>
     					<option value="2">c. At right angles to the center of the galaxy</option>
   					</select>
-				<li> There are many stars in a different part of the sky. In which direction are you looking when you observe this? (Refer to the index image when you see this view.)</li>
-				<select class="custom-select my-1 mr-sm-2 student-answer-mc">
+  				</li>
+				<li> There are many stars in a different part of the sky. In which direction are you looking when you observe this? (Refer to the index image when you see this view.)
+					<select class="custom-select my-1 mr-sm-2">
     					<option selected>Choose ...</option>
     					<option value="1">a. Directly opposite the center of the galaxy</option>
     					<option value="2">b. Directly towards the center of the galaxy</option>
     					<option value="2">c. At right angles to the center of the galaxy</option>
   					</select>
+  				</li>
 			</ol>
 
 			<p>Change the menu on the sky mapper to “Elliptical Galaxy - Halfway.”</p>
@@ -176,15 +179,17 @@
 			<p>Now imagine you are in the same galaxy as before, but you’ve moved to a location that’s halfway between the center and the outer edge.</p>
 
 			<ol start="9">
-				<li>How does the distribution of stars look different than when you were located at the edge of the galaxy?</li>
-				<textarea class="form-control" rows="1"></textarea>
-				<li>Notice there is a direction in the sky where the concentration of stars is highest. In what direction is this? </li>
-				<select class="custom-select my-1 mr-sm-2 student-answer-mc">
-    					<option selected>Choose ...</option>
-    					<option value="1">a. Directly opposite the center of the galaxy</option>
-    					<option value="2">b. Directly towards the center of the galaxy</option>
-    					<option value="2">c. At right angles to the center of the galaxy</option>
-  				</select>
+				<li>How does the distribution of stars look different than when you were located at the edge of the galaxy?
+					<textarea class="form-control" rows="1"></textarea>
+				</li>
+				<li>Notice there is a direction in the sky where the concentration of stars is highest. In what direction is this? 
+					<select class="custom-select my-1 mr-sm-2">
+	    				<option selected>Choose ...</option>
+	    				<option value="1">a. Directly opposite the center of the galaxy</option>
+	    				<option value="2">b. Directly towards the center of the galaxy</option>
+	    				<option value="2">c. At right angles to the center of the galaxy</option>
+	  				</select>
+  				</li>
 			</ol>
 
 			<p>Change the menu on the sky mapper to “Elliptical Galaxy - Center.”</p>
@@ -192,8 +197,9 @@
 			<p>Notice as you look around the sky that that the concentration of stars is the same in every direction you look. </p>
 
 			<ol start="11">
-				<li>If you are at the center of an elliptical galaxy, why does the distribution of stars look the same in all directions?</li>
-				<textarea class="form-control" rows="1"></textarea>
+				<li>If you are at the center of an elliptical galaxy, why does the distribution of stars look the same in all directions?
+					<textarea class="form-control" rows="1"></textarea>
+				</li>
 			</ol>
 
 			<p>Now let’s investigate the views of the sky from a spiral galaxy.</p>
@@ -201,27 +207,30 @@
 			<p>Change the menu on the sky mapper to “Spiral Galaxy - Edge.”</p>
 
 			<ol start="12">
-				<li>In what direction is the concentration of stars the highest? (Hint: Think about the previous examples with the elliptical galaxy.)</li>
-				<select class="custom-select my-1 mr-sm-2 student-answer-mc">
-    				<option selected>Choose ...</option>
-    				<option value="1">a. Directly opposite the center of the galaxy</option>
-    				<option value="2">b. Directly towards the center of the galaxy</option>
-    				<option value="2">c. At right angles to the center of the galaxy</option>
-  				</select>
+				<li>In what direction is the concentration of stars the highest? (Hint: Think about the previous examples with the elliptical galaxy.)
+					<select class="custom-select my-1 mr-sm-2">
+						<option selected>Choose ...</option>
+						<option value="1">a. Directly opposite the center of the galaxy</option>
+						<option value="2">b. Directly towards the center of the galaxy</option>
+						<option value="2">c. At right angles to the center of the galaxy</option>
+					</select>
+  				</li>
 			</ol>
 
 			<p>Change the menu on the sky mapper to “Spiral Galaxy - Halfway.”</p>
 
 			<ol start="13">
-				<li>How does this distribution of stars look different than when you were halfway out from the center of an elliptical galaxy?</li>
-				<textarea class="form-control" rows="1"></textarea>
+				<li>How does this distribution of stars look different than when you were halfway out from the center of an elliptical galaxy?
+					<textarea class="form-control" rows="1"></textarea>
+				</li>
 			</ol>
 
 			<p>Change the menu on the sky mapper to “Spiral Galaxy - Center.”</p>
 
 			<ol start="14">
-				<li>How does this distribution of stars look different than when you were at the center of an elliptical galaxy?</li>
-				<textarea class="form-control" rows="1"></textarea>
+				<li>How does this distribution of stars look different than when you were at the center of an elliptical galaxy?
+					<textarea class="form-control" rows="1"></textarea>
+				</li>
 				<li>For each of the six scenarios listed in the left column of the chart below, answer the three questions (listed in the top row) by selecting yes or no for each box:
 					<ul>
 						<li>Is there a band of color that indicates a high concentration of stars across the map?</li>
@@ -243,18 +252,18 @@
 				<tr>
 					<td scope="row">Elliptical Edge</td>
 					<td>
-					<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:75px;margin:0px;">
+					<select class="custom-select my-1 mr-sm-2 student-answer-inline mc-small">
     					<option selected>...</option>
     					<option value="1">yes</option>
     					<option value="2">no</option>
   					</select>
 					</td>
-					<td><select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:75px;margin:0px;">
+					<td><select class="custom-select my-1 mr-sm-2 student-answer-inline mc-small">
     					<option selected>...</option>
     					<option value="1">yes</option>
     					<option value="2">no</option>
   					</select></td>
-					<td><select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:75px;margin:0px;">
+					<td><select class="custom-select my-1 mr-sm-2 student-answer-inline mc-small">
     					<option selected>...</option>
     					<option value="1">yes</option>
     					<option value="2">no</option>
@@ -263,18 +272,18 @@
 				<tr>
 					<td scope="row">Elliptical Halfway</td>
 					<td>
-					<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:75px;margin:0px;">
+					<select class="custom-select my-1 mr-sm-2 student-answer-inline mc-small">
     					<option selected>...</option>
     					<option value="1">yes</option>
     					<option value="2">no</option>
   					</select>
 					</td>
-					<td><select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:75px;margin:0px;">
+					<td><select class="custom-select my-1 mr-sm-2 student-answer-inline mc-small">
     					<option selected>...</option>
     					<option value="1">yes</option>
     					<option value="2">no</option>
   					</select></td>
-					<td><select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:75px;margin:0px;">
+					<td><select class="custom-select my-1 mr-sm-2 student-answer-inline mc-small">
     					<option selected>...</option>
     					<option value="1">yes</option>
     					<option value="2">no</option>
@@ -283,18 +292,18 @@
 				<tr>
 					<td scope="row">Elliptical Center</td>
 					<td>
-					<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:75px;margin:0px;">
+					<select class="custom-select my-1 mr-sm-2 student-answer-inline mc-small">
     					<option selected>...</option>
     					<option value="1">yes</option>
     					<option value="2">no</option>
   					</select>
 					</td>
-					<td><select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:75px;margin:0px;">
+					<td><select class="custom-select my-1 mr-sm-2 student-answer-inline mc-small">
     					<option selected>...</option>
     					<option value="1">yes</option>
     					<option value="2">no</option>
   					</select></td>
-					<td><select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:75px;margin:0px;">
+					<td><select class="custom-select my-1 mr-sm-2 student-answer-inline mc-small">
     					<option selected>...</option>
     					<option value="1">yes</option>
     					<option value="2">no</option>
@@ -303,18 +312,18 @@
 				<tr>
 					<td scope="row">Spiral Edge</td>
 					<td>
-					<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:75px;margin:0px;">
+					<select class="custom-select my-1 mr-sm-2 student-answer-inline mc-small">
     					<option selected>...</option>
     					<option value="1">yes</option>
     					<option value="2">no</option>
   					</select>
 					</td>
-					<td><select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:75px;margin:0px;">
+					<td><select class="custom-select my-1 mr-sm-2 student-answer-inline mc-small">
     					<option selected>...</option>
     					<option value="1">yes</option>
     					<option value="2">no</option>
   					</select></td>
-					<td><select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:75px;margin:0px;">
+					<td><select class="custom-select my-1 mr-sm-2 student-answer-inline mc-small">
     					<option selected>...</option>
     					<option value="1">yes</option>
     					<option value="2">no</option>
@@ -323,18 +332,18 @@
 				<tr>
 					<td scope="row">Spiral Halfway</td>
 					<td>
-					<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:75px;margin:0px;">
+					<select class="custom-select my-1 mr-sm-2 student-answer-inline mc-small">
     					<option selected>...</option>
     					<option value="1">yes</option>
     					<option value="2">no</option>
   					</select>
 					</td>
-					<td><select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:75px;margin:0px;">
+					<td><select class="custom-select my-1 mr-sm-2 student-answer-inline mc-small">
     					<option selected>...</option>
     					<option value="1">yes</option>
     					<option value="2">no</option>
   					</select></td>
-					<td><select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:75px;margin:0px;">
+					<td><select class="custom-select my-1 mr-sm-2 student-answer-inline mc-small">
     					<option selected>...</option>
     					<option value="1">yes</option>
     					<option value="2">no</option>
@@ -343,18 +352,18 @@
 				<tr>
 					<td scope="row">Spiral Center</td>
 					<td>
-					<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:75px;margin:0px;">
+					<select class="custom-select my-1 mr-sm-2 student-answer-inline mc-small">
     					<option selected>...</option>
     					<option value="1">yes</option>
     					<option value="2">no</option>
   					</select>
 					</td>
-					<td><select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:75px;margin:0px;">
+					<td><select class="custom-select my-1 mr-sm-2 student-answer-inline mc-small">
     					<option selected>...</option>
     					<option value="1">yes</option>
     					<option value="2">no</option>
   					</select></td>
-					<td><select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:75px;margin:0px;">
+					<td><select class="custom-select my-1 mr-sm-2 student-answer-inline mc-small">
     					<option selected>...</option>
     					<option value="1">yes</option>
     					<option value="2">no</option>
@@ -372,42 +381,50 @@
 			<ol start="16">
 				<li>As you did for the simulated maps, answer these three questions about the LSST map:</li>
 				<ol>
-					<li>Is there a band of color that indicates a high concentration of stars across the map?</li>
-					<select class="custom-select my-1 mr-sm-2 student-answer-mc">
-						<option selected>Choose ...</option>
-						<option value="1">Yes</option>
-						<option value="2">No</option>
+					<li>Is there a band of color that indicates a high concentration of stars across the map?
+						<select class="custom-select my-1 mr-sm-2">
+							<option selected>Choose ...</option>
+							<option value="1">Yes</option>
+							<option value="2">No</option>
 						</select>
-						<li>Is there a single place that has the highest concentration of stars?</li>
-					<select class="custom-select my-1 mr-sm-2 student-answer-mc">
-						<option selected>Choose ...</option>
-						<option value="1">Yes</option>
-						<option value="2">No</option>
+					</li>
+					<li>Is there a single place that has the highest concentration of stars?
+						<select class="custom-select my-1 mr-sm-2">
+							<option selected>Choose ...</option>
+							<option value="1">Yes</option>
+							<option value="2">No</option>
 						</select>
-						<li>Are there regions of the map where there are very few (or no) stars?</li>
-					<select class="custom-select my-1 mr-sm-2 student-answer-mc">
-						<option selected>Choose ...</option>
-						<option value="1">Yes</option>
-						<option value="2">No</option>
-					</select>
+					</li>
+					<li>Are there regions of the map where there are very few (or no) stars?
+						<select class="custom-select my-1 mr-sm-2">
+							<option selected>Choose ...</option>
+							<option value="1">Yes</option>
+							<option value="2">No</option>
+						</select>
+					</li>
 				</ol>
-				<li>Using your answers for these three questions, which of the six simulated maps most closely matches the appearance of the LSST map?</li>
-				<textarea class="form-control" rows="1"></textarea>
-				<li>Based upon your previous answer, which type of galaxy do you think the Milky Way is?</li>
-				<select class="custom-select my-1 mr-sm-2 student-answer-mc">
-					<option selected>Choose ...</option>
-					<option value="1">Spiral</option>
-					<option value="2">Elliptical</option>
-				</select>
-				<li>Where do you think we are located in the galaxy?</li>
-				<select class="custom-select my-1 mr-sm-2 student-answer-mc">
-					<option selected>Choose ...</option>
-					<option value="1">Center</option>
-					<option value="2">Edge</option>
-					<option value="2">Halfway</option>
-				</select>
-				<li> Turn on the constellations overlay. Which constellation is in the direction of the center of our galaxy? </li>
-				<textarea class="form-control" rows="1"></textarea>
+
+				<li>Using your answers for these three questions, which of the six simulated maps most closely matches the appearance of the LSST map?
+					<textarea class="form-control" rows="1"></textarea>
+				</li>
+				<li>Based upon your previous answer, which type of galaxy do you think the Milky Way is?
+					<select class="custom-select my-1 mr-sm-2">
+						<option selected>Choose ...</option>
+						<option value="1">Spiral</option>
+						<option value="2">Elliptical</option>
+					</select>
+				</li>
+				<li>Where do you think we are located in the galaxy?
+					<select class="custom-select my-1 mr-sm-2">
+						<option selected>Choose ...</option>
+						<option value="1">Center</option>
+						<option value="2">Edge</option>
+						<option value="2">Halfway</option>
+					</select>
+				</li>
+				<li> Turn on the constellations overlay. Which constellation is in the direction of the center of our galaxy?
+					<textarea class="form-control" rows="1"></textarea>
+				</li>
 			</ol>
 
 			<p>Select LMC/SMC from the drop down menu under Milky Way Galaxy.</p>
@@ -418,41 +435,45 @@
 			<button class="button" onclick="scrollToSMC()">Go to SMC</button>
 
 			<ol start="21">
-				<li>The Milky Way Galaxy is about 100,000 light years in diameter. The LMC is about 158,000 light years away from the Milky Way and the SMC is about 200,000 light years away. Do you think the LMC and SMC are inside or outside the Milky Way? How do you know?</li>
-				<textarea class="form-control" rows="1"></textarea>
-				<li>Despite their names, these two objects aren’t actually clouds. What type of objects could they be?</li>
-				<select class="custom-select my-1 mr-sm-2 student-answer-mc">
-					<option selected>Choose ...</option>
-					<option value="1">Planetary nebulae</option>
-					<option value="2">Galaxies</option>
-					<option value="2">Star forming regions (nebulae) in our galaxy</option>
-					<option value="2">Comets</option>
-				</select>
-				<li>Explain your answer to the previous question.</li>
-				<textarea class="form-control" rows="2"></textarea>
+				<li>The Milky Way Galaxy is about 100,000 light years in diameter. The LMC is about 158,000 light years away from the Milky Way and the SMC is about 200,000 light years away. Do you think the LMC and SMC are inside or outside the Milky Way? How do you know?
+					<textarea class="form-control" rows="1"></textarea>
+				</li>
+				<li>Despite their names, these two objects aren’t actually clouds. What type of objects could they be?
+					<select class="custom-select my-1 mr-sm-2">
+						<option selected>Choose ...</option>
+						<option value="1">Planetary nebulae</option>
+						<option value="2">Galaxies</option>
+						<option value="2">Star forming regions (nebulae) in our galaxy</option>
+						<option value="2">Comets</option>
+					</select>
+				</li>
+				<li>Explain your answer to the previous question.
+					<textarea class="form-control" rows="2"></textarea>
+				</li>
 			</ol>
 
 			<h3 class="mt-5 mb-3 text">Discuss and report</h3>
 			<p>Take a few minutes with your partner or group to discuss the following questions. Be prepared to share your observations with the class.</p>
 
 			<ol start="24">
-				<li>Could you have correctly answered questions 18 and 19 if LSST imaged only a small area of the galaxy? Why or why not?</li>
-				<textarea class="form-control" rows="2"></textarea>
+				<li>Could you have correctly answered questions 18 and 19 if LSST imaged only a small area of the galaxy? Why or why not?
+					<textarea class="form-control" rows="2"></textarea>
+				</li>
 
 				<li> If you are located at the edge of a disk in a
-				<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:130px;margin-left: 0px">
+				<select class="custom-select my-1 mr-sm-2 student-answer-inline">
 					<option selected>Choose ...</option>
 					<option value="1">spiral</option>
 					<option value="2">elliptical</option>
 				</select>
 				galaxy, and facing 
-  				<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:130px;margin-left: 0px">
+  				<select class="custom-select my-1 mr-sm-2 student-answer-inline">
 					<option selected>Choose ...</option>
 					<option value="1">towards the center</option>
 					<option value="2">away from the center</option>
 				</select>	
   				, it would appear bright white on the density map, indicating the concentration of stars is 
-  				<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:130px;margin-left: 0px">
+  				<select class="custom-select my-1 mr-sm-2 student-answer-inline">
 					<option selected>Choose ...</option>
 					<option value="1">high</option>
 					<option value="2">low</option>
@@ -464,25 +485,25 @@
 
 			<ol start="26">
 				<li>The view from the center of both types of galaxies shows many stars in
-				<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:130px;margin-left: 0px">
+				<select class="custom-select my-1 mr-sm-2 student-answer-inline">
 					<option selected>Choose ...</option>
 					<option value="1">all directions</option>
 					<option value="2">only one direction</option>
 				</select>, while the view from the edge of both types of galaxies shows a high concentration of stars in when looking
-				<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:130px;margin-left: 0px">
+				<select class="custom-select my-1 mr-sm-2 student-answer-inline">
 					<option selected>Choose ...</option>
 					<option value="1">away from</option>
 					<option value="2">towards</option>
 				</select>
 				the center of the galaxy.</li>
 				<li>From a halfway location in both types of galaxies there would be a 
-				<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:130px;margin-left: 0px">
+				<select class="custom-select my-1 mr-sm-2 student-answer-inline">
 					<option selected>Choose ...</option>
 					<option value="1">higher</option>
 					<option value="2">lower</option>
 				</select>
 				concentration of stars when looking towards the center. The difference is that in an elliptical galaxy, there would not be a 
-				<select class="custom-select my-1 mr-sm-2 student-answer-mc" style="width:130px;margin-left: 0px">
+				<select class="custom-select my-1 mr-sm-2 student-answer-inline">
 					<option selected>Choose ...</option>
 					<option value="1">banded</option>
 					<option value="2">spherical</option>
@@ -499,7 +520,8 @@
 		<script src='https://s3.ca-central-1.amazonaws.com/maxv-dev/ThreeJS/OrbitControls.js'></script>
 		<script src="js/libs/inflate.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>	
-		<script  src="js/FBXLoader.js"></script>
-		<script  src="js/index.js"></script>
+		<script src="js/FBXLoader.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/canvas.js"></script>
 	</body>
 </html>

@@ -10,6 +10,10 @@ body {
     src: url(../fonts/BwNistaGeo-Bk.otf);
 }
 
+html{
+    margin: 0;
+    font-weight: 300;   
+}
 
 h1 {
     font-family: 'BWNistaGEo-Bk', sans-serif;
@@ -27,10 +31,6 @@ h2 {
   margin: 30px 0 30px 0;
 } 
 
-html{
-    margin: 0;
-    font-weight: 300;   
-}
 
 a {
   color: #6c757d;
@@ -42,11 +42,6 @@ a:hover {
   color: #aeaeae;
   transition: .3s;
   cursor: pointer;
-}
-
-.prism-radio {
-  margin-left: 30px;
-  margin-top: 30px;
 }
 
 
@@ -76,6 +71,17 @@ li a {
 
 li a:hover {
     color: #ffcb39;
+}
+
+
+textarea{
+  margin:10px 0px 10px 0px;
+}
+
+
+.prism-radio {
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 
@@ -255,10 +261,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 /* Textarea */
-textarea.form-control {
-  width: 40%;
-  margin:10px 0px 10px 0px;
-}
+
 
 .form-control:focus {
   border-color: none;
@@ -274,36 +277,15 @@ textarea.form-control {
   width: 100% !important;
 }
 
-.student-answer {
-  max-width: 40%;
-}
-
-.student-answer-mc {
+.student-answer-inline {
   width: 130px;
 }
 
-
-/* Dropdown */
-
-.object-select {
-  font-size: 18px;
-  float: right;
-  width: 100px;
+.mc-small {
+  width: 75px;
 }
 
-.object-select:focus {
-  outline: none;
-  box-shadow: none;
-  border-color: rgb(206, 212, 218);
-}
 
-@media (max-width: 1200px) {
-
-}
-
-@media (max-width: 768px) {
-
-}
 
 @media (max-width: 600px){
     .navbar-links{
@@ -328,8 +310,6 @@ textarea.form-control {
 }
 
 @media (max-width: 676px) {
-  textarea.form-control {
-    width: 91%;
-  }
+
 
 }

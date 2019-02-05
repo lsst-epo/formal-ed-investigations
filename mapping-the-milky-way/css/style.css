@@ -1,8 +1,23 @@
+
 body {
   margin:0 !important;
   overflow-x:hidden;
   background-color: #f7f7f7;
 }
+
+canvas {
+  background-color:#000;
+  display: block;
+}
+
+
+#main {
+  position:fixed;
+  z-index: 1;
+
+}
+
+/* Fonts Sizes */
 
 h3 {
   font-size: 2.35rem;
@@ -22,16 +37,18 @@ ol {
   font-size: 18px;
 }
 
-canvas {
-  background-color:#000;
-  display: block;
+.nb-header-alt2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 70px;
+  color: #86a9c5;
+  margin: auto;
+  margin-top: 200px;
+  margin-bottom: 250px;
 }
 
-#main {
-  position:fixed;
-  z-index: 1;
 
-}
+/* Menu */
 
 .hamburger-alt {
   background: none;
@@ -53,17 +70,8 @@ canvas {
   margin-left:0px !important;
 }
 
-/* Text CSS */
+/* Sidebar */
 
-.nb-header-alt2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  font-size: 70px;
-  color: #86a9c5;
-  margin: auto;
-  margin-top: 200px;
-  margin-bottom: 250px;
-}
 
 .sidebar {
   float: left;
@@ -92,11 +100,6 @@ canvas {
   margin-top: 20px;
 }
 
-.sidebar textarea {
-  margin-left: 24px;
-  width: 90%;
-}
-
 .sidebar h2, h3 {
   padding: 19px;
 }
@@ -114,14 +117,7 @@ canvas {
   background: white;
   font-size: 15px;
 }
-/* Widget CSS */
 
-.position-indicator {
-	display: inline;
-	float: right;
-  position: relative;
-  top: 11px;
-}
 
 /* Buttons*/
 
@@ -131,10 +127,6 @@ canvas {
   margin: 20px;
 }
 
-.custom-select {
-  width: 200px;
-  margin: 20px;
-}
 
 .canvas-overlay-button {
   left: 440px;
@@ -142,4 +134,28 @@ canvas {
 
 a.click-to-scroll {
   font-size: 30px;
+}
+
+.legend-position {
+  height: 100px;
+  left: 680px;
+}
+
+.density-map-opacity {
+  display: block;
+  margin-right: auto !important; 
+  margin-left: auto;
+}
+
+
+/* Images */
+
+.density-map {
+  width: 370px;
+  padding:20px;
+}
+
+.data-map {
+  position: absolute;
+  left: 15px;
 }
