@@ -2,13 +2,40 @@
 <html lang="en" >
 	<head>
 		<meta charset="UTF-8">
-		<title>Searching the Solar System</title>		
+		<title>Searching the Solar System</title>
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="../assets/css/style.css">
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="../assets/css/normalize.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet">
 	</head>
 	<body>
+		
+		<div class="container sidebar">
+
+			<ul class="list-none">
+			<br>
+              <li class="hamburger-menu"><button class="hamburger text-dark">&#9776;</button></li>
+            </ul>
+
+			<h1 class="notebook-header purple">Searching the Solar System</h1>
+			<h3 class="mt-5 mb-4">Introduction</h3>
+			<p>One hundred years ago, we had a fairly simple model of the components our solar system: some planets and moons, comets, and asteroids between Mars and Jupiter. Advances in technology have provided a more powerful ability to detect objects that are smaller and farther from the Sun, so our model of the solar system today is more complete. </p>
+
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer fixed-bottom bg-white pt-3" id="footer">  
+		  <p class=" copyright text-sm-left ml-5">Thank you for helping us test this workspace, which is in development. Please submit feedback to <a href="mailto:education@lsst.org">education@lsst.org</a><button type="button" class="close mr-3" aria-label="Close" onclick="closeFooter()">
+		  <span aria-hidden="true">&times;</span>
+		  </button></p>
+		</footer>
+
 		<canvas id="main"></canvas>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js'></script>
 		<script src='https://s3.ca-central-1.amazonaws.com/maxv-dev/ThreeJS/OrbitControls.js'></script>
 		<script  src="js/index.js"></script>
+		<script  src="../assets/js/index.js"></script>
 	</body>
 </html>

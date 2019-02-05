@@ -1,35 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900')
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,900');
+html{
+    margin: 0;
+    font-weight: 300;   
+}
 
-
-@font-face {
-    font-family: BWNistaGEo-Bk;
-    src: url(../fonts/BwNistaGeo-Bk.otf);
+canvas {
+  background-color:#000;
+  display: block;
 }
 
 
+#main {
+  position:fixed;
+  z-index: 1;
+
+}
+
 h1 {
-    font-family: 'BWNistaGEo-Bk', sans-serif;
-    font-weight: 700;
-    text-shadow: 2px 2px 8px #2c4373;
-    color: white;
-    max-width: 480px;
-    font-size: 74px;
-    margin: auto;
-    text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 84px;
+  margin: auto;
+  margin-top: 70px;
 }
 
 h2 {
   font-weight: 600;
-  margin: 30px 0 30px 0;
 } 
 
-html{
-    margin: 0;
-    font-weight: 300;   
+h3 {
+  font-size: 2.35rem;
+  color: #272727;
+  font-weight: 600;
+}
+
+p, li {
+  font-size: 18px;
+  color: #272727;
+  line-height: 34px;
+  font-weight: 300;
+}
+
+li {
+  margin-top: 20px;
 }
 
 a {
@@ -44,9 +64,12 @@ a:hover {
   cursor: pointer;
 }
 
-.prism-radio {
-  margin-left: 30px;
-  margin-top: 30px;
+b {
+  font-size: 20px;
+}
+
+ul ol {
+  font-size: 18px;
 }
 
 
@@ -78,16 +101,31 @@ li a:hover {
     color: #ffcb39;
 }
 
+textarea{
+  margin:10px 0px 10px 0px;
+}
 
-/* Navigation Styles */
+.notebook-header {
+  font-weight: 800;
+  font-size: 68px;
+  color: #86a9c5;
+  margin: auto;
+  margin-top: 225px;
+  margin-bottom: 275px;
+}
+
+.notebook-header.purple {
+  color: #963f86;
+}
+
+/* Menu Styles */
 
 .custom-navbar{
     padding-top: 15px;
 }
 
-.brand-logo{
+.logo {
     margin-left: 25px;
-    margin-top: 5px;
     display: inline-block;
 }
 
@@ -99,26 +137,31 @@ li a:hover {
 }
 
 .hamburger {
-  background:none;
-  position:absolute;
-  top:0;
-  right:0;
-  line-height:45px;
-  padding:5px 15px 0px 15px;
-  width: 100px;
-  border:0;
-  font-size:2em;
-  font-weight:bold;
-  cursor:pointer;
-  outline:none;
-  z-index:100;
+  background: none;
+  line-height: 45px;
+  border: 0;
+  font-size: 2em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 100;
 }
+
+.hamburger-menu {
+  margin-left:0px !important;
+}
+
 
 
 /* Text Styles */
 
 .list-none {
   list-style: none;
+  padding:0px;
+}
+
+.list-none li {
+  margin:0px;
 }
 
 .widget-title {
@@ -162,10 +205,11 @@ li a:hover {
   margin: 10px 10px -5px 10px !important;
 }
 
-/* Universal Styles */
+/* Buttons */
 
 .button {
   background: #182848;
+  font-size: 18px;
   width: auto;
   padding: 10px 20px;
   border: none;
@@ -183,6 +227,37 @@ li a:hover {
 button:focus {
   outline: none;
 }
+
+/* Range */
+
+input[type="range"] {
+  /*display: block;*/
+  -webkit-appearance: none;
+  background-color: #4b6cb7;
+  width: 200px;
+  height: 5px;
+  border-radius: 5px;
+  outline: 0;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 5px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 26px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -4px;
+  /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  /* Add cool effects to your sliders! */
+}
+
+
 
 .icon {
   height: 30px;
@@ -224,10 +299,7 @@ button:focus {
 }
 
 /* Textarea */
-textarea.form-control {
-  width: 40%;
-  margin:10px 0px 10px 0px;
-}
+
 
 .form-control:focus {
   border-color: none;
@@ -243,36 +315,31 @@ textarea.form-control {
   width: 100% !important;
 }
 
-.student-answer {
-  max-width: 40%;
-}
-
-.student-answer-mc {
+.student-answer-inline {
   width: 130px;
 }
 
-
-/* Dropdown */
-
-.object-select {
-  font-size: 18px;
-  float: right;
-  width: 100px;
+.mc-small {
+  width: 75px;
 }
 
-.object-select:focus {
-  outline: none;
-  box-shadow: none;
-  border-color: rgb(206, 212, 218);
+/* Sidebar */
+
+
+.sidebar {
+  float: left;
+  width: 425px;
+  z-index: 10;
+  position: relative;
+  background: white;
+  font-size: 15px;
+  padding-left: 27px;
 }
 
-@media (max-width: 1200px) {
-
+.container.sidebar {
+  padding-right: 40px;
 }
 
-@media (max-width: 768px) {
-
-}
 
 @media (max-width: 600px){
     .navbar-links{
@@ -283,7 +350,7 @@ textarea.form-control {
         text-align: center;
     }
     
-    .brand-logo img{
+    .logo img{
         width: 120px;
     }
     
@@ -297,8 +364,6 @@ textarea.form-control {
 }
 
 @media (max-width: 676px) {
-  textarea.form-control {
-    width: 91%;
-  }
+
 
 }
