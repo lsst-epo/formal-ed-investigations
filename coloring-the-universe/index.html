@@ -15,8 +15,8 @@
   </head>
   <body>
 
+  <!-- Cover Animation -->
     <div class="bg-blue">
-      
       <div class="stars">
         <div class="custom-navbar">
           <div class="logo">
@@ -51,613 +51,650 @@
         </div>
       </div>
     </div >
+
+
+    <!-- Notebook -->
     <div class="container mb-5">
-      <br><br>
+
       <h3 class="mt-5">Introduction</h3>
       <p>Nearly everything astronomers know about the stars and galaxies in the Universe comes from the light we receive from these objects. Fortunately, that light contains a wealth of information. In this investigation, you will learn how astronomers use light and filters to understand things such as distant galaxies, dusty nebulae, and types of stars.</p>
+
       <h3 class="mt-5">Essential Questions</h3>
       <ul>
         <li>How are filters used to create color images?</li>
         <li>What types of filters are used in astronomical cameras?</li>
         <li>What can astronomers learn by using these filters?</li>
       </ul>
+
+
       <h3 class="mt-5">Background</h3>
       <b>Types of Light</b>
-      <p>There are many types of <a href="https://imagine.gsfc.nasa.gov/science/toolbox/emspectrum1.html">electromagnetic radiation</a>: radio waves, infrared, visible, ultraviolet (UV), X-rays, etc. Astronomers refer to all of these types of radiation as light. Each type of light has a specific range of wavelengths and energies. The type of light we can see with our eyes is called “visible” light.
-    </p>
-    <img class="fig wide" src="assets/images/EM-spectrum-full.jpg">
-    <p class="credit">Figure 1: The electromagnetic spectrum. Adapted from <a href="https://imagine.gsfc.nasa.gov/Images/science/EM_spectrum_full.jpg">https://imagine.gsfc.nasa.gov/Images/science/EM-spectrum-full.jpg</a></p>
-    <p>Visible light consists of all of the colors of the rainbow, as shown below. You may have learned the acronym “Roy G. Biv” to remember the seven colors of the rainbow. The different colors correspond to different wavelengths and energies. Within the range of light we can see, red light has the lowest energy and the longest wavelengths, while violet has the highest energy and the shortest wavelengths.</p>
-    <img class="fig" src="assets/images/visible-spectrum2.png">
-    <p class="credit">Figure 2: Adapted from Daltonism: <a href="http://www.daltonism.org.uk/2018/01/rainbows/">http://www.daltonism.org.uk/2018/01/rainbows/</a></p>
-    <br>
-    <b>How Filters Work</b>
-    <p>Digital cameras cannot see color. They can only measure the amount of light that illuminates the <a href="https://en.wikipedia.org/wiki/Image_sensor">image sensor</a>. To build a color image, we use filters. A filter is designed to allow only certain wavelengths (or colors) of light to pass through it. All other wavelengths (or colors) are blocked. Figure 3a shows an example of how an orange filter <a href="https://www.merriam-webster.com/dictionary/transmit">transmits</a> some wavelengths of light while blocking others.
-  </p>
-  <p>There are filters like this inside a digital camera (e.g., the one on a mobile phone). Tiny red, green, and blue filters are placed over the pixels of the image sensor as shown below in Figure 3b. When you take a picture, your camera measures light simultaneously through all three filters. </p>
-  <div class="img-container inline">
-    <img class="fig two-image" src="assets/images/marenfeld.jpeg">
-    <img class="fig two-image" src="assets/images/bayer-filter.png">
-  </div>
-  <p class="credit">Figure 3a: Orange filter. Credit: P. Marenfeld (NOAO/AURA/NSF). Figure 3b: Diagram of an image sensor with filter arrangement. <a href="https://en.wikipedia.org/wiki/Bayer_filter">Credit.</a></p>
+      <p>There are many types of <a href="https://imagine.gsfc.nasa.gov/science/toolbox/emspectrum1.html">electromagnetic radiation</a>: radio waves, infrared, visible, ultraviolet (UV), X-rays, etc. Astronomers refer to all of these types of radiation as light. Each type of light has a specific range of wavelengths and energies. The type of light we can see with our eyes is called “visible” light.</p>
+
+      <img class="fig wide" src="assets/images/EM-spectrum-full.jpg">
+      <p class="credit">Figure 1: The electromagnetic spectrum. Adapted from <a href="https://imagine.gsfc.nasa.gov/Images/science/EM_spectrum_full.jpg">https://imagine.gsfc.nasa.gov/Images/science/EM-spectrum-full.jpg</a></p>
+
+      <p>Visible light consists of all of the colors of the rainbow, as shown below. You may have learned the acronym “Roy G. Biv” to remember the seven colors of the rainbow. The different colors correspond to different wavelengths and energies. Within the range of light we can see, red light has the lowest energy and the longest wavelengths, while violet has the highest energy and the shortest wavelengths.</p>
+
+      <img class="fig" src="assets/images/visible-spectrum2.png">
+      <p class="credit">Figure 2: Adapted from Daltonism: <a href="http://www.daltonism.org.uk/2018/01/rainbows/">http://www.daltonism.org.uk/2018/01/rainbows/</a></p>
+
+
+      <b>How Filters Work</b>
+      <p>Digital cameras cannot see color. They can only measure the amount of light that illuminates the <a href="https://en.wikipedia.org/wiki/Image_sensor">image sensor</a>. To build a color image, we use filters. A filter is designed to allow only certain wavelengths (or colors) of light to pass through it. All other wavelengths (or colors) are blocked. Figure 3a shows an example of how an orange filter <a href="https://www.merriam-webster.com/dictionary/transmit">transmits</a> some wavelengths of light while blocking others.</p>
+
+      <p>There are filters like this inside a digital camera (e.g., the one on a mobile phone). Tiny red, green, and blue filters are placed over the pixels of the image sensor as shown below in Figure 3b. When you take a picture, your camera measures light simultaneously through all three filters. </p>
+
+      <div class="img-container inline">
+        <img class="fig two-image" src="assets/images/marenfeld.jpeg">
+        <img class="fig two-image" src="assets/images/bayer-filter.png">
+      </div>
+
+      <p class="credit">Figure 3a: Orange filter. Credit: P. Marenfeld (NOAO/AURA/NSF). Figure 3b: Diagram of an image sensor with filter arrangement. <a href="https://en.wikipedia.org/wiki/Bayer_filter">Credit.</a></p>
   
-  <!-- Filter  -->
-  <p>To better understand how filters work, try out the filter tool below:</p>
-  <br>
-  <div class="content-wrapper">
-    <div class="prism-shape">
-      <div class="upper-streak white-streak"></div>
-      <div class=" lower-streak white-streak"></div>
-      <div class="prism-clip-wrapper">
-        <div class="prism-wrapper">
-          <div class="prism-items">
-            <div class="prism-colors" name="red"></div>
-            <div class="prism-colors" name="orange"></div>
-            <div class="prism-colors" name="yellow"></div>
-            <div class="prism-colors" name="green"></div>
-            <div class="prism-colors" name="blue"></div>
-            <div class="prism-colors" name="indigo"></div>
-            <div class="prism-colors" name="violet"></div>
-            <div class="lens camera-filter" id="red"></div>
-            <div class="lens camera-filter" id="orange"></div>
-            <div class="lens camera-filter" id="yellow"></div>
-            <div class="lens camera-filter" id="green"></div>
-            <div class="lens camera-filter" id="blue"></div>
-            <div class="lens camera-filter" id="indigo"></div>
-            <div class="lens camera-filter" id="violet"></div>
-            <div class="lens white-cover"></div>
-            <div class="prism-colors single"></div>
+      <!-- Filter  -->
+      <p>To better understand how filters work, try out the filter tool below:</p>
+
+
+      <div class="content-wrapper">
+        <div class="prism-shape">
+          <div class="upper-streak white-streak"></div>
+          <div class=" lower-streak white-streak"></div>
+          <div class="prism-clip-wrapper">
+            <div class="prism-wrapper">
+              <div class="prism-items">
+                <div class="prism-colors" name="red"></div>
+                <div class="prism-colors" name="orange"></div>
+                <div class="prism-colors" name="yellow"></div>
+                <div class="prism-colors" name="green"></div>
+                <div class="prism-colors" name="blue"></div>
+                <div class="prism-colors" name="indigo"></div>
+                <div class="prism-colors" name="violet"></div>
+                <div class="lens camera-filter" id="red"></div>
+                <div class="lens camera-filter" id="orange"></div>
+                <div class="lens camera-filter" id="yellow"></div>
+                <div class="lens camera-filter" id="green"></div>
+                <div class="lens camera-filter" id="blue"></div>
+                <div class="lens camera-filter" id="indigo"></div>
+                <div class="lens camera-filter" id="violet"></div>
+                <div class="lens white-cover"></div>
+                <div class="prism-colors single"></div>
+              </div>
+            </div>
+          </div>
+          <p id="prism-label">prism</p>
+          <p id="white-light-label">white light →  </p>
+        </div>
+
+        <input type="radio" class="prism-radio" name="prism" value="red" onchange="prismColor(this.value)"> Red</input>
+        <input type="radio" class="prism-radio" name="prism" value="orange" onchange="prismColor(this.value)"> Orange</input>
+        <input type="radio" class="prism-radio" name="prism" value="yellow" onchange="prismColor(this.value)"> Yellow</input>
+        <input type="radio" class="prism-radio" name="prism" value="green" onchange="prismColor(this.value)"> Green</input>
+        <input type="radio" class="prism-radio" name="prism" value="blue" onchange="prismColor(this.value)"> Blue</input>
+        <input type="radio" class="prism-radio" name="prism" value="violet" onchange="prismColor(this.value)"> Violet</input>
+      </div>
+      
+      <!-- End Prism -->
+
+      <ol>
+        <li>What happens to the white light when it passes through the prism?
+          <textarea class="form-control" rows="1"></textarea>
+        </li>
+        <li>Choose the red filter.</li>
+          <ol>
+            <li>What does the filter do to the red light?<textarea class="form-control" rows="1"></textarea></li>
+            <li>What does it do to the other colors of light?<textarea class="form-control" rows="1"></textarea></li>
+          </ol>
+        <li>Now choose the blue filter.</li>
+          <ol>
+            <li>What does the filter do to the blue light? <textarea class="form-control" rows="1"></textarea></li>
+            <li>What does it do to the other colors of light? <textarea class="form-control" rows="1"></textarea></li></ol>
+          </ol>
+      </ol>  
+
+      <b>Constructing an Image with Three Filters</b>
+      <p>Looking at a rainbow you might think that we need to use (at least) seven filters to produce a color image. But we actually only need three. This is because our eyes contain sensors called “cones” that collect red, green, and blue light. Our brain has a method for transforming the relative amounts of red, green, and blue light measured by the cones into a color image. This is known as the <i>three-color process.</i> Remarkably, our eyes can see over a million different colors with this method. Now let’s explore how the three-color process works.</p>
+
+      <p>Below there is a series of images. The first three are images obtained using red, green, and blue filters. As we mentioned before, digital cameras cannot see color, so each of the three images of filtered light starts out as a black and white image. A color (red, green, or blue) is then selected to  <a href="https://www.dictionary.com/browse/colorize">colorize</a> each of the filtered images, and finally, the three images are combined to create the color image.</p>
+
+      <p>Start by looking at the brightness of the boys’ shirts in the black and white images taken through each filter. Think about what is similar and what is different in them.</p>
+  
+      <img class="fig wide" src="assets/images/rgb.png">
+      <p class="credit">Figure 4: Comparison of the light passed by filters.</p>
+
+      <ol start="4">
+        <li>In the table below, record whether a shirt of a particular color appears to be bright or dark in the corresponding filter (e.g., in the upper-left cell below select “bright” or “dark” for the red shirt as it appears through the red filter. In the lower-left cell select “bright” or “dark” for the red shirt as it appears through the blue filter). </li>
+      </ol>
+
+      <table class="table mt-5 mb-5">
+        <thead>
+          <tr>
+            <th scope="col">Bright or dark?</th>
+            <th scope="col">Red shirt</th>
+            <th scope="col">Green Shirt</th>
+            <th scope="col">Blue Shirt</th>
+          </tr>
+        </thead>
+        <tr>
+          <td scope="row">Red Filter</td>
+          <td><input class="form-control" type="text"></td>
+          <td><input class="form-control" type="text"></td>
+          <td><input class="form-control" type="text"></td>
+        </tr>
+        <tr>
+          <td scope="row">Green Filter</td>
+          <td><input class="form-control" type="text"></td>
+          <td><input class="form-control" type="text"></td>
+          <td><input class="form-control" type="text"></td>
+        </tr>
+        <tr>
+          <td scope="row">Blue Filter</td>
+          <td><input class="form-control" type="text"></td>
+          <td><input class="form-control" type="text"></td>
+          <td><input class="form-control" type="text"></td>
+        </tr>
+      </table>
+
+      <p>Look for a pattern in the answers in the table above.</p>
+
+      <ol start="5">
+        <li>Choose the right words to finish this sentence: </li>
+
+          <p>“The red shirt looks 
+          <select class="custom-select my-1 mr-sm-2 student-answer-inline">
+            <option selected>Choose ...</option>
+            <option value="1">Bright</option>
+            <option value="2">Dark</option>
+          </select>in the image taken through the red filter because the red filter  
+          <select class="custom-select my-1 mr-sm-2 student-answer-inline">
+            <option selected>Choose ...</option>
+            <option value="1">passes</option>
+            <option value="2">blocks</option>
+          </select>  
+          red light."</p><br>
+
+        <li>Choose the right words to finish this sentence: 
+          <p>“The green shirt looks  
+          <select class="custom-select my-1 mr-sm-2 student-answer-inline">
+            <option selected>Choose ...</option>
+            <option value="1">Bright</option>
+            <option value="2">Dark</option>
+          </select>  in the image taken through the red filter because the red filter
+          <select class="custom-select my-1 mr-sm-2 student-answer-inline">
+            <option selected>Choose ...</option>
+            <option value="1">passes</option>
+            <option value="2">blocks</option>
+          </select>green light.”</p>
+        </li>
+      </ol>
+
+      <p>Here are the same images, now colorized with their corresponding colors, and the resulting image in full color:</p>
+      <img class="fig wide" src="assets/images/color-rgb-strip.jpg">
+      <p class="credit">Figure 5: Assignment of colors to filters.</p>
+
+      <p>The same image appears in the color-mixing tool below.</p>
+
+     <ul>
+       <li>Turn on filters one by one using the checkboxes at the left. </li>
+       <li>Since the filtered images are in black and white, you need to colorize them before combining them. Do this by selecting a color to the right of the sliders.</li>
+       <li>Now try to recreate the full-color image by adjusting the sliders to change the color intensity of the image. When the sliders are correctly placed, the image will be properly <i>color balanced</i>. If the colors in the image are not balanced, parts of the image (e.g., the skin colors) will look unusual.</li>
+     </ul>
+
+
+    <!-- Three Color -->
+    <div class="container mb-5">
+      <div class="row"> 
+        <!-- Words and Sliders -->
+        <div class="col-12 col-md-4">
+          <h1 class="widget-title mb-5">RGB Color Mixing Tool</h1>
+
+          <div class="filter" id="red-filter">
+            <p class="filter-titles titles-right">Colors </p>
+            <p class="filter-titles">Filter on/off </p>
+
+            <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"><p class="filter-label">R</p>
+            <input type="range" min=".7" max="1.5" step=".01" value="1.17" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
+            <select class="custom-select object-select" id="red-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
+              <option value="" disabled selected>Color</option>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+              <option value="transparent">None</option>
+            </select>
+          </div>
+
+          <div class="filter" id="green-filter">
+            <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">G</p>
+            <input type="range" min=".7" max="2" step=".01" value="1.64" onchange="updateSlider(this.value, this.parentNode.id)">
+            <select class="custom-select object-select" id="green-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
+              <option value="" disabled selected>Color</option>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+              <option value="transparent">None</option>
+            </select>
+          </div>
+        
+          <div class="filter" id="blue-filter">
+            <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">B</p>
+            <input type="range" min=".7" max="1.5" step=".01" value="1.06" class="range"  onchange="updateSlider(this.value, this.parentNode.id)">
+            <select class="custom-select object-select" onchange="selectColor(this.value, this.parentNode.id)">
+              <option value="" disabled selected>Color</option>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+              <option value="transparent">None</option>
+            </select>
           </div>
         </div>
+        <!-- Images -->
+        <div class="col-12 col-md-8 mobile-buffer">
+          <div class="intro-filter"></div>
+          <div class="red-filter rgb-filter"></div>
+          <div class="green-filter rgb-filter"></div>
+          <div class="blue-filter rgb-filter"></div>
+        </div>
       </div>
-      <p id="prism-label">prism</p>
-      <p id="white-light-label">white light →  </p>
+      <div class="row py-2">
+        <div class="col-12 col-md-4"></div>
+        <div class="col-12 col-md-8">
+          <button id="button" class="button" value="preset" name="preset" onclick="rgbReset()" >Reset</button>
+        </div>
+      </div>
     </div>
-    <input type="radio" class="prism-radio" name="prism" value="red" onchange="prismColor(this.value)"> Red</input>
-    <input type="radio" class="prism-radio" name="prism" value="orange" onchange="prismColor(this.value)"> Orange</input>
-    <input type="radio" class="prism-radio" name="prism" value="yellow" onchange="prismColor(this.value)"> Yellow</input>
-    <input type="radio" class="prism-radio" name="prism" value="green" onchange="prismColor(this.value)"> Green</input>
-    <input type="radio" class="prism-radio" name="prism" value="blue" onchange="prismColor(this.value)"> Blue</input>
-    <input type="radio" class="prism-radio" name="prism" value="violet" onchange="prismColor(this.value)"> Violet</input>
-    
-  </div>
-  <br><br>
-  <ol>
-    
-    <li>What happens to the white light when it passes through the prism?
-    <textarea class="form-control" rows="1"></textarea>
-    </li>
-    <li>Choose the red filter.</li>
-      <ol>
-        <li>What does the filter do to the red light?<textarea class="form-control" rows="1"></textarea></li>
-        <li>What does it do to the other colors of light?<textarea class="form-control" rows="1"></textarea></li>
-      </ol>
-    <li>Now choose the blue filter.</li>
-      <ol>
-        <li>What does the filter do to the blue light? <textarea class="form-control" rows="1"></textarea></li>
-        <li>What does it do to the other colors of light? <textarea class="form-control" rows="1"></textarea></li></ol>
-      </ol>
-    </ol>  
-  <b>Constructing an Image with Three Filters</b>
-  <p>Looking at a rainbow you might think that we need to use (at least) seven filters to produce a color image. But we actually only need three. This is because our eyes contain sensors called “cones” that collect red, green, and blue light. Our brain has a method for transforming the relative amounts of red, green, and blue light measured by the cones into a color image. This is known as the <i>three-color process.</i> Remarkably, our eyes can see over a million different colors with this method. Now let’s explore how the three-color process works.</p>
-  <p>Below there is a series of images. The first three are images obtained using red, green, and blue filters. As we mentioned before, digital cameras cannot see color, so each of the three images of filtered light starts out as a black and white image. A color (red, green, or blue) is then selected to  <a href="https://www.dictionary.com/browse/colorize">colorize</a> each of the filtered images, and finally, the three images are combined to create the color image.</p>
-  <p>Start by looking at the brightness of the boys’ shirts in the black and white images taken through each filter. Think about what is similar and what is different in them.</p>
-  
-  <img class="fig wide" src="assets/images/rgb.png">
-  <p class="credit">Figure 4: Comparison of the light passed by filters.</p>
-  <ol start="4">
-    <li>In the table below, record whether a shirt of a particular color appears to be bright or dark in the corresponding filter (e.g., in the upper-left cell below select “bright” or “dark” for the red shirt as it appears through the red filter. In the lower-left cell select “bright” or “dark” for the red shirt as it appears through the blue filter). </li>
-  </ol>
+    <!-- End Widget -->
+
+
+    <b>Eyes vs. Telescopes - Different Ways of Seeing</b>
+    <p>People often wonder if astronomical images show an object “as it really looks,” that is, as it would appear to their eyes. Note that telescopes not only magnify distant objects, they also collect much more light than your eyes. Most astronomical objects would be too faint for you to see, even if you were much closer to them than you are on Earth.  </p>
+
+    <p>Furthermore, telescope images are often made by using light with wavelengths that your eyes can’t see. This invisible light is collected by passing it through a filter that transmits a specific range of wavelengths. For instance, an ultraviolet filter (u filter) transmits light with wavelengths that are “above violet” and too high in energy for our eyes to see. Likewise, infrared filters transmit light with wavelengths that are “below red” and  too low in energy for our eyes to see. Astronomers use these extra filters because each type of light reveals different information about the Universe, so observing light over all these wavelengths allows us to learn more about objects in space. In a sense, telescopes give us superhuman vision. Indeed that’s the reason we build them!</p>
+
+    <b>Uses of Astronomical Filters</b>
+    <p>The LSST camera contains six filters (Figure 6), identified by the letters u, g, r, i, z and y. Three of these filters (g, r, and i) transmit visible light our eyes can see. The u filter transmits ultraviolet light.  The z and y filters transmit only infrared light. </p>
+
+
+    <img class="fig wide" src="assets/images/filters-ugrizy.png">
+    <p class="credit">Figure 6: Comparison of visible color wavelength ranges with LSST filters  (nm = nanometers)</p>
+
+    <p>As already mentioned, ultraviolet and infrared light are beyond the range of human vision. However, astronomers can still make images with these filters by colorizing the filtered images with colors we can see. Different filters are used to highlight certain objects or areas of interest. Here are some examples:</p>
+
+    <u id="B">Infrared filters: Seeing through dust</u>
+    <p>One of the uses of infrared filters is to see through dust, which <a href="https://www.itp.uni-hannover.de/fileadmin/arbeitsgruppen/zawischa/static_html/scattering.html">scatters</a> light with shorter wavelengths but transmits light with longer wavelengths. </p>
+
+    <p>Figure 7 below displays images from three filters and a full-color image. Before combining the filtered images they had to be colorized. The u filter image was colorized blue, the g filter image was colorized green, and the y (infrared) filter image was colorized red. (There’s a particular reason that these colors are arranged in this order—more on this later.) </p>
+
+    <img class="fig wide" src="assets/images/ghost-zoom.png">
+    <p class="credit">Figure 7: Ghost Nebula images from the HST WFC3/UVIS/IR data from MAST and the Hubble Legacy Archive. Each filtered image was colorized and combined to make the color image on the right.</p>
+
+    <ol start="7">
+      <li>Compare the three black and white images in Figure 7. What differences in the gas and stars do you notice between the three images?
+        <textarea class="form-control" rows="1"></textarea>
+      </li>
+
+      <li>What color are the stars in Figure 7 that were previously hidden by dust?
+        <textarea class="form-control" rows="1"></textarea>
+      </li>
+    </ol>
+
+    <u id="C">Infrared filters: Detecting faraway galaxies</u>
+    <p>Some galaxies are very distant, so distant that their light, because of <a href="http://astronomy.swin.edu.au/cosmos/C/Cosmological+Redshift">cosmological redshift,</a> is detectable only at infrared wavelengths.</p>
+    <p>To quickly spot the most distant galaxies, a color composite image can be made using at least one infrared filter. The image obtained using the filter that transmits the light with the shortest wavelengths is colorized blue, and the one using the filter that transmits the light with the longest (infrared) wavelengths is colorized red. The color image in Figure 8 below was made by combining all three filtered images and shows the most distant galaxies in a very red color, because they are brightest at very long wavelengths.</p>
+
+    <p>Identify a distant galaxy in the three black and white images below (Figure 8). It will get brighter as the filter wavelengths get longer. Then look for it in the color image. Can you find it?</p>
+
+    <img class="fig wide" src="assets/images/dropout-galaxy-large.png">
+    <p class="credit">Figure 8: Galaxy HSC J021838–052023, from the Subaru HSC Data Release 1 DAS Quarry. The filters were colorized as described above, then combined to make the color image on the right.</p>
+
+    <u id="A">Visible light filters: Exploring spiral galaxies</u>
+    <p>Active star-forming regions can be identified in spiral galaxies. They appear as fuzzy patches of gas that glow brightly in r-images due to light emitted by hydrogen, but are dimmer in shorter wavelengths (u and g filters). </p>
+
+    <p>Hot young stars are very bright when imaged with the u and g filters, but dimmer when imaged with the longer wavelengths (r and i). By combining three or more filters, images such as those in Figure 9 can be produced that highlight different astronomical objects and structures. </p>
+
+    <img class="fig" src="assets/images/NGC3982.jpg">
+    <p class="credit">Figure 9: NGC 3982 is a spiral galaxy showing areas of active star formation and hot, young stars. Image credit: <a href="https://www.spacetelescope.org/images/opo1036a/">NASA, ESA, and the Hubble Heritage Team (STScI/AURA);  Acknowledgment: A. Riess (STScI)</a></p>
+
+    <b>Color in Astronomical Images</b>
+    <p>There is a deliberate method for the way astronomers choose colors when building a color image. It is called <i>chromatic ordering</i>. Each color represents light with a range of wavelengths, and colors are selected following the order of wavelength. These images are not simply pretty pictures—they communicate scientific information about specific details in the image. Astronomers know how to interpret the colors to gain scientific knowledge. Images constructed by using chromatic ordering are known as <i>representative color images</i>. </p>
+
+    <p>The chromatic ordering technique matches the light with the shortest wavelengths collected by the telescope to the color with the shortest wavelength, and continues increasing the wavelength of the color as we increase the wavelength of the captured light. Since the LSST u filter passes light with the shortest wavelengths, images obtained with that filter would be colorized violet because violet has the shortest wavelengths of visible light. The g filter transmits light with slightly longer wavelengths than the u filter, so the g filter image would be colorized blue, since blue is the next shortest wavelength color. Continuing on with this process, the images obtained with other LSST filters would be colorized in this pattern:</p>
+
+    <table class="table mt-5 mb-5">
+      <th scope="col">r filter -> green</th>
+      <th scope="col">i filter ->  yellow</th>
+      <th scope="col">z filter -> orange</th>
+      <th scope="col">y filter ->  red</th>
+    </table>
+
+    <p>Sometimes images from all six filters are not all available. In that case, a few colors are omitted, and the images can be colorized with any colors as long as they follow the chromatic order rule. For example, suppose you have a set of images taken using only these filters: g, r, i, and y.</p>
+    <p>Any of the following filter sequences would be a correct application of chromatic ordering:</p>
+
     <table class="table mt-5 mb-5">
       <thead>
+        <th scope="col">g</th>
+        <th scope="col">r</th>
+        <th scope="col">i</th>
+        <th scope="col">y</th>
+      </thead>
       <tr>
-        <th scope="col">Bright or dark?</th>
-        <th scope="col">Red shirt</th>
-        <th scope="col">Green Shirt</th>
-        <th scope="col">Blue Shirt</th>
-      </tr>
-    </thead>
-      <tr>
-        <td scope="row">Red Filter</td>
-        <td><input class="form-control" type="text"></td>
-        <td><input class="form-control" type="text"></td>
-        <td><input class="form-control" type="text"></td>
+        <td scope="row">violet</td>
+        <td>green</td>
+        <td>yellow</td>
+        <td>red</td>
       </tr>
       <tr>
-        <td scope="row">Green Filter</td>
-        <td><input class="form-control" type="text"></td>
-        <td><input class="form-control" type="text"></td>
-        <td><input class="form-control" type="text"></td>
+        <td scope="row">blue</td>
+        <td>yellow</td>
+        <td>orange</td>
+        <td>red</td>
       </tr>
       <tr>
-        <td scope="row">Blue Filter</td>
-        <td><input class="form-control" type="text"></td>
-        <td><input class="form-control" type="text"></td>
-        <td><input class="form-control" type="text"></td>
+        <td scope="row">blue</td>
+        <td>green</td>
+        <td>yellow</td>
+        <td>orange</td>
       </tr>
     </table>
-    <p>Look for a pattern in the answers in the table above.</p>
-    <ol start="5">
-    <li>Choose the right words to finish this sentence: </li>
-    <p>“The red shirt looks 
-  <select class="custom-select my-1 mr-sm-2 student-answer-inline">
-    <option selected>Choose ...</option>
-    <option value="1">Bright</option>
-    <option value="2">Dark</option>
-  </select>in the image taken through the red filter because the red filter  
- <select class="custom-select my-1 mr-sm-2 student-answer-inline">
-    <option selected>Choose ...</option>
-    <option value="1">passes</option>
-    <option value="2">blocks</option>
-  </select>  
-  red light."</p><br>
 
-    <li>Choose the right words to finish this sentence: 
-      <p>“The green shirt looks  
-    <select class="custom-select my-1 mr-sm-2 student-answer-inline">
-    <option selected>Choose ...</option>
-    <option value="1">Bright</option>
-    <option value="2">Dark</option>
-  </select>  in the image taken through the red filter because the red filter
-  <select class="custom-select my-1 mr-sm-2 student-answer-inline">
-    <option selected>Choose ...</option>
-    <option value="1">passes</option>
-    <option value="2">blocks</option>
-  </select>green light.”</p>
-</li>
-  </ol>
-  <p>Here are the same images, now colorized with their corresponding colors, and the resulting image in full color:</p>
-  <!-- Text updated until here -->
-  <img class="fig wide" src="assets/images/color-rgb-strip.jpg">
-  <p class="credit">Figure 5: Assignment of colors to filters.</p>
+    <ol start="9">
+      <li>What is another chromatic sequence of colors that you could use in addition to the three examples above? If you are not sure, refer back to Figure 6.
+        <textarea class="form-control mt-3" rows="2"></textarea>
+      </li>
+    </ol>
 
-  <p>The same image appears in the color-mixing tool below. 
-</p>
- <ul>
-   <li>Turn on filters one by one using the checkboxes at the left. </li>
-   <li>Since the filtered images are in black and white, you need to colorize them before combining them. Do this by selecting a color to the right of the sliders.</li>
-   <li>Now try to recreate the full-color image by adjusting the sliders to change the color intensity of the image. When the sliders are correctly placed, the image will be properly <i>color balanced</i>. If the colors in the image are not balanced, parts of the image (e.g., the skin colors) will look unusual.</li>
- </ul>
-  <!-- Three Color -->
-  <div class="container mb-5">
-    <br>
-    <div class="row">
-      
-      <!-- Words and Sliders -->
-      <div class="col-12 col-md-4">
-        <br>
-        <h1 class="widget-title">RGB Color Mixing Tool</h1>
-        <br><br><br>
-        <div class="filter" id="red-filter">
-          <p class="filter-titles titles-right">Colors </p>
-          <p class="filter-titles">Filter on/off </p>
-          <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"><p class="filter-label">R</p>
-          <input type="range" min=".7" max="1.5" step=".01" value="1.17" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
-          <select class="custom-select object-select" id="red-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
-            <option value="" disabled selected>Color</option>
-            <option value="red">Red</option>
-            <option value="green">Green</option>
-            <option value="blue">Blue</option>
-            <option value="transparent">None</option>
-          </select>
-        </div>
-        <div class="filter" id="green-filter">
-          <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">G</p>
-          <input type="range" min=".7" max="2" step=".01" value="1.64" onchange="updateSlider(this.value, this.parentNode.id)">
-          <select class="custom-select object-select" id="green-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
-            <option value="" disabled selected>Color</option>
-            <option value="red">Red</option>
-            <option value="green">Green</option>
-            <option value="blue">Blue</option>
-            <option value="transparent">None</option>
-          </select>
-        </div>
+    <b>Constructing an Astronomical Color Image</b>
+    <p>To practice this technique, let’s use images taken with the six LSST filters to create a color image with the Astronomical Image Coloring Tool. It works in a similar way to the RGB mixing tool.  We will use it to explore an image of M33, a spiral galaxy.</p>
+
+
+    <!-- Widget -->
+    <div class="widget container">
+      <div class="row"">
         
-        <div class="filter" id="blue-filter">
-          <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">B</p>
-          <input type="range" min=".7" max="1.5" step=".01" value="1.06" class="range"  onchange="updateSlider(this.value, this.parentNode.id)">
-          <select class="custom-select object-select" onchange="selectColor(this.value, this.parentNode.id)">
-            <option value="" disabled selected>Color</option>
-            <option value="red">Red</option>
-            <option value="green">Green</option>
-            <option value="blue">Blue</option>
-            <option value="transparent">None</option>
-          </select>
-        </div>
-        
-      </div>
-      <!-- Images -->
-      <div class="col-12 col-md-8 mobile-buffer">
-        <div class="intro-filter"></div>
-        <div class="red-filter rgb-filter"></div>
-        <div class="green-filter rgb-filter"></div>
-        <div class="blue-filter rgb-filter"></div>
-        
-      </div>
-    </div>
-    <div class="row py-2">
-      <div class="col-12 col-md-4"></div>
-      <div class="col-12 col-md-8">
-        <button id="button" class="button" value="preset" name="preset" onclick="rgbReset()" >Reset</button>
-      </div>
-    </div>
-    
-  </div>
-  <!-- End Widget -->
-
-
-  <b>Eyes vs. Telescopes - Different Ways of Seeing</b>
-  <p>People often wonder if astronomical images show an object “as it really looks,” that is, as it would appear to their eyes. Note that telescopes not only magnify distant objects, they also collect much more light than your eyes. Most astronomical objects would be too faint for you to see, even if you were much closer to them than you are on Earth.  </p>
-  <p>Furthermore, telescope images are often made by using light with wavelengths that your eyes can’t see. This invisible light is collected by passing it through a filter that transmits a specific range of wavelengths. For instance, an ultraviolet filter (u filter) transmits light with wavelengths that are “above violet” and too high in energy for our eyes to see. Likewise, infrared filters transmit light with wavelengths that are “below red” and  too low in energy for our eyes to see. Astronomers use these extra filters because each type of light reveals different information about the Universe, so observing light over all these wavelengths allows us to learn more about objects in space. In a sense, telescopes give us superhuman vision. Indeed that’s the reason we build them!</p>
-  <b>Uses of Astronomical Filters</b>
-  <p>The LSST camera contains six filters (Figure 6), identified by the letters u, g, r, i, z and y. Three of these filters (g, r, and i) transmit visible light our eyes can see. The u filter transmits ultraviolet light.  The z and y filters transmit only infrared light. </p>
-
-
-  <img class="fig wide" src="assets/images/filters-ugrizy.png">
-  <p class="credit">Figure 6: Comparison of visible color wavelength ranges with LSST filters  (nm = nanometers)</p>
-
-  <p>As already mentioned, ultraviolet and infrared light are beyond the range of human vision. However, astronomers can still make images with these filters by colorizing the filtered images with colors we can see. Different filters are used to highlight certain objects or areas of interest. Here are some examples:</p>
-
-  <u id="B">Infrared filters: Seeing through dust</u>
-  <p>One of the uses of infrared filters is to see through dust, which <a href="https://www.itp.uni-hannover.de/fileadmin/arbeitsgruppen/zawischa/static_html/scattering.html">scatters</a> light with shorter wavelengths but transmits light with longer wavelengths. </p>
-
-  <p>Figure 7 below displays images from three filters and a full-color image. Before combining the filtered images they had to be colorized. The u filter image was colorized blue, the g filter image was colorized green, and the y (infrared) filter image was colorized red. (There’s a particular reason that these colors are arranged in this order—more on this later.) </p>
-
-  <img class="fig wide" src="assets/images/ghost-zoom.png">
-  <p class="credit">Figure 7: Ghost Nebula images from the HST WFC3/UVIS/IR data from MAST and the Hubble Legacy Archive. Each filtered image was colorized and combined to make the color image on the right.
-</p>
-
-<ol start="7">
-  <li>Compare the three black and white images in Figure 7. What differences in the gas and stars do you notice between the three images?</li>
-  <textarea class="form-control" rows="1"></textarea>
-  <li>What color are the stars in Figure 7 that were previously hidden by dust?</li>
-  <textarea class="form-control" rows="1"></textarea>
-</ol>
-
-<u id="C">Infrared filters: Detecting faraway galaxies</u>
-<p>Some galaxies are very distant, so distant that their light, because of <a href="http://astronomy.swin.edu.au/cosmos/C/Cosmological+Redshift">cosmological redshift,</a> is detectable only at infrared wavelengths.</p>
-<p>To quickly spot the most distant galaxies, a color composite image can be made using at least one infrared filter. The image obtained using the filter that transmits the light with the shortest wavelengths is colorized blue, and the one using the filter that transmits the light with the longest (infrared) wavelengths is colorized red. The color image in Figure 8 below was made by combining all three filtered images and shows the most distant galaxies in a very red color, because they are brightest at very long wavelengths.
-</p>
-<p>Identify a distant galaxy in the three black and white images below (Figure 8). It will get brighter as the filter wavelengths get longer. Then look for it in the color image. Can you find it?
-</p>
-
-<img class="fig wide" src="assets/images/dropout-galaxy-large.png">
-  <p class="credit">Figure 8: Galaxy HSC J021838–052023, from the Subaru HSC Data Release 1 DAS Quarry. The filters were colorized
- as described above, then combined to make the color image on the right.
-</p>
-
-<u id="A">Visible light filters: Exploring spiral galaxies</u>
-<p>Active star-forming regions can be identified in spiral galaxies. They appear as fuzzy patches of gas that glow brightly in r-images due to light emitted by hydrogen, but are dimmer in shorter wavelengths (u and g filters). </p>
-<p>Hot young stars are very bright when imaged with the u and g filters, but dimmer when imaged with the longer wavelengths (r and i). By combining three or more filters, images such as those in Figure 9 can be produced that highlight different astronomical objects and structures. </p>
-  <img class="fig" src="assets/images/NGC3982.jpg">
-  <p class="credit">Figure 9: NGC 3982 is a spiral galaxy showing areas of active star formation and hot, young stars. 
-Image credit: <a href="https://www.spacetelescope.org/images/opo1036a/">NASA, ESA, and the Hubble Heritage Team (STScI/AURA);  Acknowledgment: A. Riess (STScI)</a>
-</p>
-
-<b>Color in Astronomical Images</b>
-<p>There is a deliberate method for the way astronomers choose colors when building a color image. It is called <i>chromatic ordering</i>. Each color represents light with a range of wavelengths, and colors are selected following the order of wavelength. These images are not simply pretty pictures—they communicate scientific information about specific details in the image. Astronomers know how to interpret the colors to gain scientific knowledge. Images constructed by using chromatic ordering are known as <i>representative color images</i>. 
-</p>
-
-<p>The chromatic ordering technique matches the light with the shortest wavelengths collected by the telescope to the color with the shortest wavelength, and continues increasing the wavelength of the color as we increase the wavelength of the captured light. Since the LSST u filter passes light with the shortest wavelengths, images obtained with that filter would be colorized violet because violet has the shortest wavelengths of visible light. The g filter transmits light with slightly longer wavelengths than the u filter, so the g filter image would be colorized blue, since blue is the next shortest wavelength color. Continuing on with this process, the images obtained with other LSST filters would be colorized in this pattern:
-</p>
-
-<table class="table mt-5 mb-5">
-  <th scope="col">r filter -> green</th>
-  <th scope="col">i filter ->  yellow</th>
-  <th scope="col">z filter -> orange</th>
-  <th scope="col">y filter ->  red</th>
-</table>
-
-<p>Sometimes images from all six filters are not all available. In that case, a few colors are omitted, and the images can be colorized with any colors as long as they follow the chromatic order rule. For example, suppose you have a set of images taken using only these filters: g, r, i, and y.
-</p>
-<p>Any of the following filter sequences would be a correct application of chromatic ordering:</p>
-<table class="table mt-5 mb-5">
-  <th scope="col">g</th>
-  <th scope="col">r</th>
-  <th scope="col">i</th>
-  <th scope="col">y</th>
-  <tr>
-    <td scope="row">violet</td>
-    <td>green</td>
-    <td>yellow</td>
-    <td>red</td>
-  </tr>
-  <tr>
-    <td scope="row">blue</td>
-    <td>yellow</td>
-    <td>orange</td>
-    <td>red</td>
-  </tr>
-  <tr>
-    <td scope="row">blue</td>
-    <td>green</td>
-    <td>yellow</td>
-    <td>orange</td>
-  </tr>
-</table>
-
-<ol start="9">
-  <li>What is another chromatic sequence of colors that you could use in addition to the three examples above? If you are not sure, refer back to Figure 6.</li>
-  <textarea class="form-control mt-3" rows="2"></textarea>
-</ol>
-<br>
-<b>Constructing an Astronomical Color Image</b>
-<p>To practice this technique, let’s use images taken with the six LSST filters to create a color image with the Astronomical Image Coloring Tool. It works in a similar way to the RGB mixing tool.  We will use it to explore an image of M33, a spiral galaxy. </p>
-
-
-  <!-- Widget -->
-  <div class="widget container">
-    <div class="row"">
-      
-      <!-- Words and Sliders -->
-      <div class="col-12 col-md-4">
-        <h1 class="widget-title">Astronomical Image Coloring Tool</h1>
-        <div class="row">
-          <div class="center-sticky input-group ">
-            <select class="custom-select object-select" aria-label="select an object" onchange="selectObject(this.value)">
-              <option >Select an Object</option>
-              <optgroup label="Spiral Galaxies">
-              <option selected value="m33">M33</option>
-              <option value="m51">M51</option>
-              <option value="m63">M63</option>
-              <option value="m101">M101</option>
-              <option value="ngc6946">NGC6946</option>
-              <option value="ngc3718">NGC3718</option>
-             </optgroup>
-              <optgroup label="Nebulae">
-                <option value="cg4">GG4</option>
-                <option value="b163">B163</option>
-                <option value="m78">M78</option>
-                <option value="ngc6520">NGC6520</option>
-              </optgroup>
+        <!-- Words and Sliders -->
+        <div class="col-12 col-md-4">
+          <h1 class="widget-title">Astronomical Image Coloring Tool</h1>
+          <div class="row">
+            <div class="center-sticky input-group ">
+              <select class="custom-select object-select" aria-label="select an object" onchange="selectObject(this.value)">
+                <option >Select an Object</option>
+                <optgroup label="Spiral Galaxies">
+                <option selected value="m33">M33</option>
+                <option value="m51">M51</option>
+                <option value="m63">M63</option>
+                <option value="m101">M101</option>
+                <option value="ngc6946">NGC6946</option>
+                <option value="ngc3718">NGC3718</option>
+               </optgroup>
+                <optgroup label="Nebulae">
+                  <option value="cg4">GG4</option>
+                  <option value="b163">B163</option>
+                  <option value="m78">M78</option>
+                  <option value="ngc6520">NGC6520</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+          
+          <div class="filter" id="u-filter">
+            <p class="filter-titles titles-right">Colors </p>
+            <p class="filter-titles">Filter on/off </p>
+            <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">u</p>
+            <input type="range" min="1.5" max="4" step=".01" value="1.92" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
+            <select class="custom-select object-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
+              <option value="" disabled selected>Color</option>
+              <option value="violet">Violet</option>
+              <option value="blue">Blue</option>
+              <option value="green">Green</option>
+              <option value="yellow">Yellow</option>
+              <option value="orange">Orange</option>
+              <option value="red">Red</option>
+              <option value="cyan">*Cyan</option>
+              <option value="magenta">*Magenta</option>
+              <option value="transparent">None</option>
+            </select>
+          </div>
+          
+          
+          <div class="filter" id="g-filter">
+            <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">g</p>
+            <input type="range" min=".5" max="2.5" step=".01" value="1.08" onchange="updateSlider(this.value, this.parentNode.id)" >
+            <select class="custom-select object-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
+              <option value="" disabled selected>Color</option>
+              <option value="violet">Violet</option>
+              <option value="blue">Blue</option>
+              <option value="green">Green</option>
+              <option value="yellow">Yellow</option>
+              <option value="orange">Orange</option>
+              <option value="red">Red</option>
+               <option value="cyan">*Cyan</option>
+              <option value="magenta">*Magenta</option>
+              <option value="transparent">None</option>
+            </select>
+          </div>
+          
+          <div class="filter" id="r-filter" >
+            <input class="form-check-input" onclick="check(this.parentNode.id)" type="checkbox"> <p class="filter-label">r</p>
+            <input type="range" min="1" max="3" step=".01" value="1.45" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
+            <select class="custom-select object-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
+              <option value="" disabled selected>Color</option>
+              <option value="violet">Violet</option>
+              <option value="blue">Blue</option>
+              <option value="green">Green</option>
+              <option value="yellow">Yellow</option>
+              <option value="orange">Orange</option>
+              <option value="red">Red</option>
+             <option value="cyan">*Cyan</option>
+              <option value="magenta">*Magenta</option>
+              <option value="transparent">None</option>
+            </select>
+          </div>
+          <div class="filter" id="i-filter">
+            <input class="form-check-input" onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter-label">i</p>
+            <input type="range" min=".5" max="1.5" step=".01" value=".52" class="range" onchange="updateSlider(this.value, this.parentNode.id)" >
+            <select class="custom-select object-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
+              <option value="" disabled selected>Color</option>
+              <option value="violet">Violet</option>
+              <option value="blue">Blue</option>
+              <option value="green">Green</option>
+              <option value="yellow">Yellow</option>
+              <option value="orange">Orange</option>
+              <option value="red">Red</option>
+               <option value="cyan">*Cyan</option>
+              <option value="magenta">*Magenta</option>
+              <option value="transparent">None</option>
+            </select>
+          </div>
+          <div class="filter" id="z-filter">
+            <input class="form-check-input " onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter-label">z</p>
+            <input type="range" min=".4" max="1.6" step=".01" value=".375" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
+            <select class="custom-select object-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
+              <option value="" disabled selected>Color</option>
+              <option value="violet">Violet</option>
+              <option value="blue">Blue</option>
+              <option value="green">Green</option>
+              <option value="yellow">Yellow</option>
+              <option value="orange">Orange</option>
+              <option value="red">Red</option>
+              <option value="cyan">*Cyan</option>
+              <option value="magenta">*Magenta</option>
+              <option value="transparent">None</option>
+            </select>
+          </div>
+          <div class="filter" id="y-filter">
+            <input class="form-check-input " onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter-label">y</p>
+            <input type="range" min="1" max="3.5" step=".01" value="1.25" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
+            <select class="custom-select object-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
+              <option value="" disabled selected>Color</option>
+              <option value="violet">Violet</option>
+              <option value="blue">Blue</option>
+              <option value="green">Green</option>
+              <option value="yellow">Yellow</option>
+              <option value="orange">Orange</option>
+              <option value="red">Red</option>
+               <option value="cyan">*Cyan</option>
+              <option value="magenta">*Magenta</option>
+              <option value="transparent">None</option>
             </select>
           </div>
         </div>
-        
-        <div class="filter" id="u-filter">
-          <p class="filter-titles titles-right">Colors </p>
-          <p class="filter-titles">Filter on/off </p>
-          <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">u</p>
-          <input type="range" min="1.5" max="4" step=".01" value="1.92" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
-          <select class="custom-select object-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
-            <option value="" disabled selected>Color</option>
-            <option value="violet">Violet</option>
-            <option value="blue">Blue</option>
-            <option value="green">Green</option>
-            <option value="yellow">Yellow</option>
-            <option value="orange">Orange</option>
-            <option value="red">Red</option>
-            <option value="cyan">*Cyan</option>
-            <option value="magenta">*Magenta</option>
-            <option value="transparent">None</option>
-          </select>
-        </div>
-        
-        
-        <div class="filter" id="g-filter">
-          <input class="form-check-input" type="checkbox" onchange="check(this.parentNode.id)"> <p class="filter-label">g</p>
-          <input type="range" min=".5" max="2.5" step=".01" value="1.08" onchange="updateSlider(this.value, this.parentNode.id)" >
-          <select class="custom-select object-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
-            <option value="" disabled selected>Color</option>
-            <option value="violet">Violet</option>
-            <option value="blue">Blue</option>
-            <option value="green">Green</option>
-            <option value="yellow">Yellow</option>
-            <option value="orange">Orange</option>
-            <option value="red">Red</option>
-             <option value="cyan">*Cyan</option>
-            <option value="magenta">*Magenta</option>
-            <option value="transparent">None</option>
-          </select>
-        </div>
-        
-        <div class="filter" id="r-filter" >
-          <input class="form-check-input" onclick="check(this.parentNode.id)" type="checkbox"> <p class="filter-label">r</p>
-          <input type="range" min="1" max="3" step=".01" value="1.45" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
-          <select class="custom-select object-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
-            <option value="" disabled selected>Color</option>
-            <option value="violet">Violet</option>
-            <option value="blue">Blue</option>
-            <option value="green">Green</option>
-            <option value="yellow">Yellow</option>
-            <option value="orange">Orange</option>
-            <option value="red">Red</option>
-           <option value="cyan">*Cyan</option>
-            <option value="magenta">*Magenta</option>
-            <option value="transparent">None</option>
-          </select>
-        </div>
-        <div class="filter" id="i-filter">
-          <input class="form-check-input" onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter-label">i</p>
-          <input type="range" min=".5" max="1.5" step=".01" value=".52" class="range" onchange="updateSlider(this.value, this.parentNode.id)" >
-          <select class="custom-select object-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
-            <option value="" disabled selected>Color</option>
-            <option value="violet">Violet</option>
-            <option value="blue">Blue</option>
-            <option value="green">Green</option>
-            <option value="yellow">Yellow</option>
-            <option value="orange">Orange</option>
-            <option value="red">Red</option>
-             <option value="cyan">*Cyan</option>
-            <option value="magenta">*Magenta</option>
-            <option value="transparent">None</option>
-          </select>
-        </div>
-        <div class="filter" id="z-filter">
-          <input class="form-check-input " onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter-label">z</p>
-          <input type="range" min=".4" max="1.6" step=".01" value=".375" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
-          <select class="custom-select object-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
-            <option value="" disabled selected>Color</option>
-            <option value="violet">Violet</option>
-            <option value="blue">Blue</option>
-            <option value="green">Green</option>
-            <option value="yellow">Yellow</option>
-            <option value="orange">Orange</option>
-            <option value="red">Red</option>
-            <option value="cyan">*Cyan</option>
-            <option value="magenta">*Magenta</option>
-            <option value="transparent">None</option>
-          </select>
-        </div>
-        <div class="filter" id="y-filter">
-          <input class="form-check-input " onchange="check(this.parentNode.id)" type="checkbox"> <p class="filter-label">y</p>
-          <input type="range" min="1" max="3.5" step=".01" value="1.25" class="range" onchange="updateSlider(this.value, this.parentNode.id)">
-          <select class="custom-select object-select" aria-label="Color" onchange="selectColor(this.value, this.parentNode.id)">
-            <option value="" disabled selected>Color</option>
-            <option value="violet">Violet</option>
-            <option value="blue">Blue</option>
-            <option value="green">Green</option>
-            <option value="yellow">Yellow</option>
-            <option value="orange">Orange</option>
-            <option value="red">Red</option>
-             <option value="cyan">*Cyan</option>
-            <option value="magenta">*Magenta</option>
-            <option value="transparent">None</option>
-          </select>
+        <!-- Images -->
+        <div class="col-12 col-md-8 mobile-buffer">
+          
+          <div class="intro-filter"></div>
+          <div class="image-filter u-filter" ></div>
+          <div class="image-filter g-filter"></div>
+          <div class="image-filter r-filter"></div>
+          <div class="image-filter i-filter"></div>
+          <div class="image-filter z-filter"></div>
+          <div class="image-filter y-filter"></div>
+          
         </div>
       </div>
-      <!-- Images -->
-      <div class="col-12 col-md-8 mobile-buffer">
-        
-        <div class="intro-filter"></div>
-        <div class="image-filter u-filter" ></div>
-        <div class="image-filter g-filter"></div>
-        <div class="image-filter r-filter"></div>
-        <div class="image-filter i-filter"></div>
-        <div class="image-filter z-filter"></div>
-        <div class="image-filter y-filter"></div>
-        
+      <div class="row py-2">
+        <div class="col-4"></div>
+        <div class="col-12 col-md-8">
+          <button id="button" class="button" value="preset" name="preset" onclick="" >Reset</button>
+          
+        </div>
       </div>
     </div>
-    <div class="row py-2">
-      <div class="col-4"></div>
-      <div class="col-12 col-md-8">
-        <button id="button" class="button" value="preset" name="preset" onclick="" >Reset</button>
-        
-      </div>
-    </div>
-  </div>
-  <!-- End Widget -->
+    <!-- End Widget -->
 
 
-<ul>
-  <li>Select M33 from the dropdown menu.</li>
-  <li>Turn on the u filter.  You should see a greyscale image of M33. </li>
-  <li>Now click on the right side of the slider and select the color violet. You should now see the image turn violet.</li>
-  <li>Repeat for the remaining filters, assigning the colors in chromatic order. </li>
-</ul>
-
-<i>Note: If you have difficulty distinguishing between certain colors, you can substitute alternate colors; magenta and cyan are available for this purpose.</i>
-
-<p>You will now see a full color image of M33, made by combining the light from these six filters. For this image, the sliders are automatically positioned so that the colors are properly balanced (in other words, you don’t see too much of one color.) </p>
-
-<p>Now let’s see what happens when you move the sliders.</p>
-<p>Move the slider next to the g filter all the way to the right.</p>
-
-<ol start="10">
-  <li>What happens to the appearance of the image?</li>
-  <textarea class="form-control mt-2 mb-2" rows="2"></textarea>
-  <li>Explain why the appearance of the image changed in the way it did.</li>
-  <textarea class="form-control mt-2 mb-2" rows="2"></textarea>
-  <li>Would you say this image is color balanced?  Why or why not?</li>
-  <textarea class="form-control mt-2 mb-2" rows="2"></textarea>
-</ol>
-
-<p>Move the slider next to the g filter back to its original location (so that the image looked as it did before you moved it). Now move the slider next to the r filter all the way to the left.</p>
-
-<ol start="13">
-  <li>What happens to the appearance of the image?</li>
-  <textarea class="form-control mt-2 mb-2" rows="2"></textarea>
-  <li>Explain why the appearance of the image changed in the way it did.</li>
-  <textarea class="form-control mt-2 mb-2" rows="2"></textarea>
-  <li>Would you say this image is color balanced?  Why or why not?</li>
-  <textarea class="form-control mt-2 mb-2" rows="2"></textarea>
-</ol>
-
-<p>Move the slider next to the r filter back to its original location (so the image looks as it did before you moved it.)</p>
-<p>At this point you may be thinking: <i>but how do I know when an image looks “correct”?</i> The good news is that there are many ways to construct an image that combines a pleasing aesthetic with a science message. Below are three different images of M33:
-</p>
-
- <img class="fig wide" src="assets/images/Figure10.png">
-  <p class="credit">Figure 10: Three different images of M33. From left to right, Fig.10a: <a href="http://www.galex.caltech.edu/media/glx2009-01f_img03.html">Combined Spitzer/GALEX data, NASA/JPL-Caltech;</a> Fig. 10b: <a href="https://commons.wikimedia.org/wiki/File:Messier_33_(Image_Of_Team)_(18235295964).jpg">Collective image obtained with the contributions of: Paolo Demaria, Giuseppe Donatiello (composition and processing), Marco Favuzzi, Terenzio Fusco, Rolando Ligustri, Alessandro Elio Milani, Zlatko Orbanic, Andrea Pistocchini, and Tim Stone.</a> Creative Commons CCO 1.0; Fig. 10c: <a href="https://commons.wikimedia.org/wiki/File:Messier_33.jpg">Image by Francesco Antonucci,</a> Creative Commons 4.0 international.</p>
-
-  <p>These three images are different from each other because they were made with different telescopes, using different filters. They were also produced with different color balances.  </p>
-  <p>You’ll know you’re done when your image conveys the features you wish to display, is in chromatic order, and looks good to you. </p>
-  <h3>What do you want to investigate?</h3>
-  <p>Now it’s your turn to create a representative color image and use it to answer a question.</p>
-
-  <p>Think about these points before you begin:</p>
-  <ul>
-    <li>What type of object would you like to investigate?</li>
-    <p>Here are some options:</p>
     <ul>
-      <li  onclick="scrollToQuestionNode('B')" class="scroll-link">Look through a dusty nebula to see what’s inside</li>
-      <li  onclick="scrollToQuestionNode('C')" class="scroll-link">Search for a faraway galaxy</li>
-      <li  onclick="scrollToQuestionNode('A')" class="scroll-link">Locate the hot young stars in a galaxy</li>
-      <li  onclick="scrollToQuestionNode('A')" class="scroll-link">Identify star-forming regions in a galaxy</li>
+      <li>Select M33 from the dropdown menu.</li>
+      <li>Turn on the u filter.  You should see a greyscale image of M33. </li>
+      <li>Now click on the right side of the slider and select the color violet. You should now see the image turn violet.</li>
+      <li>Repeat for the remaining filters, assigning the colors in chromatic order. </li>
     </ul>
-    <br>
-    <li>What question do you want to answer? </li>
-    <li>What filters will be most appropriate for conducting your investigation? Why? <i>(Note: You must use at least two filters.)</i></li>
-  </ul>
 
-  <p>To get started:</p>
-  <ul>
-    <li>Return to the Astronomical Color Mixing Tool.</li>
-    <li>Select an object from the list.</li>
-    <li>For each of the filters you wish to use, start by turning on each filter and selecting colors.</li>
-    <li>Remember to use chromatic ordering.</li>
-    <li>Adjust the sliders to enhance the image.</li>
-    <li>If needed, you can open up additional windows to compare different filters or different objects in the same filter by clicking on the “add a window” sign in the upper right.</li>
-    <li>You may wish to use the drawing tool to mark a place on the image where you have identified an object, or where you wish to direct a comment.</li>
-    <li>Save your completed image(s).</li>
-  </ul>
-  
-  <h3>Discuss and Report</h3>
-  <ol start="16">
-    <li>You are wearing a pair of sunglasses and notice that the lenses of your glasses make the color of the sun look yellow. What is the most likely explanation for this color change?
-    </li>
-    <select class="custom-select student-answer-inline mt-2 mb-2" aria-label="select an object">
+    <i>Note: If you have difficulty distinguishing between certain colors, you can substitute alternate colors; magenta and cyan are available for this purpose.</i>
+
+    <p>You will now see a full color image of M33, made by combining the light from these six filters. For this image, the sliders are automatically positioned so that the colors are properly balanced (in other words, you don’t see too much of one color.) </p>
+
+    <p>Now let’s see what happens when you move the sliders.</p>
+    <p>Move the slider next to the g filter all the way to the right.</p>
+
+    <ol start="10">
+      <li>What happens to the appearance of the image?
+        <textarea class="form-control mt-2 mb-2" rows="2"></textarea>
+      </li>
+
+      <li>Explain why the appearance of the image changed in the way it did.
+        <textarea class="form-control mt-2 mb-2" rows="2"></textarea>
+      </li>
+
+      <li>Would you say this image is color balanced?  Why or why not?
+        <textarea class="form-control mt-2 mb-2" rows="2"></textarea>
+      </li>
+    </ol>
+
+    <p>Move the slider next to the g filter back to its original location (so that the image looked as it did before you moved it). Now move the slider next to the r filter all the way to the left.</p>
+
+    <ol start="13">
+      <li>What happens to the appearance of the image?
+        <textarea class="form-control mt-2 mb-2" rows="2"></textarea>
+      </li>
+      <li>Explain why the appearance of the image changed in the way it did.
+        <textarea class="form-control mt-2 mb-2" rows="2"></textarea>
+      </li>
+      <li>Would you say this image is color balanced?  Why or why not?
+        <textarea class="form-control mt-2 mb-2" rows="2"></textarea>
+      </li>
+    </ol>
+
+    <p>Move the slider next to the r filter back to its original location (so the image looks as it did before you moved it.)</p>
+    <p>At this point you may be thinking: <i>but how do I know when an image looks “correct”?</i> The good news is that there are many ways to construct an image that combines a pleasing aesthetic with a science message. Below are three different images of M33:
+    </p>
+
+    <img class="fig wide" src="assets/images/Figure10.png">
+    <p class="credit">Figure 10: Three different images of M33. From left to right, Fig.10a: <a href="http://www.galex.caltech.edu/media/glx2009-01f_img03.html">Combined Spitzer/GALEX data, NASA/JPL-Caltech;</a> Fig. 10b: <a href="https://commons.wikimedia.org/wiki/File:Messier_33_(Image_Of_Team)_(18235295964).jpg">Collective image obtained with the contributions of: Paolo Demaria, Giuseppe Donatiello (composition and processing), Marco Favuzzi, Terenzio Fusco, Rolando Ligustri, Alessandro Elio Milani, Zlatko Orbanic, Andrea Pistocchini, and Tim Stone.</a> Creative Commons CCO 1.0; Fig. 10c: <a href="https://commons.wikimedia.org/wiki/File:Messier_33.jpg">Image by Francesco Antonucci,</a> Creative Commons 4.0 international.</p>
+
+    <p>These three images are different from each other because they were made with different telescopes, using different filters. They were also produced with different color balances.</p>
+
+    <p>You’ll know you’re done when your image conveys the features you wish to display, is in chromatic order, and looks good to you.</p>
+
+    <h3>What do you want to investigate?</h3>
+    <p>Now it’s your turn to create a representative color image and use it to answer a question.</p>
+
+    <p>Think about these points before you begin:</p>
+
+    <ul>
+      <li>What type of object would you like to investigate?</li>
+        <p>Here are some options:</p>
+        <ul>
+          <li  onclick="scrollToQuestionNode('B')" class="scroll-link">Look through a dusty nebula to see what’s inside</li>
+          <li  onclick="scrollToQuestionNode('C')" class="scroll-link">Search for a faraway galaxy</li>
+          <li  onclick="scrollToQuestionNode('A')" class="scroll-link">Locate the hot young stars in a galaxy</li>
+          <li  onclick="scrollToQuestionNode('A')" class="scroll-link">Identify star-forming regions in a galaxy</li>
+        </ul>
+      <li>What question do you want to answer? </li>
+      <li>What filters will be most appropriate for conducting your investigation? Why? <i>(Note: You must use at least two filters.)</i></li>
+    </ul>
+
+    <p>To get started:</p>
+    <ul>
+      <li>Return to the Astronomical Color Mixing Tool.</li>
+      <li>Select an object from the list.</li>
+      <li>For each of the filters you wish to use, start by turning on each filter and selecting colors.</li>
+      <li>Remember to use chromatic ordering.</li>
+      <li>Adjust the sliders to enhance the image.</li>
+      <li>If needed, you can open up additional windows to compare different filters or different objects in the same filter by clicking on the “add a window” sign in the upper right.</li>
+      <li>You may wish to use the drawing tool to mark a place on the image where you have identified an object, or where you wish to direct a comment.</li>
+      <li>Save your completed image(s).</li>
+    </ul>
+    
+    <h3>Discuss and Report</h3>
+    <ol start="16">
+      <li>You are wearing a pair of sunglasses and notice that the lenses of your glasses make the color of the sun look yellow. What is the most likely explanation for this color change?
+        <select class="custom-select mt-2 mb-2" aria-label="select an object">
           <option selected>Choose ...</option>
-       <option>a. the lens of your sunglasses changes the white light of the sun into yellow light</option>
-              <option>b. the lens of your sunglasses reflects yellow light but transmits other color</option>
-              <option>c. the lens of your sunglasses transmits yellow light but blocks other colors</option>
-            </select>
-      <li>An object is imaged using the z, g, and u filters. Describe a colorization for each of these filters that will produce a representative color image.</li>
+          <option>a. the lens of your sunglasses changes the white light of the sun into yellow light</option>
+          <option>b. the lens of your sunglasses reflects yellow light but transmits other color</option>
+          <option>c. the lens of your sunglasses transmits yellow light but blocks other colors</option>
+        </select>
+      </li>
+      <li>An object is imaged using the z, g, and u filters. Describe a colorization for each of these filters that will produce a representative color image.
+        <textarea class="form-control" rows="1"></textarea>
+      </li>
+      <li>An asteroid is imaged using u, g, and r filters. It is visible in all three images but looks brighter in the r filter image. Does the asteroid reflect any blue light? Explain your reasoning.
+        <textarea class="form-control" rows="1"></textarea>
+      </li>
+      <li>A new type of object has been discovered in space. Its surface appears to emit more green light than any other color. You have a chance to use LSST images to study this object. Which three filters would you select to construct a representative color image of the object, and how would it appear in your image? Explain your reasoning.
+        <textarea class="form-control" rows="1"></textarea>
+      </li>
+    </ol>
 
-      <textarea class="form-control" rows="1"></textarea>
-      <li>An asteroid is imaged using u, g, and r filters. It is visible in all three images but looks brighter in the r filter image. Does the asteroid reflect any blue light? Explain your reasoning.</li>
-      <textarea class="form-control" rows="1"></textarea>
-      <li>A new type of object has been discovered in space. Its surface appears to emit more green light than any other color. You have a chance to use LSST images to study this object. Which three filters would you select to construct a representative color image of the object, and how would it appear in your image? Explain your reasoning.</li>
-      <textarea class="form-control" rows="1"></textarea>
-  </ol>
+    <h3>Summary</h3>
+    <ol start="20">
+      <li>Write a summary that includes:</li>
+      <ul>
+        <li>The type of object(s) you selected to explore,</li>
+        <li>The question you wanted to answer, </li>
+        <li>The filters and images you selected,</li>
+        <li>The chromatic order of colors you assigned,</li>
+        <li>The procedure you followed to analyze the image(s), and</li>
+        <li>What you learned through this process. (What was the answer to the question you posed?)</li>
+      </ul>
+    </ol>
+    <textarea class="form-control summary" rows="5"></textarea>
+    <p> Be sure to save/print your image!</p>
+    <button class="button">Submit</button>
+  </div>
 
-  <h3>Summary</h3>
-  <ol start="20">
-    <li>Write a summary that includes:</li>
-    <ul>
-      <li>The type of object(s) you selected to explore,</li>
-      <li>The question you wanted to answer, </li>
-      <li>The filters and images you selected,</li>
-      <li>The chromatic order of colors you assigned,</li>
-      <li>The procedure you followed to analyze the image(s), and</li>
-      <li>What you learned through this process. (What was the answer to the question you posed?)</li>
-    </ul>
-  </ol>
- <textarea class="form-control summary" rows="5"></textarea>
-  <p> Be sure to save/print your image!</p>
-<button class="button">Submit</button>
-</div>
-
-<!-- Draft Text -->
+<!-- Footer -->
 <footer class="footer fixed-bottom bg-white pt-3" id="footer">  
- <p class=" copyright text-sm-left ml-5">Thank you for helping us test this workspace, which is in development. Please submit feedback to <a href="mailto:education@lsst.org">education@lsst.org</a><button type="button" class="close mr-3" aria-label="Close" onclick="document.getElementById('footer').style.display = 'none'">
-  <span aria-hidden="true">&times;</span>
-</button></p>
+  <p class=" copyright text-sm-left ml-5">Thank you for helping us test this workspace, which is in development. Please submit feedback to <a href="mailto:education@lsst.org">education@lsst.org</a>
+    <button type="button" class="close mr-3" aria-label="Close" onclick="closeFooter()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </p>
 </footer>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="../assets/js/index.js"></script>
+
 </body>
 </html>

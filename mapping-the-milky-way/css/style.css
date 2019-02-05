@@ -4,18 +4,6 @@ body {
   background-color: #f7f7f7;
 }
 
-canvas {
-  background-color:#000;
-  display: block;
-}
-
-
-#main {
-  position:fixed;
-  z-index: 1;
-
-}
-
 /* Buttons*/
 
 .canvas-overlay-button {
