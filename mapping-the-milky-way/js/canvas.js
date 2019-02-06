@@ -25,7 +25,6 @@ function init() {
   scene.add( backgroundMesh );
 
 
-
   // Indicator Scene ============= 
 
   // Camera
@@ -50,6 +49,8 @@ function init() {
 
   ambientLight = new THREE.AmbientLight( 0xffffff, .4 )
   scene2.add(ambientLight)
+
+  var loader = new THREE.OBJLoader();
 
   var dir = new THREE.Vector3( 10, 0, 0 );
 
@@ -86,19 +87,59 @@ function init() {
   }
   // Indicator Location
   if (textureValue == "Elliptical-Galaxy/elliptical-center" ) {
-    var elipticalCenterPosition = new THREE.Vector3( 0, 0, -4 );
-    arrowHelper = new THREE.ArrowHelper( dir, elipticalCenterPosition, length, hex );
+    var ellipticalCenterPosition = new THREE.Vector3( 0, 0, -4 );
+    arrowHelper = new THREE.ArrowHelper( dir, ellipticalCenterPosition, length, hex );
     scene2.add( arrowHelper );
   }
   if (textureValue == "Elliptical-Galaxy/elliptical-edge" ) {
-    var elipticalCenterPosition = new THREE.Vector3( .4, 0, -4 );
-    arrowHelper = new THREE.ArrowHelper( dir, elipticalCenterPosition, length, hex );
+    var ellipticalEdgePosition = new THREE.Vector3( .4, 0, -4 );
+    arrowHelper = new THREE.ArrowHelper( dir, ellipticalEdgePosition, length, hex );
     scene2.add( arrowHelper );
   }
   if (textureValue == "Elliptical-Galaxy/elliptical-halfway" ) {
-    var elipticalCenterPosition = new THREE.Vector3( .2, 0, -4 );
-    arrowHelper = new THREE.ArrowHelper( dir, elipticalCenterPosition, length, hex );
+    var ellipticalHalfwayPosition = new THREE.Vector3( .2, 0, -4 );
+    arrowHelper = new THREE.ArrowHelper( dir, ellipticalHalfwayPosition, length, hex );
     scene2.add( arrowHelper );
+
+  }
+  if (textureValue == "Spiral-Galaxy/spiral-center") {
+    var spiralCenterPosition = new THREE.Vector3( 0, 0, -4 );
+    arrowHelper = new THREE.ArrowHelper( dir, spiralCenterPosition, length, hex );
+    scene2.add( arrowHelper );
+    scene2.remove(sphere)
+    loader.load( 'assets/Generic/testobj.obj', function ( object ) {
+      object.position.set(0,0,-20);
+      object.rotation.x = 10;
+      object.scale.set = (.5,.5,.5)
+      scene2.add( object );
+    }
+  );
+ }
+  if (textureValue == "Spiral-Galaxy/spiral-edge") {
+    var spiralEdgePosition = new THREE.Vector3( .58, 0, -4 );
+    arrowHelper = new THREE.ArrowHelper( dir, spiralEdgePosition, length, hex );
+    scene2.add( arrowHelper );
+    scene2.remove(sphere)
+    loader.load( 'assets/Generic/testobj.obj', function ( object ) {
+      object.position.set(0,0,-20);
+      object.rotation.x = 10;
+      object.scale.set = (.5,.5,.5)
+      scene2.add( object );
+    }
+    );
+  }
+  if (textureValue == "Spiral-Galaxy/spiral-halfway") {
+    var spiralHalfwayPosition = new THREE.Vector3( .35, 0, -4 );
+    arrowHelper = new THREE.ArrowHelper( dir, spiralHalfwayPosition, length, hex );
+    scene2.add( arrowHelper );
+    scene2.remove(sphere)
+    loader.load( 'assets/Generic/testobj.obj', function ( object ) {
+      object.position.set(0,0,-20);
+      object.rotation.x = 10;
+      object.scale.set = (.5,.5,.5)
+      scene2.add( object );
+    }
+    );
   }
 }
 
