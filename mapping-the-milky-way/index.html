@@ -30,7 +30,7 @@
 			</optgroup>
 		</select>
 
-		<img src="assets/Generic/Legends.png" class="fixed-bottom canvas-overlay-button legend-position" alt="">
+		<img src="assets/Generic/Legends.png" class="fixed-bottom canvas-overlay-button legend-position" id="legend" alt="">
 
 		<canvas id="main"></canvas>
 
@@ -69,15 +69,22 @@
 
 			<img src="assets/Concentration Map/density-map.png" class="density-map" alt="">
 			<img src="assets/Concentration Map/data-map.png" class="density-map data-map" id="data-map" alt="">
-			<input type="range" class="density-map-opacity range" min="0" max="100" step="1" value="100" onchange="changeOpacity(this.value)">
+			<br><br>
+			<label for="input" class="range-label float-left">Concentration map</label><label for="input" class="range-label float-right">Star field</label>
+
+			<input type="range" class="density-map-opacity range" min="0" max="100" step="1" value="100" onchange="changeOpacity(this.value)"></input>
+			 
+			<br><br>
+			<img src="assets/Generic/Legend-Small.png" width="250" class="m-auto d-block">
+			<br>
 
 
 			<p>When there are lots of stars in an image, it becomes impossible to quantify exactly how many stars are in a particular area just by looking at it. Since LSST will precisely map the locations of about 17 billion stars during its ten-year survey, it will definitely be impossible to count them visually. Instead, astronomers create data visualizations, called concentration maps, to show how many stars are concentrated at different locations in the sky. </p>
 			<p>Now select the concentration map for this image.</p>
-			<p>The different colors in the concentration maps give you an indication of how many stars are present in that area of the galaxy. Examine the color legend at the map bottom: e.g., a red color indicates a high number of stars concentrated in that area, whereas black indicates there are no stars at that location. White areas of the map are places where LSST has not observed the sky.</p>
+			<p>The different colors in the concentration maps give you an indication of how many stars are present in that area of the galaxy. Examine the color legend at the map bottom: e.g., a yellow color indicates a high number of stars concentrated in that area, whereas dark blue indicates there are no or very few stars at that location. White areas of the map are places where LSST has not observed the sky.</p>
 
 			<ol>
-				<li>A green color indicates that there is a 
+				<li>A red color indicates that there is a 
 				<select class="custom-select my-1 mr-sm-2 student-answer-inline">
 					<option selected>Choose ...</option>
     				<option value="1">high</option>
@@ -89,7 +96,7 @@
 				<li>Why are some regions white? Does this mean there are no stars in those places?
 					<textarea class="form-control" rows="1"></textarea>
 				</li>
-				<li>Find a red area on the map. Predict whether there is a large number of stars or a small number of stars in this area.
+				<li>Find a yellow area on the map. Predict whether there is a large number of stars or a small number of stars in this area.
 					<select class="custom-select my-1 mr-sm-2">
     					<option selected>Choose ...</option>
     					<option value="1">Large</option>
@@ -98,8 +105,9 @@
   				</li>
 			</ol>
 
-			<p>Click on the red area on the map. An image of that region of the galaxy will appear. Note the number of stars in this image.</p>
-			<p>Now find a location that appears blue on the map.</p>
+			<p>Use the slider to view the star field under the yellow area on the map. Note the number of stars in this area.</p>
+
+			<p>Now find a location that appears dark blue on the map.</p>
 
 			<ol start="4">
 				<li>Predict whether you will see a large number of stars or a small number of stars at this location.
@@ -110,7 +118,7 @@
   					</select>
   				</li>
 			</ol>
-			<p>Click on a blue location and an image of that region of the sky will appear. Note the number of stars in this image.</p>
+			<p>Use the slider to view the star field under the dark blue location. Note the number of stars in this area.</p>
 
 			<ol start="5">
 				<li>Based on what you have just observed, what do the colors on the concentration maps represent? (read the four choices below)
@@ -123,15 +131,15 @@
   					</select>
   				</li>
 				<ol type="a">
-					<li>The colors on the map correspond to the colors of the stars for that area of the galaxy. Red on the map indicates that many red stars are located in that area.</li>
-					<li>The colors on the map correspond to how many stars are in that area. Red locations indicate where there are high concentrations of stars.</li>
+					<li>The colors on the map correspond to the colors of the stars for that area of the galaxy. Blue on the map indicates that many blue stars are located in that area.</li>
+					<li>The colors on the map correspond to how many stars are in that area. Blue locations indicate where there are low concentrations of stars.</li>
 					<li>The colors on the map correspond to the average temperature of stars for that area of the galaxy. Blue areas indicate that many hot stars are located in that area.</li>
-					<li>The colors on the map correspond to how often LSST has observed that part of the galaxy. Red areas indicate that LSST has observed that part of the galaxy many times.</li>
+					<li>The colors on the map correspond to how often LSST has observed that part of the galaxy. Blue areas indicate that LSST has observed that part of the galaxy many times.</li>
 					<br>
 					
 				</ol>
 			</ol>
-
+			
 			<b>Concentration Map Models</b>
 
 			<p>The distribution of stars you see in the sky depends on the type of galaxy you live in and your location within it. If the Milky Way had a different shape or if the Sun were in a different location, you would see the stars distributed in the sky in a different way. To understand how this works you will investigate six concentration maps for simulated galaxies, using two galaxy types (elliptical and spiral) and three locations in each galaxy. </p>
@@ -423,7 +431,13 @@
 					</select>
 				</li>
 				<li> Turn on the constellations overlay. Which constellation is in the direction of the center of our galaxy?
-					<textarea class="form-control" rows="1"></textarea>
+					<select class="custom-select my-1 mr-sm-2">
+						<option selected>Choose ...</option>
+						<option value="1">Sagittarius (SGR)</option>
+						<option value="2">Cygnus (CYG)</option>
+						<option value="2">Cygnus (CYG)</option>
+						<option value="2">Tucana (TUC)</option>
+					</select>
 				</li>
 			</ol>
 
@@ -432,7 +446,6 @@
 			<p>Notice there are two bright objects in the concentration map. These are named the Large Magellanic Cloud (LMC) and Small Magellanic Cloud (SMC).</p>
 
 
-			<button class="button" onclick="scrollToSMC()">Go to SMC</button>
 
 			<ol start="21">
 				<li>The Milky Way Galaxy is about 100,000 light years in diameter. The LMC is about 158,000 light years away from the Milky Way and the SMC is about 200,000 light years away. Do you think the LMC and SMC are inside or outside the Milky Way? How do you know?
@@ -526,7 +539,6 @@
 		<script src='https://s3.ca-central-1.amazonaws.com/maxv-dev/ThreeJS/OrbitControls.js'></script>
 		<script src="js/OBJLoader.js"></script>
 		<script src="js/index.js"></script>
-		<script src="js/canvas.js"></script>
 		<script type="text/javascript" src="../assets/js/index.js"></script>
 
 	</body>

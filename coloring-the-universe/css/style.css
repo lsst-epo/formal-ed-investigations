@@ -182,6 +182,13 @@
 
 /* Color Tool */
 
+input[type="range"] {
+  width: 200px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 5px;
+}
+
 .object-select {
   font-size: 18px;
   float: right;
