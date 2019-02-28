@@ -10,9 +10,12 @@
 		<link rel="stylesheet" href="../assets/css/normalize.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet">
 	</head>
+
 	<body>
+		<script src="https://d3js.org/d3.v3.min.js"></script>
+
 		
-		<div class="container sidebar">
+		<div class="container sidebar d-none">
 
 			<ul class="list-none">
 			<br>
@@ -25,17 +28,36 @@
 
 		</div>
 
+		<select class="custom-select my-1 mr-sm-2 student-answer-inline" id="x-axis" onchange="test()">
+			<option >x axis ...</option>
+    		<option value="semimajor_axis" selected>Semimajor Axis</option>
+    		<option value="eccentricity">Eccentricity</option>
+    		<option value="inclination">Inclination</option>
+    		<option value="long_ascend_node">Long Ascend Node</option>
+    		<option value="abs_mag">Absolute Magnitude</option>
+		</select>
+
+		<select class="custom-select my-1 mr-sm-2 student-answer-inline" id="y-axis">
+					<option >y axis ...</option>
+    				<option value="semimajor_axis" selected>Semimajor Axis</option>
+    				<option selected value="eccentricity">Eccentricity</option>
+    				<option value="inclination">Inclination</option>
+    				<option value="long_ascend_node">Long Ascend Node</option>
+    				<option value="abs_mag">Absolute Magnitude</option>
+		</select>
+
 		<!-- Footer -->
-		<footer class="footer fixed-bottom bg-white pt-3" id="footer">  
+<!-- 		<footer class="footer fixed-bottom bg-white pt-3" id="footer">  
 		  <p class=" copyright text-sm-left ml-5">Thank you for helping us test this workspace, which is in development. Please submit feedback to <a href="mailto:education@lsst.org">education@lsst.org</a><button type="button" class="close mr-3" aria-label="Close" onclick="closeFooter()">
 		  <span aria-hidden="true">&times;</span>
 		  </button></p>
-		</footer>
+		</footer> -->
 
-		<canvas id="main"></canvas>
+		<!-- <canvas id="main"></canvas> -->
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js'></script>
 		<script src='https://s3.ca-central-1.amazonaws.com/maxv-dev/ThreeJS/OrbitControls.js'></script>
 		<script  src="js/index.js"></script>
 		<script  src="../assets/js/index.js"></script>
+		<script src="js/graph.js"></script>
 	</body>
 </html>
