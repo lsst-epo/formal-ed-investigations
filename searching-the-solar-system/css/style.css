@@ -7,3 +7,11 @@
 canvas{
   background-color:#000;
 }
+
+#main {
+    width: 70vw !important;
+    height: 70vh !important
+    float: right !important;
+     position: relative; 
+    z-index: 1;
+    }

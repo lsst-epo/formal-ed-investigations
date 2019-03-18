@@ -26,7 +26,7 @@ var cValue = function(d) { return d.type;},
     color = d3.scale.category10();
 
 // add the graph canvas to the body of the webpage
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#graph").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
