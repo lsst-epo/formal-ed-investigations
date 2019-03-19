@@ -9,9 +9,12 @@ canvas{
 }
 
 #main {
-    width: 70vw !important;
-    height: 70vh !important
-    float: right !important;
-     position: relative; 
-    z-index: 1;
-    }
+    display: inline-flex;
+    position: absolute;
+}
+
+#graph {
+    position: absolute;
+    top: 1000px;
+    left: 450px;
+}
