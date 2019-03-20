@@ -12,10 +12,10 @@ function init() {
   renderer = new THREE.WebGLRenderer({ canvas:document.getElementById('main'), antialiasing:true });
   renderer.shadowMap.enabled = true;
   renderer.setClearColor(0x000000);
-  renderer.setSize( window.innerWidth,window.innerHeight );
+  renderer.setSize( (window.innerWidth *.75),(window.innerHeight) );
 
   // Camera
-  camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
+  camera = new THREE.PerspectiveCamera(45, (window.innerWidth *.75) / (window.innerHeight), 1, 1000);
   camera.position.set(10, 100, 175);
 
   // Scene

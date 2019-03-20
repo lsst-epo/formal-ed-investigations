@@ -10,18 +10,14 @@
 		<link rel="stylesheet" href="../assets/css/normalize.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet">
 	</head>
-
 	<body>
 		<script src="https://d3js.org/d3.v3.min.js"></script>
-
 		
 		<div class="container sidebar">
-
 			<ul class="list-none">
-			<br>
-              <li class="hamburger-menu"><button class="hamburger text-dark">&#9776;</button></li>
-            </ul>
-
+				<br>
+				<li class="hamburger-menu"><button class="hamburger text-dark">&#9776;</button></li>
+			</ul>
 			<h1 class="notebook-header purple">Surveying the Solar System</h1>
 			<h3 class="mt-5 mb-4">Introduction</h3>
 			<p>For hundreds of years we had a simple model of our Solar System: eight planets and their moons, and occasionally a passing comet. Then came the discovery of the first asteroid, Ceres, in 1801, an indication there was more going on out there than we thought. Sure enough, over the next 200 years about 800,000 small Solar System objects (which includes asteroids, comets, and trans-Neptunian objects) were discovered. At first the rate of discovery was slow, but advances in technology, which have made it possible to detect smaller and more distant objects, have sped up the process. </p>
@@ -33,447 +29,370 @@
 				<li>How can observations of small objects give us information about their sizes and compositions?</li>
 				<li>What can observations of small objects reveal about the formation and history of the Solar System?</li>
 			</ul>
-
 			<b>Detecting Solar System objects</b>
 			<p>Each night, LSST takes two images of the same star field, at least thirty minutes apart. The images are compared by computer software, and if anything has moved an alert is automatically generated, and the data sent to the <a href="https://www.minorplanetcenter.net/about">IAU Minor Planet Center</a> (MPC). Within hours, the MPC determines a preliminary orbit for the object.</p>
-
 			<p>Below are some sample observations of moving Solar System objects. Observe how each object moves in relation to the star field. Each image is a 30-second exposure.</p>
-
 			<img src="assets/images/Fig1.gif" width="350" alt="">
 			<p class="credit">Figure 1. Multiple observations of two different small Solar System objects. Credit: Catalina Sky Survey/ Lunar and Planetary Laboratory/ University of Arizona</p>
-
 			<ol>
 				<li>Is the amount of time it takes for the two objects to move across the sky approximately the same?</li>
 				<select class="custom-select my-1 mr-sm-2">
-    				<option selected>Choose ...</option>
-    				<option value="1">Yes</option>
-    				<option value="2">No</option>
-  				</select>
-  				<li>The object that takes a longer time to move across the field of view is 
-  				<select class="custom-select my-1 mr-sm-2 student-answer-inline">
 					<option selected>Choose ...</option>
-    				<option value="1">closer</option>
-    				<option value="2">farther</option>
+					<option value="1">Yes</option>
+					<option value="2">No</option>
 				</select>
-				from the Sun, and will have a 
-				<select class="custom-select my-1 mr-sm-2 student-answer-inline">
-					<option selected>Choose ...</option>
-    				<option value="1">long</option>
-    				<option value="2">short</option>
-				</select>orbital period.</li>
-			</ol>
-			<b>Characterizing the orbit of a Solar System object</b>
-			<p>To estimate the orbit of a newly discovered Solar System object, astronomers map its position and record the time it takes to travel from one place to another. By making a series of careful measurements, they can determine a preliminary orbit for the object. The orbit is mathematically expressed through a series of orbital elements. The ones used in this investigation are described below:</p>
-
-			<p>The <a href="https://en.wikipedia.org/wiki/Semi-major_and_semi-minor_axes">semi-major axis</a> is half of the longest diameter of an ellipse. Simply put, this number indicates the size of the orbit. It is measured in <a href="https://cneos.jpl.nasa.gov/glossary/au.html">astronomical units</a> (AU).</p>
-
-			<img src="assets/images/Fig2.png" width="350" alt="">
-			<p class="credit">Fig. 2: An image indicating the semi-major and semi-minor axis of an ellipse. Credit: <a href="https://commons.wikimedia.org/wiki/File:An_image_describing_the_semi-major_and_semi-minor_axis_of_ellipse.svg">Sae1962</a>, Creative Commons 4.0 international.</p>
-
-			<p><a href="https://en.wikipedia.org/wiki/Orbital_eccentricity">Eccentricity</a> is a mathematical way of describing how elliptical (i.e., oval shaped) an orbit is. Eccentricity values range from 0 to almost 1. An eccentricity of 0 describes a perfectly circular orbit. The larger the eccentricity, the more elliptical the orbit.</p>
-
-			<img src="assets/images/Fig3.png" width="350" alt="">
-			<p class="credit">Fig. 3: Examples of ellipses with different eccentricities. <a href="https://earthobservatory.nasa.gov/features/OrbitsCatalog">NASA illustration by Robert Simmon.</a></p>
-
-			<p><a href="https://en.wikipedia.org/wiki/Orbital_inclination">Inclination</a> is the angle that the object’s orbital plane is tilted, relative to Earth’s orbital plane around the Sun. A value of 0° means that the orbit is parallel with Earth’s orbit. A value of 90° means that the orbit is tilted at a right angle to Earth’s orbit. Occasionally, a value between 90° and 180° is listed. These objects are in retrograde orbits around the Sun, orbiting in the opposite direction of most Solar System objects.</p>
-
-
-			<img src="assets/images/Fig4.jpg" width="350" alt="">
-			<p class="credit">Fig. 4: An image describing the inclination of an orbit. Credit: Modified from <a href="https://en.wikipedia.org/wiki/File:Orbit1.svg">image by Lassuncty</a>, Creative Commons 3.0 Unported.</p>
-
-			<b>The Big View of the Solar System</b>
-
-			<p>LSST will discover millions of new Solar System objects, and will provide an enormous data set that gives us a more comprehensive view of the objects’ distribution. The more we identify and map the distribution of objects in our Solar System, the more we can learn about how it formed.</p>
-
-			<img src="assets/images/Fig5.jpg" width="350" alt="">
-			<p class="credit">Fig. 5: Three objects in the Asteroid Belt, shown to scale. Image credit NASA/JPL.</p>
-
-			<p>For the purposes of this investigation, we have divided the small Solar System objects into four categories:</p>
-
-			<ul>
-				<li><a href="https://en.wikipedia.org/wiki/Asteroid_belt">Main belt asteroids</a> (MBAs) - Objects located from 2 to 4 astronomical units (AU) from the Sun, between the orbits of Mars and Jupiter.</li>
-				<li><a href="https://cneos.jpl.nasa.gov/about/basics.html">Near-Earth objects</a> (NEOs) - Asteroids or comets whose orbit intersects the orbit of Earth.</li>
-				<li><a href="https://en.wikipedia.org/wiki/Trans-Neptunian_object">Trans-Neptunian objects</a> (TNOs) - Objects that orbit the Sun, at or beyond the orbit of Neptune, at a distance of about 30 AU and beyond. This area includes the Kuiper Belt and the entire region out to the inner Oort Cloud, which begins at approximately 2000 AU from the Sun.</li>
-				<li>Comets - Icy objects found throughout the Solar System.</li>
-			</ul>
-
-			<img src="assets/images/Fig6.jpg" width="350" alt="">
-			<p class="credit">Fig. 6: Comet Hale-Bopp. Credit: E. Kolmhofer, H. Raab; <a href="http://www.sternwarte.at">Johannes-Kepler-Observatory</a>, Linz, Austria</p>
-
-			<p>Now you’ll use a data visualization tool called the Orbit Tracker to explore the positions and orbital characteristics of some small Solar System objects. All of the displayed points and their motions represent the positions and behavior of real objects that have previously been discovered.</p>
-
-			<p>Begin by selecting all objects and setting the view to fully zoomed out, then zoom in as necessary to explore. Experiment with changing the view of the Solar System orbits. Notice that you can change the view to above or below the Sun, as well as along the plane of the Solar System (as if you were a planet orbiting the Sun).</p>
-
-			<ol start="3">
-				<li>Observe the orbits of the objects and describe what is similar and what is different about these objects.</li>
-				<textarea class="form-control" rows="1" placeholder="Similarities..."></textarea>
-				<br>
-				<textarea class="form-control" rows="1" placeholder="Differences..."></textarea>
-			</ol>
-
-
-			<p>Next, take time to examine each group of objects individually by selecting the object type in the Orbitmaster and paying attention to the four orbital characteristics listed below. Decide which of the statements provided below best describes each group’s orbital characteristics. Use the provided statements to complete the table in question 4.</p>
-
-			<ul>
-				<li>Eccentricity</li>
+				<li>The object that takes a longer time to move across the field of view is
+					<select class="custom-select my-1 mr-sm-2 student-answer-inline">
+						<option selected>Choose ...</option>
+						<option value="1">closer</option>
+						<option value="2">farther</option>
+					</select>
+					from the Sun, and will have a
+					<select class="custom-select my-1 mr-sm-2 student-answer-inline">
+						<option selected>Choose ...</option>
+						<option value="1">long</option>
+						<option value="2">short</option>
+					</select>orbital period.</li>
+				</ol>
+				<b>Characterizing the orbit of a Solar System object</b>
+				<p>To estimate the orbit of a newly discovered Solar System object, astronomers map its position and record the time it takes to travel from one place to another. By making a series of careful measurements, they can determine a preliminary orbit for the object. The orbit is mathematically expressed through a series of orbital elements. The ones used in this investigation are described below:</p>
+				<p>The <a href="https://en.wikipedia.org/wiki/Semi-major_and_semi-minor_axes">semi-major axis</a> is half of the longest diameter of an ellipse. Simply put, this number indicates the size of the orbit. It is measured in <a href="https://cneos.jpl.nasa.gov/glossary/au.html">astronomical units</a> (AU).</p>
+				<img src="assets/images/Fig2.png" width="350" alt="">
+				<p class="credit">Fig. 2: An image indicating the semi-major and semi-minor axis of an ellipse. Credit: <a href="https://commons.wikimedia.org/wiki/File:An_image_describing_the_semi-major_and_semi-minor_axis_of_ellipse.svg">Sae1962</a>, Creative Commons 4.0 international.</p>
+				<p><a href="https://en.wikipedia.org/wiki/Orbital_eccentricity">Eccentricity</a> is a mathematical way of describing how elliptical (i.e., oval shaped) an orbit is. Eccentricity values range from 0 to almost 1. An eccentricity of 0 describes a perfectly circular orbit. The larger the eccentricity, the more elliptical the orbit.</p>
+				<img src="assets/images/Fig3.png" width="350" alt="">
+				<p class="credit">Fig. 3: Examples of ellipses with different eccentricities. <a href="https://earthobservatory.nasa.gov/features/OrbitsCatalog">NASA illustration by Robert Simmon.</a></p>
+				<p><a href="https://en.wikipedia.org/wiki/Orbital_inclination">Inclination</a> is the angle that the object’s orbital plane is tilted, relative to Earth’s orbital plane around the Sun. A value of 0° means that the orbit is parallel with Earth’s orbit. A value of 90° means that the orbit is tilted at a right angle to Earth’s orbit. Occasionally, a value between 90° and 180° is listed. These objects are in retrograde orbits around the Sun, orbiting in the opposite direction of most Solar System objects.</p>
+				<img src="assets/images/Fig4.jpg" width="350" alt="">
+				<p class="credit">Fig. 4: An image describing the inclination of an orbit. Credit: Modified from <a href="https://en.wikipedia.org/wiki/File:Orbit1.svg">image by Lassuncty</a>, Creative Commons 3.0 Unported.</p>
+				<b>The Big View of the Solar System</b>
+				<p>LSST will discover millions of new Solar System objects, and will provide an enormous data set that gives us a more comprehensive view of the objects’ distribution. The more we identify and map the distribution of objects in our Solar System, the more we can learn about how it formed.</p>
+				<img src="assets/images/Fig5.jpg" width="350" alt="">
+				<p class="credit">Fig. 5: Three objects in the Asteroid Belt, shown to scale. Image credit NASA/JPL.</p>
+				<p>For the purposes of this investigation, we have divided the small Solar System objects into four categories:</p>
 				<ul>
-					<li>Most orbits are similar to the shape of Earth’s orbit (nearly circular)</li>
-					<li>Most orbits are very different from the shape of Earth’s orbit (noticeably elliptical)</li>
-					<li>There is a wide range in the shapes of the orbits</li>
+					<li><a href="https://en.wikipedia.org/wiki/Asteroid_belt">Main belt asteroids</a> (MBAs) - Objects located from 2 to 4 astronomical units (AU) from the Sun, between the orbits of Mars and Jupiter.</li>
+					<li><a href="https://cneos.jpl.nasa.gov/about/basics.html">Near-Earth objects</a> (NEOs) - Asteroids or comets whose orbit intersects the orbit of Earth.</li>
+					<li><a href="https://en.wikipedia.org/wiki/Trans-Neptunian_object">Trans-Neptunian objects</a> (TNOs) - Objects that orbit the Sun, at or beyond the orbit of Neptune, at a distance of about 30 AU and beyond. This area includes the Kuiper Belt and the entire region out to the inner Oort Cloud, which begins at approximately 2000 AU from the Sun.</li>
+					<li>Comets - Icy objects found throughout the Solar System.</li>
 				</ul>
-				<li>Inclination</li>
+				<img src="assets/images/Fig6.jpg" width="350" alt="">
+				<p class="credit">Fig. 6: Comet Hale-Bopp. Credit: E. Kolmhofer, H. Raab; <a href="http://www.sternwarte.at">Johannes-Kepler-Observatory</a>, Linz, Austria</p>
+				<p>Now you’ll use a data visualization tool called the Orbit Tracker to explore the positions and orbital characteristics of some small Solar System objects. All of the displayed points and their motions represent the positions and behavior of real objects that have previously been discovered.</p>
+				<p>Begin by selecting all objects and setting the view to fully zoomed out, then zoom in as necessary to explore. Experiment with changing the view of the Solar System orbits. Notice that you can change the view to above or below the Sun, as well as along the plane of the Solar System (as if you were a planet orbiting the Sun).</p>
+				<ol start="3">
+					<li>Observe the orbits of the objects and describe what is similar and what is different about these objects.</li>
+					<textarea class="form-control" rows="1" placeholder="Similarities..."></textarea>
+					<br>
+					<textarea class="form-control" rows="1" placeholder="Differences..."></textarea>
+				</ol>
+				<p>Next, take time to examine each group of objects individually by selecting the object type in the Orbitmaster and paying attention to the four orbital characteristics listed below. Decide which of the statements provided below best describes each group’s orbital characteristics. Use the provided statements to complete the table in question 4.</p>
 				<ul>
-					<li>Most orbits are similar to Earth’s orbital plane</li>
-					<li>Most orbits are considerably tilted compared to Earth’s orbital plane</li>
-					<li>There is a wide range in the tilt of the orbits</li>
+					<li>Eccentricity</li>
+					<ul>
+						<li>Most orbits are similar to the shape of Earth’s orbit (nearly circular)</li>
+						<li>Most orbits are very different from the shape of Earth’s orbit (noticeably elliptical)</li>
+						<li>There is a wide range in the shapes of the orbits</li>
+					</ul>
+					<li>Inclination</li>
+					<ul>
+						<li>Most orbits are similar to Earth’s orbital plane</li>
+						<li>Most orbits are considerably tilted compared to Earth’s orbital plane</li>
+						<li>There is a wide range in the tilt of the orbits</li>
+					</ul>
+					<li>Size of the orbit</li>
+					<ul>
+						<li>The orbits are within the inner Solar System (closer to the Sun than Jupiter)</li>
+						<li>The orbits are located in the outer Solar System (beyond the orbit of Jupiter)</li>
+						<li>The orbits span both the inner and outer Solar System</li>
+					</ul>
+					<li>Direction of the orbit</li>
+					<ul>
+						<li>Most objects orbit the Sun in the same direction as Earth’s orbit</li>
+						<li>Many objects orbit the Sun in the opposite to the direction of Earth’s orbit</li>
+					</ul>
 				</ul>
-				<li>Size of the orbit</li>
+				<ol start="4">
+					<li>Complete the table below, choosing from the answers listed above.</li>
+				</ol>
+				<table class="table" width="350">
+					<thead>
+						<th></th>
+						<th>Eccentricity</th>
+						<th>Inclination</th>
+						<th>Size of orbit</th>
+						<th>Direction of orbit</th>
+					</thead>
+					<tr>
+						<td>NEOs</td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+					</tr>
+					<tr>
+						<td>MBAs</td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+					</tr>
+					<tr>
+						<td>TNOs</td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+					</tr>
+					<tr>
+						<td>comets</td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+					</tr>
+				</table>
+				<ol start="5">
+					<li>According to Kepler's Third Law, and the information you recorded in your table, which of the four types of objects will have orbital periods shorter than Jupiter and which will be longer than Jupiter?</li>
+					<textarea class="form-control" rows="1" placeholder="Periods shorter than Jupiter:"></textarea>
+					<textarea class="form-control" rows="1" placeholder="Periods longer than Jupiter:"></textarea>
+					<li>Complete this sentence: When an object is closest to the Sun in its orbit, the gravitational force it experiences is the
+						<select class="custom-select my-1 mr-sm-2 student-answer-inline">
+							<option selected>Choose ...</option>
+							<option value="1">greatest</option>
+							<option value="2">least</option>
+						</select>, and its orbital speed at that location is the
+						<select class="custom-select my-1 mr-sm-2 student-answer-inline">
+							<option selected>Choose ...</option>
+							<option value="1">fastest</option>
+							<option value="2">slowest</option>
+						</select>.</li>
+					</ol>
+					<p>In order to see general trends more clearly, it’s helpful to work with a large data set. Although your eyes can discriminate differences among a few hundred objects, it’s not possible to do so when the numbers get much larger. Plots are useful tools for examining larger data sets.</p>
+					
+					<p>Use the Plotter to construct a histogram of the number of small Solar System objects on the y-axis vs. distance from the Sun (semi-major axis) on the x-axis. Select all objects.</p>
+					<ol start="7">
+						<li>Which group of Solar System objects is the most common?</li>
+						<select class="custom-select my-1 mr-sm-2">
+							<option selected>Choose ...</option>
+							<option value="1">NEOs</option>
+							<option value="2">Comets</option>
+							<option value="2">TNOs</option>
+							<option value="2">MBAs</option>
+						</select>
+						<li>. There are two main groups of small objects. One group is centered at a distance of approximately <textarea class="form-control" rows="1"></textarea> AU from the Sun, and the second group is centered at a distance of <textarea class="form-control" rows="1"></textarea> AU from the Sun.</li>
+					</ol>
+					
+					<b>The History of the Solar System</b>
+					<p>According to the Solar Nebula Theory, a spinning cloud of dust and gas collapsed and the young Sun began to form at the center, while dusty and icy objects began to grow by repeated collisions with each other in a flattened accretion disk surrounding the Sun.</p>
+					<img src="assets/images/Fig7.jpg" width="350" alt="">
+					<p class="credit">Fig. 7: This artist's concept shows a very young star encircled by a disk of gas and dust. The Solar Nebula Theory predicts an accretion disk such as this where Solar System objects would form. Image Credit: NASA/JPL-Caltech.</p>
+					
+					<p>There is significant evidence to support this theory. Observations of star-forming regions reveal similar accretion disks around young stars in other parts of the galaxy. Another piece of evidence that supports the theory is the the fact that rocky planets formed close to the Sun and icy planets formed at greater distances. This can be explained by the higher temperatures closer to the Sun, which prevented the inner planets from retaining most of their original atmospheres and ices.</p>
+					<p>We can also find evidence to support the Solar Nebula Theory by studying the motions of objects within the Solar System. To collect this evidence, we’ll go back to the Orbit Tracker and look for overall patterns in the way objects orbit the Sun. Use your completed chart and the visualization to answer these questions:</p>
+					<ol start="9">
+						<li><select class="custom-select my-1 mr-sm-2 student-answer-inline">
+							<option selected>Choose ...</option>
+							<option value="1">Nearly all</option>
+							<option value="2">Roughly half</option>
+						</select> of Solar System objects orbit in the same direction around the Sun
+					</li>
+					<li>If the direction of an object’s orbit were random, there would be a 50/50 chance that two objects would travel around the Sun in the same direction. Do the orbits you observe appear to be the result of random chance? If not, what might explain their motions and orientation?</li>
+					<textarea class="form-control" rows="1"></textarea>
+				</ol>
+				<p>Although the orbital motions of all of the major planets support the Solar Nebula Theory, many of the small Solar System objects have very eccentric or highly inclined orbits, and some even orbit the Sun in the opposite direction as the planets. We can apply Newton’s Laws to help explain these observations: </p>
+				<ol start="11">
+					<li>Imagine a close encounter in space between two objects, one with a large mass, and one with a small mass. As the objects approach each other, the forces they exert on each other must be equal according to Newton’s Third Law. Which object would experience a greater acceleration? Hint: think about Newton’s Second Law (Force = mass X acceleration).</li>
+					<select class="custom-select my-1 mr-sm-2">
+						<option selected>Choose ...</option>
+						<option value="1">The more massive object would be accelerated more</option>
+						<option value="2">The less massive object would be accelerated more</option>
+						<option value="2">Both objects would experience the same acceleration</option>
+					</select>
+				</ol>
+				<p>These interactions are orchestrated by the big player in this story, gravity. Although the Sun is the dominant mass of the Solar System, local gravitational interactions play a role as well. From the early days of the Solar System to the present time, there have been many such interactions between objects. Complete the statement below to summarize what happens during these encounters: </p>
+				<ol start="12">
+					<li>Close encounters between small Solar System objects can result in changes in their orbits. The ___ the mass of an object, the ___ likely a close encounter will change the object’s orbital characteristics, such as  ____ and ____. In addition to mass, the distance between the two objects is a factor. Objects that are more widely separated are ___ likely to experience a change in their orbits as a result of a close encounter.</li>
+				</ol>
+				<b>The Sizes of Small Solar System Objects</b>
+				<p>Even through the most powerful telescopes on Earth, asteroids and TNOs are too far away to look like anything bigger than dots in an image, or maybe streaks (if they are moving very fast). However, we can still use images to learn a lot about these small objects. For example, we can use the brightness of an asteroid to estimate its size.</p>
+				<ol start="13">
+					<p>Complete the statement, using your reasoning abilities:</p>
+					<li>The larger the asteroid, the
+						<select class="custom-select my-1 mr-sm-2 student-answer-inline">
+							<option selected>Choose ...</option>
+							<option value="1">dimmer</option>
+							<option value="2">brighter</option>
+						</select> it will appear, because its surface will reflect
+						<select class="custom-select my-1 mr-sm-2 student-answer-inline">
+							<option selected>Choose ...</option>
+							<option value="1">more</option>
+							<option value="2">less</option>
+						</select>
+					light</li>
+				</ol>
+				<p>To estimate the size of an asteroid, we use its absolute magnitude, which can be thought of as the asteroid’s actual brightness (as opposed to how bright it appears to an observer on Earth). An asteroid’s absolute magnitude depends only on its size and its albedo. Albedo is a measure of the reflectivity of the surface of an object. An object that is pure white will reflect 100% of the light that hits it and will have an albedo of 1. An object that is pure black will reflect 0% of the light that hits it and will have an albedo of 0. The albedos for asteroids depend on the material on the surface, but they range from 0.05 (5%) to 0.25 (25%).</p>
+				<p>The equation for calculating the size of an asteroid is given by:</p>
+				<img src="assets/images/Fig8.png" width="250">
+				<p>Where D is the diameter of the asteroid (in kilometers), H is the absolute magnitude of the asteroid, and p is the albedo of the asteroid. You can visit <a href="http://www.physics.sfasu.edu/astro/asteroids/sizemagnitude.html">this website</a> to calculate the diameter.</p>
+				<p>Use the Plotter to construct a scatter plot of size on the y-axis vs. distance from the Sun (semi-major axis) on the x-axis. Select all categories of objects.</p>
+				<ol start="14">
+					<li>Based on the scatter plot, which group is mostly made up of dim, small objects, and which is mostly made of bright, large objects?</li>
+					<textarea class="form-control" rows="1" placeholder="Small objects..."></textarea>
+					<br>
+					<textarea class="form-control" rows="1" placeholder="Large objects..."></textarea>
+					<li>If there were many bright, large NEOs, would the scatter plot have looked different? If so, how (where would this data have been on your plot)?</li>
+					<textarea class="form-control" rows="1" ></textarea>
+					<li>The scatter plot shows few dim, small TNOs. Is it possible that there are small TNOs that we don't see at all? Why might we not be able to see them?</li>
+					<textarea class="form-control" rows="1" ></textarea>
+					<li>Based upon the scatter plot and your answers for the previous questions, which of these statements are true?</li>
+					<ol type="a">
+						<li>There are mostly small objects (less than 10 km in diameter) nearby.</li>
+						<li>There are mostly large objects (greater than 10 km in diameter) far away.</li>
+						<li>Throughout the Solar System, there are far more small objects than large objects.</li>
+					</ol>
+					<select class="custom-select my-1 mr-sm-2">
+						<option selected>Choose ...</option>
+						<option value="1">a</option>
+						<option value="1">b</option>
+						<option value="1">c</option>
+					</select>
+				</ol>
+				<b>Classifying Newly- Detected Solar System Objects</b>
+				<p>You will be randomly assigned three small Solar System objects that have been recently discovered by LSST. Your choices for classifying each object are:</p>
 				<ul>
-					<li>The orbits are within the inner Solar System (closer to the Sun than Jupiter)</li>
-					<li>The orbits are located in the outer Solar System (beyond the orbit of Jupiter)</li>
-					<li>The orbits span both the inner and outer Solar System</li>
+					<li>MBA</li>
+					<li>TNO</li>
+					<li>NEO</li>
+					<li>comet</li>
+					<li>none of the above</li>
 				</ul>
-				<li>Direction of the orbit</li>
-				<ul>
-					<li>Most objects orbit the Sun in the same direction as Earth’s orbit</li>
-					<li>Many objects orbit the Sun in the opposite to the direction of Earth’s orbit</li>
-				</ul>
-			</ul>
-
-			<ol start="4">
-				<li>Complete the table below, choosing from the answers listed above.</li>
-			</ol>
-
-			<table class="table" width="350">
-				<thead>
-					<th></th>
-					<th>Eccentricity</th>
-					<th>Inclination</th>
-					<th>Size of orbit</th>
-					<th>Direction of orbit</th>
-				</thead>
-				<tr>
-					<td>NEOs</td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-				</tr>
-
-				<tr>
-					<td>MBAs</td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-				</tr>
-
-				<tr>
-					<td>TNOs</td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-				</tr>
-
-				<tr>
-					<td>comets</td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-				</tr>
-			</table>
-
-			<ol start="5">
-				<li>According to Kepler's Third Law, and the information you recorded in your table, which of the four types of objects will have orbital periods shorter than Jupiter and which will be longer than Jupiter?</li>
-				<textarea class="form-control" rows="1" placeholder="Periods shorter than Jupiter:"></textarea>
-				<textarea class="form-control" rows="1" placeholder="Periods longer than Jupiter:"></textarea>
-
-				<li>Complete this sentence: When an object is closest to the Sun in its orbit, the gravitational force it experiences is the
-				<select class="custom-select my-1 mr-sm-2 student-answer-inline">
-					<option selected>Choose ...</option>
-    				<option value="1">greatest</option>
-    				<option value="2">least</option>
-				</select>, and its orbital speed at that location is the 
-				<select class="custom-select my-1 mr-sm-2 student-answer-inline">
-					<option selected>Choose ...</option>
-    				<option value="1">fastest</option>
-    				<option value="2">slowest</option>
-				</select>.</li>
-			</ol>	
-
-			<p>In order to see general trends more clearly, it’s helpful to work with a large data set. Although your eyes can discriminate differences among a few hundred objects, it’s not possible to do so when the numbers get much larger. Plots are useful tools for examining larger data sets.</p>
+				<p>Consider factors such as the object’s absolute magnitude, and the size, shape, and tilt of its orbit. Then, give an explanation and evidence for your classification.</p>
+				<p>Begin by selecting the first object (Object 1) from the drop-down menu on the Orbit Tracker, then repeat for the next two objects.</p>
+				<ol start="18">
+					<li>For each object, complete the table below.</li>
+				</ol>
+				<table class="table" width="350">
+					<thead>
+						<th></th>
+						<th>Objectr</th>
+						<th>Name</th>
+						<th>Object Type</th>
+						<th>Data/Evidence</th>
+					</thead>
+					<tr>
+						<td>1</td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+						<td><textarea class="form-control" rows="1"></textarea></td>
+					</tr>
+				</table>
+				<p>Look at the orbits of the three objects and find the one that has the highest eccentricity. Use the play buttons to see where the orbital speed of the object is the fastest.</p>
+				<ol start="19">
+					<li>Where is this object located on its orbit (relative to the Sun) when it is moving at its fastest speed?</li>
+					<textarea class="form-control" rows="1"></textarea>
+					<li>Explain your above answer using ideas from Kepler’s Laws and Newton’s Laws.</li>
+					<textarea class="form-control" rows="1"></textarea>
+				</ol>
+				<b>Determining the Composition of an Object </b>
+				<p>There are many different classes of asteroids. C-class (“carbonaceous”) asteroids are the most common, making up about 75% of all known asteroids. They are mostly made of clay and rock, and are dark gray in color. These asteroids are of interest because they contain significant amounts of water, which future space explorers could use for life support and for the production of rocket fuel. </p>
+				<p>S-class (“silicaceous”) asteroids are the second most common, and make up about 17% of known asteroids. Greenish to reddish in color, they are made mostly of rock and metals. They contain  large amounts of precious metals, such as gold, platinum, and iridium. Scientists estimate that some S-class asteroids have several trillion dollars worth of metals in them, which makes them of interest to potential mining operations. </p>
+				<p>We can learn about the composition of a Solar System object by measuring its brightness through multiple filters. The two plots below show the differences in brightness of C-class and S-class asteroids when measured through LSST’s g, r, i, and z filters:</p>
+				<img src="assets/images/Fig9.png" width="350">
+				<p class="credit">Figure 8: C and S class asteroids display brightness differences when measured through different filters.</p>
+				<p>For each plot, the horizontal (x) axis shows four filters. The vertical (y) axis is a measure of brightness compared to the g filter. For example, if the r filter shows a brightness value of 3, it means that the asteroid appeared three times brighter through the r filter than it was when measured through the g filter.</p>
+				<ol start="21">
+					<li>What characteristic of the displayed data do you need to compare in order to determine if an asteroid is a C-class or an S-class</li>
+					<textarea class="form-control" rows="1" ></textarea>
+				</ol>
+				<p>There are other kinds of asteroids as well. For example, V-class asteroids are rare asteroids that have a surface made primarily of basalt. Below is a brightness comparison between S-class and V-class asteroids.</p>
+				<img src="assets/images/Fig10.png" width="350">
+				<p class="credit">Figure 9: S-and V-class asteroids display brightness differences when measured through different filters.</p>
+				<ol start="22">
+					<li>Which filter is most useful for determining the difference between these two objects? Explain your answer.</li>
+					<textarea class="form-control" rows="1" ></textarea>
+					<li>At least one of your three objects newly detected by LSST is an NEO. Determine its type (C or S) by using the plotter tool to construct a curve. Explain how you decided. </li>
+					<textarea class="form-control" rows="1" ></textarea>
+					<li>Use the calculator found <a href="http://www.physics.sfasu.edu/astro/asteroids/sizemagnitude.html">here</a> to determine the diameter of your NEO. The average albedo for C-class asteroids is 0.06 and the average albedo for S-class asteroids is 0.20.</li>
+					<textarea class="form-control" rows="1" ></textarea>
+					<li>Select an object on Earth that is roughly the size of your asteroid.</li>
+					<select class="custom-select my-1 mr-sm-2">
+						<option selected>Choose ...</option>
+						<option value="1">marble</option>
+						<option value="1">car</option>
+						<option value="1">city</option>
+						<option value="1">continent</option>
+					</select>
+				</ol>
+				<h2>Discuss and Report</h2>
+				<ol start="26">
+					<li>Evaluate your NEO’s economic potential for mining. First, consider what class of asteroid you have. Next, think about how hard it would be to travel to this asteroid from Earth. Traveling to an asteroid that is moving at a velocity similar to Earth’s would require less rocket fuel, so an NEO with an orbit most similar to Earth is optimal. Consider an asteroid’s orbital characteristics such as semi-major axis, eccentricity, and inclination. Explain how you arrived at your answers</li>
+					<textarea class="form-control" rows="2" ></textarea>
+					<li>Compare your NEO to others in your class or workgroup. Which has the most economic potential? Explain</li>
+					<textarea class="form-control" rows="2" ></textarea>
+				</ol>
+				<h2>Summary</h2>
+				<ol start="28">
+					<li>Choose one group of Solar System objects (such as TNOs) or a subcategory of a major group. Write a user guide to characterize the group. Include ranges of data and descriptions that you have learned as a result of this investigation, such as orbital elements, composition, location, size, and color. You may use the Plotter to investigate the data for your group.</li>
+					<textarea class="form-control" rows="2" ></textarea>
+				</ol>
+				<!-- End of Sidebar -->
+			</div>
+			<!-- Solar System Graphic -->
+			<canvas id="main"></canvas>
+			<!-- End Solar Sytem Graphic -->
+			<!-- Selection Items for Graphs -->
 			
-			<p>Use the Plotter to construct a histogram of the number of small Solar System objects on the y-axis vs. distance from the Sun (semi-major axis) on the x-axis. Select all objects.</p>
+			
+			<div id="graph">
+			<select class="custom-select my-1 mr-sm-2 student-answer-inline" id="x-axis" onchange="test()">
+				<option >x axis ...</option>
+				<option value="semimajor_axis" selected>Semimajor Axis</option>
+				<option value="eccentricity">Eccentricity</option>
+				<option value="inclination">Inclination</option>
+				<option value="long_ascend_node">Long Ascend Node</option>
+				<option value="abs_mag">Absolute Magnitude</option>
+			</select>
+			<select class="custom-select my-1 mr-sm-2 student-answer-inline" id="y-axis">
+				<option >y axis ...</option>
+				<option value="semimajor_axis" selected>Semimajor Axis</option>
+				<option selected value="eccentricity">Eccentricity</option>
+				<option value="inclination">Inclination</option>
+				<option value="long_ascend_node">Long Ascend Node</option>
+				<option value="abs_mag">Absolute Magnitude</option>
+			</select>	
 
-			<ol start="7">
-				<li>Which group of Solar System objects is the most common?</li>
-				<select class="custom-select my-1 mr-sm-2">
-    				<option selected>Choose ...</option>
-    				<option value="1">NEOs</option>
-    				<option value="2">Comets</option>
-    				<option value="2">TNOs</option>
-    				<option value="2">MBAs</option>
-  				</select>
+				
+			</div>
+			<!-- End Graphs -->
 
-  				<li>. There are two main groups of small objects. One group is centered at a distance of approximately <textarea class="form-control" rows="1"></textarea> AU from the Sun, and the second group is centered at a distance of <textarea class="form-control" rows="1"></textarea> AU from the Sun.</li>
-			</ol>
-
-
-		
-
-		<b>The History of the Solar System</b>
-		<p>According to the Solar Nebula Theory, a spinning cloud of dust and gas collapsed and the young Sun began to form at the center, while dusty and icy objects began to grow by repeated collisions with each other in a flattened accretion disk surrounding the Sun.</p>
-
-		<img src="assets/images/Fig7.jpg" width="350" alt="">
-		<p class="credit">Fig. 7: This artist's concept shows a very young star encircled by a disk of gas and dust. The Solar Nebula Theory predicts an accretion disk such as this where Solar System objects would form. Image Credit: NASA/JPL-Caltech.</p>
-	
-		<p>There is significant evidence to support this theory. Observations of star-forming regions reveal similar accretion disks around young stars in other parts of the galaxy. Another piece of evidence that supports the theory is the the fact that rocky planets formed close to the Sun and icy planets formed at greater distances. This can be explained by the higher temperatures closer to the Sun, which prevented the inner planets from retaining most of their original atmospheres and ices.</p>
-
-		<p>We can also find evidence to support the Solar Nebula Theory by studying the motions of objects within the Solar System. To collect this evidence, we’ll go back to the Orbit Tracker and look for overall patterns in the way objects orbit the Sun. Use your completed chart and the visualization to answer these questions:</p>
-
-		<ol start="9">
-			<li><select class="custom-select my-1 mr-sm-2 student-answer-inline">
-					<option selected>Choose ...</option>
-    				<option value="1">Nearly all</option>
-    				<option value="2">Roughly half</option>
-				</select> of Solar System objects orbit in the same direction around the Sun
-			</li>
-			<li>If the direction of an object’s orbit were random, there would be a 50/50 chance that two objects would travel around the Sun in the same direction. Do the orbits you observe appear to be the result of random chance? If not, what might explain their motions and orientation?</li>
-			<textarea class="form-control" rows="1"></textarea>
-		</ol>
-
-		<p>Although the orbital motions of all of the major planets support the Solar Nebula Theory, many of the small Solar System objects have very eccentric or highly inclined orbits, and some even orbit the Sun in the opposite direction as the planets. We can apply Newton’s Laws to help explain these observations: </p>
-
-		<ol start="11">
-			<li>Imagine a close encounter in space between two objects, one with a large mass, and one with a small mass. As the objects approach each other, the forces they exert on each other must be equal according to Newton’s Third Law. Which object would experience a greater acceleration? Hint: think about Newton’s Second Law (Force = mass X acceleration).</li>
-			<select class="custom-select my-1 mr-sm-2">
-    			<option selected>Choose ...</option>
-    			<option value="1">The more massive object would be accelerated more</option>
-    			<option value="2">The less massive object would be accelerated more</option>
-    			<option value="2">Both objects would experience the same acceleration</option>
-  			</select>
-		</ol>
-
-		<p>These interactions are orchestrated by the big player in this story, gravity. Although the Sun is the dominant mass of the Solar System, local gravitational interactions play a role as well. From the early days of the Solar System to the present time, there have been many such interactions between objects. Complete the statement below to summarize what happens during these encounters: </p>
-
-		<ol start="12">
-			<li>Close encounters between small Solar System objects can result in changes in their orbits. The ___ the mass of an object, the ___ likely a close encounter will change the object’s orbital characteristics, such as  ____ and ____. In addition to mass, the distance between the two objects is a factor. Objects that are more widely separated are ___ likely to experience a change in their orbits as a result of a close encounter.</li>
-		</ol>
-
-		<b>The Sizes of Small Solar System Objects</b>
-
-		<p>Even through the most powerful telescopes on Earth, asteroids and TNOs are too far away to look like anything bigger than dots in an image, or maybe streaks (if they are moving very fast). However, we can still use images to learn a lot about these small objects. For example, we can use the brightness of an asteroid to estimate its size.</p>
-
-		<ol start="13">
-			<p>Complete the statement, using your reasoning abilities:</p>
-			<li>The larger the asteroid, the 
-				<select class="custom-select my-1 mr-sm-2 student-answer-inline">
-					<option selected>Choose ...</option>
-    				<option value="1">dimmer</option>
-    				<option value="2">brighter</option>
-				</select> it will appear, because its surface will reflect 
-
-				<select class="custom-select my-1 mr-sm-2 student-answer-inline">
-					<option selected>Choose ...</option>
-    				<option value="1">more</option>
-    				<option value="2">less</option>
-				</select>
-				light</li>
-		</ol>
-
-		<p>To estimate the size of an asteroid, we use its absolute magnitude, which can be thought of as the asteroid’s actual brightness (as opposed to how bright it appears to an observer on Earth). An asteroid’s absolute magnitude depends only on its size and its albedo. Albedo is a measure of the reflectivity of the surface of an object. An object that is pure white will reflect 100% of the light that hits it and will have an albedo of 1. An object that is pure black will reflect 0% of the light that hits it and will have an albedo of 0. The albedos for asteroids depend on the material on the surface, but they range from 0.05 (5%) to 0.25 (25%).</p>
-
-		<p>The equation for calculating the size of an asteroid is given by:</p>
-
-		<img src="assets/images/Fig8.png" width="250">
-
-		<p>Where D is the diameter of the asteroid (in kilometers), H is the absolute magnitude of the asteroid, and p is the albedo of the asteroid. You can visit <a href="http://www.physics.sfasu.edu/astro/asteroids/sizemagnitude.html">this website</a> to calculate the diameter.</p>
-
-		<p>Use the Plotter to construct a scatter plot of size on the y-axis vs. distance from the Sun (semi-major axis) on the x-axis. Select all categories of objects.</p>
-
-		<ol start="14">
-			<li>Based on the scatter plot, which group is mostly made up of dim, small objects, and which is mostly made of bright, large objects?</li>
-			<textarea class="form-control" rows="1" placeholder="Small objects..."></textarea>
-				<br>
-			<textarea class="form-control" rows="1" placeholder="Large objects..."></textarea>
-
-			<li>If there were many bright, large NEOs, would the scatter plot have looked different? If so, how (where would this data have been on your plot)?</li>
-			<textarea class="form-control" rows="1" ></textarea>
-
-			<li>The scatter plot shows few dim, small TNOs. Is it possible that there are small TNOs that we don't see at all? Why might we not be able to see them?</li>
-			<textarea class="form-control" rows="1" ></textarea>
-
-			<li>Based upon the scatter plot and your answers for the previous questions, which of these statements are true?</li>
-			<ol type="a">
-				<li>There are mostly small objects (less than 10 km in diameter) nearby.</li>
-				<li>There are mostly large objects (greater than 10 km in diameter) far away.</li>
-				<li>Throughout the Solar System, there are far more small objects than large objects.</li>
-			</ol>
-			<select class="custom-select my-1 mr-sm-2">
-    			<option selected>Choose ...</option>
-    			<option value="1">a</option>
-    			<option value="1">b</option>
-    			<option value="1">c</option>
-  			</select>
-		</ol>
-
-		<b>Classifying Newly- Detected Solar System Objects</b>
-		<p>You will be randomly assigned three small Solar System objects that have been recently discovered by LSST. Your choices for classifying each object are:</p>
-
-		<ul>
-			<li>MBA</li>
-			<li>TNO</li>
-			<li>NEO</li>
-			<li>comet</li>
-			<li>none of the above</li>
-		</ul>
-
-		<p>Consider factors such as the object’s absolute magnitude, and the size, shape, and tilt of its orbit. Then, give an explanation and evidence for your classification.</p>
-
-		<p>Begin by selecting the first object (Object 1) from the drop-down menu on the Orbit Tracker, then repeat for the next two objects.</p>
-
-		<ol start="18">
-			<li>For each object, complete the table below.</li>
-		</ol>
-
-		<table class="table" width="350">
-				<thead>
-					<th></th>
-					<th>Objectr</th>
-					<th>Name</th>
-					<th>Object Type</th>
-					<th>Data/Evidence</th>
-				</thead>
-				<tr>
-					<td>1</td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-				</tr>
-
-				<tr>
-					<td>2</td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-				</tr>
-
-				<tr>
-					<td>3</td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-					<td><textarea class="form-control" rows="1"></textarea></td>
-				</tr>
-			</table>
-
-			<p>Look at the orbits of the three objects and find the one that has the highest eccentricity. Use the play buttons to see where the orbital speed of the object is the fastest.</p>
-
-			<ol start="19">
-				<li>Where is this object located on its orbit (relative to the Sun) when it is moving at its fastest speed?</li>
-				<textarea class="form-control" rows="1"></textarea>
-
-				<li>Explain your above answer using ideas from Kepler’s Laws and Newton’s Laws.</li>
-				<textarea class="form-control" rows="1"></textarea>
-			</ol>
-
-			<b>Determining the Composition of an Object </b>
-
-			<p>There are many different classes of asteroids. C-class (“carbonaceous”) asteroids are the most common, making up about 75% of all known asteroids. They are mostly made of clay and rock, and are dark gray in color. These asteroids are of interest because they contain significant amounts of water, which future space explorers could use for life support and for the production of rocket fuel. </p>
-
-			<p>S-class (“silicaceous”) asteroids are the second most common, and make up about 17% of known asteroids. Greenish to reddish in color, they are made mostly of rock and metals. They contain  large amounts of precious metals, such as gold, platinum, and iridium. Scientists estimate that some S-class asteroids have several trillion dollars worth of metals in them, which makes them of interest to potential mining operations. </p>
-
-			<p>We can learn about the composition of a Solar System object by measuring its brightness through multiple filters. The two plots below show the differences in brightness of C-class and S-class asteroids when measured through LSST’s g, r, i, and z filters:</p>
-
-			<img src="assets/images/Fig9.png" width="350">
-			<p class="credit">Figure 8: C and S class asteroids display brightness differences when measured through different filters.</p>
-
-			<p>For each plot, the horizontal (x) axis shows four filters. The vertical (y) axis is a measure of brightness compared to the g filter. For example, if the r filter shows a brightness value of 3, it means that the asteroid appeared three times brighter through the r filter than it was when measured through the g filter.</p>
-
-			<ol start="21">
-				<li>What characteristic of the displayed data do you need to compare in order to determine if an asteroid is a C-class or an S-class</li>
-				<textarea class="form-control" rows="1" ></textarea>
-			</ol>
-
-			<p>There are other kinds of asteroids as well. For example, V-class asteroids are rare asteroids that have a surface made primarily of basalt. Below is a brightness comparison between S-class and V-class asteroids.</p>
-
-			<img src="assets/images/Fig10.png" width="350">
-			<p class="credit">Figure 9: S-and V-class asteroids display brightness differences when measured through different filters.</p>
-
-			<ol start="22">
-				<li>Which filter is most useful for determining the difference between these two objects? Explain your answer.</li>
-				<textarea class="form-control" rows="1" ></textarea>
-
-				<li>At least one of your three objects newly detected by LSST is an NEO. Determine its type (C or S) by using the plotter tool to construct a curve. Explain how you decided. </li>
-				<textarea class="form-control" rows="1" ></textarea>
-
-				<li>Use the calculator found <a href="http://www.physics.sfasu.edu/astro/asteroids/sizemagnitude.html">here</a> to determine the diameter of your NEO. The average albedo for C-class asteroids is 0.06 and the average albedo for S-class asteroids is 0.20.</li>
-				<textarea class="form-control" rows="1" ></textarea>
-
-				<li>Select an object on Earth that is roughly the size of your asteroid.</li>
-				<select class="custom-select my-1 mr-sm-2">
-    			<option selected>Choose ...</option>
-    			<option value="1">marble</option>
-    			<option value="1">car</option>
-    			<option value="1">city</option>
-    			<option value="1">continent</option>
-  			</select>
-			</ol>
-
-			<h2>Discuss and Report</h2>
-
-			<ol start="26">
-				<li>Evaluate your NEO’s economic potential for mining. First, consider what class of asteroid you have. Next, think about how hard it would be to travel to this asteroid from Earth. Traveling to an asteroid that is moving at a velocity similar to Earth’s would require less rocket fuel, so an NEO with an orbit most similar to Earth is optimal. Consider an asteroid’s orbital characteristics such as semi-major axis, eccentricity, and inclination. Explain how you arrived at your answers</li>
-				<textarea class="form-control" rows="2" ></textarea>
-
-				<li>Compare your NEO to others in your class or workgroup. Which has the most economic potential? Explain</li>
-				<textarea class="form-control" rows="2" ></textarea>
-
-			</ol>
-
-			<h2>Summary</h2>
-
-			<ol start="28">
-				<li>Choose one group of Solar System objects (such as TNOs) or a subcategory of a major group. Write a user guide to characterize the group. Include ranges of data and descriptions that you have learned as a result of this investigation, such as orbital elements, composition, location, size, and color. You may use the Plotter to investigate the data for your group.</li>
-				<textarea class="form-control" rows="2" ></textarea>
-
-			</ol>
-
-<!-- End of Sidebar -->
-	</div>
-	<select class="custom-select my-1 mr-sm-2 student-answer-inline" id="x-axis" onchange="test()">
-			<option >x axis ...</option>
-    		<option value="semimajor_axis" selected>Semimajor Axis</option>
-    		<option value="eccentricity">Eccentricity</option>
-    		<option value="inclination">Inclination</option>
-    		<option value="long_ascend_node">Long Ascend Node</option>
-    		<option value="abs_mag">Absolute Magnitude</option>
-		</select>
-
-		<select class="custom-select my-1 mr-sm-2 student-answer-inline" id="y-axis">
-			<option >y axis ...</option>
-    		<option value="semimajor_axis" selected>Semimajor Axis</option>
-    		<option selected value="eccentricity">Eccentricity</option>
-    		<option value="inclination">Inclination</option>
-    		<option value="long_ascend_node">Long Ascend Node</option>
-    		<option value="abs_mag">Absolute Magnitude</option>
-		</select>
-		<!-- Footer -->
-<!-- 		<footer class="footer fixed-bottom bg-white pt-3" id="footer">  
-		  <p class=" copyright text-sm-left ml-5">Thank you for helping us test this workspace, which is in development. Please submit feedback to <a href="mailto:education@lsst.org">education@lsst.org</a><button type="button" class="close mr-3" aria-label="Close" onclick="closeFooter()">
-		  <span aria-hidden="true">&times;</span>
-		  </button></p>
+			<!-- Footer -->
+			<!-- 		<footer class="footer fixed-bottom bg-white pt-3" id="footer">
+				<p class=" copyright text-sm-left ml-5">Thank you for helping us test this workspace, which is in development. Please submit feedback to <a href="mailto:education@lsst.org">education@lsst.org</a><button type="button" class="close mr-3" aria-label="Close" onclick="closeFooter()">
+				<span aria-hidden="true">&times;</span>
+			</button></p>
 		</footer> -->
-
-		<!-- <canvas id="main"></canvas> -->
+		
+		
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js'></script>
 		<script src='https://s3.ca-central-1.amazonaws.com/maxv-dev/ThreeJS/OrbitControls.js'></script>
-		<!-- <script  src="js/index.js"></script> -->
-		<!-- <script  src="../assets/js/index.js"></script> -->
-		<!-- <script src="js/graph.js"></script> -->
+		<script  src="js/3dsolarsystem.js"></script>
+		<script  src="../assets/js/index.js"></script>
+		<script src="js/graph.js"></script>
 	</body>
 </html>

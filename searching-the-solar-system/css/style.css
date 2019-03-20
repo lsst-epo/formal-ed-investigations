@@ -7,3 +7,14 @@
 canvas{
   background-color:#000;
 }
+
+#main {
+    display: inline-flex;
+    position: absolute;
+}
+
+#graph {
+    position: absolute;
+    top: 1000px;
+    left: 450px;
+}
