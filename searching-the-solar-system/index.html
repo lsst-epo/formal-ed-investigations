@@ -13,7 +13,7 @@
 	<body>
 		<script src="https://d3js.org/d3.v3.min.js"></script>
 		
-		<div class="container sidebar">
+		<div class="container condensed" style="max-width: 850px !important;">
 			<ul class="list-none">
 				<br>
 				<li class="hamburger-menu"><button class="hamburger text-dark">&#9776;</button></li>
@@ -32,7 +32,7 @@
 			<b>Detecting Solar System objects</b>
 			<p>Each night, LSST takes two images of the same star field, at least thirty minutes apart. The images are compared by computer software, and if anything has moved an alert is automatically generated, and the data sent to the <a href="https://www.minorplanetcenter.net/about">IAU Minor Planet Center</a> (MPC). Within hours, the MPC determines a preliminary orbit for the object.</p>
 			<p>Below are some sample observations of moving Solar System objects. Observe how each object moves in relation to the star field. Each image is a 30-second exposure.</p>
-			<img src="assets/images/Fig1.gif" width="350" alt="">
+			<img class="fig" src="assets/images/Fig1.gif" width="900" alt="">
 			<p class="credit">Figure 1. Multiple observations of two different small Solar System objects. Credit: Catalina Sky Survey/ Lunar and Planetary Laboratory/ University of Arizona</p>
 			<ol>
 				<li>Is the amount of time it takes for the two objects to move across the sky approximately the same?</li>
@@ -57,17 +57,17 @@
 				<b>Characterizing the orbit of a Solar System object</b>
 				<p>To estimate the orbit of a newly discovered Solar System object, astronomers map its position and record the time it takes to travel from one place to another. By making a series of careful measurements, they can determine a preliminary orbit for the object. The orbit is mathematically expressed through a series of orbital elements. The ones used in this investigation are described below:</p>
 				<p>The <a href="https://en.wikipedia.org/wiki/Semi-major_and_semi-minor_axes">semi-major axis</a> is half of the longest diameter of an ellipse. Simply put, this number indicates the size of the orbit. It is measured in <a href="https://cneos.jpl.nasa.gov/glossary/au.html">astronomical units</a> (AU).</p>
-				<img src="assets/images/Fig2.png" width="350" alt="">
+				<img class="fig" src="assets/images/Fig2.png" width="600" alt="">
 				<p class="credit">Fig. 2: An image indicating the semi-major and semi-minor axis of an ellipse. Credit: <a href="https://commons.wikimedia.org/wiki/File:An_image_describing_the_semi-major_and_semi-minor_axis_of_ellipse.svg">Sae1962</a>, Creative Commons 4.0 international.</p>
 				<p><a href="https://en.wikipedia.org/wiki/Orbital_eccentricity">Eccentricity</a> is a mathematical way of describing how elliptical (i.e., oval shaped) an orbit is. Eccentricity values range from 0 to almost 1. An eccentricity of 0 describes a perfectly circular orbit. The larger the eccentricity, the more elliptical the orbit.</p>
-				<img src="assets/images/Fig3.png" width="350" alt="">
+				<img class="fig" src="assets/images/Fig3.png" width="600" alt="">
 				<p class="credit">Fig. 3: Examples of ellipses with different eccentricities. <a href="https://earthobservatory.nasa.gov/features/OrbitsCatalog">NASA illustration by Robert Simmon.</a></p>
 				<p><a href="https://en.wikipedia.org/wiki/Orbital_inclination">Inclination</a> is the angle that the object’s orbital plane is tilted, relative to Earth’s orbital plane around the Sun. A value of 0° means that the orbit is parallel with Earth’s orbit. A value of 90° means that the orbit is tilted at a right angle to Earth’s orbit. Occasionally, a value between 90° and 180° is listed. These objects are in retrograde orbits around the Sun, orbiting in the opposite direction of most Solar System objects.</p>
-				<img src="assets/images/Fig4.jpg" width="350" alt="">
+				<img class="fig" src="assets/images/Fig4.jpg" width="600" alt="">
 				<p class="credit">Fig. 4: An image describing the inclination of an orbit. Credit: Modified from <a href="https://en.wikipedia.org/wiki/File:Orbit1.svg">image by Lassuncty</a>, Creative Commons 3.0 Unported.</p>
 				<b>The Big View of the Solar System</b>
 				<p>LSST will discover millions of new Solar System objects, and will provide an enormous data set that gives us a more comprehensive view of the objects’ distribution. The more we identify and map the distribution of objects in our Solar System, the more we can learn about how it formed.</p>
-				<img src="assets/images/Fig5.jpg" width="350" alt="">
+				<img class="fig" src="assets/images/Fig5.jpg" width="900" alt="">
 				<p class="credit">Fig. 5: Three objects in the Asteroid Belt, shown to scale. Image credit NASA/JPL.</p>
 				<p>For the purposes of this investigation, we have divided the small Solar System objects into four categories:</p>
 				<ul>
@@ -76,9 +76,15 @@
 					<li><a href="https://en.wikipedia.org/wiki/Trans-Neptunian_object">Trans-Neptunian objects</a> (TNOs) - Objects that orbit the Sun, at or beyond the orbit of Neptune, at a distance of about 30 AU and beyond. This area includes the Kuiper Belt and the entire region out to the inner Oort Cloud, which begins at approximately 2000 AU from the Sun.</li>
 					<li>Comets - Icy objects found throughout the Solar System.</li>
 				</ul>
-				<img src="assets/images/Fig6.jpg" width="350" alt="">
+				<img class="fig" src="assets/images/Fig6.jpg" width="900" alt="">
 				<p class="credit">Fig. 6: Comet Hale-Bopp. Credit: E. Kolmhofer, H. Raab; <a href="http://www.sternwarte.at">Johannes-Kepler-Observatory</a>, Linz, Austria</p>
 				<p>Now you’ll use a data visualization tool called the Orbit Tracker to explore the positions and orbital characteristics of some small Solar System objects. All of the displayed points and their motions represent the positions and behavior of real objects that have previously been discovered.</p>
+
+				<!-- Orbit Master Widget -->
+				<canvas id="main"></canvas>
+				<!-- Orbit Mater Widget -->
+
+
 				<p>Begin by selecting all objects and setting the view to fully zoomed out, then zoom in as necessary to explore. Experiment with changing the view of the Solar System orbits. Notice that you can change the view to above or below the Sun, as well as along the plane of the Solar System (as if you were a planet orbiting the Sun).</p>
 				<ol start="3">
 					<li>Observe the orbits of the objects and describe what is similar and what is different about these objects.</li>
@@ -115,7 +121,7 @@
 				<ol start="4">
 					<li>Complete the table below, choosing from the answers listed above.</li>
 				</ol>
-				<table class="table" width="350">
+				<table class="table" width="900">
 					<thead>
 						<th></th>
 						<th>Eccentricity</th>
@@ -171,6 +177,29 @@
 					<p>In order to see general trends more clearly, it’s helpful to work with a large data set. Although your eyes can discriminate differences among a few hundred objects, it’s not possible to do so when the numbers get much larger. Plots are useful tools for examining larger data sets.</p>
 					
 					<p>Use the Plotter to construct a histogram of the number of small Solar System objects on the y-axis vs. distance from the Sun (semi-major axis) on the x-axis. Select all objects.</p>
+
+					<!-- Plotter Widget -->
+					<div>
+						<div id="graph">
+						<select class="custom-select my-1 mr-sm-2 student-answer-inline" id="x-axis" onchange="test()">
+							<option >x axis ...</option>
+							<option value="semimajor_axis" selected>Semimajor Axis</option>
+							<option value="eccentricity">Eccentricity</option>
+							<option value="inclination">Inclination</option>
+							<option value="long_ascend_node">Long Ascend Node</option>
+							<option value="abs_mag">Absolute Magnitude</option>
+						</select>
+						<select class="custom-select my-1 mr-sm-2 student-answer-inline" id="y-axis">
+							<option >y axis ...</option>
+							<option value="semimajor_axis" selected>Semimajor Axis</option>
+							<option selected value="eccentricity">Eccentricity</option>
+							<option value="inclination">Inclination</option>
+							<option value="long_ascend_node">Long Ascend Node</option>
+							<option value="abs_mag">Absolute Magnitude</option>
+						</select>	
+					</div>
+					<!-- Plotter Widget Ends -->
+
 					<ol start="7">
 						<li>Which group of Solar System objects is the most common?</li>
 						<select class="custom-select my-1 mr-sm-2">
@@ -185,7 +214,7 @@
 					
 					<b>The History of the Solar System</b>
 					<p>According to the Solar Nebula Theory, a spinning cloud of dust and gas collapsed and the young Sun began to form at the center, while dusty and icy objects began to grow by repeated collisions with each other in a flattened accretion disk surrounding the Sun.</p>
-					<img src="assets/images/Fig7.jpg" width="350" alt="">
+					<img class="fig" src="assets/images/Fig7.jpg" width="900" alt="">
 					<p class="credit">Fig. 7: This artist's concept shows a very young star encircled by a disk of gas and dust. The Solar Nebula Theory predicts an accretion disk such as this where Solar System objects would form. Image Credit: NASA/JPL-Caltech.</p>
 					
 					<p>There is significant evidence to support this theory. Observations of star-forming regions reveal similar accretion disks around young stars in other parts of the galaxy. Another piece of evidence that supports the theory is the the fact that rocky planets formed close to the Sun and icy planets formed at greater distances. This can be explained by the higher temperatures closer to the Sun, which prevented the inner planets from retaining most of their original atmospheres and ices.</p>
@@ -233,7 +262,7 @@
 				</ol>
 				<p>To estimate the size of an asteroid, we use its absolute magnitude, which can be thought of as the asteroid’s actual brightness (as opposed to how bright it appears to an observer on Earth). An asteroid’s absolute magnitude depends only on its size and its albedo. Albedo is a measure of the reflectivity of the surface of an object. An object that is pure white will reflect 100% of the light that hits it and will have an albedo of 1. An object that is pure black will reflect 0% of the light that hits it and will have an albedo of 0. The albedos for asteroids depend on the material on the surface, but they range from 0.05 (5%) to 0.25 (25%).</p>
 				<p>The equation for calculating the size of an asteroid is given by:</p>
-				<img src="assets/images/Fig8.png" width="250">
+				<img class="fig" src="assets/images/Fig8.png" width="250">
 				<p>Where D is the diameter of the asteroid (in kilometers), H is the absolute magnitude of the asteroid, and p is the albedo of the asteroid. You can visit <a href="http://www.physics.sfasu.edu/astro/asteroids/sizemagnitude.html">this website</a> to calculate the diameter.</p>
 				<p>Use the Plotter to construct a scatter plot of size on the y-axis vs. distance from the Sun (semi-major axis) on the x-axis. Select all categories of objects.</p>
 				<ol start="14">
@@ -272,7 +301,7 @@
 				<ol start="18">
 					<li>For each object, complete the table below.</li>
 				</ol>
-				<table class="table" width="350">
+				<table class="table" width="900">
 					<thead>
 						<th></th>
 						<th>Objectr</th>
@@ -313,7 +342,7 @@
 				<p>There are many different classes of asteroids. C-class (“carbonaceous”) asteroids are the most common, making up about 75% of all known asteroids. They are mostly made of clay and rock, and are dark gray in color. These asteroids are of interest because they contain significant amounts of water, which future space explorers could use for life support and for the production of rocket fuel. </p>
 				<p>S-class (“silicaceous”) asteroids are the second most common, and make up about 17% of known asteroids. Greenish to reddish in color, they are made mostly of rock and metals. They contain  large amounts of precious metals, such as gold, platinum, and iridium. Scientists estimate that some S-class asteroids have several trillion dollars worth of metals in them, which makes them of interest to potential mining operations. </p>
 				<p>We can learn about the composition of a Solar System object by measuring its brightness through multiple filters. The two plots below show the differences in brightness of C-class and S-class asteroids when measured through LSST’s g, r, i, and z filters:</p>
-				<img src="assets/images/Fig9.png" width="350">
+				<img class="fig" src="assets/images/Fig9.png" width="900">
 				<p class="credit">Figure 8: C and S class asteroids display brightness differences when measured through different filters.</p>
 				<p>For each plot, the horizontal (x) axis shows four filters. The vertical (y) axis is a measure of brightness compared to the g filter. For example, if the r filter shows a brightness value of 3, it means that the asteroid appeared three times brighter through the r filter than it was when measured through the g filter.</p>
 				<ol start="21">
@@ -321,7 +350,7 @@
 					<textarea class="form-control" rows="1" ></textarea>
 				</ol>
 				<p>There are other kinds of asteroids as well. For example, V-class asteroids are rare asteroids that have a surface made primarily of basalt. Below is a brightness comparison between S-class and V-class asteroids.</p>
-				<img src="assets/images/Fig10.png" width="350">
+				<img class="fig" src="assets/images/Fig10.png" width="900">
 				<p class="credit">Figure 9: S-and V-class asteroids display brightness differences when measured through different filters.</p>
 				<ol start="22">
 					<li>Which filter is most useful for determining the difference between these two objects? Explain your answer.</li>
@@ -339,6 +368,11 @@
 						<option value="1">continent</option>
 					</select>
 				</ol>
+
+
+
+
+
 				<h2>Discuss and Report</h2>
 				<ol start="26">
 					<li>Evaluate your NEO’s economic potential for mining. First, consider what class of asteroid you have. Next, think about how hard it would be to travel to this asteroid from Earth. Traveling to an asteroid that is moving at a velocity similar to Earth’s would require less rocket fuel, so an NEO with an orbit most similar to Earth is optimal. Consider an asteroid’s orbital characteristics such as semi-major axis, eccentricity, and inclination. Explain how you arrived at your answers</li>
@@ -354,31 +388,13 @@
 				<!-- End of Sidebar -->
 			</div>
 			<!-- Solar System Graphic -->
-			<canvas id="main"></canvas>
 			<!-- End Solar Sytem Graphic -->
 			<!-- Selection Items for Graphs -->
 			
-			
-			<div id="graph">
-			<select class="custom-select my-1 mr-sm-2 student-answer-inline" id="x-axis" onchange="test()">
-				<option >x axis ...</option>
-				<option value="semimajor_axis" selected>Semimajor Axis</option>
-				<option value="eccentricity">Eccentricity</option>
-				<option value="inclination">Inclination</option>
-				<option value="long_ascend_node">Long Ascend Node</option>
-				<option value="abs_mag">Absolute Magnitude</option>
-			</select>
-			<select class="custom-select my-1 mr-sm-2 student-answer-inline" id="y-axis">
-				<option >y axis ...</option>
-				<option value="semimajor_axis" selected>Semimajor Axis</option>
-				<option selected value="eccentricity">Eccentricity</option>
-				<option value="inclination">Inclination</option>
-				<option value="long_ascend_node">Long Ascend Node</option>
-				<option value="abs_mag">Absolute Magnitude</option>
-			</select>	
 
 				
 			</div>
+			<br><br>
 			<!-- End Graphs -->
 
 			<!-- Footer -->

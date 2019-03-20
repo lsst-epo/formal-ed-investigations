@@ -10,11 +10,21 @@ canvas{
 
 #main {
     display: inline-flex;
-    position: absolute;
+    position: relative;
 }
 
 #graph {
-    position: absolute;
-    top: 1000px;
-    left: 450px;
+    /*position: absolute;*/
+    /*top: 1000px;*/
+    /*left: 450px;*/
+}
+
+.notebook-header {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.fig {
+  margin: auto;
+  display: block
 }
