@@ -52,15 +52,21 @@ function init() {
 
   var loader = new THREE.OBJLoader();
 
-  var dir = new THREE.Vector3( 10, 0, 0 );
 
-  //normalize the direction vector (convert to vector of length 1)
-  // dir.normalize();
 
   var origin = new THREE.Vector3( .4, 0, -4 );
   var length = .3;
-  var hex = 0xff0000;
-  arrowHelper = new THREE.ArrowHelper( dir, origin, length, hex );
+  var hex = 0x305e3;
+  var headLength = .2;
+  var headWidth = .2;
+  var dir = new THREE.Vector3( 10, 0, 0 );
+
+    //normalize the direction vector (convert to vector of length 1)
+  dir.normalize();
+
+
+  arrowHelper = new THREE.ArrowHelper( dir, origin, length, hex, headLength, headWidth );
+  arrowHelper.rotation.z = 1.7100356020193566;
 
   // Renderer
   renderer = new THREE.WebGLRenderer({ canvas:document.getElementById('main'), antialiasing:true });        
@@ -122,7 +128,7 @@ loader.load( 'assets/Generic/SpiralGalaxy.obj', function ( object ) {
     scene2.add( object );
     scene2.remove(sphere)
   }
-  arrowHelper = new THREE.ArrowHelper( dir, position, length, hex );
+
   scene2.add( arrowHelper );
   }
   );
@@ -150,9 +156,10 @@ function animate() {
 
 function render() {
 
-  arrowHelper.rotation.x = (camera.position.y +190);
+  arrowHelper.rotation.x = (camera.position.y + 190);
   arrowHelper.rotation.z = camera.position.x
   camera.lookAt( scene.position );
+
   
   renderer.clear();
   renderer.setViewport( 0, 0, window.innerWidth, window.innerHeight );
