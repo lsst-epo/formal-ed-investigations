@@ -96,14 +96,17 @@ loader.load( 'assets/Generic/SpiralGalaxy.obj', function ( object ) {
   if (textureValue == "Elliptical-Galaxy/elliptical-center" ) {
     var ellipticalCenterPosition = new THREE.Vector3( 0, 0, -4 );
     position = ellipticalCenterPosition
+    scene2.add( arrowHelper );
   }
   if (textureValue == "Elliptical-Galaxy/elliptical-edge" ) {
     var ellipticalEdgePosition = new THREE.Vector3( .4, 0, -4 );
     position = ellipticalEdgePosition
+    scene2.add( arrowHelper );
   }
   if (textureValue == "Elliptical-Galaxy/elliptical-halfway" ) {
     var ellipticalHalfwayPosition = new THREE.Vector3( .2, 0, -4 );
     position = ellipticalHalfwayPosition
+    scene2.add( arrowHelper );
 
   }
 
@@ -111,31 +114,32 @@ loader.load( 'assets/Generic/SpiralGalaxy.obj', function ( object ) {
   if (textureValue == "Spiral-Galaxy/spiral-center") {
     var spiralCenterPosition = new THREE.Vector3( 0, 0, -4 );
     position = spiralCenterPosition;
-    scene2.add( object );
+    scene2.add( object, arrowHelper );
     scene2.remove(sphere)
 
  }
   if (textureValue == "Spiral-Galaxy/spiral-edge") {
     var spiralEdgePosition = new THREE.Vector3( .58, 0, -4 );
     position = spiralEdgePosition;
-    scene2.add( object );
+    scene2.add( object, arrowHelper );
     scene2.remove(sphere)
     
   }
   if (textureValue == "Spiral-Galaxy/spiral-halfway") {
     var spiralHalfwayPosition = new THREE.Vector3( .35, 0, -4 );
     position = spiralHalfwayPosition;
-    scene2.add( object );
+    scene2.add( object, arrowHelper );
     scene2.remove(sphere)
   }
 
-  scene2.add( arrowHelper );
+  
   }
   );
-  if (textureValue == "Generic/SMC" || textureValue == "Generic/Constellations") {
+  if (textureValue == "Generic/Footprint5-em" || textureValue == "Generic/Footprint3-em") {
     camera.position.set(-0.98,  1.18, -1.28)
     document.getElementById('legend').src = "assets/Generic/Legend-BW.png";
     scene2.remove(sphere, arrowHelper)
+    console.log(textureValue)
   }
 }
 
@@ -155,7 +159,6 @@ function animate() {
 }
 
 function render() {
-
   arrowHelper.rotation.x = (camera.position.y + 190);
   arrowHelper.rotation.z = camera.position.x
   camera.lookAt( scene.position );
