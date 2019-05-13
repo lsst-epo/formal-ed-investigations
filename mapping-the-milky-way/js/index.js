@@ -93,6 +93,7 @@ loader.load( 'assets/Generic/SpiralGalaxy.obj', function ( object ) {
 
 
   // Indicator Location
+  // I know this is terribly messy and needs to be fixed, I apologize. -ab
   if (textureValue == "Elliptical-Galaxy/elliptical-center" ) {
     var ellipticalCenterPosition = new THREE.Vector3( 0, 0, -4 );
     position = ellipticalCenterPosition
