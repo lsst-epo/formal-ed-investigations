@@ -188,6 +188,13 @@ textarea{
   margin: 10px 10px -5px 10px !important;
 }
 
+
+/* Container */
+
+.condensed {
+  max-width: 850px !important;
+}
+
 /* Buttons */
 
 .button {

@@ -183,7 +183,7 @@
 /* Color Tool */
 
 input[type="range"] {
-  width: 200px;
+  width: 110px;
   margin-bottom: 20px;
   margin-top: 20px;
   margin-right: 5px;
@@ -252,7 +252,8 @@ input[type="range"] {
   border-radius: 10px;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 70%;
+  bottom: 0;
   -webkit-box-shadow: 0px 0px 11px #ccc;
   /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow: 0px 0px 11px #ccc;
@@ -269,7 +270,8 @@ input[type="range"] {
   border-radius: 10px;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 70%;
+  bottom: 0;
   background-size: 100%;
   background-blend-mode: multiply;
   mix-blend-mode: screen;
@@ -385,7 +387,7 @@ input[type="range"] {
 
 @media (max-width: 1200px) {
   input[type="range"] {
-    width: 142px;
+    width: 110px;
   }
 }
 
@@ -402,7 +404,13 @@ input[type="range"] {
   .fig {
     width: 100%;
   }
+  .image-filter {
+    height: 60%;
+  }
 
+  .intro-filter {
+    height: 60%;
+  }
 
 }
 
@@ -415,6 +423,14 @@ input[type="range"] {
   }
   .mobile-buffer {
     height: 40vh;
+  }
+
+  .intro-filter {
+    height: 100%;
+  }
+
+  .image-filter {
+    height: 100%;
   }
 
 }
