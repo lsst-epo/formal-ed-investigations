@@ -10,7 +10,12 @@ You'll need a server to view the investigations.
 
 ```
 cd formal-ed-investigations
+
+If using Python 2:
 python -m SimpleHTTPServer 9000
+
+If using Python 3:
+python -m http.server 9000
 ```
 
 Then navigate to localhost:9000/mapping-the-milky-way to view the investigation. 
